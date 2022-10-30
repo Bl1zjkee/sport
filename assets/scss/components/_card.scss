@@ -1,0 +1,67 @@
+.card{
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+  &:hover{
+    .favorite-card{
+      display: block;
+    }
+  }
+  &__img{
+    img{
+     max-width: 350px;
+      width: 1005px;
+    }
+  }
+
+  h4{
+    font-weight: var(--fw-semibold);
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+  span{
+    font-style: italic;
+    font-weight: var(--fw-semibold);
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: var(--darkgrey);
+  }
+  &__sale{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    p{
+      font-weight: var(--fw-bold);
+      font-size: 20px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    a{
+      font-weight: var(--fw-bold);
+      font-size: 20px;
+      line-height: 24px;
+      text-decoration-line: underline;
+      color: var(--black);
+    }
+  }
+}
+.new{
+  position: absolute;
+  top: -8px;
+  right: -16px;
+  img{
+    width: 60px;
+    height: 60px;
+  }
+}
+.favorite-card{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: none;
+}
