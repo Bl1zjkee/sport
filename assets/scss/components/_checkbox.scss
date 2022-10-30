@@ -1,0 +1,48 @@
+.custom-checkbox{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  &+label{
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-family:var(--alumnisans);
+    font-weight: var(--fw-regular);
+    font-size: 12px;
+    line-height: 16px;
+    font-feature-settings: 'liga' off;
+    color: var(--grey);
+    cursor: pointer;
+    &:hover{
+      text-decoration-line: underline;
+      color: var(--black);
+      font-weight: var(--fw-semibold);
+    }
+    &:focus,active{
+      color: var(--black);
+      font-weight: var(--fw-semibold);
+    }
+  }
+
+  &+label:before{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--grey);
+    border-radius: 2px;
+    position: relative;
+    margin-right: 12px;
+  }
+  &:checked+label:before{
+    border: 1px solid var(--black);
+  }
+  &:checked+label:after{
+    content: '';
+    background-image: url("../icons/checkbox.svg");
+    width: 10px;
+    height: 9px;
+    left: 4px;
+    position: absolute;
+  }
+}

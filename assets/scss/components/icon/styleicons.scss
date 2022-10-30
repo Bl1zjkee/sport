@@ -1,0 +1,387 @@
+.allicons{
+  display: flex;
+  align-items: center;
+}
+
+
+
+.search{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path{
+    stroke:black;
+        stroke-width: 0.2px;
+        border: 0.2px solid #000000;
+        fill:var(--Yellow);
+      }
+    }
+  }
+&:active{
+  svg{
+    path{
+      stroke:black;
+      stroke-width: 1.3px;
+    }
+  }
+}
+}
+
+.favorite{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path:nth-of-type(1){
+        fill:var(--Yellow);
+        stroke: black;
+        stroke-width: 0.2px;
+      }
+    }
+  }
+
+  &:active{
+    svg{
+      path:nth-of-type(1){
+        fill: var(--black);
+      }
+
+      path:nth-of-type(2){
+        fill: var(--Yellow);
+      }
+    }
+  }
+}
+
+.user{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path:nth-of-type(1){
+      fill: var(--Yellow);
+        stroke: black;
+        stroke-width: 0.2px;
+      }
+    }
+  }
+  &:active{
+    svg{
+      path:nth-of-type(1){
+        fill: var(--black);
+      }
+      path:nth-of-type(2){
+        fill: var(--Yellow);
+      }
+      path:nth-of-type(3){
+        fill: var(--Yellow);
+      }
+    }
+  }
+}
+
+.cart{
+  cursor: pointer;
+  position: relative;
+  &:hover{
+    svg{
+      path:nth-of-type(1){
+        fill: var(--Yellow);
+        stroke: black;
+        stroke-width: 0.2px;
+      }
+    }
+  }
+  &:active{
+    svg{
+      path:nth-of-type(1){
+         fill: var(--black);
+       }
+      path:nth-of-type(2){
+        fill: var(--Yellow);
+      }
+    }
+  }
+  &__quantity{
+    position: absolute;
+    background: var(--Yellow);
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    top: -7px;
+    right: -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+      font-weight: var(--fw-semibold);
+      font-size: 12px;
+      line-height: 12px;
+      color: var(--black);
+    }
+  }
+}
+.filter{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path{
+        fill: var(--Yellow);
+        stroke: black;
+        stroke-width: 0.2px;
+      }
+    }
+  }
+  &:active{
+    svg{
+      path{
+        fill: var(--black);
+
+      }
+    }
+  }
+}
+
+.filter_active{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path{
+        fill: var(--Yellow);
+        stroke: black;
+        stroke-width: 0.2px;
+      }
+    }
+  }
+  &:active{
+    svg{
+      path{
+        fill: var(--black);
+
+      }
+    }
+  }
+}
+
+.edit{
+  cursor: pointer;
+  position: absolute;
+  top:22px;
+right: 58px;
+  &:hover,active{
+    svg{
+      path{
+        fill: black;
+      }
+    }
+  }
+}
+
+.delete{
+  cursor: pointer;
+  position: absolute;
+  top:22px;
+  right: 25px;
+  &:hover,active{
+    svg{
+      path{
+        fill: black;
+      }
+    }
+  }
+}
+
+.group-big{
+  cursor: pointer;
+  &:hover{
+    svg{
+      circle{
+        fill: var(--Yellow);
+      }
+    }
+  }
+  &:active{
+    svg{
+      circle{
+        fill: var(--black);
+      }
+    }
+  }
+}
+
+.group-small{
+  cursor: pointer;
+  &:hover{
+    svg{
+      circle{
+        fill: var(--Yellow);
+      }
+    }
+  }
+  &:active{
+    svg{
+      circle{
+        fill: var(--black);
+      }
+    }
+  }
+}
+.close-secondary{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path{
+        fill: var(--Yellow);
+        stroke: black;
+        stroke-width: 0.2;
+      }
+    }
+  }
+  &:active{
+    svg{
+      path{
+        fill: var(--black);
+      }
+    }
+  }
+}
+
+.close-primary{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path{
+        fill: var(--Yellow);
+      }
+    }
+  }
+  &:active{
+    svg{
+      path{
+        fill: var(--black);
+      }
+    }
+  }
+}
+
+.vk{
+  cursor: pointer;
+    &:hover{
+      svg{
+        path{
+          fill: var(--black);
+          stroke: var(--Yellow);
+          stroke-width: 0.2;
+        }
+      }
+    }
+    &:active{
+      svg{
+        path{
+          stroke: var(--white);
+          fill: var(--white);
+        }
+      }
+    }
+  }
+.telegram{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path{
+        fill: var(--black);
+        stroke: var(--Yellow);
+        stroke-width: 0.2;
+      }
+    }
+  }
+  &:active{
+    svg{
+      path{
+        stroke: var(--white);
+        fill: var(--white);
+      }
+    }
+  }
+}
+
+.whatsup{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path{
+        fill: var(--black);
+        stroke: var(--Yellow);
+        stroke-width: 0.2;
+      }
+    }
+  }
+  &:active{
+    svg{
+      path{
+        stroke: var(--white);
+        fill: var(--white);
+      }
+    }
+  }
+}
+
+.yt{
+  cursor: pointer;
+  &:hover{
+    svg{
+      path{
+        fill: var(--black);
+        stroke: var(--Yellow);
+        stroke-width: 0.2;
+      }
+    }
+  }
+  &:active{
+    svg{
+      path{
+        stroke: var(--white);
+        fill: var(--white);
+      }
+    }
+  }
+}
+
+
+.ok{
+  position: absolute;
+  top: 22px;
+  right:20px;
+  img{
+    width: 16px;
+    height: 16px;
+  }
+  &__active{
+    display: block;
+  }
+  &_item{
+    top: 17px;
+    right: 21px;
+  }
+}
+
+.warning{
+  position: absolute;
+  top: 22px;
+  right:20px;
+
+  img{
+    width: 16px;
+    height: 16px;
+  }
+  &__input{
+    border: 1px dashed var(--red);
+  }
+  &__active{
+
+  }
+}
+
+.input-vk{
+  position: absolute;
+  left: 20px;
+  top: 14px;
+}
