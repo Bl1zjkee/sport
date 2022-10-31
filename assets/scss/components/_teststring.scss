@@ -1,33 +1,57 @@
-.div3{
-  h3{
+p{
+  text-align: center;
+}
+
+.marquee-infinite{
+  margin: 30px auto;
+  max-width: 100%;
+  background: black;
+
+  h1{
+    white-space: nowrap;
+    width: 100%;
     font-family: 'Alumni Sans';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 80px;
     line-height: 96px;
     /* identical to box height */
 
     text-transform: uppercase;
 
-    color: #FFFFFF;
-
+    color: white;
+    span{
+      font-weight: 900;
+    }
+    span:nth-of-type(1){
+        font-weight: 900;
+        color: white;
+      }
+    span:nth-of-type(2){
+      font-weight: 700;
+      color: yellow;
+    }
+    span:nth-of-type(3){
+      font-weight: 200;
+      color: white;
+    }
+    span:nth-of-type(4){
+      font-weight: 700;
+      color: yellow;
+    }
   }
 }
-
-.div2 {
-  margin: auto;
-  width:500px;
-  height: 96px;
-  border: 1px solid black;
-  animation: 5s div2 infinite linear;
-  animation-delay: 2s;
-}
-@keyframes div2{
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -250px 0;
-  }
+.marquee-infinite div{
+display: flex;
+  width: 200%;
+  animation: marquee-infinite 3s linear infinite;
 }
 
+@keyframes marquee-infinite {
+ 0% {
+   transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
