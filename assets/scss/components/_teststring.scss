@@ -1,0 +1,33 @@
+.div3{
+  h3{
+    font-family: 'Alumni Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+  }
+}
+
+.div2 {
+  margin: auto;
+  width:500px;
+  height: 96px;
+  border: 1px solid black;
+  animation: 5s div2 infinite linear;
+  animation-delay: 2s;
+}
+@keyframes div2{
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -250px 0;
+  }
+}
+
