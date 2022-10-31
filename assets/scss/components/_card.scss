@@ -47,6 +47,16 @@
       line-height: 24px;
       text-decoration-line: underline;
       color: var(--black);
+      display: flex;
+      align-items: center;
+      &:after{
+        content: '';
+        display: block;
+        background-image: url("../icons/sale_arrow.svg");
+        width: 20px;
+        height: 8px;
+        margin-left: 6px;
+      }
     }
   }
 }
@@ -58,10 +68,52 @@
     width: 60px;
     height: 60px;
   }
+  &_small{
+    img{
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 .favorite-card{
   position: absolute;
   top: 12px;
   left: 12px;
   display: none;
+  &__small{
+    top: 7px;
+    left: 7px;
+  }
+}
+
+.card-small{
+position: relative;
+  max-width: 160px;
+  width: 100%;
+  &:hover{
+    .favorite-card{
+      display: block;
+    }
+  }
+  h4{
+    font-weight: var(--fw-semibold);
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+  span{
+    font-style: italic;
+    font-weight: var(--fw-semibold);
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: var(--darkgrey);
+  }
+  &__img{
+img{
+  max-width: 160px;
+  width: 100%;
+}
+  }
 }

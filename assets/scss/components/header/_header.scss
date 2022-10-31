@@ -2,6 +2,12 @@
   background: var(--grey);
   padding: 15px 0;
 
+  &__burger-menu{
+display: none;
+    @media (max-width: 960px) {
+      display: block;
+    }
+  }
   &__item{
     display: flex;
     align-items: center;
@@ -23,6 +29,11 @@
     position: absolute;
     top: 19px;
     right: -13px;
+    @media (max-width: 960px) {
+      width: 60px;
+      top: 2px;
+      right: 14px;
+    }
     span{
       font-weight: var(--fw-semibold);
       font-size: 14px;
@@ -41,6 +52,9 @@
 
 }
 .nav{
+  @media (max-width: 960px) {
+    display: none;
+  }
 ul{
   width: 100%;
   display: flex;

@@ -25,6 +25,11 @@
     }
   }
 }
+  &_mobile{
+    @media (max-width: 960px) {
+display: none;
+    }
+  }
 }
 
 .favorite{
@@ -48,6 +53,11 @@
       path:nth-of-type(2){
         fill: var(--Yellow);
       }
+    }
+  }
+  &_mobile{
+    @media (max-width: 960px) {
+      display: none;
     }
   }
 }
@@ -74,6 +84,11 @@
       path:nth-of-type(3){
         fill: var(--Yellow);
       }
+    }
+  }
+  &_mobile{
+    @media (max-width: 960px) {
+      display: none;
     }
   }
 }
