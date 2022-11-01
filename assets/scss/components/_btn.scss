@@ -1,7 +1,8 @@
 .btn {
   padding: 13px 45px;
-  background: var(--Yellow);
+  background: var(--yellow);
   border: 1px solid var(--black);
+  border-left: none;
   height: 50px;
   cursor: pointer;
 
@@ -10,24 +11,24 @@
 
     svg {
       path {
-        stroke: var(--Yellow);
+        stroke: var(--yellow);
       }
     }
   }
 
   &:active {
     background: var(--black);
-    border: 1px solid var(--Yellow);
+    border: 1px solid var(--yellow);
 
     svg {
       path {
-        stroke: var(--Yellow);
+        stroke: var(--yellow);
       }
     }
   }
 
   &:focus {
-    background: var(--Yellow);
+    background: var(--yellow);
     border: 3px solid var(--black);
 
     svg {
@@ -48,15 +49,15 @@
 }
 
 .btn-collection {
-  button {
-    background: var(--Yellow);
+
+    background: var(--yellow);
     padding: 24px 94px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
 
-    h3 {
+    p {
       font-style: normal;
       font-weight: var(--fw-black);
       font-size: 18px;
@@ -77,14 +78,14 @@ svg{
 
     &:hover {
       background: var(--black);
-      h3 {
-        color: var(--Yellow);
+      p {
+        color: var(--yellow);
 
         svg{
             transform: rotate(45deg);
           transition: 1s;
           path{
-            fill:var(--Yellow);
+            fill:var(--yellow);
           }
         }
       }
@@ -92,25 +93,25 @@ svg{
 
     &:active {
       background: var(--black);
-      border: 1px solid var(--Yellow);
+      border: 1px solid var(--yellow);
 
-      h3 {
-        color: var(--Yellow);
+      p {
+        color: var(--yellow);
 
         svg{
           transform: rotate(45deg);
           path{
-            fill:var(--Yellow);
+            fill:var(--yellow);
           }
         }
       }
     }
 
     &:focus {
-      background: var(--Yellow);
+      background: var(--yellow);
       border: 1px solid var(--black);
 
-      h3 {
+      p {
         color: var(--black);
         svg{
           transform: rotate(0);
@@ -120,7 +121,7 @@ svg{
         }
       }
     }
-  }
+
 }
 
 
@@ -143,7 +144,7 @@ svg{
     }
 
     &:hover {
-      background: var(--Yellow);
+      background: var(--yellow);
 
       h3 {
         color: var(--black);
@@ -151,7 +152,7 @@ svg{
     }
 
     &:active {
-      background: var(--Yellow);
+      background: var(--yellow);
       border: 1px solid var(--black);
 
       h3 {
@@ -160,7 +161,7 @@ svg{
     }
 
     &:focus {
-      border: 1px solid var(--Yellow);
+      border: 1px solid var(--yellow);
       background: var(--black);
 
       h3 {

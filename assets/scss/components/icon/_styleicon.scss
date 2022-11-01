@@ -10,26 +10,47 @@
   &:hover{
     svg{
       path{
-    stroke:black;
+        stroke:black;
         stroke-width: 0.2px;
         border: 0.2px solid #000000;
-        fill:var(--Yellow);
+        fill:var(--yellow);
       }
     }
   }
-&:active{
-  svg{
-    path{
-      stroke:black;
-      stroke-width: 1.3px;
+  &:active, &_active{
+    svg{
+      path{
+        stroke:black;
+        stroke-width: 1.3px;
+      }
     }
   }
-}
+  &__white{
+    @media (max-width: 960px) {
+      svg{
+        path{
+          fill: (var(--white));
+        }
+      }
+    }
+
+  }
+
+  &__active{
+    svg{
+      path{
+        stroke:black;
+        stroke-width: 1.3px;
+      }
+    }
+  }
   &_mobile{
     @media (max-width: 960px) {
-display: none;
+      display: none;
     }
   }
+
+
 }
 
 .favorite{
@@ -37,24 +58,43 @@ display: none;
   &:hover{
     svg{
       path:nth-of-type(1){
-        fill:var(--Yellow);
+        fill:var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
 
-  &:active{
+  &:active, &_active{
     svg{
       path:nth-of-type(1){
         fill: var(--black);
       }
 
       path:nth-of-type(2){
-        fill: var(--Yellow);
+        fill: var(--yellow);
       }
     }
   }
+  &__white{
+    @media (max-width: 960px) {
+      svg{
+        path{
+          fill: (var(--white));
+        }
+      }
+    }
+
+  }
+  &__active{
+    svg{
+      path{
+        stroke:black;
+        stroke-width: 1.3px;
+      }
+    }
+  }
+
   &_mobile{
     @media (max-width: 960px) {
       display: none;
@@ -67,24 +107,34 @@ display: none;
   &:hover{
     svg{
       path:nth-of-type(1){
-      fill: var(--Yellow);
+        fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       path:nth-of-type(1){
         fill: var(--black);
       }
       path:nth-of-type(2){
-        fill: var(--Yellow);
+        fill: var(--yellow);
       }
       path:nth-of-type(3){
-        fill: var(--Yellow);
+        fill: var(--yellow);
       }
     }
+  }
+  &__white{
+    @media (max-width: 960px) {
+      svg{
+        path{
+          fill: (var(--white));
+        }
+      }
+    }
+
   }
   &_mobile{
     @media (max-width: 960px) {
@@ -99,25 +149,25 @@ display: none;
   &:hover{
     svg{
       path:nth-of-type(1){
-        fill: var(--Yellow);
+        fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       path:nth-of-type(1){
-         fill: var(--black);
-       }
+        fill: var(--black);
+      }
       path:nth-of-type(2){
-        fill: var(--Yellow);
+        fill: var(--yellow);
       }
     }
   }
   &__quantity{
     position: absolute;
-    background: var(--Yellow);
+    background: var(--yellow);
     border-radius: 50%;
     width: 14px;
     height: 14px;
@@ -139,13 +189,13 @@ display: none;
   &:hover{
     svg{
       path{
-        fill: var(--Yellow);
+        fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       path{
         fill: var(--black);
@@ -160,13 +210,13 @@ display: none;
   &:hover{
     svg{
       path{
-        fill: var(--Yellow);
+        fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       path{
         fill: var(--black);
@@ -180,7 +230,7 @@ display: none;
   cursor: pointer;
   position: absolute;
   top:22px;
-right: 58px;
+  right: 58px;
   &:hover,active{
     svg{
       path{
@@ -209,11 +259,11 @@ right: 58px;
   &:hover{
     svg{
       circle{
-        fill: var(--Yellow);
+        fill: var(--yellow);
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       circle{
         fill: var(--black);
@@ -227,11 +277,11 @@ right: 58px;
   &:hover{
     svg{
       circle{
-        fill: var(--Yellow);
+        fill: var(--yellow);
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       circle{
         fill: var(--black);
@@ -244,13 +294,13 @@ right: 58px;
   &:hover{
     svg{
       path{
-        fill: var(--Yellow);
+        fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2;
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       path{
         fill: var(--black);
@@ -264,11 +314,11 @@ right: 58px;
   &:hover{
     svg{
       path{
-        fill: var(--Yellow);
+        fill: var(--yellow);
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       path{
         fill: var(--black);
@@ -279,36 +329,36 @@ right: 58px;
 
 .vk{
   cursor: pointer;
-    &:hover{
-      svg{
-        path{
-          fill: var(--black);
-          stroke: var(--Yellow);
-          stroke-width: 0.2;
-        }
-      }
-    }
-    &:active{
-      svg{
-        path{
-          stroke: var(--white);
-          fill: var(--white);
-        }
+  &:hover{
+    svg{
+      path{
+        fill: var(--black);
+        stroke: var(--yellow);
+        stroke-width: 0.2;
       }
     }
   }
+  &:active, &_active{
+    svg{
+      path{
+        stroke: var(--white);
+        fill: var(--white);
+      }
+    }
+  }
+}
 .telegram{
   cursor: pointer;
   &:hover{
     svg{
       path{
         fill: var(--black);
-        stroke: var(--Yellow);
+        stroke: var(--yellow);
         stroke-width: 0.2;
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       path{
         stroke: var(--white);
@@ -324,12 +374,12 @@ right: 58px;
     svg{
       path{
         fill: var(--black);
-        stroke: var(--Yellow);
+        stroke: var(--yellow);
         stroke-width: 0.2;
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       path{
         stroke: var(--white);
@@ -345,12 +395,12 @@ right: 58px;
     svg{
       path{
         fill: var(--black);
-        stroke: var(--Yellow);
+        stroke: var(--yellow);
         stroke-width: 0.2;
       }
     }
   }
-  &:active{
+  &:active, &_active{
     svg{
       path{
         stroke: var(--white);

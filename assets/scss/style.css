@@ -55,13 +55,17 @@ table {
 * {
   box-sizing: border-box;
 }
+*:after:before {
+  box-sizing: border-box;
+}
 
-h1, h2, h3, h4, h5, h6, p, span, a, placeholder {
+body, button {
   font-family: var(--alumnisans);
 }
 
 a, button {
   cursor: pointer;
+  text-decoration: none;
 }
 
 .container {
@@ -72,32 +76,6 @@ a, button {
 }
 
 /** components **/
-/** Шрифт **/
-:root {
-  /**Шрифты**/
-  --alumnisans:"Alumni Sans";
-  /** font-weight **/
-  --fw-regular:400;
-  --fw-medium:500;
-  --fw-semibold:600;
-  --fw-bold:700;
-  --fw-black:800;
-}
-
-/** Цвета **/
-:root {
-  --black: #000000;
-  --white:#FFFFFF;
-  --silver:#D9D9D9;
-  --Yellow:#DBFF4E;
-  --grey: #B8B6B6;
-  --darkgrey:#444444;
-  --red:#FF0000;
-  --lightblack:#303030;
-  --lightgrey:#4F4F4F;
-  --supportgrey:#878787;
-}
-
 /** Input **/
 .input span {
   font-size: 20px;
@@ -250,9 +228,18 @@ a, button {
   stroke: black;
   stroke-width: 0.2px;
   border: 0.2px solid #000000;
-  fill: var(--Yellow);
+  fill: var(--yellow);
 }
-.search:active svg path {
+.search:active svg path, .search_active svg path {
+  stroke: black;
+  stroke-width: 1.3px;
+}
+@media (max-width: 960px) {
+  .search__white svg path {
+    fill: var(--white);
+  }
+}
+.search__active svg path {
   stroke: black;
   stroke-width: 1.3px;
 }
@@ -266,15 +253,24 @@ a, button {
   cursor: pointer;
 }
 .favorite:hover svg path:nth-of-type(1) {
-  fill: var(--Yellow);
+  fill: var(--yellow);
   stroke: black;
   stroke-width: 0.2px;
 }
-.favorite:active svg path:nth-of-type(1) {
+.favorite:active svg path:nth-of-type(1), .favorite_active svg path:nth-of-type(1) {
   fill: var(--black);
 }
-.favorite:active svg path:nth-of-type(2) {
-  fill: var(--Yellow);
+.favorite:active svg path:nth-of-type(2), .favorite_active svg path:nth-of-type(2) {
+  fill: var(--yellow);
+}
+@media (max-width: 960px) {
+  .favorite__white svg path {
+    fill: var(--white);
+  }
+}
+.favorite__active svg path {
+  stroke: black;
+  stroke-width: 1.3px;
 }
 @media (max-width: 960px) {
   .favorite_mobile {
@@ -286,18 +282,23 @@ a, button {
   cursor: pointer;
 }
 .user:hover svg path:nth-of-type(1) {
-  fill: var(--Yellow);
+  fill: var(--yellow);
   stroke: black;
   stroke-width: 0.2px;
 }
-.user:active svg path:nth-of-type(1) {
+.user:active svg path:nth-of-type(1), .user_active svg path:nth-of-type(1) {
   fill: var(--black);
 }
-.user:active svg path:nth-of-type(2) {
-  fill: var(--Yellow);
+.user:active svg path:nth-of-type(2), .user_active svg path:nth-of-type(2) {
+  fill: var(--yellow);
 }
-.user:active svg path:nth-of-type(3) {
-  fill: var(--Yellow);
+.user:active svg path:nth-of-type(3), .user_active svg path:nth-of-type(3) {
+  fill: var(--yellow);
+}
+@media (max-width: 960px) {
+  .user__white svg path {
+    fill: var(--white);
+  }
 }
 @media (max-width: 960px) {
   .user_mobile {
@@ -310,19 +311,19 @@ a, button {
   position: relative;
 }
 .cart:hover svg path:nth-of-type(1) {
-  fill: var(--Yellow);
+  fill: var(--yellow);
   stroke: black;
   stroke-width: 0.2px;
 }
-.cart:active svg path:nth-of-type(1) {
+.cart:active svg path:nth-of-type(1), .cart_active svg path:nth-of-type(1) {
   fill: var(--black);
 }
-.cart:active svg path:nth-of-type(2) {
-  fill: var(--Yellow);
+.cart:active svg path:nth-of-type(2), .cart_active svg path:nth-of-type(2) {
+  fill: var(--yellow);
 }
 .cart__quantity {
   position: absolute;
-  background: var(--Yellow);
+  background: var(--yellow);
   border-radius: 50%;
   width: 14px;
   height: 14px;
@@ -343,11 +344,11 @@ a, button {
   cursor: pointer;
 }
 .filter:hover svg path {
-  fill: var(--Yellow);
+  fill: var(--yellow);
   stroke: black;
   stroke-width: 0.2px;
 }
-.filter:active svg path {
+.filter:active svg path, .filter_active svg path {
   fill: var(--black);
 }
 
@@ -355,11 +356,11 @@ a, button {
   cursor: pointer;
 }
 .filter_active:hover svg path {
-  fill: var(--Yellow);
+  fill: var(--yellow);
   stroke: black;
   stroke-width: 0.2px;
 }
-.filter_active:active svg path {
+.filter_active:active svg path, .filter_active_active svg path {
   fill: var(--black);
 }
 
@@ -387,9 +388,9 @@ a, button {
   cursor: pointer;
 }
 .group-big:hover svg circle {
-  fill: var(--Yellow);
+  fill: var(--yellow);
 }
-.group-big:active svg circle {
+.group-big:active svg circle, .group-big_active svg circle {
   fill: var(--black);
 }
 
@@ -397,9 +398,9 @@ a, button {
   cursor: pointer;
 }
 .group-small:hover svg circle {
-  fill: var(--Yellow);
+  fill: var(--yellow);
 }
-.group-small:active svg circle {
+.group-small:active svg circle, .group-small_active svg circle {
   fill: var(--black);
 }
 
@@ -407,11 +408,11 @@ a, button {
   cursor: pointer;
 }
 .close-secondary:hover svg path {
-  fill: var(--Yellow);
+  fill: var(--yellow);
   stroke: black;
   stroke-width: 0.2;
 }
-.close-secondary:active svg path {
+.close-secondary:active svg path, .close-secondary_active svg path {
   fill: var(--black);
 }
 
@@ -419,9 +420,9 @@ a, button {
   cursor: pointer;
 }
 .close-primary:hover svg path {
-  fill: var(--Yellow);
+  fill: var(--yellow);
 }
-.close-primary:active svg path {
+.close-primary:active svg path, .close-primary_active svg path {
   fill: var(--black);
 }
 
@@ -430,10 +431,10 @@ a, button {
 }
 .vk:hover svg path {
   fill: var(--black);
-  stroke: var(--Yellow);
+  stroke: var(--yellow);
   stroke-width: 0.2;
 }
-.vk:active svg path {
+.vk:active svg path, .vk_active svg path {
   stroke: var(--white);
   fill: var(--white);
 }
@@ -443,10 +444,10 @@ a, button {
 }
 .telegram:hover svg path {
   fill: var(--black);
-  stroke: var(--Yellow);
+  stroke: var(--yellow);
   stroke-width: 0.2;
 }
-.telegram:active svg path {
+.telegram:active svg path, .telegram_active svg path {
   stroke: var(--white);
   fill: var(--white);
 }
@@ -456,10 +457,10 @@ a, button {
 }
 .whatsup:hover svg path {
   fill: var(--black);
-  stroke: var(--Yellow);
+  stroke: var(--yellow);
   stroke-width: 0.2;
 }
-.whatsup:active svg path {
+.whatsup:active svg path, .whatsup_active svg path {
   stroke: var(--white);
   fill: var(--white);
 }
@@ -469,10 +470,10 @@ a, button {
 }
 .yt:hover svg path {
   fill: var(--black);
-  stroke: var(--Yellow);
+  stroke: var(--yellow);
   stroke-width: 0.2;
 }
-.yt:active svg path {
+.yt:active svg path, .yt_active svg path {
   stroke: var(--white);
   fill: var(--white);
 }
@@ -535,7 +536,7 @@ a, button {
   border: 1px solid var(--black);
 }
 .custom-radio:hover + label:before {
-  background: var(--Yellow);
+  background: var(--yellow);
 }
 .custom-radio:checked + label:before {
   background: transparent;
@@ -553,8 +554,9 @@ a, button {
 /** btn**/
 .btn {
   padding: 13px 45px;
-  background: var(--Yellow);
+  background: var(--yellow);
   border: 1px solid var(--black);
+  border-left: none;
   height: 50px;
   cursor: pointer;
 }
@@ -562,17 +564,17 @@ a, button {
   background: var(--black);
 }
 .btn:hover svg path {
-  stroke: var(--Yellow);
+  stroke: var(--yellow);
 }
 .btn:active {
   background: var(--black);
-  border: 1px solid var(--Yellow);
+  border: 1px solid var(--yellow);
 }
 .btn:active svg path {
-  stroke: var(--Yellow);
+  stroke: var(--yellow);
 }
 .btn:focus {
-  background: var(--Yellow);
+  background: var(--yellow);
   border: 3px solid var(--black);
 }
 .btn:focus svg path {
@@ -587,15 +589,15 @@ a, button {
   width: 100%;
 }
 
-.btn-collection button {
-  background: var(--Yellow);
+.btn-collection {
+  background: var(--yellow);
   padding: 24px 94px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
 }
-.btn-collection button h3 {
+.btn-collection p {
   font-style: normal;
   font-weight: var(--fw-black);
   font-size: 18px;
@@ -606,46 +608,46 @@ a, button {
   display: flex;
   align-items: center;
 }
-.btn-collection button h3 svg {
+.btn-collection p svg {
   margin-left: 10px;
 }
-.btn-collection button:hover {
+.btn-collection:hover {
   background: var(--black);
 }
-.btn-collection button:hover h3 {
-  color: var(--Yellow);
+.btn-collection:hover p {
+  color: var(--yellow);
 }
-.btn-collection button:hover h3 svg {
+.btn-collection:hover p svg {
   transform: rotate(45deg);
   transition: 1s;
 }
-.btn-collection button:hover h3 svg path {
-  fill: var(--Yellow);
+.btn-collection:hover p svg path {
+  fill: var(--yellow);
 }
-.btn-collection button:active {
+.btn-collection:active {
   background: var(--black);
-  border: 1px solid var(--Yellow);
+  border: 1px solid var(--yellow);
 }
-.btn-collection button:active h3 {
-  color: var(--Yellow);
+.btn-collection:active p {
+  color: var(--yellow);
 }
-.btn-collection button:active h3 svg {
+.btn-collection:active p svg {
   transform: rotate(45deg);
 }
-.btn-collection button:active h3 svg path {
-  fill: var(--Yellow);
+.btn-collection:active p svg path {
+  fill: var(--yellow);
 }
-.btn-collection button:focus {
-  background: var(--Yellow);
+.btn-collection:focus {
+  background: var(--yellow);
   border: 1px solid var(--black);
 }
-.btn-collection button:focus h3 {
+.btn-collection:focus p {
   color: var(--black);
 }
-.btn-collection button:focus h3 svg {
+.btn-collection:focus p svg {
   transform: rotate(0);
 }
-.btn-collection button:focus h3 svg path {
+.btn-collection:focus p svg path {
   fill: var(--black);
 }
 
@@ -666,20 +668,20 @@ a, button {
   color: var(--white);
 }
 .btn-basket button:hover {
-  background: var(--Yellow);
+  background: var(--yellow);
 }
 .btn-basket button:hover h3 {
   color: var(--black);
 }
 .btn-basket button:active {
-  background: var(--Yellow);
+  background: var(--yellow);
   border: 1px solid var(--black);
 }
 .btn-basket button:active h3 {
   color: var(--black);
 }
 .btn-basket button:focus {
-  border: 1px solid var(--Yellow);
+  border: 1px solid var(--yellow);
   background: var(--black);
 }
 .btn-basket button:focus h3 {
@@ -709,7 +711,11 @@ a, button {
   color: var(--black);
   font-weight: var(--fw-semibold);
 }
-.custom-checkbox + label:focus, .custom-checkbox + label active {
+.custom-checkbox + label:focus {
+  color: var(--black);
+  font-weight: var(--fw-semibold);
+}
+.custom-checkbox + label:active {
   color: var(--black);
   font-weight: var(--fw-semibold);
 }
@@ -723,6 +729,10 @@ a, button {
   position: relative;
   margin-right: 12px;
 }
+.custom-checkbox:checked + label {
+  color: var(--black);
+  font-weight: var(--fw-semibold);
+}
 .custom-checkbox:checked + label:before {
   border: 1px solid var(--black);
 }
@@ -731,7 +741,7 @@ a, button {
   background-image: url("../icons/checkbox.svg");
   width: 10px;
   height: 9px;
-  left: 4px;
+  left: 3px;
   position: absolute;
 }
 
@@ -768,6 +778,11 @@ a, button {
 .header {
   background: var(--grey);
   padding: 15px 0;
+}
+@media (max-width: 960px) {
+  .header .search {
+    display: none;
+  }
 }
 .header__burger-menu {
   display: none;
@@ -822,15 +837,15 @@ a, button {
     display: none;
   }
 }
+.nav_main {
+  margin-top: 30px;
+}
 .nav ul {
   width: 100%;
   display: flex;
   align-items: center;
   list-style: none;
   justify-content: space-between;
-  gap: 67px;
-}
-.nav ul li {
   gap: 67px;
 }
 .nav ul li a {
@@ -862,7 +877,7 @@ a, button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #474747;
+  border-bottom: 1px solid var(--linecolor);
   padding-bottom: 40px;
 }
 @media (max-width: 1024px) {
@@ -890,7 +905,7 @@ a, button {
 }
 .footer__menu_item a {
   display: block;
-  color: var(--Yellow);
+  color: var(--yellow);
   font-weight: var(--fw-bold);
   font-size: 14px;
   line-height: 17px;
@@ -919,7 +934,7 @@ a, button {
   line-height: 22px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--Yellow);
+  color: var(--yellow);
   margin-bottom: 10px;
 }
 .footer__menu_item ul li {
@@ -1141,10 +1156,6 @@ a, button {
   width: 100%;
 }
 
-p {
-  text-align: center;
-}
-
 .marquee-infinite {
   margin: 30px auto;
   max-width: 100%;
@@ -1195,6 +1206,70 @@ p {
   100% {
     transform: translateX(-50%);
   }
+}
+/** block **/
+.header-main_block {
+  display: flex;
+}
+.header-main__img picture {
+  width: 100%;
+}
+.header-main__img picture img {
+  max-width: 705px;
+}
+.header-main__menu {
+  width: 100%;
+  padding: 21px 165px 0 30px;
+}
+.header-main h2 {
+  font-weight: var(--fw-bold);
+  font-size: 80px;
+  line-height: 70px;
+  text-transform: uppercase;
+  color: var(--black);
+  white-space: pre-line;
+  height: 365px;
+}
+.header-main h2 span {
+  display: flex;
+  text-align: end;
+  white-space: pre-line;
+  max-width: 384px;
+  width: 100%;
+}
+.header-main__circle img {
+  width: 138px;
+  height: 138px;
+}
+
+/** abstract **/
+/** Шрифт **/
+:root {
+  /**Шрифты**/
+  --alumnisans:"Alumni Sans";
+  /** font-weight **/
+  --fw-regular:400;
+  --fw-medium:500;
+  --fw-semibold:600;
+  --fw-bold:700;
+  --fw-black:800;
+  --fs-title:30px;
+}
+
+/** Цвета **/
+:root {
+  /** Цвета **/
+  --black: #000000;
+  --white:#FFFFFF;
+  --silver:#D9D9D9;
+  --yellow:#DBFF4E;
+  --grey:#B8B6B6;
+  --darkgrey:#444444;
+  --red:#FF0000;
+  --lightblack:#303030;
+  --lightgrey:#4F4F4F;
+  --supportgrey:#878787;
+  --linecolor:#474747;
 }
 
 /*# sourceMappingURL=style.css.map */
