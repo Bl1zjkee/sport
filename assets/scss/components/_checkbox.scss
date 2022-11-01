@@ -18,7 +18,11 @@
       color: var(--black);
       font-weight: var(--fw-semibold);
     }
-    &:focus,active{
+    &:focus{
+        color: var(--black);
+        font-weight: var(--fw-semibold);
+      }
+    &:active{
       color: var(--black);
       font-weight: var(--fw-semibold);
     }
@@ -34,6 +38,11 @@
     position: relative;
     margin-right: 12px;
   }
+
+  &:checked+label{
+    color: var(--black);
+    font-weight: var(--fw-semibold);
+  }
   &:checked+label:before{
     border: 1px solid var(--black);
   }
@@ -42,7 +51,7 @@
     background-image: url("../icons/checkbox.svg");
     width: 10px;
     height: 9px;
-    left: 4px;
+    left: 3px;
     position: absolute;
   }
 }

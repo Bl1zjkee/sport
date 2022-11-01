@@ -19,7 +19,7 @@ display: inline-flex;
     border: 1px solid var(--black);
   }
   &:hover+label:before{
-background: var(--Yellow);
+background: var(--yellow);
   }
 
   &:checked+label:before{
