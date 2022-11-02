@@ -14,11 +14,12 @@
     }
   }
 
-  h4{
+  a{
     font-weight: var(--fw-semibold);
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
+    display: block;
     color: var(--black);
   }
   span{
@@ -29,7 +30,7 @@
     text-transform: uppercase;
     color: var(--darkgrey);
   }
-  &__sale{
+  &__price{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,7 +96,7 @@ position: relative;
       display: block;
     }
   }
-  h4{
+  a{
     font-weight: var(--fw-semibold);
     font-size: 20px;
     line-height: 24px;

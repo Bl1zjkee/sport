@@ -1,0 +1,50 @@
+.subscription{
+  max-width: 350px;
+  width: 100%;
+  background:var(--background-black);
+  padding: 24px 20px ;
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+  h3{
+    font-weight: var(--fw-bold);
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 13px;
+  }
+  p{
+    font-weight: var(--fw-semibold);
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--supportgrey);
+    margin-top: 6px;
+  }
+  &_small {
+     padding: 13px 26px;
+     border: none;
+     border-bottom-right-radius: 10px;
+     border-top-right-radius: 10px;
+     max-width: 75px;
+     width: 100%;
+   }
+  &_item{
+    display: flex;
+  }
+&_input{
+  max-width: 235px;
+  width: 100%;
+  background: var(--lightblack);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-primory);
+  line-height: var(--lh-17);
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  border: 1px solid var(--lightgrey);
+  padding: 16px 0 17px 20px;
+}
+}

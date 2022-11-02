@@ -35,22 +35,6 @@
     }
 
   }
-
-  &__active{
-    svg{
-      path{
-        stroke:black;
-        stroke-width: 1.3px;
-      }
-    }
-  }
-  &_mobile{
-    @media (max-width: 960px) {
-      display: none;
-    }
-  }
-
-
 }
 
 .favorite{
@@ -86,20 +70,6 @@
     }
 
   }
-  &__active{
-    svg{
-      path{
-        stroke:black;
-        stroke-width: 1.3px;
-      }
-    }
-  }
-
-  &_mobile{
-    @media (max-width: 960px) {
-      display: none;
-    }
-  }
 }
 
 .user{
@@ -133,12 +103,6 @@
           fill: (var(--white));
         }
       }
-    }
-
-  }
-  &_mobile{
-    @media (max-width: 960px) {
-      display: none;
     }
   }
 }

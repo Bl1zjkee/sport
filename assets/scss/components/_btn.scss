@@ -11,7 +11,7 @@
 
     svg {
       path {
-        stroke: var(--yellow);
+        fill: var(--yellow);
       }
     }
   }
@@ -22,7 +22,7 @@
 
     svg {
       path {
-        stroke: var(--yellow);
+        fill: var(--yellow);
       }
     }
   }
@@ -33,30 +33,18 @@
 
     svg {
       path {
-        stroke: var(--black);
+        fill: var(--black);
       }
     }
   }
-
-  &_small {
-    padding: 13px 26px;
-    border: none;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    max-width: 75px;
-    width: 100%;
-  }
-}
-
-.btn-collection {
-
+  &_collection{
     background: var(--yellow);
-    padding: 24px 94px;
+    padding: 24px 73px 24px 94px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-
+margin-top: 278px;
     p {
       font-style: normal;
       font-weight: var(--fw-black);
@@ -68,12 +56,12 @@
       display: flex;
       align-items: center;
 
-svg{
-  margin-left: 10px;
-  path{
+      svg{
+        margin-left: 10px;
+        path{
 
-  }
-}
+        }
+      }
     }
 
     &:hover {
@@ -82,7 +70,7 @@ svg{
         color: var(--yellow);
 
         svg{
-            transform: rotate(45deg);
+          transform: rotate(45deg);
           transition: 1s;
           path{
             fill:var(--yellow);
@@ -122,51 +110,51 @@ svg{
       }
     }
 
-}
-
-
-.btn-basket {
-  button {
-    background: var(--black);
-    padding: 16px 89px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-
-    h3 {
-      font-weight: var(--fw-bold);
-      font-size: 20px;
-      line-height: 24px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--white);
-    }
-
-    &:hover {
-      background: var(--yellow);
-
-      h3 {
-        color: var(--black);
-      }
-    }
-
-    &:active {
-      background: var(--yellow);
-      border: 1px solid var(--black);
-
-      h3 {
-        color: var(--black);
-      }
-    }
-
-    &:focus {
-      border: 1px solid var(--yellow);
+  }
+  &_basket {
+    button {
       background: var(--black);
+      padding: 16px 89px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
 
       h3 {
+        font-weight: var(--fw-bold);
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
         color: var(--white);
+      }
+
+      &:hover {
+        background: var(--yellow);
+
+        h3 {
+          color: var(--black);
+        }
+      }
+
+      &:active {
+        background: var(--yellow);
+        border: 1px solid var(--black);
+
+        h3 {
+          color: var(--black);
+        }
+      }
+
+      &:focus {
+        border: 1px solid var(--yellow);
+        background: var(--black);
+
+        h3 {
+          color: var(--white);
+        }
       }
     }
   }
+
 }
