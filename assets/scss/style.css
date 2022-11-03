@@ -1392,6 +1392,7 @@ a, button {
   display: flex;
   align-items: center;
   gap: 40px;
+  margin-bottom: 80px;
 }
 .main__gallery picture img {
   max-width: 250px;
