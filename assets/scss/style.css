@@ -60,10 +60,10 @@ table {
 }
 
 body, button {
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
 }
 
-a, button {
+a, button, label {
   cursor: pointer;
   text-decoration: none;
 }
@@ -73,6 +73,12 @@ a, button {
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /** components **/
@@ -98,7 +104,7 @@ a, button {
   font-weight: var(--fw-regular);
   font-size: 14px;
   line-height: 17px;
-  letter-spacing: var(--ls-04);
+  letter-spacing: var(--ls-regular);
   color: var(--black);
 }
 .input__item input:focus-visible {
@@ -129,7 +135,7 @@ a, button {
   padding: 22px 20px 21px 72px;
 }
 .soc-input input::placeholder {
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
   font-weight: var(--fw-medium);
   font-size: 14px;
   line-height: 17px;
@@ -187,7 +193,7 @@ a, button {
   line-height: 24px;
   color: var(--black);
   text-transform: uppercase;
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
 }
 .promocod_item {
   position: relative;
@@ -200,7 +206,7 @@ a, button {
   border: 1px solid var(--lightgrey);
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
   font-weight: var(--fw-semibold);
   font-size: 14px;
   line-height: 17px;
@@ -378,6 +384,7 @@ a, button {
 
 .close-secondary {
   cursor: pointer;
+  display: flex;
 }
 .close-secondary:hover svg path {
   fill: var(--yellow);
@@ -614,7 +621,7 @@ a, button {
 .btn_collection:focus p svg path {
   fill: var(--black);
 }
-.btn_basket button {
+.btnket button {
   background: var(--black);
   padding: 16px 89px;
   display: flex;
@@ -622,7 +629,7 @@ a, button {
   justify-content: center;
   border: none;
 }
-.btn_basket button h3 {
+.btnket button h3 {
   font-weight: var(--fw-bold);
   font-size: 20px;
   line-height: 24px;
@@ -630,24 +637,24 @@ a, button {
   text-transform: uppercase;
   color: var(--white);
 }
-.btn_basket button:hover {
+.btnket button:hover {
   background: var(--yellow);
 }
-.btn_basket button:hover h3 {
+.btnket button:hover h3 {
   color: var(--black);
 }
-.btn_basket button:active {
+.btnket button:active {
   background: var(--yellow);
   border: 1px solid var(--black);
 }
-.btn_basket button:active h3 {
+.btnket button:active h3 {
   color: var(--black);
 }
-.btn_basket button:focus {
+.btnket button:focus {
   border: 1px solid var(--yellow);
   background: var(--black);
 }
-.btn_basket button:focus h3 {
+.btnket button:focus h3 {
   color: var(--white);
 }
 
@@ -661,7 +668,7 @@ a, button {
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
   font-weight: var(--fw-regular);
   font-size: 12px;
   line-height: 16px;
@@ -712,7 +719,7 @@ a, button {
 .subscription {
   max-width: 350px;
   width: 100%;
-  background: var(--background-black);
+  background: var(--bg-black);
   padding: 24px 20px;
 }
 @media (max-width: 768px) {
@@ -752,7 +759,7 @@ a, button {
   width: 100%;
   background: var(--lightblack);
   font-weight: var(--fw-regular);
-  font-size: var(--fs-primory);
+  font-size: var(--fs-primary);
   line-height: var(--lh-17);
   display: flex;
   align-items: center;
@@ -764,7 +771,7 @@ a, button {
 
 /** header **/
 .header {
-  background: var(--grey);
+  background: var(--white);
   padding: 15px 0;
 }
 @media (max-width: 960px) {
@@ -1256,12 +1263,11 @@ a, button {
 }
 .main h2 {
   font-weight: var(--fw-bold);
-  font-size: 80px;
+  font-size: var(--fs-title);
   line-height: 70px;
   text-transform: uppercase;
   color: var(--black);
   white-space: pre-line;
-  height: 365px;
 }
 .main h2 span {
   display: flex;
@@ -1316,7 +1322,7 @@ a, button {
 .main__title-collection h3 {
   font-style: italic;
   font-weight: var(--fw-regular);
-  font-size: var(--fs-100);
+  font-size: var(--fs-big-title);
   line-height: var(--lh-120);
   text-transform: uppercase;
   color: var(--black);
@@ -1324,18 +1330,18 @@ a, button {
 .main__title-collection span {
   font-style: italic;
   font-weight: var(--fw-regular);
-  font-size: var(--fs-60);
+  font-size: var(--fs-medium-title);
   line-height: var(--lh-72);
   text-transform: uppercase;
   color: var(--black);
 }
 .main__stroky {
-  font-weight: 400;
-  font-size: 80px;
-  line-height: 96px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-title);
+  line-height: var(--lh-96px);
   text-transform: uppercase;
-  color: #FFFFFF;
-  background: #000000;
+  color: var(--white);
+  background: var(--black);
   width: 100%;
   height: 111px;
 }
@@ -1351,16 +1357,16 @@ a, button {
 }
 .main__popular h3 {
   font-style: normal;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 96px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-96px);
   text-transform: uppercase;
-  color: #000000;
+  color: var(--black);
 }
 .main__popular a {
   font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   color: var(--black);
   display: flex;
   align-items: center;
@@ -1386,7 +1392,7 @@ a, button {
 }
 .main__runningText h3 {
   font-weight: var(--fw-bold);
-  font-size: 80px;
+  font-size: var(--fs-title);
   line-height: var(--lh-70);
   text-transform: uppercase;
   color: var(--black);
@@ -1403,11 +1409,221 @@ a, button {
 }
 
 /** Каталог **/
+.catalog-top__runningText {
+  padding-top: 2px;
+}
+.catalog-top__runningText p {
+  background: var(--black);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-01);
+  text-transform: uppercase;
+  color: var(--white);
+}
+.catalog-top__runningText_big {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.catalog-top__runningText_big p {
+  font-style: italic;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-40);
+  line-height: var(--lh-48);
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.catalog-menu {
+  background: var(--black);
+  padding-top: 67px;
+  padding-bottom: 31px;
+}
+.catalog-menu__block {
+  display: flex;
+  gap: 503px;
+}
+.catalog-menu__block h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-96px);
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.catalog-menu__list {
+  text-align: right;
+}
+.catalog-menu__list ul li {
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.catalog-menu__list ul li:nth-of-type(1) {
+  margin-top: 0;
+}
+.catalog-menu__list ul li a {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-40);
+  line-height: var(--lh-48);
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+.catalog-menu__list ul li a svg {
+  margin-left: 16px;
+}
+.catalog-menu__list ul li a:hover {
+  color: var(--yellow);
+}
+.catalog-menu__list ul li a:hover svg path {
+  fill: var(--yellow);
+}
+
+.catalog-products {
+  margin-top: 40px;
+}
+.catalog-products__text {
+  display: flex;
+  align-items: center;
+  gap: 545px;
+}
+.catalog-products__text h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-40);
+  line-height: var(--lh-48);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.catalog-products__text span {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-40);
+  line-height: var(--lh-48);
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+}
+.catalog-products__text span svg {
+  margin-left: 19px;
+}
+.catalog-products__filters {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  margin-top: 10px;
+}
+.catalog-products__group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.catalog-products_filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.catalog-products_filter label {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.catalog-filter-list {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 42px;
+}
+.catalog-filter-list__inner {
+  display: flex;
+  gap: 152px;
+}
+.catalog-filter-list__name {
+  max-width: 175px;
+  width: 100%;
+}
+.catalog-filter-list__name ul {
+  list-style: none;
+  width: 100%;
+}
+.catalog-filter-list__name ul li {
+  margin-top: 5px;
+}
+.catalog-filter-list__name ul li:nth-of-type(1) {
+  margin-top: 0;
+}
+.catalog-filter-list__name ul li a {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  text-transform: uppercase;
+  color: var(--grey);
+  display: flex;
+  align-items: center;
+  max-width: 175px;
+  width: 100%;
+  justify-content: space-between;
+}
+.catalog-filter-list__name ul li a:active, .catalog-filter-list__name ul li a_active {
+  color: var(--black);
+}
+.catalog-filter-list__size {
+  max-width: 141px;
+  width: 100%;
+}
+.catalog-filter-list__size h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 5px;
+}
+
+.catalog-card {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+.catalog-card__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.radio-size {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.radio-size + label {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-left: 20px;
+}
+.radio-size + label:nth-of-type(1) {
+  margin-left: 0;
+}
+.radio-size:checked + label {
+  color: var(--black);
+  font-weight: var(--fw-bold);
+}
+
 /** abstract **/
 /** Шрифт **/
 :root {
   /**Шрифты**/
-  --alumnisans: "Alumni Sans";
+  --font-family: "Alumni Sans";
   /** font-weight **/
   --fw-regular: 400;
   --fw-medium: 500;
@@ -1417,13 +1633,15 @@ a, button {
   /**font-size**/
   --fs-title: 80px;
   --fs-title-footer: 18px;
-  --fs-primory: 14px;
+  --fs-primary: 14px;
   --fs--btn:12px;
-  --fs-name-card:20px;
-  --fs-100:100px;
-  --fs-60:60px;
+  --fs-card-name:20px;
+  --fs-big-title:100px;
+  --fs-medium-title:60px;
+  --fs-40:40px;
   /**line-height **/
   --lh-17:17px;
+  --lh-24:24px;
   --lh-48:48px;
   --lh-22:22px;
   --lh-72:72px;
@@ -1431,7 +1649,8 @@ a, button {
   --lh-96px:96px;
   --lh-120:120px;
   /**letter-spacing**/
-  --ls-04:0.04em;
+  --ls-regular:0.04em;
+  --ls-01:0.01em;
 }
 
 /** Цвета **/
@@ -1448,7 +1667,7 @@ a, button {
   --lightgrey:#4F4F4F;
   --supportgrey:#878787;
   --linecolor:#474747;
-  --background-black:#1B1B1B;
+  --bg-black:#1B1B1B;
 }
 
 /*# sourceMappingURL=style.css.map */

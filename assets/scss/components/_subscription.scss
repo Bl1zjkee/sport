@@ -1,7 +1,7 @@
 .subscription{
   max-width: 350px;
   width: 100%;
-  background:var(--background-black);
+  background:var(--bg-black);
   padding: 24px 20px ;
   @media (max-width: 768px) {
     margin: 0 auto;
@@ -38,7 +38,7 @@
   width: 100%;
   background: var(--lightblack);
   font-weight: var(--fw-regular);
-  font-size: var(--fs-primory);
+  font-size: var(--fs-primary);
   line-height: var(--lh-17);
   display: flex;
   align-items: center;

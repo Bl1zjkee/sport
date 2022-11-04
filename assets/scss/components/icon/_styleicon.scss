@@ -195,7 +195,7 @@
   position: absolute;
   top:22px;
   right: 58px;
-  &:hover,active{
+  &:hover, active{
     svg{
       path{
         fill: black;
@@ -255,6 +255,7 @@
 }
 .close-secondary{
   cursor: pointer;
+  display: flex;
   &:hover{
     svg{
       path{

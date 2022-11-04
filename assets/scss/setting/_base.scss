@@ -5,9 +5,9 @@
 }
 }
 body,button{
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
 }
-a,button{
+a,button,label{
   cursor: pointer;
   text-decoration: none;
 }
@@ -16,4 +16,9 @@ a,button{
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+.wrapper{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
