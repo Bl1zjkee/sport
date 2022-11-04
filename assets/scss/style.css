@@ -60,7 +60,7 @@ table {
 }
 
 body, button {
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
 }
 
 a, button {
@@ -78,8 +78,8 @@ a, button {
 /** components **/
 /** Input **/
 .input label {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-transform: uppercase;
   color: var(--black);
   font-weight: var(--fw-semibold);
@@ -96,9 +96,9 @@ a, button {
 }
 .input__item input::placeholder {
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: var(--ls-04);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-regular);
   color: var(--black);
 }
 .input__item input:focus-visible {
@@ -129,13 +129,13 @@ a, button {
   padding: 22px 20px 21px 72px;
 }
 .soc-input input::placeholder {
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
   font-weight: var(--fw-medium);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   display: flex;
   align-items: center;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ls-regular);
   font-feature-settings: "liga" off;
   color: var(--grey);
 }
@@ -150,11 +150,11 @@ a, button {
 }
 .soc-input a {
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   display: flex;
   align-items: center;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ls-regular);
   text-decoration-line: underline;
   font-feature-settings: "liga" off;
   color: var(--grey);
@@ -175,19 +175,19 @@ a, button {
   max-width: 255px;
   width: 100%;
   font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
 }
 .promocod input:focus-visible {
   outline: none;
 }
 .promocod input::placeholder {
   font-weight: var(--fw-semibold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   color: var(--black);
   text-transform: uppercase;
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
 }
 .promocod_item {
   position: relative;
@@ -200,12 +200,12 @@ a, button {
   border: 1px solid var(--lightgrey);
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   align-items: center;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ls-regular);
   color: var(--white);
   padding: 16px 102px 17px 20px;
 }
@@ -222,7 +222,7 @@ a, button {
 .search:hover svg path {
   stroke: black;
   stroke-width: 0.2px;
-  border: 0.2px solid #000000;
+  border: 0.2px solid var(--black);
   fill: var(--yellow);
 }
 .search:active svg path, .search_active svg path {
@@ -307,8 +307,8 @@ a, button {
 }
 .cart__quantity span {
   font-weight: var(--fw-semibold);
-  font-size: 12px;
-  line-height: 12px;
+  font-size: var(--fs--btn);
+  line-height: var(--lh-12);
   color: var(--black);
 }
 
@@ -495,7 +495,7 @@ a, button {
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-size: 12px;
+  font-size: var(--fs--btn);
   color: red;
   cursor: pointer;
 }
@@ -552,7 +552,45 @@ a, button {
 .btn:focus svg path {
   fill: var(--black);
 }
-.btn_collection {
+
+.btn-basket button {
+  background: var(--black);
+  padding: 16px 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.btn-basket button h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  letter-spacing: var(--ls-06);
+  text-transform: uppercase;
+  color: var(--white);
+}
+.btn-basket button:hover {
+  background: var(--yellow);
+}
+.btn-basket button:hover h3 {
+  color: var(--black);
+}
+.btn-basket button:active {
+  background: var(--yellow);
+  border: 1px solid var(--black);
+}
+.btn-basket button:active h3 {
+  color: var(--black);
+}
+.btn-basket button:focus {
+  border: 1px solid var(--yellow);
+  background: var(--black);
+}
+.btn-basket button:focus h3 {
+  color: var(--white);
+}
+
+.btn-collection {
   background: var(--yellow);
   padding: 24px 73px 24px 94px;
   display: flex;
@@ -561,94 +599,57 @@ a, button {
   border: none;
   margin-top: 278px;
 }
-.btn_collection p {
-  font-style: normal;
+.btn-collection p {
   font-weight: var(--fw-black);
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.1em;
+  font-size: var(--fs-title-footer);
+  line-height: var(--lh-22);
+  letter-spacing: var(--ls-01);
   text-transform: uppercase;
   color: var(--black);
   display: flex;
   align-items: center;
 }
-.btn_collection p svg {
+.btn-collection p svg {
   margin-left: 10px;
 }
-.btn_collection:hover {
+.btn-collection:hover {
   background: var(--black);
 }
-.btn_collection:hover p {
+.btn-collection:hover p {
   color: var(--yellow);
 }
-.btn_collection:hover p svg {
+.btn-collection:hover p svg {
   transform: rotate(45deg);
   transition: 1s;
 }
-.btn_collection:hover p svg path {
+.btn-collection:hover p svg path {
   fill: var(--yellow);
 }
-.btn_collection:active {
+.btn-collection:active {
   background: var(--black);
   border: 1px solid var(--yellow);
 }
-.btn_collection:active p {
+.btn-collection:active p {
   color: var(--yellow);
 }
-.btn_collection:active p svg {
+.btn-collection:active p svg {
   transform: rotate(45deg);
 }
-.btn_collection:active p svg path {
+.btn-collection:active p svg path {
   fill: var(--yellow);
 }
-.btn_collection:focus {
+.btn-collection:focus {
   background: var(--yellow);
   border: 1px solid var(--black);
 }
-.btn_collection:focus p {
+.btn-collection:focus p {
   color: var(--black);
 }
-.btn_collection:focus p svg {
+.btn-collection:focus p svg {
   transform: rotate(0);
 }
-.btn_collection:focus p svg path {
+.btn-collection:focus p svg path {
   fill: var(--black);
-}
-.btn_basket button {
-  background: var(--black);
-  padding: 16px 89px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-}
-.btn_basket button h3 {
-  font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--white);
-}
-.btn_basket button:hover {
-  background: var(--yellow);
-}
-.btn_basket button:hover h3 {
-  color: var(--black);
-}
-.btn_basket button:active {
-  background: var(--yellow);
-  border: 1px solid var(--black);
-}
-.btn_basket button:active h3 {
-  color: var(--black);
-}
-.btn_basket button:focus {
-  border: 1px solid var(--yellow);
-  background: var(--black);
-}
-.btn_basket button:focus h3 {
-  color: var(--white);
 }
 
 /** checkbox**/
@@ -661,10 +662,10 @@ a, button {
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-family: var(--alumnisans);
+  font-family: var(--font-family);
   font-weight: var(--fw-regular);
-  font-size: 12px;
-  line-height: 16px;
+  font-size: var(--fs--btn);
+  line-height: var(--lh-16);
   font-feature-settings: "liga" off;
   color: var(--grey);
   cursor: pointer;
@@ -708,11 +709,11 @@ a, button {
   position: absolute;
 }
 
-/** block-btn-input**/
+/** --ls-regular-input**/
 .subscription {
   max-width: 350px;
   width: 100%;
-  background: var(--background-black);
+  background: var(--bg-black);
   padding: 24px 20px;
 }
 @media (max-width: 768px) {
@@ -722,21 +723,21 @@ a, button {
 }
 .subscription h3 {
   font-weight: var(--fw-bold);
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-title-footer);
+  line-height: var(--lh-22);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 13px;
 }
 .subscription p {
   font-weight: var(--fw-semibold);
-  font-size: 12px;
-  line-height: 12px;
+  font-size: var(--fs--btn);
+  line-height: var(--lh-12);
   color: var(--supportgrey);
   margin-top: 6px;
 }
-.subscription_small {
+.subscription__small {
   padding: 13px 26px;
   border: none;
   border-bottom-right-radius: 10px;
@@ -744,19 +745,19 @@ a, button {
   max-width: 75px;
   width: 100%;
 }
-.subscription_item {
+.subscription__item {
   display: flex;
 }
-.subscription_input {
+.subscription__input {
   max-width: 235px;
   width: 100%;
   background: var(--lightblack);
   font-weight: var(--fw-regular);
-  font-size: var(--fs-primory);
+  font-size: var(--fs-primary);
   line-height: var(--lh-17);
   display: flex;
   align-items: center;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--ls-regular);
   color: var(--white);
   border: 1px solid var(--lightgrey);
   padding: 16px 0 17px 20px;
@@ -809,8 +810,8 @@ a, button {
 }
 .header__icon_bay span {
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 12px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-12);
   color: var(--black);
 }
 .header__block {
@@ -840,9 +841,9 @@ a, button {
   position: relative;
   display: block;
   font-weight: var(--fw-semibold);
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.08em;
+  font-size: var(--fs-title-footer);
+  line-height: var(--lh-22);
+  letter-spacing: var(--ls-08em);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -895,32 +896,32 @@ a, button {
   display: block;
   color: var(--yellow);
   font-weight: var(--fw-bold);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
 }
 .footer__menu_item a:nth-of-type(3) {
   margin-top: 13px;
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   color: var(--white);
 }
 .footer__menu_item span {
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   color: var(--white);
   display: block;
 }
 .footer__menu_item h3 {
   font-weight: var(--fw-bold);
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-title-footer);
+  line-height: var(--lh-22);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
   color: var(--yellow);
   margin-bottom: 10px;
@@ -931,18 +932,18 @@ a, button {
 .footer__menu_item ul li span {
   font-style: italic;
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
   color: #AAA9A9;
 }
 .footer__menu_item ul li a {
   font-style: normal;
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -990,9 +991,9 @@ a, button {
 }
 .footer__document a {
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   color: var(--white);
 }
 @media (max-width: 576px) {
@@ -1047,8 +1048,8 @@ a, button {
 }
 .card a {
   font-weight: var(--fw-semibold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-transform: uppercase;
   display: block;
   color: var(--black);
@@ -1056,34 +1057,34 @@ a, button {
 .card span {
   font-style: italic;
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
-.card__price {
+.card__add-to-cart {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
 }
-.card__price p {
+.card__add-to-cart p {
   font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-transform: uppercase;
   color: var(--black);
 }
-.card__price a {
+.card__add-to-cart a {
   font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-decoration-line: underline;
   color: var(--black);
   display: flex;
   align-items: center;
 }
-.card__price a:after {
+.card__add-to-cart a:after {
   content: "";
   display: block;
   background-image: url("../icons/sale_arrow.svg");
@@ -1127,16 +1128,16 @@ a, button {
 }
 .card-small a {
   font-weight: var(--fw-semibold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-transform: uppercase;
   color: var(--black);
 }
 .card-small span {
   font-style: italic;
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
@@ -1256,12 +1257,11 @@ a, button {
 }
 .main h2 {
   font-weight: var(--fw-bold);
-  font-size: 80px;
-  line-height: 70px;
+  font-size: var(--fs-title);
+  line-height: var(--lh-70);
   text-transform: uppercase;
   color: var(--black);
   white-space: pre-line;
-  height: 365px;
 }
 .main h2 span {
   display: flex;
@@ -1316,7 +1316,7 @@ a, button {
 .main__title-collection h3 {
   font-style: italic;
   font-weight: var(--fw-regular);
-  font-size: var(--fs-100);
+  font-size: var(--fs-big-title);
   line-height: var(--lh-120);
   text-transform: uppercase;
   color: var(--black);
@@ -1324,18 +1324,18 @@ a, button {
 .main__title-collection span {
   font-style: italic;
   font-weight: var(--fw-regular);
-  font-size: var(--fs-60);
+  font-size: var(--fs-medium-title);
   line-height: var(--lh-72);
   text-transform: uppercase;
   color: var(--black);
 }
 .main__stroky {
-  font-weight: 400;
-  font-size: 80px;
-  line-height: 96px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-title);
+  line-height: var(--lh-96px);
   text-transform: uppercase;
-  color: #FFFFFF;
-  background: #000000;
+  color: var(--white);
+  background: var(--black);
   width: 100%;
   height: 111px;
 }
@@ -1350,17 +1350,16 @@ a, button {
   margin-bottom: 70px;
 }
 .main__popular h3 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 96px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-96px);
   text-transform: uppercase;
-  color: #000000;
+  color: var(--black);
 }
 .main__popular a {
   font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   color: var(--black);
   display: flex;
   align-items: center;
@@ -1386,7 +1385,7 @@ a, button {
 }
 .main__runningText h3 {
   font-weight: var(--fw-bold);
-  font-size: 80px;
+  font-size: var(--fs-title);
   line-height: var(--lh-70);
   text-transform: uppercase;
   color: var(--black);
@@ -1407,7 +1406,7 @@ a, button {
 /** Шрифт **/
 :root {
   /**Шрифты**/
-  --alumnisans: "Alumni Sans";
+  --font-family: "Alumni Sans";
   /** font-weight **/
   --fw-regular: 400;
   --fw-medium: 500;
@@ -1417,21 +1416,28 @@ a, button {
   /**font-size**/
   --fs-title: 80px;
   --fs-title-footer: 18px;
-  --fs-primory: 14px;
+  --fs-primary: 14px;
   --fs--btn:12px;
-  --fs-name-card:20px;
-  --fs-100:100px;
-  --fs-60:60px;
+  --fs-card-name:20px;
+  --fs-big-title:100px;
+  --fs-medium-title:60px;
   /**line-height **/
+  --lh-12:12px;
+  --lh-16:16px;
   --lh-17:17px;
   --lh-48:48px;
   --lh-22:22px;
+  --lh-24:24px;
   --lh-72:72px;
   --lh-70:70px;
   --lh-96px:96px;
   --lh-120:120px;
   /**letter-spacing**/
-  --ls-04:0.04em;
+  --ls-regular:0.04em;
+  --ls-06:0.06em;
+  --ls-01:0.01em;
+  --ls-02:0.02em;
+  --ls-08:0.08em;
 }
 
 /** Цвета **/
@@ -1448,7 +1454,7 @@ a, button {
   --lightgrey:#4F4F4F;
   --supportgrey:#878787;
   --linecolor:#474747;
-  --background-black:#1B1B1B;
+  --bg-black:#1B1B1B;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -37,121 +37,121 @@
       }
     }
   }
-  &_collection{
-    background: var(--yellow);
-    padding: 24px 73px 24px 94px;
+}
+
+.btn-basket {
+  button {
+    background: var(--black);
+    padding: 16px 89px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
-margin-top: 278px;
-    p {
-      font-style: normal;
-      font-weight: var(--fw-black);
-      font-size: 18px;
-      line-height: 22px;
-      letter-spacing: 0.1em;
+
+    h3 {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-24);
+      letter-spacing: var(--ls-06);
       text-transform: uppercase;
-      color: var(--black);
-      display: flex;
-      align-items: center;
-
-      svg{
-        margin-left: 10px;
-        path{
-
-        }
-      }
+      color: var(--white);
     }
 
     &:hover {
-      background: var(--black);
-      p {
-        color: var(--yellow);
+      background: var(--yellow);
 
-        svg{
-          transform: rotate(45deg);
-          transition: 1s;
-          path{
-            fill:var(--yellow);
-          }
-        }
+      h3 {
+        color: var(--black);
       }
     }
 
     &:active {
-      background: var(--black);
-      border: 1px solid var(--yellow);
+      background: var(--yellow);
+      border: 1px solid var(--black);
 
-      p {
-        color: var(--yellow);
-
-        svg{
-          transform: rotate(45deg);
-          path{
-            fill:var(--yellow);
-          }
-        }
+      h3 {
+        color: var(--black);
       }
     }
 
     &:focus {
-      background: var(--yellow);
-      border: 1px solid var(--black);
+      border: 1px solid var(--yellow);
+      background: var(--black);
 
-      p {
-        color: var(--black);
-        svg{
-          transform: rotate(0);
-          path{
-            fill:var(--black);
-          }
+      h3 {
+        color: var(--white);
+      }
+    }
+  }
+}
+
+.btn-collection{
+  background: var(--yellow);
+  padding: 24px 73px 24px 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin-top: 278px;
+  p {
+    font-weight: var(--fw-black);
+    font-size: var(--fs-title-footer);
+    line-height: var(--lh-22);
+    letter-spacing: var(--ls-01);
+    text-transform: uppercase;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+
+    svg{
+      margin-left: 10px;
+      path{
+
+      }
+    }
+  }
+
+  &:hover {
+    background: var(--black);
+    p {
+      color: var(--yellow);
+
+      svg{
+        transform: rotate(45deg);
+        transition: 1s;
+        path{
+          fill:var(--yellow);
         }
       }
     }
-
   }
-  &_basket {
-    button {
-      background: var(--black);
-      padding: 16px 89px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
 
-      h3 {
-        font-weight: var(--fw-bold);
-        font-size: 20px;
-        line-height: 24px;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--white);
-      }
+  &:active {
+    background: var(--black);
+    border: 1px solid var(--yellow);
 
-      &:hover {
-        background: var(--yellow);
+    p {
+      color: var(--yellow);
 
-        h3 {
-          color: var(--black);
+      svg{
+        transform: rotate(45deg);
+        path{
+          fill:var(--yellow);
         }
       }
+    }
+  }
 
-      &:active {
-        background: var(--yellow);
-        border: 1px solid var(--black);
+  &:focus {
+    background: var(--yellow);
+    border: 1px solid var(--black);
 
-        h3 {
-          color: var(--black);
-        }
-      }
-
-      &:focus {
-        border: 1px solid var(--yellow);
-        background: var(--black);
-
-        h3 {
-          color: var(--white);
+    p {
+      color: var(--black);
+      svg{
+        transform: rotate(0);
+        path{
+          fill:var(--black);
         }
       }
     }

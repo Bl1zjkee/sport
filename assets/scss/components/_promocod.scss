@@ -8,18 +8,18 @@
     max-width: 255px;
     width: 100%;
     font-weight: var(--fw-bold);
-    font-size: 20px;
-    line-height: 24px;
+    font-size: var(--fs-card-name);
+    line-height: var(--lh-24);
     &:focus-visible{
       outline: none;
     }
     &::placeholder{
       font-weight: var(--fw-semibold);
-      font-size: 20px;
-      line-height: 24px;
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-24);
       color: var(--black);
       text-transform: uppercase;
-      font-family: var(--alumnisans);
+      font-family: var(--font-family);
     }
   }
 
@@ -38,12 +38,12 @@
       border: 1px solid var(--lightgrey);
       border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
-      font-family:var(--alumnisans);
+      font-family:var(--font-family);
       font-weight:var(--fw-semibold);
-      font-size: 14px;
-      line-height: 17px;
+      font-size: var(--fs-primary);
+      line-height: var(--lh-17);
       align-items: center;
-      letter-spacing: 0.04em;
+      letter-spacing: var(--ls-regular);
       color: var(--white);
       padding: 16px 102px 17px 20px;
     }
