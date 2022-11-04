@@ -22,7 +22,7 @@
     color: var(--supportgrey);
     margin-top: 6px;
   }
-  &_small {
+  &__small {
      padding: 13px 26px;
      border: none;
      border-bottom-right-radius: 10px;
@@ -30,10 +30,10 @@
      max-width: 75px;
      width: 100%;
    }
-  &_item{
+  &__item{
     display: flex;
   }
-&_input{
+&__input{
   max-width: 235px;
   width: 100%;
   background: var(--lightblack);
@@ -42,7 +42,6 @@
   line-height: var(--lh-17);
   display: flex;
   align-items: center;
-  line-height:var(--ls-regular);
   color: var(--white);
   border: 1px solid var(--lightgrey);
   padding: 16px 0 17px 20px;

@@ -39,6 +39,8 @@
 
 .favorite{
   cursor: pointer;
+  display: flex;
+  align-items: center;
   &:hover{
     svg{
       path:nth-of-type(1){
