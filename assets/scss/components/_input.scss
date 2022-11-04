@@ -1,7 +1,7 @@
 .input {
   label {
-    font-size: 20px;
-    line-height: 24px;
+    font-size:var(--fs-card-name);
+    line-height:var(--lh-24);
     text-transform: uppercase;
     color: var(--black);
     font-weight: var(--fw-semibold);
@@ -17,8 +17,8 @@
       padding: 22px 20px 21px 20px;
       &::placeholder {
         font-weight: var(--fw-regular);
-        font-size: 14px;
-        line-height: 17px;
+         font-size:var(--fs-primary);
+        line-height:var(--lh-17);
         letter-spacing: var( --ls-regular);
         color: var(--black);
       }

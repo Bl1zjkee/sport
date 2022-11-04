@@ -47,8 +47,8 @@
 
       span {
         font-weight: var(--fw-semibold);
-        font-size: 14px;
-        line-height: 12px;
+         font-size:var(--fs-primary);
+        line-height:var(--lh-12);
         color: var(--black);
       }
     }
@@ -86,9 +86,9 @@
         position: relative;
         display: block;
         font-weight: var(--fw-semibold);
-        font-size: 18px;
-        line-height: 22px;
-        letter-spacing: 0.08em;
+        font-size:var(--fs-title-footer);
+        line-height:var(--lh-22);
+       letter-spacing:var(--ls-08);
         text-transform: uppercase;
         color: var(--black);
       }

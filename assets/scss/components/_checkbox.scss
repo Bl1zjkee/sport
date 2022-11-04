@@ -8,8 +8,8 @@
     position: relative;
     font-family:var(--font-family);
     font-weight: var(--fw-regular);
-    font-size: 12px;
-    line-height: 16px;
+    font-size:var(--fs--btn);
+    line-height:var(--lh-16);
     font-feature-settings: 'liga' off;
     color: var(--grey);
     cursor: pointer;

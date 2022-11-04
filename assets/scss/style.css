@@ -84,8 +84,8 @@ a, button, label {
 /** components **/
 /** Input **/
 .input label {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-transform: uppercase;
   color: var(--black);
   font-weight: var(--fw-semibold);
@@ -102,8 +102,8 @@ a, button, label {
 }
 .input__item input::placeholder {
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   letter-spacing: var(--ls-regular);
   color: var(--black);
 }
@@ -137,11 +137,11 @@ a, button, label {
 .soc-input input::placeholder {
   font-family: var(--font-family);
   font-weight: var(--fw-medium);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   display: flex;
   align-items: center;
-  letter-spacing: 0.04em;
+  line-height: var(--ls-regular);
   font-feature-settings: "liga" off;
   color: var(--grey);
 }
@@ -156,11 +156,11 @@ a, button, label {
 }
 .soc-input a {
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   display: flex;
   align-items: center;
-  letter-spacing: 0.04em;
+  line-height: var(--ls-regular);
   text-decoration-line: underline;
   font-feature-settings: "liga" off;
   color: var(--grey);
@@ -181,16 +181,16 @@ a, button, label {
   max-width: 255px;
   width: 100%;
   font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
 }
 .promocod input:focus-visible {
   outline: none;
 }
 .promocod input::placeholder {
   font-weight: var(--fw-semibold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   color: var(--black);
   text-transform: uppercase;
   font-family: var(--font-family);
@@ -208,10 +208,10 @@ a, button, label {
   border-top-left-radius: 10px;
   font-family: var(--font-family);
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   align-items: center;
-  letter-spacing: 0.04em;
+  line-height: var(--ls-regular);
   color: var(--white);
   padding: 16px 102px 17px 20px;
 }
@@ -313,8 +313,8 @@ a, button, label {
 }
 .cart__quantity span {
   font-weight: var(--fw-semibold);
-  font-size: 12px;
-  line-height: 12px;
+  font-size: var(--fs--btn);
+  line-height: var(--lh-12);
   color: var(--black);
 }
 
@@ -502,7 +502,7 @@ a, button, label {
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-size: 12px;
+  font-size: var(--fs--btn);
   color: red;
   cursor: pointer;
 }
@@ -571,9 +571,9 @@ a, button, label {
 .btn_collection p {
   font-style: normal;
   font-weight: var(--fw-black);
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.1em;
+  font-size: var(--fs-title-footer);
+  line-height: var(--lh-22);
+  letter-spacing: var(--ls-01);
   text-transform: uppercase;
   color: var(--black);
   display: flex;
@@ -631,9 +631,9 @@ a, button, label {
 }
 .btnket button h3 {
   font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.06em;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  letter-spacing: var(--ls-06);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -670,8 +670,8 @@ a, button, label {
   position: relative;
   font-family: var(--font-family);
   font-weight: var(--fw-regular);
-  font-size: 12px;
-  line-height: 16px;
+  font-size: var(--fs--btn);
+  line-height: var(--lh-16);
   font-feature-settings: "liga" off;
   color: var(--grey);
   cursor: pointer;
@@ -729,17 +729,17 @@ a, button, label {
 }
 .subscription h3 {
   font-weight: var(--fw-bold);
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-title-footer);
+  line-height: var(--lh-22);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 13px;
 }
 .subscription p {
   font-weight: var(--fw-semibold);
-  font-size: 12px;
-  line-height: 12px;
+  font-size: var(--fs--btn);
+  line-height: var(--lh-12);
   color: var(--supportgrey);
   margin-top: 6px;
 }
@@ -763,7 +763,7 @@ a, button, label {
   line-height: var(--lh-17);
   display: flex;
   align-items: center;
-  letter-spacing: 0.04em;
+  line-height: var(--ls-regular);
   color: var(--white);
   border: 1px solid var(--lightgrey);
   padding: 16px 0 17px 20px;
@@ -816,8 +816,8 @@ a, button, label {
 }
 .header__icon_bay span {
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 12px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-12);
   color: var(--black);
 }
 .header__block {
@@ -847,9 +847,9 @@ a, button, label {
   position: relative;
   display: block;
   font-weight: var(--fw-semibold);
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.08em;
+  font-size: var(--fs-title-footer);
+  line-height: var(--lh-22);
+  letter-spacing: var(--ls-08);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -902,32 +902,32 @@ a, button, label {
   display: block;
   color: var(--yellow);
   font-weight: var(--fw-bold);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
 }
 .footer__menu_item a:nth-of-type(3) {
   margin-top: 13px;
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   color: var(--white);
 }
 .footer__menu_item span {
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   color: var(--white);
   display: block;
 }
 .footer__menu_item h3 {
   font-weight: var(--fw-bold);
-  font-size: 18px;
-  line-height: 22px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-title-footer);
+  line-height: var(--lh-22);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
   color: var(--yellow);
   margin-bottom: 10px;
@@ -938,18 +938,18 @@ a, button, label {
 .footer__menu_item ul li span {
   font-style: italic;
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
   color: #AAA9A9;
 }
 .footer__menu_item ul li a {
   font-style: normal;
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -997,9 +997,9 @@ a, button, label {
 }
 .footer__document a {
   font-weight: var(--fw-regular);
-  font-size: 14px;
-  line-height: 17px;
-  letter-spacing: 0.02em;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
+  letter-spacing: var(--ls-02);
   color: var(--white);
 }
 @media (max-width: 576px) {
@@ -1054,8 +1054,8 @@ a, button, label {
 }
 .card a {
   font-weight: var(--fw-semibold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-transform: uppercase;
   display: block;
   color: var(--black);
@@ -1063,8 +1063,8 @@ a, button, label {
 .card span {
   font-style: italic;
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
@@ -1076,15 +1076,15 @@ a, button, label {
 }
 .card__price p {
   font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-transform: uppercase;
   color: var(--black);
 }
 .card__price a {
   font-weight: var(--fw-bold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-decoration-line: underline;
   color: var(--black);
   display: flex;
@@ -1134,16 +1134,16 @@ a, button, label {
 }
 .card-small a {
   font-weight: var(--fw-semibold);
-  font-size: 20px;
-  line-height: 24px;
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
   text-transform: uppercase;
   color: var(--black);
 }
 .card-small span {
   font-style: italic;
   font-weight: var(--fw-semibold);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: var(--fs-primary);
+  line-height: var(--lh-17);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
@@ -1264,7 +1264,7 @@ a, button, label {
 .main h2 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: 70px;
+  line-height: var(--lh-70);
   text-transform: uppercase;
   color: var(--black);
   white-space: pre-line;
@@ -1640,6 +1640,8 @@ a, button, label {
   --fs-medium-title:60px;
   --fs-40:40px;
   /**line-height **/
+  --lh-12:12px;
+  --lh-16:16px;
   --lh-17:17px;
   --lh-24:24px;
   --lh-48:48px;
@@ -1651,6 +1653,9 @@ a, button, label {
   /**letter-spacing**/
   --ls-regular:0.04em;
   --ls-01:0.01em;
+  --ls-02:0.02em;
+  --ls-08:0.08em;
+  --ls-06:0.06em;
 }
 
 /** Цвета **/
