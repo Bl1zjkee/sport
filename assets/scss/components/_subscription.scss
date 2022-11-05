@@ -8,17 +8,17 @@
   }
   h3{
     font-weight: var(--fw-bold);
-    font-size:var(--fs-secondary);
-    line-height: var(--lh-secondary);
-    letter-spacing: var(--ls-secondary);
+    font-size:var(--fs-title-footer);
+    line-height:var(--lh-22);
+    letter-spacing:var(--ls-02);
     text-transform: uppercase;
     color: var(--white);
     margin-bottom: 13px;
   }
   p{
     font-weight: var(--fw-semibold);
-    font-size:var(--fs-little);
-    line-height: var(--lh-little);
+    font-size:var(--fs--btn);
+    line-height:var(--lh-12);
     color: var(--supportgrey);
     margin-top: 6px;
   }
@@ -39,10 +39,9 @@
   background: var(--lightblack);
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-primary);
+  line-height: var(--lh-17);
   display: flex;
   align-items: center;
-  letter-spacing: var(--ls-regular);
   color: var(--white);
   border: 1px solid var(--lightgrey);
   padding: 16px 0 17px 20px;

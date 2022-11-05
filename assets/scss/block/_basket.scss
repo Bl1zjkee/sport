@@ -1,0 +1,142 @@
+.basket{
+  h3{
+    font-weight:var(--fw-bold);
+    font-size: var(--fs-title);
+    line-height:var(--lh-96px);
+    text-transform: uppercase;
+    color: var(--black);
+  }
+  &__card{
+    max-width: 730px;
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 20px;
+    picture{
+      img{
+        max-width: 160px;
+      }
+    }
+  }
+
+  &__description{
+margin-left: 30px;
+    width: 100%;
+    h3{
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-16);
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+  }
+
+  &__name{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    span{
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-24);
+      text-transform: uppercase;
+      color: var(--black);
+    }
+  }
+  &__color{
+    margin-top: 84px;
+    font-weight:var(--fw-regular);
+    font-size: var(--fs-card-name);
+    line-height: var(--lh-24);
+    text-transform: uppercase;
+    color: var(--black);
+  }
+  &__size{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+    p{
+      font-weight:var(--fw-regular);
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-24);
+      text-transform: uppercase;
+      color: var(--black);
+
+      span{
+        font-weight:var(--fw-bold);
+        font-size: var(--fs-card-name);
+        line-height: var(--lh-24);
+        text-transform: uppercase;
+        color: var(--black);
+        margin-left: 47px;
+      }
+    }
+    a{
+      font-weight:var(--fw-regular);
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-24);
+      text-align: right;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      color: var(--black);
+
+    }
+  }
+  &__decoration{
+    margin-top: 40px;
+    margin-bottom: 76px;
+    p{
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-card-name);
+      line-height:var(--lh-24);
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+    p:nth-of-type(2){
+      font-style: italic;
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-primary);
+      line-height: var(--lh-17);
+      text-transform: uppercase;
+      color: var(--darkgrey);
+      margin-bottom: 20px;
+    }
+    span{
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-40);
+      line-height: var(--lh-48);
+      text-transform: uppercase;
+      color: var(--black);
+    }
+  }
+
+  .basket__runText{
+    background: var(--yellow);
+    border: 1px solid var(--black);
+    padding-top: 2px;
+    padding-bottom: 1px;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    p{
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-primary);
+      line-height: var(--lh-17);
+      letter-spacing:var(--ls-01);
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    &_horizont{
+      transform: rotate(270deg);
+margin-left: 185px;
+      z-index: 0;
+    }
+
+  }
+
+}

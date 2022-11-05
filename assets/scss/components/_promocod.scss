@@ -1,6 +1,7 @@
 .promocod{
   display: flex;
   align-items: center;
+  margin-top: 40px;
   input{
     border: 1px solid var(--black);
     padding: 15px 0 15px 10px;
@@ -8,22 +9,22 @@
     max-width: 255px;
     width: 100%;
     font-weight: var(--fw-bold);
-    font-size: var(--fs-normal);
-    line-height: var(--lh-normal);
+    font-size:var(--fs-card-name);
+    line-height:var(--lh-24);
     &:focus-visible{
       outline: none;
     }
     &::placeholder{
       font-weight: var(--fw-semibold);
-      font-size: var(--fs-normal);
-      line-height: var(--lh-normal);
+      font-size:var(--fs-card-name);
+      line-height:var(--lh-24);
       color: var(--black);
       text-transform: uppercase;
       font-family: var(--font-family);
     }
   }
 
-  &_item{
+  &__item{
     position: relative;
   }
 
@@ -40,10 +41,9 @@
       border-top-left-radius: 10px;
       font-family:var(--font-family);
       font-weight:var(--fw-semibold);
-      font-size: var(--fs-primary);
-      line-height: var(--lh-primary);
+       font-size:var(--fs-primary);
+      line-height:var(--lh-17);
       align-items: center;
-      letter-spacing: var(--ls-regular);
       color: var(--white);
       padding: 16px 102px 17px 20px;
     }

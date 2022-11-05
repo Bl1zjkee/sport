@@ -1,4 +1,9 @@
 .main {
+  max-width: 1440px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+
   &__burger-menu {
     display: none;
   }
@@ -42,11 +47,12 @@
 
   h2 {
     font-weight: var(--fw-bold);
-    font-size: var(--fs-title);
-    line-height: var(--lh-title-secondary);
+     font-size: var(--fs-title);
+    line-height:var(--lh-70);
     text-transform: uppercase;
     color: var(--black);
     white-space: pre-line;
+
 
     span {
       display: flex;
@@ -76,12 +82,12 @@
 
   &__collection {
     margin-top: 130px;
-    margin-bottom:var(--margin-regular);
+    margin-bottom: 100px;
 
     h3 {
       font-weight: var(--fw-bold);
       font-size: var(--fs-title);
-      line-height: var(--lh-title);
+      line-height: var(--lh-96px);
       text-transform: uppercase;
       color: var(--black);
     }
@@ -111,7 +117,7 @@
       font-style: italic;
       font-weight: var(--fw-regular);
       font-size: var(--fs-big-title);
-      line-height: var(--lh-big);
+      line-height: var(--lh-120);
       text-transform: uppercase;
       color: var(--black);
     }
@@ -119,15 +125,15 @@
       font-style: italic;
       font-weight: var(--fw-regular);
       font-size: var(--fs-medium-title);
-      line-height: var(--lh-medium);
+      line-height: var(--lh-72);
       text-transform: uppercase;
       color: var(--black);
     }
   }
   &__stroky{
     font-weight: var(--fw-regular);
-    font-size: var(--fs-title);
-    line-height: var(--lh-title);
+     font-size: var(--fs-title);
+    line-height: var(--lh-96px);
     text-transform: uppercase;
     color: var(--white);
     background: var(--black);
@@ -136,54 +142,20 @@
 
   }
 
-  &__popular{
-    margin-top:var(--margin-regular);
-    margin-bottom:var(--margin-secondary);
-    &_list{
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 70px;
-    }
-    h3{
-      font-weight: var(--fw-bold);
-      font-size: var(--fs-title);
-      line-height: var(--lh-title);
-      text-transform: uppercase;
-      color: var(--black);
-    }
 
-    a{
-      font-weight: var(--fw-bold);
-      font-size: var(--fs-normal);
-      line-height: var(--lh-normal);
-      color: var(--black);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:after{
-        content: '';
-        display: block;
-        background-image: url("../icons/sale_arrow.svg");
-        width: 20px;
-        height: 8px;
-        margin-left: 6px;
-      }
-    }
-  }
   &__gif{
-    margin-bottom:var(--margin-regular);
+    margin-bottom: 100px;
     img{
       max-width: 1439.95px;
       width: 100%;
     }
   }
-  &__runningText{
-    margin-bottom:var(--margin-regular);
+ &__runningText{
+    margin-bottom: 100px;
     h3{
       font-weight: var(--fw-bold);
-      font-size: var(--fs-title);
-      line-height: var(--lh-title-secondary);
+       font-size: var(--fs-title);
+      line-height: var(--lh-70);
       text-transform: uppercase;
       color: var(--black);
     }
@@ -193,12 +165,48 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-bottom:var(--margin-secondary);
+    margin-bottom: 80px;
     picture{
       img{
         max-width: 250px;
         width: 100%;
       }
+    }
+  }
+}
+.popular{
+  margin-top: 100px;
+  margin-bottom: 80px;
+  &__list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+  h3{
+    font-style: normal;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-title);
+    line-height: var(--lh-96px);
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  a{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-card-name);
+    line-height: var(--lh-24);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after{
+      content: '';
+      display: block;
+      background-image: url("../icons/sale_arrow.svg");
+      width: 20px;
+      height: 8px;
+      margin-left: 6px;
     }
   }
 }

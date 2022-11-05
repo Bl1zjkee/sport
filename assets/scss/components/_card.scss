@@ -16,8 +16,8 @@
 
   a{
     font-weight: var(--fw-semibold);
-    font-size: var(--fs-normal);
-    line-height: var(--lh-normal);
+    font-size:var(--fs-card-name);
+    line-height:var(--lh-24);
     text-transform: uppercase;
     display: block;
     color: var(--black);
@@ -25,27 +25,27 @@
   span{
     font-style: italic;
     font-weight: var(--fw-semibold);
-    font-size: var(--fs-primary);
-    line-height: var(--lh-primary);
+     font-size:var(--fs-primary);
+    line-height:var(--lh-17);
     text-transform: uppercase;
     color: var(--darkgrey);
   }
-  &__add-to-cart{
+  &__price{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
     p{
       font-weight: var(--fw-bold);
-      font-size: var(--fs-normal);
-      line-height: var(--lh-normal);
+      font-size:var(--fs-card-name);
+      line-height:var(--lh-24);
       text-transform: uppercase;
       color: var(--black);
     }
     a{
       font-weight: var(--fw-bold);
-      font-size: var(--fs-normal);
-      line-height: var(--lh-normal);
+      font-size:var(--fs-card-name);
+      line-height:var(--lh-24);
       text-decoration-line: underline;
       color: var(--black);
       display: flex;
@@ -98,16 +98,16 @@ position: relative;
   }
   a{
     font-weight: var(--fw-semibold);
-    font-size: var(--fs-normal);
-    line-height: var(--lh-normal);
+    font-size:var(--fs-card-name);
+    line-height:var(--lh-24);
     text-transform: uppercase;
     color: var(--black);
   }
   span{
     font-style: italic;
     font-weight: var(--fw-semibold);
-    font-size: var(--fs-primary);
-    line-height: var(--lh-primary);
+     font-size:var(--fs-primary);
+    line-height:var(--lh-17);
     text-transform: uppercase;
     color: var(--darkgrey);
   }
