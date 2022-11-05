@@ -1396,6 +1396,85 @@ a, button {
 }
 
 /** Каталог **/
+/** Оформления заказа **/
+.order {
+  display: flex;
+}
+
+.order-placing h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-title);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.order-placing label {
+  margin-top: 3px;
+}
+.order-placing__adress {
+  display: flex;
+  gap: 30px;
+}
+.order-placing__enter {
+  max-width: 350px;
+  width: 100%;
+}
+.order-placing__enter p {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-medium);
+  text-transform: uppercase;
+  color: var(--black);
+  margin-top: 20px;
+}
+.order-placing__enter p:last-child {
+  margin-top: 6px;
+}
+
+.run-text {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  padding: 18px 0;
+  margin-top: 20px;
+}
+.run-text p {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.run-text:nth-of-type(6) {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.order-check {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+  max-width: 730px;
+  width: 100%;
+}
+.order-check p {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  display: flex;
+  align-items: center;
+  text-align: right;
+  font-feature-settings: "liga" off;
+  color: var(--black);
+}
+.order-check p a {
+  margin-left: 4px;
+  text-decoration: underline;
+  color: var(--black);
+}
+
 /** abstract **/
 /** Шрифт **/
 :root {
