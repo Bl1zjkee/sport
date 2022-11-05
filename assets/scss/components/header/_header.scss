@@ -42,8 +42,8 @@ display: none;
     }
     span{
       font-weight: var(--fw-semibold);
-      font-size: 14px;
-      line-height: 12px;
+      font-size: var(--fs-primary);
+      line-height: var(--lh-little);
       color: var(--black);
     }
   }
@@ -76,9 +76,9 @@ ul{
       position: relative;
       display: block;
       font-weight: var(--fw-semibold);
-      font-size: 18px;
-      line-height: 22px;
-      letter-spacing: 0.08em;
+      font-size: var(--fs-secondary);
+      line-height: var(--lh-secondary);
+      letter-spacing:var(--ls-bigem);
       text-transform: uppercase;
       color: var(--black);
     }

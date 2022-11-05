@@ -1,15 +1,46 @@
 
 :root {
   /**Шрифты**/
-  --alumnisans:'Alumni Sans';
+  --font-family: 'Alumni Sans';
 
   /** font-weight **/
-  --fw-regular:400;
-  --fw-medium:500;
-  --fw-semibold:600;
-  --fw-bold:700;
-  --fw-black:800;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;
 
-  --fs-title:30px;
 
+  /**font-size**/
+  --fs-title: 80px;
+  --fs-secondary: 18px;
+  --fs-primary: 14px;
+  --fs-little:12px;
+  --fs-normal:20px;
+ --fs-big-title:100px;
+  --fs-medium-title:60px;
+  --fs-sup-title:40px;
+
+  /**line-height **/
+  --lh-little:12px;
+  --lh-primary:17px;
+  --lh-title:96px;
+  --lh-big:120px;
+  --lh-secondary:22px;
+  --lh-normal:24px;
+  --lh-medium:72px;
+  --lh-sup-title:48px;
+  --lh-title-secondary:70px;
+  --lh-checkbox:16px;
+
+  /**letter-spacing**/
+  --ls-regular:0.04em;
+  --ls-medium:0.06em;
+  --ls-little:0.01em;
+  --ls-secondary:0.02em;
+  --ls-big:0.08em;
+
+  /**margin**/
+  --margin-regular: 100px;
+  --margin-secondary: 80px;
 }

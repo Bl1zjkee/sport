@@ -1,7 +1,7 @@
 .input {
-  span {
-    font-size: 20px;
-    line-height: 24px;
+  label {
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--black);
     font-weight: var(--fw-semibold);
@@ -17,9 +17,9 @@
       padding: 22px 20px 21px 20px;
       &::placeholder {
         font-weight: var(--fw-regular);
-        font-size: 14px;
-        line-height: 17px;
-        letter-spacing: 0.04em;
+        font-size: var(--fs-primary);
+        line-height: var(--lh-primary);
+        letter-spacing: var( --ls-regular);
         color: var(--black);
       }
       &:focus-visible {
@@ -32,59 +32,5 @@
     }
   }
 }
-.warning__input{
-  border: 1px dashed var(--red);
-}
 
 
-.input-btn{
-  display: flex;
-  align-items: center;
-  input{
-    border: 1px solid var(--black);
-    padding: 15px 0 15px 10px;
-    height: 50px;
-    max-width: 255px;
-    width: 100%;
-    font-weight: var(--fw-bold);
-    font-size: 20px;
-    line-height: 24px;
-    &:focus-visible{
-      outline: none;
-    }
-    &::placeholder{
-      font-weight: var(--fw-semibold);
-      font-size: 20px;
-      line-height: 24px;
-      color: var(--black);
-      text-transform: uppercase;
-      font-family: var(--alumnisans);
-    }
-  }
-
-  &_item{
-    position: relative;
-  }
-
-  &_warning{
-    border: 1px solid var(--red);
-  }
-
-  &_small{
-
-    input{
-      background:var(--lightblack);
-      border: 1px solid var(--lightgrey);
-      border-bottom-left-radius: 10px;
-      border-top-left-radius: 10px;
-      font-family:var(--alumnisans);
-      font-weight:var(--fw-semibold);
-      font-size: 14px;
-      line-height: 17px;
-      align-items: center;
-      letter-spacing: 0.04em;
-      color: var(--white);
-      padding: 16px 102px 17px 20px;
-    }
-  }
-}

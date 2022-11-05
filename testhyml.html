@@ -176,9 +176,9 @@
 </div>
 
 <div class="input">
-    <span>ИМЯ*</span>
+    <label for="name">Имя*</label>
     <div class="input__item">
-        <input class="warning__input" type="text" placeholder="Ваше имя">
+        <input id="name" class="warning__input" type="text" placeholder="Ваше имя">
         <div class="edit">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.705 8.04222L17.373 10.3742L13.623 6.62422L15.955 4.29222C16.0478 4.19928 16.158 4.12554 16.2794 4.07523C16.4007 4.02492 16.5307 3.99902 16.662 3.99902C16.7934 3.99902 16.9234 4.02492 17.0447 4.07523C17.1661 4.12554 17.2763 4.19928 17.369 4.29222L19.705 6.62822C19.798 6.72101 19.8717 6.83122 19.922 6.95253C19.9724 7.07385 19.9982 7.20389 19.9982 7.33522C19.9982 7.46656 19.9724 7.5966 19.922 7.71792C19.8717 7.83923 19.798 7.94944 19.705 8.04222V8.04222ZM2.99805 17.2482L13.063 7.18422L16.813 10.9342L6.74805 20.9982H2.99905V17.2482H2.99805ZM16.62 5.04422L15.08 6.58322L17.417 8.91822L18.955 7.37922L16.62 5.04422ZM15.356 10.9792L13.021 8.64322L3.99905 17.6642V20.0002H6.33505L15.356 10.9792V10.9792Z"
@@ -202,9 +202,9 @@
     </div>
 </div>
 
-<div class="input-btn">
-    <div class="input-btn_item">
-        <input class="input-btn_warning" type="text" placeholder="ПРОМОКОД">
+<div class="promocod">
+    <div class="promocod_item">
+        <input class="promocod_warning" type="text" placeholder="ПРОМОКОД">
         <div class="ok ok_item">
             <img src="assets/icons/ok.svg" alt="">
         </div>
@@ -237,27 +237,26 @@
     <a href="">Добавить</a>
 </div>
 
-<div class="block-btn-input">
+<div class="subscription">
     <h3>Подписка на рассылку</h3>
-    <div class="input-btn input-btn_small ">
-        <div class="input-btn_item">
-            <input class="input-btn_warning" type="text">
-        </div>
+        <div class="subscription_item">
+            <input class="subscription_input" type="text">
         <a href="">
-            <button class="btn btn_small">
+            <button class="btn subscription_small">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round"
                           stroke-linejoin="round"/>
                 </svg>
             </button>
         </a>
-    </div>
+        </div>
+
     <p>Подпишитесь на e-mail рассылку, чтобы первыми увидеть новые коллекции, новости и видео</p>
 </div>
 
 
 
-    <button class="btn-collection">
+    <button class="btn btn_collection">
         <p>
             Смотреть коллекцию
             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -444,24 +443,23 @@
 
             </div>
 
-            <div class="block-btn-input">
+            <div class="subscription">
                 <h3>Подписка на рассылку</h3>
-                <div class="input-btn input-btn_small ">
-                    <div class="input-btn_item">
-                        <input class="input-btn_warning" type="text">
-                    </div>
+                <div class="subscription_item">
+                    <input class="subscription_input" type="text">
                     <a href="">
-                        <button class="btn btn_small">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
+                        <button class="btn subscription_small">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round"
                                       stroke-linejoin="round"/>
                             </svg>
                         </button>
                     </a>
                 </div>
+
                 <p>Подпишитесь на e-mail рассылку, чтобы первыми увидеть новые коллекции, новости и видео</p>
             </div>
+
         </div>
         <div class="footer__block-two">
             <div class="footer__logo">
@@ -531,12 +529,16 @@
 
 
 <div class="card">
+    <a href="">
     <div class="card__img">
         <img src="assets/image/card.png" alt="">
     </div>
-    <h4>Моделирующие Шорты</h4>
+    </a>
+    <a href="">
+    Моделирующие Шорты
+    </a>
     <span>IQ editione</span>
-    <div class="card__sale">
+    <div class="card__price">
         <p>10 700</p>
         <a href="">Купить</a>
     </div>
@@ -555,12 +557,15 @@
 </div>
 
 <div class="card-small">
+    <a href="">
     <div class="card-small__img">
         <img src="assets/image/card_small.png" alt="">
     </div>
-    <h4>Моделирующие Шорты</h4>
+    </a>
+    <a href="">Моделирующие Шорты</a>
+
     <span>IQ editione</span>
-    <div class="card__sale">
+    <div class="card__price">
         <p>10 700</p>
         <a href="">Купить</a>
     </div>
@@ -579,12 +584,12 @@
 </div>
 
 
-<div class="marquee-infinite">
-    <div>
-        <h1>  <span>– Your</span> Direction – Your <span>Direction</span> – <span>Your</span> Direction –  <span>Your</span> Direction</h1>
-        <h1>  <span>– Your</span> Direction – Your <span>Direction</span> – <span>Your</span> Direction –  <span>Your</span> Direction</h1>
-    </div>
-</div>
+<!--<div class="marquee-infinite">-->
+<!--    <div>-->
+<!--        <h1>  <span>– Your</span> Direction – Your <span>Direction</span> – <span>Your</span> Direction –  <span>Your</span> Direction</h1>-->
+<!--        <h1>  <span>– Your</span> Direction – Your <span>Direction</span> – <span>Your</span> Direction –  <span>Your</span> Direction</h1>-->
+<!--    </div>-->
+<!--</div>-->
 
 </body>
 </html>

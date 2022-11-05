@@ -12,7 +12,7 @@
       path{
         stroke:black;
         stroke-width: 0.2px;
-        border: 0.2px solid #000000;
+        border: 0.2px solid var(--black);
         fill:var(--yellow);
       }
     }
@@ -35,22 +35,6 @@
     }
 
   }
-
-  &__active{
-    svg{
-      path{
-        stroke:black;
-        stroke-width: 1.3px;
-      }
-    }
-  }
-  &_mobile{
-    @media (max-width: 960px) {
-      display: none;
-    }
-  }
-
-
 }
 
 .favorite{
@@ -86,20 +70,6 @@
     }
 
   }
-  &__active{
-    svg{
-      path{
-        stroke:black;
-        stroke-width: 1.3px;
-      }
-    }
-  }
-
-  &_mobile{
-    @media (max-width: 960px) {
-      display: none;
-    }
-  }
 }
 
 .user{
@@ -133,12 +103,6 @@
           fill: (var(--white));
         }
       }
-    }
-
-  }
-  &_mobile{
-    @media (max-width: 960px) {
-      display: none;
     }
   }
 }
@@ -178,8 +142,8 @@
     justify-content: center;
     span{
       font-weight: var(--fw-semibold);
-      font-size: 12px;
-      line-height: 12px;
+      font-size: var(--fs-little);
+      line-height: var(--lh-little);
       color: var(--black);
     }
   }
