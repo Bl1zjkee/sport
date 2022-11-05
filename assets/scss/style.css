@@ -779,7 +779,7 @@ a, button, label {
   position: absolute;
 }
 
-/** block-btn-input**/
+/** --ls-regular-input**/
 .subscription {
   max-width: 350px;
   width: 100%;
@@ -1264,7 +1264,7 @@ a, button, label {
   font-style: normal;
   font-weight: var(--fw-regular);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--white);
 }
