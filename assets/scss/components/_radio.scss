@@ -2,13 +2,17 @@
  position: absolute;
   z-index: -1;
 opacity: 0;
+  display: block;
 &+label{
-display: inline-flex;
+display: flex;
   align-items: center;
   position: relative;
-  font-size: var(--fs-little);
-  color: red;
   cursor: pointer;
+ color:  var(--black);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
 }
   &+label:before{
     content: '';
@@ -33,6 +37,13 @@ background: var(--yellow);
     border-radius: 50%;
     position: absolute;
     left:4px;
+  }
+  &_order{
+    &+label:before{
+      content: '';
+      display: inline-block;
+   margin-right: 20px;
+    }
   }
 }
 .radio-size{

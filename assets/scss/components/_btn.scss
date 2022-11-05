@@ -37,42 +37,37 @@
       }
     }
   }
-}
 
-.btn-basket {
-  button {
-    background: var(--black);
-    padding: 16px 89px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-
-    h3 {
-      font-weight: var(--fw-bold);
-      font-size: var(--fs-normal);
-      line-height: var(--lh-normal);
-      letter-spacing: var(--ls-medium);
-      text-transform: uppercase;
-      color: var(--white);
-    }
-
-    &:hover {
-      background: var(--yellow);
+  &_all {
+    button {
+      background: var(--black);
+      padding: 16px 89px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
 
       h3 {
-        color: var(--black);
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-normal);
+        line-height: var(--lh-normal);
+        letter-spacing: var(--ls-medium);
+        text-transform: uppercase;
+        color: var(--white);
       }
-    }
 
-    &:active {
-      background: var(--yellow);
-      border: 1px solid var(--black);
+      &:hover {
+        background: var(--yellow);
 
-      h3 {
-        color: var(--black);
+        h3 {
+          color: var(--black);
+        }
       }
-    }
+
+
+      &:active {
+        background: var(--yellow);
+        border: 1px solid var(--black);
 
 
   }
@@ -83,12 +78,24 @@
       border: 1px solid var(--yellow);
       background: var(--black);
 
-      h3 {
-        color: var(--white);
+
+        h3 {
+          color: var(--black);
+        }
+      }
+
+      &:focus {
+        border: 1px solid var(--yellow);
+        background: var(--black);
+
+        h3 {
+          color: var(--white);
+        }
       }
     }
   }
 }
+
 
 .btn-collection{
   background: var(--yellow);
