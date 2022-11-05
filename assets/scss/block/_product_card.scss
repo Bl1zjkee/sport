@@ -1,0 +1,231 @@
+.product-card {
+  display: flex;
+  margin-top: 60px;
+
+  &__gallery {
+    max-width: 160px;
+    width: 100%;
+
+    picture {
+      img {
+        max-width: 160px;
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+      }
+    }
+
+  }
+
+  &__img {
+    margin-left: 30px;
+    max-width: 445px;
+    width: 100%;
+
+    picture {
+      max-width: 445px;
+      width: 100%;
+
+      img {
+        max-width: 445px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__name {
+    width: 100%;
+    margin-left: 30px;
+  }
+
+  &__back {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs--btn);
+      line-height: var(--lh-14);
+      text-transform: uppercase;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+
+      &:before {
+        content: '';
+        display: block;
+        background-image: url("../icons/arrow_small.svg");
+        width: 14px;
+        height: 8px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+
+    h3 {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-40);
+      line-height: var(--lh-48);
+      text-transform: uppercase;
+      color: var(--black);
+    }
+
+    p {
+      font-style: italic;
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-24);
+      text-transform: uppercase;
+      color: var(--black);
+
+      span {
+        font-size: var(--fs-primary);
+      }
+    }
+  }
+  &__price{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    p:nth-of-type(1){
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-40);
+      line-height: var(--lh-48);
+      text-transform: uppercase;
+      color: var(--black);
+      margin-left: 0;
+    }
+    p{
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-40);
+      line-height: var(--lh-48);
+      text-transform: uppercase;
+      color: var(--black);
+      margin-left: 31px;
+    }
+    span{
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-40);
+      line-height: var(--lh-48);
+      text-decoration-line: line-through;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-left: 20px;
+    }
+  }
+  &__color{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+p{
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+    input{
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+
+    &+label{
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+    }
+
+    &:checked+label:before{
+      content: '';
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      border: 1px solid black;
+    }
+    }
+  }
+
+  &__basket{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 110px;
+  }
+  &__add{
+    border: 0.5px solid #000000;
+    max-width: 160px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 55px;
+    input{
+      max-width: 53px;
+      width: 100%;
+      display: flex;
+      text-align: center;
+      padding-top: 14px;
+      padding-bottom: 15px;
+      border: none;
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-24);
+      letter-spacing: var(--ls-01);
+      text-transform: uppercase;
+      color: var(--black);
+      &:focus-visible{
+        outline: none;
+      }
+    }
+    button{
+      max-width: 53px;
+      height: 55px;
+      background: transparent;
+      border: none;
+      padding-left: 20px;
+      width: 100%;
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-30);
+      line-height: var(--lh-24);
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: var(--ls-01);
+      text-transform: uppercase;
+      color:var(--black);
+    }
+  }
+}
+.product-card-description{
+  margin-top: 80px;
+  padding-left: 190px;
+  h3{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-40);
+    line-height: var(--lh-48);
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 20px;
+
+  }
+  p{
+    max-width: 730px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-card-name);
+    line-height: var(--lh-24);
+    letter-spacing: var(--ls-01);
+    color: var(--black);
+  }
+ }
+
+.product-card__popular{
+  margin-bottom: 100px;
+}
