@@ -12,7 +12,7 @@
       path{
         stroke:black;
         stroke-width: 0.2px;
-        border: 0.2px solid #000000;
+        border: 0.2px solid var(--black);
         fill:var(--yellow);
       }
     }
@@ -39,8 +39,6 @@
 
 .favorite{
   cursor: pointer;
-  display: flex;
-  align-items: center;
   &:hover{
     svg{
       path:nth-of-type(1){
@@ -144,8 +142,8 @@
     justify-content: center;
     span{
       font-weight: var(--fw-semibold);
-      font-size:var(--fs--btn);
-      line-height:var(--lh-12);
+      font-size: var(--fs-little);
+      line-height: var(--lh-little);
       color: var(--black);
     }
   }
@@ -197,7 +195,7 @@
   position: absolute;
   top:22px;
   right: 58px;
-  &:hover, active{
+  &:hover,active{
     svg{
       path{
         fill: black;
@@ -257,7 +255,6 @@
 }
 .close-secondary{
   cursor: pointer;
-  display: flex;
   &:hover{
     svg{
       path{

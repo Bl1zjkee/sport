@@ -7,18 +7,13 @@
 body,button{
   font-family: var(--font-family);
 }
-a,button,label{
+a,button{
   cursor: pointer;
   text-decoration: none;
 }
 .container{
-  max-width: 1130px;
+  max-width: 1140px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 10px;
-}
-.wrapper{
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
+  padding: 0 15px;
 }
