@@ -14,9 +14,7 @@
     }
 
     &_big {
-      padding-top: 9px;
-      padding-bottom: 9px;
-
+      padding: 9px 0;
       p {
         font-style: italic;
         font-weight: var(--fw-regular);
@@ -31,8 +29,7 @@
 
 .catalog-menu {
   background: var(--black);
-  padding-top: 67px;
-  padding-bottom: 31px;
+  padding: 67px 0 31px 0;
 
   &__block {
     display: flex;
@@ -58,7 +55,7 @@
         align-items: center;
         justify-content: end;
 
-        &:nth-of-type(1) {
+        &:first-of-type(1) {
           margin-top: 0;
         }
 
@@ -154,8 +151,7 @@
 .catalog-filter-list{
   border-top:1px solid var(--black);
   border-bottom:1px solid var(--black);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding:40px 0 ;
   margin-top: 42px;
 
   &__inner{
@@ -170,7 +166,7 @@ ul{
   width: 100%;
   li{
 margin-top: 5px;
-&:nth-of-type(1){
+&:first-of-type(1){
   margin-top: 0;
 }
     a{
