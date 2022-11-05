@@ -1252,7 +1252,7 @@ a, button {
 .main h2 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-J-RO);
+  line-height: var(--lh-title-secondary);
   text-transform: uppercase;
   color: var(--black);
   white-space: pre-line;
@@ -1279,7 +1279,7 @@ a, button {
 }
 .main__collection {
   margin-top: 130px;
-  margin-bottom: 100px;
+  margin-bottom: var(--margin-regular);
 }
 .main__collection h3 {
   font-weight: var(--fw-bold);
@@ -1334,8 +1334,8 @@ a, button {
   height: 111px;
 }
 .main__popular {
-  margin-top: 100px;
-  margin-bottom: 80px;
+  margin-top: var(--margin-regular);
+  margin-bottom: var(--margin-secondary);
 }
 .main__popular_list {
   display: flex;
@@ -1368,19 +1368,19 @@ a, button {
   margin-left: 6px;
 }
 .main__gif {
-  margin-bottom: 100px;
+  margin-bottom: var(--margin-regular);
 }
 .main__gif img {
   max-width: 1439.95px;
   width: 100%;
 }
 .main__runningText {
-  margin-bottom: 100px;
+  margin-bottom: var(--margin-regular);
 }
 .main__runningText h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-J-RO);
+  line-height: var(--lh-title-secondary);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1388,7 +1388,7 @@ a, button {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-bottom: 80px;
+  margin-bottom: var(--margin-secondary);
 }
 .main__gallery picture img {
   max-width: 250px;
@@ -1425,7 +1425,7 @@ a, button {
   --lh-normal:24px;
   --lh-medium:72px;
   --lh-sup-title:48px;
-  --lh-J-RO:70px;
+  --lh-title-secondary:70px;
   --lh-checkbox:16px;
   /**letter-spacing**/
   --ls-regular:0.04em;

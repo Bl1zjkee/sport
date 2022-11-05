@@ -43,7 +43,7 @@
   h2 {
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
-    line-height: var(--lh-J-RO);
+    line-height: var(--lh-title-secondary);
     text-transform: uppercase;
     color: var(--black);
     white-space: pre-line;
@@ -76,7 +76,7 @@
 
   &__collection {
     margin-top: 130px;
-    margin-bottom: 100px;
+    margin-bottom:var(--margin-regular);
 
     h3 {
       font-weight: var(--fw-bold);
@@ -137,8 +137,8 @@
   }
 
   &__popular{
-    margin-top: 100px;
-    margin-bottom: 80px;
+    margin-top:var(--margin-regular);
+    margin-bottom:var(--margin-secondary);
     &_list{
       display: flex;
       align-items: center;
@@ -172,18 +172,18 @@
     }
   }
   &__gif{
-    margin-bottom: 100px;
+    margin-bottom:var(--margin-regular);
     img{
       max-width: 1439.95px;
       width: 100%;
     }
   }
   &__runningText{
-    margin-bottom: 100px;
+    margin-bottom:var(--margin-regular);
     h3{
       font-weight: var(--fw-bold);
       font-size: var(--fs-title);
-      line-height: var(--lh-J-RO);
+      line-height: var(--lh-title-secondary);
       text-transform: uppercase;
       color: var(--black);
     }
@@ -193,7 +193,7 @@
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-bottom: 80px;
+    margin-bottom:var(--margin-secondary);
     picture{
       img{
         max-width: 250px;
