@@ -155,6 +155,15 @@ margin-top: 278px;
         }
       }
     }
+    &_decoration{
+      button{
+        max-width: 255px;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+    }
   }
 
 }
