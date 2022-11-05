@@ -64,9 +64,20 @@
         }
       }
 
+
       &:active {
         background: var(--yellow);
         border: 1px solid var(--black);
+
+
+  }
+  &_basket {
+    button {
+
+    &:focus {
+      border: 1px solid var(--yellow);
+      background: var(--black);
+
 
         h3 {
           color: var(--black);
@@ -124,6 +135,15 @@
           fill:var(--yellow);
         }
       }
+    }
+    &_decoration{
+      button{
+        max-width: 255px;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
     }
   }
 

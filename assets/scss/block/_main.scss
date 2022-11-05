@@ -135,7 +135,7 @@
     height: 111px;
 
   }
-
+  
   &__popular{
     margin-top:var(--margin-regular);
     margin-bottom:var(--margin-secondary);
@@ -171,6 +171,7 @@
       }
     }
   }
+
   &__gif{
     margin-bottom:var(--margin-regular);
     img{
@@ -199,6 +200,42 @@
         max-width: 250px;
         width: 100%;
       }
+    }
+  }
+}
+.popular{
+  margin-top: 100px;
+  margin-bottom: 80px;
+  &__list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+  h3{
+    font-style: normal;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-title);
+    line-height: var(--lh-96px);
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  a{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-card-name);
+    line-height: var(--lh-24);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after{
+      content: '';
+      display: block;
+      background-image: url("../icons/sale_arrow.svg");
+      width: 20px;
+      height: 8px;
+      margin-left: 6px;
     }
   }
 }
