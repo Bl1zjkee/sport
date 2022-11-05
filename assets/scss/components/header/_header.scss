@@ -1,7 +1,21 @@
 .header{
   background: var(--grey);
   padding: 15px 0;
-  .search{
+  position: relative;
+
+&:before{
+  content: '';
+  backdrop-filter: blur(6px);
+position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+
+}
+  .search {
     @media (max-width: 960px) {
       display: none;
     }
@@ -19,8 +33,12 @@ display: none;
     align-items: center;
     justify-content: space-between;
   }
-  &__logo{
-    img{
+
+  &__logo {
+    position: relative;
+    z-index: 1;
+    img {
+
       width: 65px;
       height: 50px;
     }
@@ -53,6 +71,8 @@ display: none;
     align-items: center;
     justify-content: space-between;
     gap: 80px;
+    position: relative;
+    z-index: 1;
   }
 
 

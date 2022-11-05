@@ -1,6 +1,7 @@
 .promocod{
   display: flex;
   align-items: center;
+  margin-top: 40px;
   input{
     border: 1px solid var(--black);
     padding: 15px 0 15px 10px;
@@ -23,7 +24,7 @@
     }
   }
 
-  &_item{
+  &__item{
     position: relative;
   }
 
