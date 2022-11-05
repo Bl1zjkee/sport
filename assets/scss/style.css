@@ -63,7 +63,7 @@ body, button {
   font-family: var(--font-family);
 }
 
-a, button, label {
+a, button {
   cursor: pointer;
   text-decoration: none;
 }
@@ -75,17 +75,11 @@ a, button, label {
   padding: 0 10px;
 }
 
-.wrapper {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 /** components **/
 /** Input **/
 .input label {
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
   font-weight: var(--fw-semibold);
@@ -103,7 +97,7 @@ a, button, label {
 .input__item input::placeholder {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   letter-spacing: var(--ls-regular);
   color: var(--black);
 }
@@ -138,10 +132,10 @@ a, button, label {
   font-family: var(--font-family);
   font-weight: var(--fw-medium);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   display: flex;
   align-items: center;
-  line-height: var(--ls-regular);
+  letter-spacing: var(--ls-regular);
   font-feature-settings: "liga" off;
   color: var(--grey);
 }
@@ -157,10 +151,10 @@ a, button, label {
 .soc-input a {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   display: flex;
   align-items: center;
-  line-height: var(--ls-regular);
+  letter-spacing: var(--ls-regular);
   text-decoration-line: underline;
   font-feature-settings: "liga" off;
   color: var(--grey);
@@ -182,16 +176,16 @@ a, button, label {
   max-width: 255px;
   width: 100%;
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
 }
 .promocod input:focus-visible {
   outline: none;
 }
 .promocod input::placeholder {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   color: var(--black);
   text-transform: uppercase;
   font-family: var(--font-family);
@@ -210,8 +204,9 @@ a, button, label {
   font-family: var(--font-family);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   align-items: center;
+  letter-spacing: var(--ls-regular);
   color: var(--white);
   padding: 16px 102px 17px 20px;
 }
@@ -228,7 +223,7 @@ a, button, label {
 .search:hover svg path {
   stroke: black;
   stroke-width: 0.2px;
-  border: 0.2px solid #000000;
+  border: 0.2px solid var(--black);
   fill: var(--yellow);
 }
 .search:active svg path, .search_active svg path {
@@ -315,8 +310,8 @@ a, button, label {
 }
 .cart__quantity span {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs--btn);
-  line-height: var(--lh-12);
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
   color: var(--black);
 }
 
@@ -386,7 +381,6 @@ a, button, label {
 
 .close-secondary {
   cursor: pointer;
-  display: flex;
 }
 .close-secondary:hover svg path {
   fill: var(--yellow);
@@ -504,7 +498,7 @@ a, button, label {
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-size: var(--fs--btn);
+  font-size: var(--fs-little);
   color: red;
   cursor: pointer;
 }
@@ -617,7 +611,45 @@ a, button, label {
 .btn:focus svg path {
   fill: var(--black);
 }
-.btn_collection {
+
+.btn-basket button {
+  background: var(--black);
+  padding: 16px 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.btn-basket button h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-medium);
+  text-transform: uppercase;
+  color: var(--white);
+}
+.btn-basket button:hover {
+  background: var(--yellow);
+}
+.btn-basket button:hover h3 {
+  color: var(--black);
+}
+.btn-basket button:active {
+  background: var(--yellow);
+  border: 1px solid var(--black);
+}
+.btn-basket button:active h3 {
+  color: var(--black);
+}
+.btn-basket button:focus {
+  border: 1px solid var(--yellow);
+  background: var(--black);
+}
+.btn-basket button:focus h3 {
+  color: var(--white);
+}
+
+.btn-collection {
   background: var(--yellow);
   padding: 24px 73px 24px 94px;
   display: flex;
@@ -626,59 +658,59 @@ a, button, label {
   border: none;
   margin-top: 278px;
 }
-.btn_collection p {
-  font-style: normal;
+.btn-collection p {
   font-weight: var(--fw-black);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-01);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-little);
   text-transform: uppercase;
   color: var(--black);
   display: flex;
   align-items: center;
 }
-.btn_collection p svg {
+.btn-collection p svg {
   margin-left: 10px;
 }
-.btn_collection:hover {
+.btn-collection:hover {
   background: var(--black);
 }
-.btn_collection:hover p {
+.btn-collection:hover p {
   color: var(--yellow);
 }
-.btn_collection:hover p svg {
+.btn-collection:hover p svg {
   transform: rotate(45deg);
   transition: 1s;
 }
-.btn_collection:hover p svg path {
+.btn-collection:hover p svg path {
   fill: var(--yellow);
 }
-.btn_collection:active {
+.btn-collection:active {
   background: var(--black);
   border: 1px solid var(--yellow);
 }
-.btn_collection:active p {
+.btn-collection:active p {
   color: var(--yellow);
 }
-.btn_collection:active p svg {
+.btn-collection:active p svg {
   transform: rotate(45deg);
 }
-.btn_collection:active p svg path {
+.btn-collection:active p svg path {
   fill: var(--yellow);
 }
-.btn_collection:focus {
+.btn-collection:focus {
   background: var(--yellow);
   border: 1px solid var(--black);
 }
-.btn_collection:focus p {
+.btn-collection:focus p {
   color: var(--black);
 }
-.btn_collection:focus p svg {
+.btn-collection:focus p svg {
   transform: rotate(0);
 }
-.btn_collection:focus p svg path {
+.btn-collection:focus p svg path {
   fill: var(--black);
 }
+
 .btn_basket button {
   background: var(--black);
   padding: 16px 89px;
@@ -734,8 +766,8 @@ a, button, label {
   position: relative;
   font-family: var(--font-family);
   font-weight: var(--fw-regular);
-  font-size: var(--fs--btn);
-  line-height: var(--lh-16);
+  font-size: var(--fs-little);
+  line-height: var(--lh-checkbox);
   font-feature-settings: "liga" off;
   color: var(--grey);
   cursor: pointer;
@@ -779,7 +811,7 @@ a, button, label {
   position: absolute;
 }
 
-/** block-btn-input**/
+/** --ls-regular-input**/
 .subscription {
   max-width: 350px;
   width: 100%;
@@ -793,17 +825,17 @@ a, button, label {
 }
 .subscription h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-02);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 13px;
 }
 .subscription p {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs--btn);
-  line-height: var(--lh-12);
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
   color: var(--supportgrey);
   margin-top: 6px;
 }
@@ -824,9 +856,11 @@ a, button, label {
   background: var(--lightblack);
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   display: flex;
   align-items: center;
+  letter-spacing: var(--ls-regular);
+
   color: var(--white);
   border: 1px solid var(--lightgrey);
   padding: 16px 0 17px 20px;
@@ -834,7 +868,7 @@ a, button, label {
 
 /** header **/
 .header {
-  background: var(--white);
+  background: var(--grey);
   padding: 15px 0;
   position: relative;
 }
@@ -896,7 +930,7 @@ a, button, label {
 .header__icon_bay span {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-12);
+  line-height: var(--lh-little);
   color: var(--black);
 }
 .header__block {
@@ -928,9 +962,9 @@ a, button, label {
   position: relative;
   display: block;
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-08);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-bigem);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -984,31 +1018,31 @@ a, button, label {
   color: var(--yellow);
   font-weight: var(--fw-bold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
 }
 .footer__menu_item a:nth-of-type(3) {
   margin-top: 13px;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   color: var(--white);
 }
 .footer__menu_item span {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   color: var(--white);
   display: block;
 }
 .footer__menu_item h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-02);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: var(--yellow);
   margin-bottom: 10px;
@@ -1020,8 +1054,8 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: #AAA9A9;
 }
@@ -1029,8 +1063,8 @@ a, button, label {
   font-style: normal;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -1079,8 +1113,8 @@ a, button, label {
 .footer__document a {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   color: var(--white);
 }
 @media (max-width: 576px) {
@@ -1135,8 +1169,8 @@ a, button, label {
 }
 .card a {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   display: block;
   color: var(--black);
@@ -1145,33 +1179,33 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
-.card__price {
+.card__add-to-cart {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
 }
-.card__price p {
+.card__add-to-cart p {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
-.card__price a {
+.card__add-to-cart a {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-decoration-line: underline;
   color: var(--black);
   display: flex;
   align-items: center;
 }
-.card__price a:after {
+.card__add-to-cart a:after {
   content: "";
   display: block;
   background-image: url("../icons/sale_arrow.svg");
@@ -1215,8 +1249,8 @@ a, button, label {
 }
 .card-small a {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1224,7 +1258,7 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
@@ -1264,7 +1298,7 @@ a, button, label {
   font-style: normal;
   font-weight: var(--fw-regular);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -1304,12 +1338,6 @@ a, button, label {
 }
 /** block **/
 /** Главная **/
-.main {
-  max-width: 1440px;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
 .main__burger-menu {
   display: none;
 }
@@ -1345,7 +1373,7 @@ a, button, label {
 .main h2 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-70);
+  line-height: var(--lh-title-secondary);
   text-transform: uppercase;
   color: var(--black);
   white-space: pre-line;
@@ -1372,12 +1400,12 @@ a, button, label {
 }
 .main__collection {
   margin-top: 130px;
-  margin-bottom: 100px;
+  margin-bottom: var(--margin-regular);
 }
 .main__collection h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1404,7 +1432,7 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-big-title);
-  line-height: var(--lh-120);
+  line-height: var(--lh-big);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1412,20 +1440,21 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-medium-title);
-  line-height: var(--lh-72);
+  line-height: var(--lh-medium);
   text-transform: uppercase;
   color: var(--black);
 }
 .main__stroky {
   font-weight: var(--fw-regular);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--white);
   background: var(--black);
   width: 100%;
   height: 111px;
 }
+
 .main__gif {
   margin-bottom: 100px;
 }
@@ -1457,6 +1486,10 @@ a, button, label {
 .popular {
   margin-top: 100px;
   margin-bottom: 80px;
+
+.main__popular {
+  margin-top: var(--margin-regular);
+  margin-bottom: var(--margin-secondary);
 }
 .popular__list {
   display: flex;
@@ -1464,18 +1497,18 @@ a, button, label {
   gap: 30px;
   margin-bottom: 70px;
 }
-.popular h3 {
-  font-style: normal;
+
+.main__popular h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--black);
 }
 .popular a {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   color: var(--black);
   display: flex;
   align-items: center;
@@ -2031,6 +2064,36 @@ a, button, label {
   z-index: 0;
 }
 
+.main__gif {
+  margin-bottom: var(--margin-regular);
+}
+.main__gif img {
+  max-width: 1439.95px;
+  width: 100%;
+}
+.main__runningText {
+  margin-bottom: var(--margin-regular);
+}
+.main__runningText h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-title-secondary);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.main__gallery {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: var(--margin-secondary);
+}
+.main__gallery picture img {
+  max-width: 250px;
+  width: 100%;
+}
+
+/** Каталог **/
+
 /** abstract **/
 /** Шрифт **/
 :root {
@@ -2044,32 +2107,35 @@ a, button, label {
   --fw-black: 800;
   /**font-size**/
   --fs-title: 80px;
-  --fs-title-footer: 18px;
+  --fs-secondary: 18px;
   --fs-primary: 14px;
-  --fs--btn:12px;
-  --fs-card-name:20px;
+  --fs-little:12px;
+  --fs-normal:20px;
   --fs-big-title:100px;
   --fs-medium-title:60px;
-  --fs-40:40px;
-  --fs-30:30px;
+
+  --fs-sup-title:40px;
   /**line-height **/
-  --lh-12:12px;
-  --lh-14:14px;
-  --lh-16:16px;
-  --lh-17:17px;
-  --lh-24:24px;
-  --lh-48:48px;
-  --lh-22:22px;
-  --lh-72:72px;
-  --lh-70:70px;
-  --lh-96px:96px;
-  --lh-120:120px;
+  --lh-little:12px;
+  --lh-primary:17px;
+  --lh-title:96px;
+  --lh-big:120px;
+  --lh-secondary:22px;
+  --lh-normal:24px;
+  --lh-medium:72px;
+  --lh-sup-title:48px;
+  --lh-title-secondary:70px;
+  --lh-checkbox:16px;
+
   /**letter-spacing**/
   --ls-regular:0.04em;
-  --ls-01:0.01em;
-  --ls-02:0.02em;
-  --ls-08:0.08em;
-  --ls-06:0.06em;
+  --ls-medium:0.06em;
+  --ls-little:0.01em;
+  --ls-secondary:0.02em;
+  --ls-big:0.08em;
+  /**margin**/
+  --margin-regular: 100px;
+  --margin-secondary: 80px;
 }
 
 /** Цвета **/

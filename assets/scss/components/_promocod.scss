@@ -9,15 +9,15 @@
     max-width: 255px;
     width: 100%;
     font-weight: var(--fw-bold);
-    font-size:var(--fs-card-name);
-    line-height:var(--lh-24);
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
     &:focus-visible{
       outline: none;
     }
     &::placeholder{
       font-weight: var(--fw-semibold);
-      font-size:var(--fs-card-name);
-      line-height:var(--lh-24);
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
       color: var(--black);
       text-transform: uppercase;
       font-family: var(--font-family);
@@ -41,9 +41,10 @@
       border-top-left-radius: 10px;
       font-family:var(--font-family);
       font-weight:var(--fw-semibold);
-       font-size:var(--fs-primary);
-      line-height:var(--lh-17);
+      font-size: var(--fs-primary);
+      line-height: var(--lh-primary);
       align-items: center;
+      letter-spacing: var(--ls-regular);
       color: var(--white);
       padding: 16px 102px 17px 20px;
     }
