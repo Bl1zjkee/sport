@@ -36,8 +36,8 @@
         color: var(--yellow);
         font-weight: var(--fw-bold);
         font-size: var(--fs-primary);
-        line-height: var(--lh-17);
-        letter-spacing: var(--ls-02);
+        line-height: var(--lh-primary);
+        letter-spacing: var(--ls-secondary);
         text-transform: uppercase;
       }
 
@@ -45,25 +45,25 @@
         margin-top: 13px;
         font-weight: var(--fw-regular);
         font-size: var(--fs-primary);
-        line-height: var(--lh-17);
-        letter-spacing: var(--ls-02);
+        line-height: var(--lh-primary);
+        letter-spacing: var(--ls-secondary);
         color: var(--white);
       }
 
       span {
         font-weight: var(--fw-regular);
         font-size: var(--fs-primary);
-        line-height: var(--lh-17);
-        letter-spacing: var(--ls-02);
+        line-height: var(--lh-primary);
+        letter-spacing: var(--ls-secondary);
         color: var(--white);
         display: block;
       }
 
       h3 {
         font-weight: var(--fw-bold);
-        font-size: var(--fs-title-footer);
-        line-height: var(--lh-22);
-        letter-spacing: var(--ls-02);
+        font-size: var(--fs-secondary);
+        line-height: var(--lh-secondary);
+        letter-spacing: var(--ls-secondary);
         text-transform: uppercase;
         color: var(--yellow);
         margin-bottom: 10px;
@@ -77,8 +77,8 @@
             font-style: italic;
             font-weight: var(--fw-regular);
             font-size: var(--fs-primary);
-            line-height: var(--lh-17);
-            letter-spacing: var(--ls-02);
+            line-height: var(--lh-primary);
+            letter-spacing: var(--ls-secondary);
             text-transform: uppercase;
             color: #AAA9A9;
           }
@@ -87,8 +87,8 @@
             font-style: normal;
             font-weight: var(--fw-regular);
             font-size: var(--fs-primary);
-            line-height: var(--lh-17);
-            letter-spacing: var(--ls-02);
+            line-height: var(--lh-primary);
+            letter-spacing: var(--ls-secondary);
             text-transform: uppercase;
             color: var(--white);
           }
@@ -140,8 +140,8 @@
     a {
       font-weight: var(--fw-regular);
       font-size: var(--fs-primary);
-      line-height: var(--lh-17);
-      letter-spacing:var(--ls-02);
+      line-height: var(--lh-primary);
+      letter-spacing:var(--ls-secondary);
       color: var(--white);
       @media (max-width: 576px) {
         display: block;

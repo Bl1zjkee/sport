@@ -78,8 +78,8 @@ a, button {
 /** components **/
 /** Input **/
 .input label {
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
   font-weight: var(--fw-semibold);
@@ -97,7 +97,7 @@ a, button {
 .input__item input::placeholder {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   letter-spacing: var(--ls-regular);
   color: var(--black);
 }
@@ -132,7 +132,7 @@ a, button {
   font-family: var(--font-family);
   font-weight: var(--fw-medium);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   display: flex;
   align-items: center;
   letter-spacing: var(--ls-regular);
@@ -151,7 +151,7 @@ a, button {
 .soc-input a {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   display: flex;
   align-items: center;
   letter-spacing: var(--ls-regular);
@@ -175,16 +175,16 @@ a, button {
   max-width: 255px;
   width: 100%;
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
 }
 .promocod input:focus-visible {
   outline: none;
 }
 .promocod input::placeholder {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   color: var(--black);
   text-transform: uppercase;
   font-family: var(--font-family);
@@ -203,7 +203,7 @@ a, button {
   font-family: var(--font-family);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   align-items: center;
   letter-spacing: var(--ls-regular);
   color: var(--white);
@@ -307,8 +307,8 @@ a, button {
 }
 .cart__quantity span {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs--btn);
-  line-height: var(--lh-12);
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
   color: var(--black);
 }
 
@@ -495,7 +495,7 @@ a, button {
   display: inline-flex;
   align-items: center;
   position: relative;
-  font-size: var(--fs--btn);
+  font-size: var(--fs-little);
   color: red;
   cursor: pointer;
 }
@@ -563,9 +563,9 @@ a, button {
 }
 .btn-basket button h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
-  letter-spacing: var(--ls-06);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-medium);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -601,9 +601,9 @@ a, button {
 }
 .btn-collection p {
   font-weight: var(--fw-black);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-01);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-little);
   text-transform: uppercase;
   color: var(--black);
   display: flex;
@@ -664,8 +664,8 @@ a, button {
   position: relative;
   font-family: var(--font-family);
   font-weight: var(--fw-regular);
-  font-size: var(--fs--btn);
-  line-height: var(--lh-16);
+  font-size: var(--fs-little);
+  line-height: var(--lh-checkbox);
   font-feature-settings: "liga" off;
   color: var(--grey);
   cursor: pointer;
@@ -723,17 +723,17 @@ a, button {
 }
 .subscription h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-02);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 13px;
 }
 .subscription p {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs--btn);
-  line-height: var(--lh-12);
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
   color: var(--supportgrey);
   margin-top: 6px;
 }
@@ -754,7 +754,7 @@ a, button {
   background: var(--lightblack);
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   display: flex;
   align-items: center;
   letter-spacing: var(--ls-regular);
@@ -811,7 +811,7 @@ a, button {
 .header__icon_bay span {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-12);
+  line-height: var(--lh-little);
   color: var(--black);
 }
 .header__block {
@@ -841,9 +841,9 @@ a, button {
   position: relative;
   display: block;
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-08em);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-bigem);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -897,31 +897,31 @@ a, button {
   color: var(--yellow);
   font-weight: var(--fw-bold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
 }
 .footer__menu_item a:nth-of-type(3) {
   margin-top: 13px;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   color: var(--white);
 }
 .footer__menu_item span {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   color: var(--white);
   display: block;
 }
 .footer__menu_item h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-02);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: var(--yellow);
   margin-bottom: 10px;
@@ -933,8 +933,8 @@ a, button {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: #AAA9A9;
 }
@@ -942,8 +942,8 @@ a, button {
   font-style: normal;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -992,8 +992,8 @@ a, button {
 .footer__document a {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   color: var(--white);
 }
 @media (max-width: 576px) {
@@ -1048,8 +1048,8 @@ a, button {
 }
 .card a {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   display: block;
   color: var(--black);
@@ -1058,7 +1058,7 @@ a, button {
   font-style: italic;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
@@ -1070,15 +1070,15 @@ a, button {
 }
 .card__add-to-cart p {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
 .card__add-to-cart a {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-decoration-line: underline;
   color: var(--black);
   display: flex;
@@ -1128,8 +1128,8 @@ a, button {
 }
 .card-small a {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1137,7 +1137,7 @@ a, button {
   font-style: italic;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
@@ -1177,7 +1177,7 @@ a, button {
   font-style: normal;
   font-weight: var(--fw-regular);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -1217,12 +1217,6 @@ a, button {
 }
 /** block **/
 /** Главная **/
-.main {
-  max-width: 1440px;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
 .main__burger-menu {
   display: none;
 }
@@ -1258,7 +1252,7 @@ a, button {
 .main h2 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-70);
+  line-height: var(--lh-J-RO);
   text-transform: uppercase;
   color: var(--black);
   white-space: pre-line;
@@ -1290,7 +1284,7 @@ a, button {
 .main__collection h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1317,7 +1311,7 @@ a, button {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-big-title);
-  line-height: var(--lh-120);
+  line-height: var(--lh-big);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1325,14 +1319,14 @@ a, button {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-medium-title);
-  line-height: var(--lh-72);
+  line-height: var(--lh-medium);
   text-transform: uppercase;
   color: var(--black);
 }
 .main__stroky {
   font-weight: var(--fw-regular);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--white);
   background: var(--black);
@@ -1352,14 +1346,14 @@ a, button {
 .main__popular h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--black);
 }
 .main__popular a {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   color: var(--black);
   display: flex;
   align-items: center;
@@ -1386,7 +1380,7 @@ a, button {
 .main__runningText h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-70);
+  line-height: var(--lh-J-RO);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1415,29 +1409,33 @@ a, button {
   --fw-black: 800;
   /**font-size**/
   --fs-title: 80px;
-  --fs-title-footer: 18px;
+  --fs-secondary: 18px;
   --fs-primary: 14px;
-  --fs--btn:12px;
-  --fs-card-name:20px;
+  --fs-little:12px;
+  --fs-normal:20px;
   --fs-big-title:100px;
   --fs-medium-title:60px;
+  --fs-sup-title:40px;
   /**line-height **/
-  --lh-12:12px;
-  --lh-16:16px;
-  --lh-17:17px;
-  --lh-48:48px;
-  --lh-22:22px;
-  --lh-24:24px;
-  --lh-72:72px;
-  --lh-70:70px;
-  --lh-96px:96px;
-  --lh-120:120px;
+  --lh-little:12px;
+  --lh-primary:17px;
+  --lh-title:96px;
+  --lh-big:120px;
+  --lh-secondary:22px;
+  --lh-normal:24px;
+  --lh-medium:72px;
+  --lh-sup-title:48px;
+  --lh-J-RO:70px;
+  --lh-checkbox:16px;
   /**letter-spacing**/
   --ls-regular:0.04em;
-  --ls-06:0.06em;
-  --ls-01:0.01em;
-  --ls-02:0.02em;
-  --ls-08:0.08em;
+  --ls-medium:0.06em;
+  --ls-little:0.01em;
+  --ls-secondary:0.02em;
+  --ls-big:0.08em;
+  /**margin**/
+  --margin-regular: 100px;
+  --margin-secondary: 80px;
 }
 
 /** Цвета **/

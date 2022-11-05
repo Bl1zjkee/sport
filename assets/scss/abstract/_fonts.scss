@@ -13,29 +13,34 @@
 
   /**font-size**/
   --fs-title: 80px;
-  --fs-title-footer: 18px;
+  --fs-secondary: 18px;
   --fs-primary: 14px;
-  --fs--btn:12px;
-  --fs-card-name:20px;
+  --fs-little:12px;
+  --fs-normal:20px;
  --fs-big-title:100px;
   --fs-medium-title:60px;
+  --fs-sup-title:40px;
 
   /**line-height **/
-  --lh-12:12px;
-  --lh-16:16px;
-  --lh-17:17px;
-  --lh-48:48px;
-  --lh-22:22px;
-  --lh-24:24px;
-  --lh-72:72px;
-  --lh-70:70px;
-  --lh-96px:96px;
-  --lh-120:120px;
+  --lh-little:12px;
+  --lh-primary:17px;
+  --lh-title:96px;
+  --lh-big:120px;
+  --lh-secondary:22px;
+  --lh-normal:24px;
+  --lh-medium:72px;
+  --lh-sup-title:48px;
+  --lh-J-RO:70px;
+  --lh-checkbox:16px;
 
   /**letter-spacing**/
   --ls-regular:0.04em;
-  --ls-06:0.06em;
-  --ls-01:0.01em;
-  --ls-02:0.02em;
-  --ls-08:0.08em;
+  --ls-medium:0.06em;
+  --ls-little:0.01em;
+  --ls-secondary:0.02em;
+  --ls-big:0.08em;
+
+  /**margin**/
+  --margin-regular: 100px;
+  --margin-secondary: 80px;
 }
