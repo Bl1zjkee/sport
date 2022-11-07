@@ -1,5 +1,9 @@
 .input {
   margin-top: 20px;
+  max-width: 720px;
+  width: 100%;
+
+
   label {
     font-size: var(--fs-normal);
     line-height: var(--lh-normal);
@@ -10,26 +14,33 @@
 
   &__item{
     position: relative;
-    max-width: 730px;
-    width: 100%;
+    padding: 22px 20px 21px 20px;
+    border: 1px dashed #B8B6B6;
+    &:active {
+      border: 1px dashed var(--black);
+    }
+    &:focus {
+      border: 1px dashed var(--black);
+    }
     input {
-      border: 1px dashed #B8B6B6;
-      width: 100%;
-      padding: 22px 20px 21px 20px;
+      width: 90%;
+      border: none;
+
       &::placeholder {
         font-weight: var(--fw-regular);
         font-size: var(--fs-primary);
         line-height: var(--lh-primary);
         letter-spacing: var( --ls-regular);
-        color: var(--black);
+        color: var(--placeholder);
       }
       &:focus-visible {
         outline: none;
       }
 
-      &:focus {
-        border: 1px dashed var(--black);
-      }
+
+    }
+    &_small{
+      padding: 21px 10px;
     }
   }
   &_small{

@@ -69,7 +69,6 @@
         background: var(--yellow);
         border: 1px solid var(--black);
 
-
   }
   &_basket {
     button {
@@ -95,8 +94,22 @@
     }
   }
 }
+    &_repeat{
+      h3{
+        display: flex;
+        align-items:center;
+        &:after{
+          content: '';
+          background-image:url("../icons/account_repeat.svg");
+          width: 19px;
+          height: 16px;
+          margin-left: 10px;
+        }
+      }
 
-
+    }
+  }
+  }
 .btn-collection{
   background: var(--yellow);
   padding: 24px 73px 24px 94px;
@@ -136,6 +149,7 @@
         }
       }
     }
+  }
     &_decoration{
       button{
         max-width: 255px;
@@ -145,7 +159,6 @@
       }
 
     }
-  }
 
   &:active {
     background: var(--black);
@@ -177,5 +190,8 @@
       }
     }
   }
+  }
 
-}
+
+
+
