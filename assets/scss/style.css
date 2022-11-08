@@ -3185,6 +3185,32 @@ a, button {
   color: var(--black);
 }
 
+/** Ошибка платежа **/
+.payment-error {
+  margin-top: 227px;
+  text-align: center;
+  padding-bottom: 44px;
+}
+.payment-error h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
+  letter-spacing: var(--ls-regular);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.payment-error .btn_all {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.payment-error .btn_all button {
+  padding: 16px 44px;
+}
+.payment-error .btn_all button h3 {
+  font-style: normal;
+}
+
 /** abstract **/
 /** Шрифт **/
 :root {
