@@ -1212,6 +1212,29 @@ a, button {
 .card:hover .favorite-card {
   display: block;
 }
+.card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  color: var(--black);
+}
+.card__price a {
+  text-decoration-line: underline;
+  display: flex;
+  align-items: center;
+}
+.card__price a:after {
+  content: "";
+  display: block;
+  background-image: url("../icons/sale_arrow.svg");
+  width: 20px;
+  height: 8px;
+  margin-left: 6px;
+}
 .card__img img {
   max-width: 350px;
   width: 1005px;
@@ -1221,7 +1244,6 @@ a, button {
   font-size: var(--fs-normal);
   line-height: var(--lh-normal);
   text-transform: uppercase;
-  display: block;
   color: var(--black);
 }
 .card span {
@@ -1231,6 +1253,7 @@ a, button {
   line-height: var(--lh-primary);
   text-transform: uppercase;
   color: var(--darkgrey);
+  display: block;
 }
 .card__add-to-cart {
   display: flex;
@@ -3095,6 +3118,18 @@ a, button {
 }
 .error .btn_all button h3 {
   font-style: normal;
+}
+
+/** Избранное **/
+.favourites {
+  margin-top: 20px;
+}
+.favourites h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-title);
+  text-transform: uppercase;
+  color: var(--black);
 }
 
 /** abstract **/
