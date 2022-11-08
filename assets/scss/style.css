@@ -2829,6 +2829,109 @@ a, button {
   width: 100%;
 }
 
+/** Оплата и Доставка **/
+.delivery {
+  margin-top: 20px;
+  padding-bottom: var(--margin-regular);
+}
+.delivery h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-title);
+  text-transform: uppercase;
+  color: var(--black);
+  max-width: 1130px;
+  width: 100%;
+  margin: 0 auto;
+}
+.delivery .bg-yellow:first-of-type {
+  margin-top: 40px;
+}
+
+.run-text-line {
+  padding: 2px 0 1px 0;
+  background: var(--black);
+  width: 100%;
+}
+.run-text-line p {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-checkbox);
+  letter-spacing: var(--ls-little);
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.delivery-information {
+  margin-top: 41px;
+  padding-bottom: var(--margin-regular);
+}
+.delivery-information__text {
+  margin-top: 20px;
+}
+.delivery-information__text h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-secondary);
+  color: var(--black);
+}
+.delivery-information__text p {
+  max-width: 920px;
+  width: 100%;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-secondary);
+  color: var(--black);
+}
+
+.delivery-refund {
+  padding-bottom: var(--margin-regular);
+}
+
+.bg-yellow {
+  margin-top: 60px;
+  max-width: 332px;
+  width: 100%;
+  background: var(--yellow);
+  padding: 6px 72px 6px 165px;
+}
+.bg-yellow h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.questions-faq {
+  width: 100%;
+  margin-top: 10px;
+}
+.questions-faq__item {
+  background: var(--yellow);
+  width: 100%;
+  padding: 24px 40px 24px 42px;
+  border-bottom: 1px solid var(--black);
+}
+.questions-faq__item h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.questions-faq__item h3:after {
+  content: "";
+  background-image: url("../icons/questions-faq_arrow.svg");
+  width: 15px;
+  height: 21px;
+  display: block;
+}
+
 /** abstract **/
 /** Шрифт **/
 :root {
