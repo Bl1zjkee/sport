@@ -315,6 +315,7 @@
 }
 .telegram{
   cursor: pointer;
+  display: flex;
   &:hover{
     svg{
       path{
@@ -336,6 +337,7 @@
 
 .whatsup{
   cursor: pointer;
+  display: flex;
   &:hover{
     svg{
       path{
