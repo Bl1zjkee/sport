@@ -646,6 +646,28 @@ a, button {
 .btn:focus svg path {
   fill: var(--black);
 }
+.btn_window-enter {
+  margin-top: 20px;
+  max-width: 460px;
+  width: 100%;
+}
+.btn_window-enter button {
+  background: var(--yellow);
+  padding: 18px 0;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-medium);
+  text-transform: uppercase;
+  color: var(--black);
+  border: 1px solid var(--black);
+  width: 100%;
+}
+.btn_window-enter button:hover {
+  background: var(--black);
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
 .btn_all button {
   background: var(--black);
   padding: 16px 89px;
@@ -697,8 +719,7 @@ a, button {
   height: 16px;
   margin-left: 10px;
 }
-
-.btn-collection {
+.btn .btn-collection {
   background: var(--yellow);
   padding: 24px 73px 24px 94px;
   display: flex;
@@ -707,7 +728,7 @@ a, button {
   border: none;
   margin-top: 278px;
 }
-.btn-collection p {
+.btn .btn-collection p {
   font-weight: var(--fw-black);
   font-size: var(--fs-secondary);
   line-height: var(--lh-secondary);
@@ -717,56 +738,55 @@ a, button {
   display: flex;
   align-items: center;
 }
-.btn-collection p svg {
+.btn .btn-collection p svg {
   margin-left: 10px;
 }
-.btn-collection:hover {
+.btn .btn-collection:hover {
   background: var(--black);
 }
-.btn-collection:hover p {
+.btn .btn-collection:hover p {
   color: var(--yellow);
 }
-.btn-collection:hover p svg {
+.btn .btn-collection:hover p svg {
   transform: rotate(45deg);
   transition: 1s;
 }
-.btn-collection:hover p svg path {
+.btn .btn-collection:hover p svg path {
   fill: var(--yellow);
 }
-.btn-collection_decoration button {
+.btn .btn-collection_decoration button {
   max-width: 255px;
   width: 100%;
   padding-left: 0;
   padding-right: 0;
 }
-.btn-collection:active {
+.btn .btn-collection:active {
   background: var(--black);
   border: 1px solid var(--yellow);
 }
-.btn-collection:active p {
+.btn .btn-collection:active p {
   color: var(--yellow);
 }
-.btn-collection:active p svg {
+.btn .btn-collection:active p svg {
   transform: rotate(45deg);
 }
-.btn-collection:active p svg path {
+.btn .btn-collection:active p svg path {
   fill: var(--yellow);
 }
-.btn-collection:focus {
+.btn .btn-collection:focus {
   background: var(--yellow);
   border: 1px solid var(--black);
 }
-.btn-collection:focus p {
+.btn .btn-collection:focus p {
   color: var(--black);
 }
-.btn-collection:focus p svg {
+.btn .btn-collection:focus p svg {
   transform: rotate(0);
 }
-.btn-collection:focus p svg path {
+.btn .btn-collection:focus p svg path {
   fill: var(--black);
 }
-
-.btn-social {
+.btn .btn-social {
   max-width: 540px;
   width: 100%;
   display: flex;
@@ -774,7 +794,7 @@ a, button {
   gap: 30px;
   margin-top: 10px;
 }
-.btn-social button {
+.btn .btn-social button {
   color: var(--yellow);
   padding: 19px 87px;
   background: var(--black);
@@ -787,19 +807,19 @@ a, button {
   display: flex;
   align-items: center;
 }
-.btn-social button svg {
+.btn .btn-social button svg {
   margin-right: 12px;
 }
-.btn-social button:hover {
+.btn .btn-social button:hover {
   background: var(--yellow);
 }
-.btn-social button:hover svg path {
+.btn .btn-social button:hover svg path {
   fill: var(--black);
 }
-.btn-social button:hover p {
+.btn .btn-social button:hover p {
   color: var(--black);
 }
-.btn-social button:active {
+.btn .btn-social button:active {
   background: var(--yellow);
   border: 1px solid var(--black);
 }
@@ -1337,6 +1357,126 @@ a, button {
 .card-small__img img {
   max-width: 160px;
   width: 100%;
+}
+
+/** Окно входа **/
+.enter {
+  background: var(--black);
+  padding: 60px 40px 40px 40px;
+  max-width: 540px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.enter h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
+  letter-spacing: var(--ls-medium);
+  text-transform: uppercase;
+  color: var(--yellow);
+  text-align: center;
+}
+.enter p {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--white);
+  margin-top: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.enter label {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--white);
+}
+.enter input {
+  border: 1px dashed var(--yellow);
+  padding: 22px 0 21px 20px;
+  max-width: 460px;
+  width: 100%;
+  background: var(--black);
+  color: var(--white);
+  margin-top: 2px;
+}
+.enter input::placeholder {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-regular);
+  text-transform: uppercase;
+  color: var(--white);
+}
+.enter span {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
+  text-align: center;
+  letter-spacing: 1px;
+  font-feature-settings: "liga" off;
+  color: #777777;
+  display: block;
+  margin-top: 10px;
+}
+.enter a {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
+  text-align: center;
+  letter-spacing: 1px;
+  font-feature-settings: "liga" off;
+  color: #777777;
+  text-decoration: underline;
+  display: block;
+  margin-top: 3px;
+}
+.enter__social {
+  margin-top: 78px;
+}
+.enter__social h3 {
+  font-weight: var(--fw-regular);
+  font-size: var(--lh-normal);
+  line-height: var(--lh-normal);
+  text-align: center;
+  font-feature-settings: "liga" off;
+  color: var(--white);
+}
+.enter__inner {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 16px;
+}
+.enter__inner svg:hover path {
+  fill: var(--black);
+  stroke: var(--yellow);
+}
+.enter_code p {
+  margin-bottom: 10px;
+}
+.enter_code span {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  align-items: center;
+  letter-spacing: var(--ls-secondary);
+  font-feature-settings: "liga" off;
+  color: var(--white);
+  text-align: center;
+  display: block;
+  margin-bottom: 33px;
+}
+.enter_code span:nth-of-type(2) {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.enter_code a {
+  color: var(--white);
 }
 
 .marquee-infinite {
