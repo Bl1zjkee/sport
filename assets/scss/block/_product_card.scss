@@ -1,11 +1,21 @@
 .product-card {
   display: flex;
   margin-top: 60px;
-
+@media (max-width: $xl) {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  @media (max-width: $md) {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+  }
   &__gallery {
     max-width: 160px;
     width: 100%;
-
+@media (max-width: $md) {
+  display: none;
+}
     picture {
       img {
         max-width: 160px;
@@ -21,7 +31,9 @@
     margin-left: 30px;
     max-width: 445px;
     width: 100%;
-
+    @media (max-width: $md) {
+      margin-left: 0;
+    }
     picture {
       max-width: 445px;
       width: 100%;
@@ -36,6 +48,10 @@
   &__name {
     width: 100%;
     margin-left: 30px;
+    @media (max-width: $xl) {
+      max-width: 637px;
+      margin-left: 0;
+    }
   }
 
   &__back {
@@ -43,7 +59,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+@media (max-width: $md) {
+  display: none;
+}
     a {
       font-weight: var(--fw-semibold);
       font-size: var(--fs--btn);
@@ -67,6 +85,9 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
+    @media (max-width: $md) {
+      display: none;
+    }
     p:nth-of-type(1){
       font-weight: var(--fw-regular);
       font-size: var(--fs-sup-title);
@@ -82,6 +103,9 @@
       text-transform: uppercase;
       color: var(--black);
       margin-left: 31px;
+      @media (max-width: $md) {
+margin-left: 143px;
+      }
     }
     span{
       font-weight: var(--fw-regular);
@@ -91,12 +115,30 @@
       text-transform: uppercase;
       color: var(--grey);
       margin-left: 20px;
+      @media (max-width: $md) {
+        font-size: var(--fs-normal);
+        line-height:var(--lh-normal);
+        text-decoration-line: line-through;
+        text-transform: uppercase;
+        color: var(--grey);
+      }
+    }
+    &_mobile{
+      display: none;
+      @media (max-width: $md) {
+        display: flex;
+        justify-content: end;
+        flex-wrap: wrap;
+      }
     }
   }
   &__color{
     display: flex;
     align-items: center;
     margin-top: 40px;
+    @media (max-width: $md) {
+      margin-top: 20px;
+    }
 p{
   font-weight: var(--fw-semibold);
   font-size: var(--fs-card-name);
@@ -131,6 +173,13 @@ p{
     align-items: center;
     justify-content: space-between;
     margin-top: 110px;
+    @media (max-width: $xl) {
+      margin-top: 30px;
+    }
+    @media (max-width: $md) {
+      gap: 6px;
+      margin-top: 20px;
+    }
   }
   &__add{
     border: 0.5px solid #000000;
@@ -138,7 +187,10 @@ p{
     width: 100%;
     display: flex;
     align-items: center;
-    height: 55px;
+    @media (max-width: $md) {
+      max-width: 96px;
+ 
+    }
     input{
       max-width: 53px;
       width: 100%;
@@ -159,7 +211,6 @@ p{
     }
     button{
       max-width: 53px;
-      height: 55px;
       background: transparent;
       border: none;
       padding-left: 20px;
@@ -179,6 +230,14 @@ p{
 .product-card-description{
   margin-top: 80px;
   padding-left: 190px;
+  @media (max-width: $lg){
+    padding-left: 80px;
+    margin-top: 40px;
+  }
+  @media (max-width: $md){
+  text-align: center;
+    padding-left: 0;
+  }
   h3{
     font-weight: var(--fw-bold);
     font-size: var(--fs-sup-title);
@@ -186,6 +245,10 @@ p{
     text-transform: uppercase;
     color: var(--black);
     margin-bottom: 20px;
+    @media (max-width: $md) {
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
+    }
 
   }
   p{
@@ -203,6 +266,9 @@ p{
 
 .product-card__popular{
   margin-bottom: 100px;
+  @media (max-width: $md ) {
+
+  }
 }
 .card-title {
   margin-top: 20px;
@@ -213,6 +279,9 @@ p{
     line-height: var(--lh-sup-title);
     text-transform: uppercase;
     color: var(--black);
+    @media (max-width: $md) {
+      display: none;
+    }
   }
 
   p {
@@ -229,6 +298,7 @@ p{
   }
   &_basket{
     margin-top: 0;
+
     h3{
       font-weight: var(--fw-semibold);
       font-size: var(--fs-card-name);
@@ -243,5 +313,30 @@ p{
       text-transform: uppercase;
       color:var(--darkgrey);
     }
+  }
+  &__favorite{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .favorite{
+      display: none;
+      @media (max-width: $md) {
+        display: flex;
+      }
+    }
+  }
+}
+.title-card-mobile{
+  display: none;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
+  text-transform: uppercase;
+  color: var(--black);
+  @media (max-width: $md) {
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 40px;
   }
 }

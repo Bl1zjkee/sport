@@ -5,7 +5,46 @@
   border-left: none;
   height: 50px;
   cursor: pointer;
+  &_basket {
+    width: 100%;
+    button {
+      background: var(--black);
+      border: none;
+      display: flex;
+      justify-content: center;
+      max-width: 255px;
+      width: 100%;
+      padding: 16px 0;
+      h3{
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-normal);
+        line-height: var(--lh-normal);
+        letter-spacing: var(--ls-medium);
+        text-transform: uppercase;
+        color: var(--white);
 
+
+      }
+      &:focus {
+        border: 1px solid var(--yellow);
+        background: var(--black);
+
+
+        h3 {
+          color: var(--black);
+        }
+      }
+
+      &:focus {
+        border: 1px solid var(--yellow);
+        background: var(--black);
+
+        h3 {
+          color: var(--white);
+        }
+      }
+    }
+  }
   &:hover {
     background: var(--black);
 
@@ -91,29 +130,7 @@ background: var(--yellow);
         border: 1px solid var(--black);
 
   }
-  &_basket {
-    button {
 
-    &:focus {
-      border: 1px solid var(--yellow);
-      background: var(--black);
-
-
-        h3 {
-          color: var(--black);
-        }
-      }
-
-      &:focus {
-        border: 1px solid var(--yellow);
-        background: var(--black);
-
-        h3 {
-          color: var(--white);
-        }
-      }
-    }
-  }
 }
     &_repeat{
       h3{

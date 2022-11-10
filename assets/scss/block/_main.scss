@@ -305,6 +305,9 @@ max-width: 100%;
 .popular{
   margin-top: 100px;
   margin-bottom: 80px;
+  @media (max-width: $md) {
+    margin-top: var(--margin-regular-mobile);
+  }
   &__list{
     display: flex;
     align-items: center;
@@ -318,6 +321,10 @@ max-width: 100%;
     line-height: var(--lh-title);
     text-transform: uppercase;
     color: var(--black);
+    @media (max-width: $md) {
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
+    }
   }
 
   a{
