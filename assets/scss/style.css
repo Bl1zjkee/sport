@@ -63,7 +63,7 @@ body, button {
   font-family: var(--font-family);
 }
 
-a, button {
+a, button, label {
   cursor: pointer;
   text-decoration: none;
 }
@@ -596,7 +596,7 @@ a, button {
 .radio-size + label {
   font-weight: var(--fw-regular);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--grey);
   margin-left: 20px;
@@ -613,10 +613,15 @@ a, button {
   max-width: 141px;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .size {
+    margin-top: 20px;
+  }
+}
 .size h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
   margin-bottom: 5px;
@@ -636,7 +641,7 @@ a, button {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   text-decoration-line: underline;
   text-transform: uppercase;
   color: var(--grey);
@@ -1269,6 +1274,11 @@ a, button {
 .card:hover .favorite-card {
   display: block;
 }
+@media (max-width: 768px) {
+  .card:hover {
+    display: none;
+  }
+}
 .card__price {
   display: flex;
   align-items: center;
@@ -1294,7 +1304,7 @@ a, button {
 }
 .card__img img {
   max-width: 350px;
-  width: 1005px;
+  width: 100%;
 }
 .card a {
   font-weight: var(--fw-semibold);
@@ -1363,6 +1373,11 @@ a, button {
   left: 12px;
   display: none;
 }
+@media (max-width: 768px) {
+  .favorite-card {
+    display: block;
+  }
+}
 .favorite-card__small {
   top: 7px;
   left: 7px;
@@ -1394,6 +1409,11 @@ a, button {
 .card-small__img img {
   max-width: 160px;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .card-small {
+    max-width: 147px;
+  }
 }
 
 /** Окно входа **/
@@ -1966,14 +1986,14 @@ a, button {
   font-style: normal;
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--black);
 }
 .popular a {
   font-weight: var(--fw-bold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   color: var(--black);
   display: flex;
   align-items: center;
@@ -1996,8 +2016,8 @@ a, button {
   background: var(--black);
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-01);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-little);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -2008,8 +2028,8 @@ a, button {
 .catalog-top__runningText_big p {
   font-style: italic;
   font-weight: var(--fw-regular);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2019,16 +2039,28 @@ a, button {
   padding-top: 67px;
   padding-bottom: 31px;
 }
+@media (max-width: 768px) {
+  .catalog-menu {
+    padding: 20px 0;
+  }
+}
 .catalog-menu__block {
   display: flex;
-  gap: 503px;
+  max-width: 940px;
+  justify-content: space-between;
 }
 .catalog-menu__block h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--yellow);
+}
+@media (max-width: 768px) {
+  .catalog-menu__block h3 {
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+  }
 }
 .catalog-menu__list {
   text-align: right;
@@ -2044,13 +2076,19 @@ a, button {
 }
 .catalog-menu__list ul li a {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-align: right;
   text-transform: uppercase;
   color: var(--white);
   display: flex;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .catalog-menu__list ul li a {
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
+  }
 }
 .catalog-menu__list ul li a svg {
   margin-left: 16px;
@@ -2068,19 +2106,20 @@ a, button {
 .catalog-products__text {
   display: flex;
   align-items: center;
-  gap: 545px;
+  max-width: 940px;
+  justify-content: space-between;
 }
 .catalog-products__text h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-transform: uppercase;
   color: var(--black);
 }
 .catalog-products__text span {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-align: right;
   text-transform: uppercase;
   color: var(--black);
@@ -2096,6 +2135,12 @@ a, button {
   gap: 90px;
   margin-top: 10px;
 }
+@media (max-width: 768px) {
+  .catalog-products__filters {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
 .catalog-products__group {
   display: flex;
   gap: 20px;
@@ -2109,7 +2154,7 @@ a, button {
 .catalog-products_filter label {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2117,13 +2162,22 @@ a, button {
 .catalog-filter-list {
   border-top: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
   margin-top: 42px;
+}
+@media (max-width: 768px) {
+  .catalog-filter-list {
+    padding: 20px 0;
+  }
 }
 .catalog-filter-list__inner {
   display: flex;
-  gap: 152px;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .catalog-filter-list__inner {
+    display: block;
+  }
 }
 .catalog-filter-list__name {
   max-width: 175px;
@@ -2141,8 +2195,8 @@ a, button {
 }
 .catalog-filter-list__name ul li a {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--grey);
   display: flex;
@@ -2164,6 +2218,40 @@ a, button {
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .catalog-card__list {
+    gap: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .catalog-card__list {
+    justify-content: center;
+  }
+}
+
+.catalog-card-small {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+.catalog-card-small__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+@media (max-width: 768px) {
+  .catalog-card-small__list {
+    justify-content: space-between;
+    gap: 20px 10px;
+  }
+}
+@media (max-width: 576px) {
+  .catalog-card-small__list {
+    justify-content: space-between;
+    gap: 20px 0;
+  }
 }
 
 /** Оформления заказа **/
@@ -2427,24 +2515,24 @@ a, button {
 }
 .product-card__price p:nth-of-type(1) {
   font-weight: var(--fw-regular);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-transform: uppercase;
   color: var(--black);
   margin-left: 0;
 }
 .product-card__price p {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-transform: uppercase;
   color: var(--black);
   margin-left: 31px;
 }
 .product-card__price span {
   font-weight: var(--fw-regular);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-decoration-line: line-through;
   text-transform: uppercase;
   color: var(--grey);
@@ -2458,7 +2546,7 @@ a, button {
 .product-card__color p {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2503,8 +2591,8 @@ a, button {
   border: none;
   font-weight: var(--fw-bold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
-  letter-spacing: var(--ls-01);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-little);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2520,11 +2608,11 @@ a, button {
   width: 100%;
   font-weight: var(--fw-bold);
   font-size: var(--fs-30);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: var(--ls-01);
+  letter-spacing: var(--ls-little);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2535,8 +2623,8 @@ a, button {
 }
 .product-card-description h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-transform: uppercase;
   color: var(--black);
   margin-bottom: 20px;
@@ -2548,8 +2636,8 @@ a, button {
   justify-content: center;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
-  letter-spacing: var(--ls-01);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-little);
   color: var(--black);
 }
 
@@ -2562,8 +2650,8 @@ a, button {
 }
 .card-title h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2571,7 +2659,7 @@ a, button {
   font-style: italic;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2591,7 +2679,7 @@ a, button {
 .card-title_basket p {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
@@ -2620,15 +2708,15 @@ a, button {
   font-style: italic;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   text-transform: uppercase;
   color: var(--darkgrey);
   margin-bottom: 20px;
 }
 .basket__decoration span {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-40);
-  line-height: var(--lh-48);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2644,7 +2732,7 @@ a, button {
 .basket .basket__runText p {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   letter-spacing: var(--ls-01);
   text-transform: uppercase;
   color: var(--black);
@@ -2686,7 +2774,7 @@ a, button {
 .card-secondary__name span {
   font-weight: var(--fw-bold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2694,7 +2782,7 @@ a, button {
   margin-top: 111px;
   font-weight: var(--fw-regular);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -2707,14 +2795,14 @@ a, button {
 .card-secondary__size p {
   font-weight: var(--fw-regular);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
 .card-secondary__size p span {
   font-weight: var(--fw-bold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
   margin-left: 47px;
@@ -2722,7 +2810,7 @@ a, button {
 .card-secondary__size a {
   font-weight: var(--fw-regular);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-align: right;
   text-decoration-line: underline;
   text-transform: uppercase;

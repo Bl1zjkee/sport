@@ -315,7 +315,7 @@ max-width: 100%;
     font-style: normal;
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
-    line-height: var(--lh-96px);
+    line-height: var(--lh-title);
     text-transform: uppercase;
     color: var(--black);
   }
@@ -323,7 +323,7 @@ max-width: 100%;
   a{
     font-weight: var(--fw-bold);
     font-size: var(--fs-card-name);
-    line-height: var(--lh-24);
+    line-height: var(--lh-normal);
     color: var(--black);
     display: flex;
     align-items: center;

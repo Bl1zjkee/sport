@@ -69,24 +69,24 @@
     margin-top: 20px;
     p:nth-of-type(1){
       font-weight: var(--fw-regular);
-      font-size: var(--fs-40);
-      line-height: var(--lh-48);
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
       text-transform: uppercase;
       color: var(--black);
       margin-left: 0;
     }
     p{
       font-weight: var(--fw-bold);
-      font-size: var(--fs-40);
-      line-height: var(--lh-48);
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
       text-transform: uppercase;
       color: var(--black);
       margin-left: 31px;
     }
     span{
       font-weight: var(--fw-regular);
-      font-size: var(--fs-40);
-      line-height: var(--lh-48);
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
       text-decoration-line: line-through;
       text-transform: uppercase;
       color: var(--grey);
@@ -100,7 +100,7 @@
 p{
   font-weight: var(--fw-semibold);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -149,8 +149,8 @@ p{
       border: none;
       font-weight: var(--fw-bold);
       font-size: var(--fs-card-name);
-      line-height: var(--lh-24);
-      letter-spacing: var(--ls-01);
+      line-height: var(--lh-normal);
+      letter-spacing: var(--ls-little);
       text-transform: uppercase;
       color: var(--black);
       &:focus-visible{
@@ -166,11 +166,11 @@ p{
       width: 100%;
       font-weight: var(--fw-bold);
       font-size: var(--fs-30);
-      line-height: var(--lh-24);
+      line-height: var(--lh-normal);
       display: flex;
       align-items: center;
       text-align: center;
-      letter-spacing: var(--ls-01);
+      letter-spacing: var(--ls-little);
       text-transform: uppercase;
       color:var(--black);
     }
@@ -181,8 +181,8 @@ p{
   padding-left: 190px;
   h3{
     font-weight: var(--fw-bold);
-    font-size: var(--fs-40);
-    line-height: var(--lh-48);
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
     text-transform: uppercase;
     color: var(--black);
     margin-bottom: 20px;
@@ -195,8 +195,8 @@ p{
     justify-content: center;
     font-weight: var(--fw-semibold);
     font-size: var(--fs-card-name);
-    line-height: var(--lh-24);
-    letter-spacing: var(--ls-01);
+    line-height: var(--lh-normal);
+    letter-spacing: var(--ls-little);
     color: var(--black);
   }
  }
@@ -209,8 +209,8 @@ p{
 
   h3 {
     font-weight: var(--fw-bold);
-    font-size: var(--fs-40);
-    line-height: var(--lh-48);
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
     text-transform: uppercase;
     color: var(--black);
   }
@@ -219,7 +219,7 @@ p{
     font-style: italic;
     font-weight: var(--fw-semibold);
     font-size: var(--fs-card-name);
-    line-height: var(--lh-24);
+    line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--black);
 
@@ -239,7 +239,7 @@ p{
     p{
       font-weight: var(--fw-semibold);
       font-size: var(--fs-primary);
-      line-height: var(--lh-17);
+      line-height: var(--lh-primary);
       text-transform: uppercase;
       color:var(--darkgrey);
     }

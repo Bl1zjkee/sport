@@ -22,15 +22,15 @@
       font-style: italic;
       font-weight: var(--fw-semibold);
       font-size: var(--fs-primary);
-      line-height: var(--lh-17);
+      line-height: var(--lh-primary);
       text-transform: uppercase;
       color: var(--darkgrey);
       margin-bottom: 20px;
     }
     span{
       font-weight: var(--fw-bold);
-      font-size: var(--fs-40);
-      line-height: var(--lh-48);
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
       text-transform: uppercase;
       color: var(--black);
     }
@@ -47,7 +47,7 @@
     p{
       font-weight: var(--fw-semibold);
       font-size: var(--fs-primary);
-      line-height: var(--lh-17);
+      line-height: var(--lh-primary);
       letter-spacing:var(--ls-01);
       text-transform: uppercase;
       color: var(--black);
@@ -97,7 +97,7 @@ margin-left: 185px;
   span{
     font-weight: var(--fw-bold);
     font-size: var(--fs-card-name);
-    line-height: var(--lh-24);
+    line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--black);
   }
@@ -106,7 +106,7 @@ margin-left: 185px;
   margin-top: 111px;
   font-weight:var(--fw-regular);
   font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -118,14 +118,14 @@ margin-left: 185px;
   p{
     font-weight:var(--fw-regular);
     font-size: var(--fs-card-name);
-    line-height: var(--lh-24);
+    line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--black);
 
     span{
       font-weight:var(--fw-bold);
       font-size: var(--fs-card-name);
-      line-height: var(--lh-24);
+      line-height: var(--lh-normal);
       text-transform: uppercase;
       color: var(--black);
       margin-left: 47px;
@@ -134,7 +134,7 @@ margin-left: 185px;
   a{
     font-weight:var(--fw-regular);
     font-size: var(--fs-card-name);
-    line-height: var(--lh-24);
+    line-height: var(--lh-normal);
     text-align: right;
     text-decoration-line: underline;
     text-transform: uppercase;

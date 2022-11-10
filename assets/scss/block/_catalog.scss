@@ -7,8 +7,8 @@
       background: var(--black);
       font-weight: var(--fw-regular);
       font-size: var(--fs-primary);
-      line-height: var(--lh-17);
-      letter-spacing: var(--ls-01);
+      line-height: var(--lh-primary);
+      letter-spacing: var(--ls-little);
       text-transform: uppercase;
       color: var(--white);
     }
@@ -20,8 +20,8 @@
       p {
         font-style: italic;
         font-weight: var(--fw-regular);
-        font-size: var(--fs-40);
-        line-height: var(--lh-48);
+        font-size: var(--fs-sup-title);
+        line-height: var(--lh-sup-title);
         text-transform: uppercase;
         color: var(--black);
       }
@@ -33,17 +33,25 @@
   background: var(--black);
   padding-top: 67px;
   padding-bottom: 31px;
+  @media (max-width: $md) {
+padding:20px 0;
+  }
 
   &__block {
     display: flex;
-    gap: 503px;
+   max-width: 940px;
+    justify-content: space-between;
 
     h3 {
       font-weight: var(--fw-bold);
       font-size: var(--fs-title);
-      line-height: var(--lh-96px);
+      line-height: var(--lh-title);
       text-transform: uppercase;
       color: var(--yellow);
+      @media (max-width: $md) {
+        font-size: var(--fs-sup-title);
+        line-height: var(--lh-sup-title);
+      }
     }
   }
 
@@ -64,14 +72,17 @@
 
         a {
           font-weight: var(--fw-semibold);
-          font-size: var(--fs-40);
-          line-height: var(--lh-48);
+          font-size: var(--fs-sup-title);
+          line-height: var(--lh-sup-title);
           text-align: right;
           text-transform: uppercase;
           color: var(--white);
           display: flex;
           align-items: center;
-
+@media (max-width: $md) {
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+}
           svg {
             margin-left: 16px;
           }
@@ -99,20 +110,21 @@
   &__text {
     display: flex;
     align-items: center;
-    gap: 545px;
+    max-width: 940px;
+    justify-content: space-between;
 
     h3 {
       font-weight: var(--fw-bold);
-      font-size: var(--fs-40);
-      line-height: var(--lh-48);
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
       text-transform: uppercase;
       color: var(--black);
     }
 
     span {
       font-weight: var(--fw-bold);
-      font-size: var(--fs-40);
-      line-height: var(--lh-48);
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
       text-align: right;
       text-transform: uppercase;
       color: var(--black);
@@ -130,6 +142,10 @@
     align-items: center;
     gap: 90px;
     margin-top: 10px;
+    @media (max-width: $md) {
+      gap: 0;
+      justify-content: space-between;
+    }
   }
 
   &__group {
@@ -144,7 +160,7 @@
     label{
       font-weight: var(--fw-semibold);
       font-size: var(--fs-card-name);
-      line-height: var(--lh-24);
+      line-height: var(--lh-normal);
       text-transform: uppercase;
       color: var(--black);
     }
@@ -154,13 +170,18 @@
 .catalog-filter-list{
   border-top:1px solid var(--black);
   border-bottom:1px solid var(--black);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
   margin-top: 42px;
+  @media (max-width:$md ) {
+    padding: 20px 0;
+  }
 
   &__inner{
     display: flex;
-    gap: 152px;
+  justify-content: space-between;
+    @media (max-width:$md ) {
+     display: block;
+    }
   }
   &__name{
     max-width: 175px;
@@ -175,8 +196,8 @@ margin-top: 5px;
 }
     a{
       font-weight: var(--fw-semibold);
-      font-size: var(--fs-card-name);
-      line-height: var(--lh-24);
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
       text-transform: uppercase;
       color: var(--grey);
       display: flex;
@@ -202,6 +223,31 @@ margin-top: 5px;
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
+    @media (max-width: $md) {
+      gap: 40px;
+    }
+    @media (max-width: $sm) {
+      justify-content: center;
+    }
   }
 }
+.catalog-card-small{
+  margin-top: 40px;
+  margin-bottom: 100px;
 
+  &__list{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    @media (max-width: $md) {
+      justify-content: space-between;
+      gap: 20px 10px;
+    }
+    @media (max-width: $sm) {
+      justify-content: space-between;
+      gap: 20px 0;
+    }
+  }
+}

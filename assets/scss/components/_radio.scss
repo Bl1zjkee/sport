@@ -54,7 +54,7 @@ background: var(--yellow);
   &+label{
     font-weight: var(--fw-regular);
     font-size: var(--fs-card-name);
-    line-height: var(--lh-24);
+    line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--grey);
     margin-left: 20px;
@@ -71,11 +71,13 @@ background: var(--yellow);
 .size{
   max-width: 141px;
   width: 100%;
-
+  @media (max-width:$md ) {
+margin-top: 20px;
+  }
   h3{
     font-weight: var(--fw-bold);
     font-size: var(--fs-card-name);
-    line-height: var(--lh-24);
+    line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--black);
     margin-bottom: 5px;
@@ -94,7 +96,7 @@ background: var(--yellow);
       font-style: italic;
       font-weight: var(--fw-regular);
       font-size: var(--fs-primary);
-      line-height: var(--lh-17);
+      line-height: var(--lh-primary);
       text-decoration-line: underline;
       text-transform: uppercase;
       color: var(--grey);
