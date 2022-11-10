@@ -1,8 +1,14 @@
-.main {
-  &__burger-menu {
-    display: none;
-  }
+@import "../abstract/mixins";
 
+.main {
+  &__burger-menu{
+    position: relative;
+    z-index: 3;
+    display: none;
+    @media (max-width: 960px) {
+      display: block;
+    }
+  }
   &__logo {
     max-width: 65px;
 
@@ -16,11 +22,23 @@
     align-items: center;
     gap: 10px;
   }
-
+&__header-all{
+  display: flex;
+  gap: 30px;
+  position: relative;
+  @media (max-width: $lg) {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  @media (max-width: $md) {
+gap: 0;
+  }
+}
   &__header {
     position: relative;
     display: flex;
-    justify-content: space-between;
+ justify-content: space-between;
   }
 
   &__img {
@@ -28,16 +46,79 @@
 
     picture {
       width: 100%;
-
       img {
         max-width: 705px;
+        width: 100%;
+        @media (max-width: $md) {
+            max-width: 210px;
+
+        }
+      }
+    }
+    @media (max-width: $lg) {
+      order: 2;
+
+
+    }
+  }
+  &__collection {
+    margin-top: 130px;
+    margin-bottom:var(--margin-regular);
+    @media (max-width: $lg) {
+      margin-bottom: var(--margin-regular-mobile);
+    }
+
+    h3 {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-title);
+      line-height: var(--lh-title);
+      text-transform: uppercase;
+      color: var(--black);
+      @media (max-width: $lg) {
+        display: flex;
+        justify-content: center;
+        @media (max-width: $lg) {
+          font-size: var(--fs-sup-title);
+          line-height: var(--lh-sup-title);
+        }
+      }
+    }
+
+
+  }
+
+  &__collection-img {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    picture{
+      max-width: 350px;
+      img{
+        width: 100%;
+      }
+    }
+    @media (max-width:$lg ) {
+      display: none;
+    }
+    &_mobile{
+      display: none;
+      @media (max-width:$lg ) {
+        picture{
+
+        }
+        display: flex;
+        justify-content: center;
       }
     }
   }
-
   &__menu {
     width: 100%;
-    padding: 21px 165px 0 30px;
+    padding: 21px 0 0 30px;
+    max-width: 541px;
+    @media (max-width: $md) {
+      padding-left: 0;
+    }
   }
 
   h2 {
@@ -46,18 +127,37 @@
     line-height: var(--lh-title-secondary);
     text-transform: uppercase;
     color: var(--black);
-    white-space: pre-line;
-
+    margin: 0 auto;
+    margin-top: 122px;
+@media (max-width: $xl) {
+  margin-top: 50px;
+}
+    @media (max-width: $md) {
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
+    }
+    @media (max-width: $md) {
+      margin-top: 8px;
+      margin-bottom: -22px;
+    }
     span {
       display: flex;
       text-align: end;
       white-space: pre-line;
       max-width: 384px;
       width: 100%;
+
+      @media (max-width: $md) {
+        font-size: var(--fs-sup-title);
+        line-height: var(--lh-sup-title);
+
+      }
     }
   }
 
   &__circle {
+    position: absolute;
+    bottom: 2px;
     img {
       width: 138px;
       height: 138px;
@@ -73,40 +173,7 @@
     bottom: 20px;
     right: 20px;
   }
-
-  &__collection {
-    margin-top: 130px;
-    margin-bottom:var(--margin-regular);
-
-    h3 {
-      font-weight: var(--fw-bold);
-      font-size: var(--fs-title);
-      line-height: var(--lh-title);
-      text-transform: uppercase;
-      color: var(--black);
-    }
-
-    &_img {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      picture{
-        max-width: 350px;
-        img{
-          width: 100%;
-        }
-      }
-    }
-  }
-&__item{
-  display: flex;
-  gap: 30px;
-  margin-top: 30px;
-}
-  &__item:nth-of-type(1){
-    margin-top: 20px;
-  }
-  &__title-collection{
+  &__text-collection{
     h3{
       font-style: italic;
       font-weight: var(--fw-regular);
@@ -123,6 +190,38 @@
       text-transform: uppercase;
       color: var(--black);
     }
+    @media (max-width: $lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h3{
+        font-size:var(--fs-sup-title);
+        line-height: var(--lh-sup-title);
+      }
+      span{
+        margin-left: 20px;
+        font-size:var(--fs-sup-title);
+        line-height: var(--lh-sup-title);
+      }
+    }
+  }
+
+&__item{
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+  &__item:nth-of-type(1){
+    margin-top: 20px;
+  }
+  &__title-collection{
+    max-width: 350px;
+    width: 100%;
+    @media (max-width: $lg) {
+max-width: 100%;
+    }
+
+
   }
   &__stroky{
     font-weight: var(--fw-regular);

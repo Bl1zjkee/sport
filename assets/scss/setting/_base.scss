@@ -1,3 +1,5 @@
+@import "../abstract/mixins";
+
 *{
   box-sizing: border-box;
 &:after:before{
@@ -12,9 +14,17 @@ a,button{
   text-decoration: none;
 }
 .container{
-  max-width: 1130px;
+  max-width: 1110px;
   width: 100%;
   margin: 0 auto;
+  @media (max-width:$xl) {
+    padding: 0 15px;
+    max-width: 1140px;
+  }
+  @media (max-width:$md) {
+    padding: 0 10px;
+    max-width: 1130px;
+  }
 }
 .wrapper{
   max-width: 1440px;
