@@ -6,22 +6,27 @@
   position: relative;
   margin-top: 332px;
   padding-bottom: 140px;
+  @media (max-width: $md) {
+    margin-top: 138px;
+  }
 
   picture {
-    width: 100%;
-
     img {
       max-width: 455px;
-      width: 100%;
+      @media (max-width: $sm) {
+      }
     }
   }
 
   picture:nth-of-type(2) {
+    position: absolute;
     img {
       margin-left: -4%;
+      @media (max-width: $sm) {
+
+      }
     }
   }
-
   &__bg {
     img {
 
@@ -47,6 +52,14 @@
       white-space: pre-line;
       max-width: 650px;
       width: 100%;
+      @media (max-width: $md) {
+        font-size: var(--fs-normal);
+        line-height:var(--lh-normal);
+        text-align: center;
+      }
+      span{
+        font-weight: var(--fw-bold);
+      }
     }
   }
 }
@@ -54,14 +67,28 @@
 .about-collection {
   background: var(--yellow);
   padding: 83px 0;
-
+overflow: hidden;
   &__list {
     display: flex;
     justify-content: space-between;
-
+@media (max-width: $xl) {
+  display: block;
+}
   }
 
   &__inner {
+    @media (max-width: $xl) {
+   display: flex;
+      justify-content: center;
+      position: relative;
+      margin-top: 35px;
+    }
+picture{
+  img{
+    max-width: 194px;
+
+  }
+}
     h3 {
       font-style: italic;
       font-weight: var(--fw-regular);
@@ -69,6 +96,20 @@
       line-height: var(--lh-big);
       text-transform: uppercase;
       color: var(--black);
+      @media (max-width: $xl) {
+        position: absolute;
+        top: -86px;
+        left: 150px;
+        z-index: 2;
+      }
+      @media (max-width: $md) {
+        font-size: var(--fs-sup-title);
+        line-height:var(--lh-sup-title);
+        top: inherit;
+      }
+      @media (max-width: $esm) {
+        left:0;
+      }
     }
 
     p {
@@ -78,25 +119,42 @@
       line-height: 72px;
       text-transform: uppercase;
       color: #000000;
-      position: absolute;
       z-index: 2;
+      position: absolute;
+      @media (max-width: $xl) {
+        position: absolute;
+        top: 50px;
+        left:110px;
+        z-index: 2;
+      }
+      @media (max-width: $md) {
+        font-size: var(--fs-sup-title);
+        line-height:var(--lh-sup-title);
+        left:145px;
+      }
+      @media (max-width: $esm) {
+        left:0;
+      }
     }
 
-    img {
-      max-width: 245px;
-      position: relative;
-      margin-top: 36px;
-
-    }
 
     &_two {
       position: relative;
-
+@media (max-width: $md) {
+  display: block;
+}
       p {
         position: absolute;
         z-index: 3;
         top: 210px;
         left: -54px;
+        @media (max-width: $xl) {
+          left: 150px;
+        }
+        @media (max-width: $md) {
+          left: 164px;
+          top: 76px;
+        }
       }
 
       h3 {
@@ -104,13 +162,22 @@
         z-index: 3;
         top: 97px;
         left: -56px;
-
+        @media (max-width: $xl) {
+          left: 150px;
+        }
+        @media (max-width: $md) {
+          left: 168px;
+          top: 33px;
+        }
       }
-
-      img {
-        max-width: 350px;
-        margin-top: 0;
-      }
+     picture{
+       img{
+         max-width: 350px;
+         @media (max-width: $md) {
+           max-width:189px ;
+         }
+       }
+     }
     }
 
     &_three {
@@ -123,6 +190,17 @@
         z-index: 3;
         top: -9px;
         left: 83px;
+        @media (max-width: $xl) {
+         bottom: 200px;
+          top:inherit;
+        }
+        @media (max-width: $md) {
+          bottom: 85px;
+          top:inherit;
+        }
+        @media (max-width: $esm) {
+          left: 55px;
+        }
       }
 
       p {
@@ -130,13 +208,31 @@
         top: 103px;
         z-index: 3;
         right: 11px;
-
+        @media (max-width: $xl) {
+          left: 160px;
+          bottom: 73px;
+          top: inherit;
+          right: inherit;
+        }
+        @media (max-width: $md) {
+          left: 47px;
+          bottom: 31px;
+        }
       }
+picture{
+  img {
+    max-width: 350px;
+    margin-top: 0;
+    @media (max-width: $md) {
+      max-width: 134px;
+    }
+    @media (max-width: $esm) {
+      margin-left: 100px;
+      margin-top: -25%;
+    }
+  }
+}
 
-      img {
-        max-width: 350px;
-        margin-top: 0;
-      }
     }
   }
 }
@@ -192,8 +288,15 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+  @media (max-width: $lg) {
+    padding: 20px 10px;
+    display: block;
+  }
 
   &__text {
+    @media (max-width: $lg) {
+      margin-bottom: 20px;
+    }
     h3 {
       font-weight: var(--fw-bold);
       font-size: var(--fs-sup-title);
@@ -221,7 +324,9 @@
   &__sending {
     max-width: 540px;
     width: 100%;
-
+    @media (max-width: $lg) {
+  max-width: 100%;
+    }
     input:first-of-type {
       margin-top: 0;
     }
