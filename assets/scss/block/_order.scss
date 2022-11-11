@@ -1,3 +1,4 @@
+@import "../abstract/mixins";
 .order{
 }
 
@@ -13,6 +14,11 @@ gap: 125px;
     line-height:var(--lh-title);
     text-transform: uppercase;
     color: var(--black);
+    @media (max-width: $lg) {
+      font-size: var(--fs-sup-title);
+      line-height:var(--lh-sup-title);
+      margin-bottom: 20px;
+    }
   }
 label{
   margin-top: 3px;
@@ -20,6 +26,10 @@ label{
   &__address{
     display: flex;
     gap: 30px;
+    @media (max-width: $md) {
+      flex-wrap: wrap;
+      gap: 0;
+    }
   }
   &__enter{
     max-width: 350px;
@@ -39,50 +49,35 @@ label{
 &_flex{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+gap: 16px;
 }
   }
 
-  &__total{
-    max-width: 730px;
-    width: 100%;
-    margin-top: 74px;
-    margin-bottom: var(--margin-regular);
 
-   .btn_all{
-     display: flex;
-     justify-content: end;
-   }
-    h3{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      font-weight: var(--fw-bold);
-      font-size: var(--fs-sup-title);
-      line-height: var(--lh-sup-title);
-      letter-spacing: var(--ls-regular);
-      text-transform: uppercase;
-      font-feature-settings: 'liga' off;
-      color: var(--black);
+&__price{
+  @media (max-width: $md) {
+    margin-top: 20px;
+  }
+  p{
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
+    letter-spacing: var(--ls-regular);
+    text-transform: uppercase;
+    font-feature-settings: 'liga' off;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    @media (max-width: $md) {
+      margin-top: 6px;
     }
-    p{
-      font-weight: var(--fw-semibold);
-      font-size: var(--fs-sup-secondary);
-      line-height: var(--lh-sup-secondary);
-      letter-spacing: var(--ls-regular);
-      text-transform: uppercase;
-      font-feature-settings: 'liga' off;
-      color: var(--black);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 10px;
-      &:nth-of-type(2){
-        margin-bottom: 44px;
-      }
+    &:nth-of-type(2){
+      margin-bottom: 44px;
     }
   }
+}
 }
 .order-sidebar{
   max-width: 255px;
@@ -92,7 +87,9 @@ label{
   height: 100%;
   top: 0;
   margin-bottom:var(--margin-regular);
-
+@media (max-width: $lg) {
+  display: none;
+}
   p{
     font-weight: var(--fw-bold);
     font-size: var(--fs-normal);
@@ -183,6 +180,13 @@ img{
   justify-content: space-between;
   max-width: 730px;
   width: 100%;
+  @media (max-width: $md) {
+    gap: 10px;
+    p{
+      max-width: 110px;
+      width: 100%;
+    }
+  }
   p{
     font-weight: var(--fw-semibold);
     font-size: var(--fs-primary);
@@ -197,5 +201,61 @@ img{
       text-decoration: underline;
       color: var(--black);
     }
+  }
+}
+.order-inner-total{
+  max-width: 730px;
+  width: 100%;
+  margin-top: 74px;
+  margin-bottom: var(--margin-regular);
+  .btn_all{
+    display: flex;
+    justify-content: end;
+    button{
+      @media (max-width: $md) {
+        padding: 16px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        h3{
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+
+  }
+  h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+    letter-spacing: var(--ls-regular);
+    text-transform: uppercase;
+    font-feature-settings: 'liga' off;
+    margin-bottom: 1px;
+    color: var(--black);
+    @media (max-width: $md) {
+      line-height: var(--lh-normal);
+      font-size: var(--fs-normal);
+
+    }
+  }
+  p{
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-sup-secondary);
+    line-height: var(--lh-sup-secondary);
+    display: flex;
+    align-items: center;
+    letter-spacing: var(--ls-regular);
+    text-transform: uppercase;
+    font-feature-settings: 'liga' off;
+    color: var(--black);
+    justify-content: space-between;
+    margin-top: 10px;
   }
 }
