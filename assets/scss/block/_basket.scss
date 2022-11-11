@@ -1,3 +1,4 @@
+@import "../abstract/mixins";
 .basket{
   h3{
     font-weight:var(--fw-bold);
@@ -16,13 +17,26 @@
     picture{
       img{
         max-width: 160px;
+
+      }
+      @media (max-width: $sm) {
+        img{
+          max-width: 147px;
+        }
       }
     }
+    @media (max-width: $md) {
+      margin-top: 20px;
+    }
+
   }
 
   &__description{
 margin-left: 30px;
     width: 100%;
+    @media (max-width: $sm) {
+      margin-left: 6px;
+    }
     h3{
       font-weight: var(--fw-semibold);
       font-size: var(--fs-card-name);
@@ -38,12 +52,18 @@ margin-left: 30px;
     display: flex;
     width: 100%;
     justify-content: space-between;
+    @media (max-width: $sm) {
+     span{
+       display: none;
+     }
+    }
     span{
       font-weight: var(--fw-bold);
       font-size: var(--fs-card-name);
       line-height: var(--lh-24);
       text-transform: uppercase;
       color: var(--black);
+
     }
   }
   &__color{
@@ -53,6 +73,9 @@ margin-left: 30px;
     line-height: var(--lh-24);
     text-transform: uppercase;
     color: var(--black);
+    @media (max-width: $sm) {
+      margin-top:10px;
+    }
   }
   &__size{
     display: flex;
@@ -83,12 +106,42 @@ margin-left: 30px;
       text-decoration-line: underline;
       text-transform: uppercase;
       color: var(--black);
-
+@media (max-width: $sm) {
+display: none;
+}
+    }
+  }
+  &__sale-mobile{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 14px;
+    @media (max-width: $sm) {
+      display: flex;
+    }
+    span{
+      font-weight:var(--fw-bold);
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-24);
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    a{
+      font-weight:var(--fw-regular);
+      font-size: var(--fs-card-name);
+      line-height: var(--lh-24);
+      text-align: right;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      color: var(--black);
     }
   }
   &__decoration{
     margin-top: 40px;
     margin-bottom: 76px;
+    @media (max-width: $sm) {
+      text-align: end;
+    }
     p{
       font-weight: var(--fw-bold);
       font-size: var(--fs-card-name);

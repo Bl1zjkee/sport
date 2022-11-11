@@ -721,6 +721,11 @@ a, button, label {
   padding-left: 0;
   padding-right: 0;
 }
+@media (max-width: 576px) {
+  .btn_basket_decoration button {
+    max-width: 100%;
+  }
+}
 
 /** checkbox**/
 .custom-checkbox {
@@ -1881,6 +1886,11 @@ a, button, label {
 .card-title p span {
   font-size: var(--fs-primary);
 }
+@media (max-width: 576px) {
+  .card-title p span {
+    display: flex;
+  }
+}
 .card-title_basket {
   margin-top: 0;
 }
@@ -1918,9 +1928,24 @@ a, button, label {
 .basket__card picture img {
   max-width: 160px;
 }
+@media (max-width: 576px) {
+  .basket__card picture img {
+    max-width: 147px;
+  }
+}
+@media (max-width: 768px) {
+  .basket__card {
+    margin-top: 20px;
+  }
+}
 .basket__description {
   margin-left: 30px;
   width: 100%;
+}
+@media (max-width: 576px) {
+  .basket__description {
+    margin-left: 6px;
+  }
 }
 .basket__description h3 {
   font-weight: var(--fw-semibold);
@@ -1934,6 +1959,11 @@ a, button, label {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+@media (max-width: 576px) {
+  .basket__name span {
+    display: none;
+  }
 }
 .basket__name span {
   font-weight: var(--fw-bold);
@@ -1949,6 +1979,11 @@ a, button, label {
   line-height: var(--lh-24);
   text-transform: uppercase;
   color: var(--black);
+}
+@media (max-width: 576px) {
+  .basket__color {
+    margin-top: 10px;
+  }
 }
 .basket__size {
   display: flex;
@@ -1980,9 +2015,46 @@ a, button, label {
   text-transform: uppercase;
   color: var(--black);
 }
+@media (max-width: 576px) {
+  .basket__size a {
+    display: none;
+  }
+}
+.basket__sale-mobile {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+@media (max-width: 576px) {
+  .basket__sale-mobile {
+    display: flex;
+  }
+}
+.basket__sale-mobile span {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.basket__sale-mobile a {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  text-align: right;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: var(--black);
+}
 .basket__decoration {
   margin-top: 40px;
   margin-bottom: 76px;
+}
+@media (max-width: 576px) {
+  .basket__decoration {
+    text-align: end;
+  }
 }
 .basket__decoration p {
   font-weight: var(--fw-bold);
