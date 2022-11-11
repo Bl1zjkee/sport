@@ -73,6 +73,11 @@ a, button {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 10px;
+  }
+}
 
 .wrapper {
   max-width: 1440px;
@@ -98,6 +103,11 @@ a, button {
   position: relative;
   padding: 22px 20px 21px 20px;
   border: 1px dashed #B8B6B6;
+}
+@media (max-width: 576px) {
+  .input__item {
+    padding: 22px 15px 21px 11px;
+  }
 }
 .input__item:active {
   border: 1px dashed var(--black);
@@ -368,6 +378,11 @@ a, button {
   top: 22px;
   right: 58px;
 }
+@media (max-width: 576px) {
+  .edit {
+    right: 44px;
+  }
+}
 .edit:hover svg path, .edit active svg path {
   fill: black;
 }
@@ -377,6 +392,11 @@ a, button {
   position: absolute;
   top: 22px;
   right: 25px;
+}
+@media (max-width: 576px) {
+  .delete {
+    right: 15px;
+  }
 }
 .delete:hover svg path, .delete active svg path {
   fill: black;
@@ -528,6 +548,12 @@ a, button {
   font-size: var(--fs-normal);
   line-height: var(--lh-normal);
   text-transform: uppercase;
+}
+@media (max-width: 576px) {
+  .custom-radio + label {
+    font-size: var(--fs-primary);
+    line-height: var(--lh-primary);
+  }
 }
 .custom-radio + label:before {
   content: "";
@@ -2312,6 +2338,12 @@ a, button {
   text-transform: uppercase;
   color: var(--black);
 }
+@media (max-width: 768px) {
+  .account h3 {
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+  }
+}
 .account__switch {
   margin-top: 80px;
   display: flex;
@@ -2320,8 +2352,18 @@ a, button {
   border-bottom: 1px solid var(--black);
   padding-bottom: 5px;
 }
+@media (max-width: 992px) {
+  .account__switch {
+    display: none;
+  }
+}
 .account__runText {
   margin-bottom: 41px;
+}
+@media (max-width: 992px) {
+  .account__runText {
+    display: none;
+  }
 }
 .account__runText p {
   font-weight: var(--fw-semibold);
@@ -2369,6 +2411,11 @@ a, button {
   width: 100%;
   margin-top: 40px;
 }
+@media (max-width: 768px) {
+  .account-data__completion .input {
+    margin-top: 20px;
+  }
+}
 .account-data__completion .input p {
   font-weight: var(--fw-regular);
   font-size: var(--fs-little);
@@ -2405,6 +2452,11 @@ a, button {
 .account-social {
   margin-top: 60px;
   margin-bottom: var(--margin-regular);
+}
+@media (max-width: 768px) {
+  .account-social {
+    margin-top: 40px;
+  }
 }
 .account-social h3 {
   font-weight: var(--fw-bold);
@@ -2512,9 +2564,19 @@ a, button {
   max-width: 1110px;
   width: 100%;
 }
+@media (max-width: 576px) {
+  .account-history button {
+    width: 100%;
+  }
+}
 .account-history button {
   margin-left: auto;
   margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .account-history button {
+    width: 100%;
+  }
 }
 .account-history .card-secondary {
   max-width: 1067px;
@@ -2529,6 +2591,12 @@ a, button {
 .account-history__list {
   border: 1px solid var(--line);
   padding: 20px 21px;
+}
+@media (max-width: 992px) {
+  .account-history__list {
+    border: none;
+    padding: 0;
+  }
 }
 .account-history__item {
   border-bottom: 1px solid var(--grey);
@@ -2588,6 +2656,56 @@ a, button {
   line-height: var(--lh-little);
   font-feature-settings: "liga" off;
   color: var(--darkgrey);
+}
+
+.account-menu-mobile {
+  display: none;
+  margin-top: 20px;
+  background: var(--yellow);
+  margin-bottom: 10px;
+}
+@media (max-width: 992px) {
+  .account-menu-mobile {
+    display: block;
+  }
+}
+.account-menu-mobile__burger {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.account-menu-mobile__burger h3 {
+  font-style: italic;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-medium);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.account-menu-mobile__burger ul li {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-medium);
+  text-transform: uppercase;
+  color: var(--black);
+  margin-top: 6px;
+}
+.account-menu-mobile__burger ul li:hover {
+  font-style: italic;
+  font-weight: var(--fw-bold);
+}
+
+.run-text-account {
+  background: var(--yellow);
+}
+.run-text-account h3 {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  text-transform: uppercase;
+  color: var(--black);
 }
 
 /** abstract **/
