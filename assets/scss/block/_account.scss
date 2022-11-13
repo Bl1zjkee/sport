@@ -1,0 +1,338 @@
+.account {
+  margin-bottom: var(--margin-regular);
+
+  h3 {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-title);
+    line-height: var(--lh-title);
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+  &__switch {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 5px;
+
+  }
+
+  &__runText {
+    margin-bottom: 41px;
+
+    p {
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-primary);
+      line-height: var(--lh-primary);
+      text-transform: uppercase;
+      color: var(--black);
+    }
+  }
+}
+
+.account-data {
+  display: none;
+
+  &.active {
+
+  }
+
+  &__avatar {
+    h3 {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
+      color: var(--black);
+    }
+
+    p {
+      font-style: italic;
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-primary);
+      line-height: var(--lh-primary);
+      color: var(--darkgrey);
+    }
+  }
+
+  &__photo {
+    border-radius: 50%;
+    background: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  &__completion {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .input {
+      max-width: 540px;
+      width: 100%;
+      margin-top: 40px;
+
+      p {
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-little);
+        line-height: var(--lh-little);
+        font-feature-settings: 'liga' off;
+        color: var(--black);
+        margin-top: 6px;
+      }
+
+      &__warning {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 14px;
+
+        p {
+          font-weight: var(--fw-regular);
+          font-size: var(--fs-little);
+          line-height: var(--lh-checkbox);
+          font-feature-settings: 'liga' off;
+          color: var(--red);
+          display: flex;
+          align-items: center;
+          margin-top: 0;
+
+          &:before {
+            content: '';
+            border-radius: 50%;
+            width: 6px;
+            height: 6px;
+            background: var(--red);
+            margin-right: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.account-social {
+  margin-top: 60px;
+  margin-bottom: var(--margin-regular);
+
+  h3 {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
+    color: var(--black);
+  }
+}
+
+.swith {
+  font-style: italic;
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-medium);
+  text-transform: uppercase;
+  color: var(--grey);
+  max-width: 255px;
+  width: 100%;
+  position: relative;
+
+  padding: 21px 0 7px 12px;
+
+  &:before {
+    content: '';
+    max-width: 249px;
+    width: 100%;
+    border: 3px solid var(--black);
+    position: absolute;
+    top: 51px;
+    right: 0;
+    display: none;
+  }
+
+  &.active {
+    background: var(--yellow);
+
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.account-address {
+  display: none;
+
+  .input {
+    max-width: 540px;
+  }
+
+  h3 {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
+    text-transform: uppercase;
+    color: var(--black);
+  }
+
+}
+
+.account-add {
+  margin-top: 60px;
+
+  p {
+    font-style: normal;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-primary);
+    line-height: var(--lh-primary);
+    display: flex;
+    align-items: center;
+    letter-spacing: var(--ls-regular);
+    text-decoration-line: underline;
+    font-feature-settings: 'liga' off;
+    color: var(--black);
+
+    &:after {
+      content: '';
+      background-image: url("../icons/account_adress.svg");
+      width: 14px;
+      height: 7px;
+      margin-left: 10px;
+    }
+  }
+
+  input::placeholder {
+    color: #7C7C7C;
+  }
+
+  button {
+    margin-top: 50px;
+  }
+
+  &__clarifications {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 720px;
+    width: 100%;
+
+    .input {
+      max-width: 350px;
+    }
+  }
+}
+
+.account-small-input {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .input {
+    max-width: 249px;
+    width: 100%;
+  }
+}
+
+
+.account-history {
+  max-width: 1110px;
+  width: 100%;
+button{
+  margin-left: auto;
+  margin-top: 20px;
+
+}
+  .card-secondary {
+    max-width: 1067px;
+    width: 100%;
+margin-top: 20px;
+
+    h3 {
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-normal);
+      line-height: var(--lh-checkbox);
+
+    }
+  }
+
+  &__list {
+    border: 1px solid var(--line);
+    padding: 20px 21px;
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--grey);
+    padding-bottom: 20px;
+
+    p {
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-primary);
+      line-height: var(--lh-primary);
+      letter-spacing: var(--ls-regular);
+      color: var(--black);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      span {
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-normal);
+        line-height: var(--lh-normal);
+        letter-spacing: var(--ls-little);
+        text-transform: uppercase;
+        color: var(--black);
+      }
+    }
+
+    P:last-child {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
+      letter-spacing: var(--ls-medium);
+      color: var(--black);
+
+      span {
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-normal);
+        line-height: var(--lh-normal);
+        letter-spacing: var(--ls-regular);
+        text-transform: uppercase;
+        font-feature-settings: 'liga' off;
+        color: var(--black);
+
+      }
+    }
+  }
+
+  &__inner{
+p{
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-regular);
+  color: var(--black);
+  margin-top: 10px;
+}
+    p:nth-of-type(2n){
+      font-weight: var(--fw-bold);
+      margin-top: 0;
+    }
+    span{
+      font-style: italic;
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-little);
+      line-height: var(--lh-little);
+      font-feature-settings: 'liga' off;
+      color: var(--darkgrey);
+
+    }
+  }
+}

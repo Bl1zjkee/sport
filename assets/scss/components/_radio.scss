@@ -21,6 +21,7 @@ display: flex;
     width: 14px;
     height: 14px;
     border: 1px solid var(--black);
+    margin-right: 10px;
   }
   &:hover+label:before{
 background: var(--yellow);

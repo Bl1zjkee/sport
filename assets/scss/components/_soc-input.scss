@@ -2,6 +2,10 @@
   position: relative;
   max-width: 538px;
   width: 100%;
+  margin-top: 20px;
+  &:first-of-type{
+    margin-top: 10px;
+  }
   &:active{
     svg{
       path{
