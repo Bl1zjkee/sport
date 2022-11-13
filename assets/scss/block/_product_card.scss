@@ -225,6 +225,9 @@ p{
 
     span {
       font-size: var(--fs-primary);
+      @media (max-width: $sm) {
+        display: flex;
+      }
     }
   }
   &_basket{

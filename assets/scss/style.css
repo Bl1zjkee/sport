@@ -747,6 +747,54 @@ a, button {
   fill: var(--black);
 }
 
+.btn_basket button {
+  background: var(--black);
+  padding: 16px 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.btn_basket button h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  letter-spacing: var(--ls-06);
+  text-transform: uppercase;
+  color: var(--white);
+}
+.btn_basket button:hover {
+  background: var(--yellow);
+}
+.btn_basket button:hover h3 {
+  color: var(--black);
+}
+.btn_basket button:active {
+  background: var(--yellow);
+  border: 1px solid var(--black);
+}
+.btn_basket button:active h3 {
+  color: var(--black);
+}
+.btn_basket button:focus {
+  border: 1px solid var(--yellow);
+  background: var(--black);
+}
+.btn_basket button:focus h3 {
+  color: var(--white);
+}
+.btn_basket_decoration button {
+  max-width: 255px;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (max-width: 576px) {
+  .btn_basket_decoration button {
+    max-width: 100%;
+  }
+}
+
 /** checkbox**/
 .custom-checkbox {
   position: absolute;
@@ -2205,6 +2253,11 @@ a, button {
 .card-title p span {
   font-size: var(--fs-primary);
 }
+@media (max-width: 576px) {
+  .card-title p span {
+    display: flex;
+  }
+}
 .card-title_basket {
   margin-top: 0;
 }
@@ -2242,9 +2295,24 @@ a, button {
 .basket__card picture img {
   max-width: 160px;
 }
+@media (max-width: 576px) {
+  .basket__card picture img {
+    max-width: 147px;
+  }
+}
+@media (max-width: 768px) {
+  .basket__card {
+    margin-top: 20px;
+  }
+}
 .basket__description {
   margin-left: 30px;
   width: 100%;
+}
+@media (max-width: 576px) {
+  .basket__description {
+    margin-left: 6px;
+  }
 }
 .basket__description h3 {
   font-weight: var(--fw-semibold);
@@ -2258,6 +2326,11 @@ a, button {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+@media (max-width: 576px) {
+  .basket__name span {
+    display: none;
+  }
 }
 .basket__name span {
   font-weight: var(--fw-bold);
@@ -2273,6 +2346,11 @@ a, button {
   line-height: var(--lh-24);
   text-transform: uppercase;
   color: var(--black);
+}
+@media (max-width: 576px) {
+  .basket__color {
+    margin-top: 10px;
+  }
 }
 .basket__size {
   display: flex;
@@ -2304,9 +2382,46 @@ a, button {
   text-transform: uppercase;
   color: var(--black);
 }
+@media (max-width: 576px) {
+  .basket__size a {
+    display: none;
+  }
+}
+.basket__sale-mobile {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+}
+@media (max-width: 576px) {
+  .basket__sale-mobile {
+    display: flex;
+  }
+}
+.basket__sale-mobile span {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.basket__sale-mobile a {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-card-name);
+  line-height: var(--lh-24);
+  text-align: right;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: var(--black);
+}
 .basket__decoration {
   margin-top: 40px;
   margin-bottom: 76px;
+}
+@media (max-width: 576px) {
+  .basket__decoration {
+    text-align: end;
+  }
 }
 .basket__decoration p {
   font-weight: var(--fw-bold);
