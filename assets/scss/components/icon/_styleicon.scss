@@ -35,6 +35,11 @@
     }
 
   }
+  &_mobile{
+    @media (max-width: $lg) {
+      display: none;
+    }
+  }
 }
 
 .favorite{
@@ -72,6 +77,11 @@
     }
 
   }
+  &_mobile{
+    @media (max-width: $lg) {
+      display: none;
+    }
+  }
 }
 
 .user{
@@ -105,6 +115,11 @@
           fill: (var(--white));
         }
       }
+    }
+  }
+  &_mobile{
+    @media (max-width: $lg) {
+      display: none;
     }
   }
 }

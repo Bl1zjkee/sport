@@ -6,7 +6,46 @@
   border-left: none;
   height: 50px;
   cursor: pointer;
+  &_basket {
+    width: 100%;
+    button {
+      background: var(--black);
+      border: none;
+      display: flex;
+      justify-content: center;
+      max-width: 255px;
+      width: 100%;
+      padding: 16px 0;
+      h3{
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-normal);
+        line-height: var(--lh-normal);
+        letter-spacing: var(--ls-medium);
+        text-transform: uppercase;
+        color: var(--white);
 
+
+      }
+      &:focus {
+        border: 1px solid var(--yellow);
+        background: var(--black);
+
+
+        h3 {
+          color: var(--black);
+        }
+      }
+
+      &:focus {
+        border: 1px solid var(--yellow);
+        background: var(--black);
+
+        h3 {
+          color: var(--white);
+        }
+      }
+    }
+  }
   &:hover {
     background: var(--black);
 
@@ -38,7 +77,28 @@
       }
     }
   }
-
+&_window-enter{
+  margin-top: 20px;
+  max-width: 460px;
+  width: 100%;
+  button {
+background: var(--yellow);
+    padding: 18px 0;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
+    letter-spacing:var(--ls-medium);
+    text-transform: uppercase;
+    color: var(--black);
+    border: 1px solid var(--black);
+    width: 100%;
+    &:hover{
+      background: var(--black);
+      color: var(--yellow);
+      border: 1px solid var(--yellow);
+    }
+}
+}
   &_all {
     button {
       background: var(--black);
@@ -71,29 +131,7 @@
         border: 1px solid var(--black);
 
   }
-  &_basket {
-    button {
 
-    &:focus {
-      border: 1px solid var(--yellow);
-      background: var(--black);
-
-
-        h3 {
-          color: var(--black);
-        }
-      }
-
-      &:focus {
-        border: 1px solid var(--yellow);
-        background: var(--black);
-
-        h3 {
-          color: var(--white);
-        }
-      }
-    }
-  }
 }
     &_repeat{
       h3{
@@ -110,15 +148,69 @@
 
     }
   }
+
+.btn-social {
+  max-width: 540px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+
+  button {
+    color: var(--yellow);
+    padding: 19px 87px;
+    background: var(--black);
+    font-style: italic;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 12px;
+    }
+
+    &:hover {
+      background: var(--yellow);
+
+      svg {
+        path {
+          fill: var(--black)
+        }
+      }
+
+      p {
+        color: var(--black);
+      }
+    }
+
+    &:active {
+      background: var(--yellow);
+      border: 1px solid var(--black);
+
+    }
   }
+}
+
+}
+
 .btn-collection{
   background: var(--yellow);
-  padding: 24px 73px 24px 94px;
+  padding: 24px 0 24px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   margin-top: 278px;
+  max-width: 350px;
+  width: 100%;
+  @media (max-width: $lg) {
+    margin: 0 auto;
+  }
   p {
     font-weight: var(--fw-black);
     font-size: var(--fs-secondary);
@@ -151,6 +243,7 @@
       }
     }
   }
+
     &_decoration{
       button{
         max-width: 255px;
@@ -161,8 +254,9 @@
        max-width: 100% ;
         }
       }
-
     }
+
+  }
 
   &:active {
     background: var(--black);
@@ -192,49 +286,6 @@
           fill:var(--black);
         }
       }
-    }
-  }
-
-  }
-
-
-.btn-social {
-  max-width: 540px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin-top: 10px;
-  button{
-    color: var(--yellow);
-    padding: 19px 87px;
-    background: var(--black);
-    font-style: italic;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-normal);
-    line-height: var(--lh-normal);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    svg{
-      margin-right: 12px;
-    }
-    &:hover {
-      background: var(--yellow);
-      svg{
-        path{
-          fill:var(--black)
-        }
-      }
-      p {
-        color: var(--black);
-      }
-    }
-    &:active {
-      background: var(--yellow);
-      border: 1px solid var(--black);
-
     }
   }
 

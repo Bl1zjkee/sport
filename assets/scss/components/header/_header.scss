@@ -23,6 +23,8 @@ position: absolute;
   }
 
   &__burger-menu{
+    position: relative;
+    z-index: 3;
 display: none;
     @media (max-width: 960px) {
       display: block;
@@ -48,12 +50,14 @@ display: none;
   gap:10px;
   align-items: center;
   position: relative;
+@media (max-width:$lg) {
 
+}
   &_bay{
     position: absolute;
     top: 19px;
     right: -13px;
-    @media (max-width: 960px) {
+    @media (max-width: $lg) {
       width: 60px;
       top: 2px;
       right: 14px;
