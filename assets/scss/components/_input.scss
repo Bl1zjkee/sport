@@ -1,7 +1,10 @@
+@import "../abstract/mixins";
+
 .input {
+  margin-top: 20px;
   label {
-    font-size:var(--fs-card-name);
-    line-height:var(--lh-24);
+    font-size: var(--fs-normal);
+    line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--black);
     font-weight: var(--fw-semibold);
@@ -11,14 +14,17 @@
     position: relative;
     max-width: 730px;
     width: 100%;
+ @media (max-width: $lg) {
+  max-width: 100%;
+ }
     input {
       border: 1px dashed #B8B6B6;
       width: 100%;
       padding: 22px 20px 21px 20px;
       &::placeholder {
         font-weight: var(--fw-regular);
-         font-size:var(--fs-primary);
-        line-height:var(--lh-17);
+        font-size: var(--fs-primary);
+        line-height: var(--lh-primary);
         letter-spacing: var( --ls-regular);
         color: var(--black);
       }
@@ -30,6 +36,10 @@
         border: 1px dashed var(--black);
       }
     }
+  }
+  &_small{
+    max-width: 106px;
+    width: 100%;
   }
 }
 

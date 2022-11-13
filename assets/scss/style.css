@@ -63,7 +63,7 @@ body, button {
   font-family: var(--font-family);
 }
 
-a, button, label {
+a, button {
   cursor: pointer;
   text-decoration: none;
 }
@@ -79,13 +79,17 @@ a, button, label {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 /** components **/
 /** Input **/
+.input {
+  margin-top: 20px;
+}
 .input label {
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
   font-weight: var(--fw-semibold);
@@ -95,6 +99,11 @@ a, button, label {
   max-width: 730px;
   width: 100%;
 }
+@media (max-width: 992px) {
+  .input__item {
+    max-width: 100%;
+  }
+}
 .input__item input {
   border: 1px dashed #B8B6B6;
   width: 100%;
@@ -103,7 +112,7 @@ a, button, label {
 .input__item input::placeholder {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   letter-spacing: var(--ls-regular);
   color: var(--black);
 }
@@ -112,6 +121,10 @@ a, button, label {
 }
 .input__item input:focus {
   border: 1px dashed var(--black);
+}
+.input_small {
+  max-width: 106px;
+  width: 100%;
 }
 
 /** Input-soc **/
@@ -138,10 +151,10 @@ a, button, label {
   font-family: var(--font-family);
   font-weight: var(--fw-medium);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   display: flex;
   align-items: center;
-  line-height: var(--ls-regular);
+  letter-spacing: var(--ls-regular);
   font-feature-settings: "liga" off;
   color: var(--grey);
 }
@@ -157,10 +170,10 @@ a, button, label {
 .soc-input a {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   display: flex;
   align-items: center;
-  line-height: var(--ls-regular);
+  letter-spacing: var(--ls-regular);
   text-decoration-line: underline;
   font-feature-settings: "liga" off;
   color: var(--grey);
@@ -182,16 +195,16 @@ a, button, label {
   max-width: 255px;
   width: 100%;
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
 }
 .promocod input:focus-visible {
   outline: none;
 }
 .promocod input::placeholder {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   color: var(--black);
   text-transform: uppercase;
   font-family: var(--font-family);
@@ -210,8 +223,9 @@ a, button, label {
   font-family: var(--font-family);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   align-items: center;
+  letter-spacing: var(--ls-regular);
   color: var(--white);
   padding: 16px 102px 17px 20px;
 }
@@ -228,7 +242,7 @@ a, button, label {
 .search:hover svg path {
   stroke: black;
   stroke-width: 0.2px;
-  border: 0.2px solid #000000;
+  border: 0.2px solid var(--black);
   fill: var(--yellow);
 }
 .search:active svg path, .search_active svg path {
@@ -315,8 +329,8 @@ a, button, label {
 }
 .cart__quantity span {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs--btn);
-  line-height: var(--lh-12);
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
   color: var(--black);
 }
 
@@ -386,7 +400,6 @@ a, button, label {
 
 .close-secondary {
   cursor: pointer;
-  display: flex;
 }
 .close-secondary:hover svg path {
   fill: var(--yellow);
@@ -499,14 +512,18 @@ a, button, label {
   position: absolute;
   z-index: -1;
   opacity: 0;
+  display: block;
 }
 .custom-radio + label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   position: relative;
-  font-size: var(--fs--btn);
-  color: red;
   cursor: pointer;
+  color: var(--black);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
 }
 .custom-radio + label:before {
   content: "";
@@ -530,6 +547,11 @@ a, button, label {
   border-radius: 50%;
   position: absolute;
   left: 4px;
+}
+.custom-radio_order + label:before {
+  content: "";
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .radio-size {
@@ -617,7 +639,47 @@ a, button, label {
 .btn:focus svg path {
   fill: var(--black);
 }
-.btn_collection {
+.btn_all button {
+  background: var(--black);
+  padding: 16px 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.btn_all button h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-medium);
+  text-transform: uppercase;
+  color: var(--white);
+}
+.btn_all button:hover {
+  background: var(--yellow);
+}
+.btn_all button:hover h3 {
+  color: var(--black);
+}
+.btn_all button:active {
+  background: var(--yellow);
+  border: 1px solid var(--black);
+}
+.btn_all button_basket button:focus {
+  border: 1px solid var(--yellow);
+  background: var(--black);
+}
+.btn_all button_basket button:focus h3 {
+  color: var(--black);
+}
+.btn_all button_basket button:focus {
+  border: 1px solid var(--yellow);
+  background: var(--black);
+}
+.btn_all button_basket button:focus h3 {
+  color: var(--white);
+}
+.btn_all .btn-collection {
   background: var(--yellow);
   padding: 24px 73px 24px 94px;
   display: flex;
@@ -626,59 +688,65 @@ a, button, label {
   border: none;
   margin-top: 278px;
 }
-.btn_collection p {
-  font-style: normal;
+.btn_all .btn-collection p {
   font-weight: var(--fw-black);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-01);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-little);
   text-transform: uppercase;
   color: var(--black);
   display: flex;
   align-items: center;
 }
-.btn_collection p svg {
+.btn_all .btn-collection p svg {
   margin-left: 10px;
 }
-.btn_collection:hover {
+.btn_all .btn-collection:hover {
   background: var(--black);
 }
-.btn_collection:hover p {
+.btn_all .btn-collection:hover p {
   color: var(--yellow);
 }
-.btn_collection:hover p svg {
+.btn_all .btn-collection:hover p svg {
   transform: rotate(45deg);
   transition: 1s;
 }
-.btn_collection:hover p svg path {
+.btn_all .btn-collection:hover p svg path {
   fill: var(--yellow);
 }
-.btn_collection:active {
+.btn_all .btn-collection:hover_decoration button {
+  max-width: 255px;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.btn_all .btn-collection:active {
   background: var(--black);
   border: 1px solid var(--yellow);
 }
-.btn_collection:active p {
+.btn_all .btn-collection:active p {
   color: var(--yellow);
 }
-.btn_collection:active p svg {
+.btn_all .btn-collection:active p svg {
   transform: rotate(45deg);
 }
-.btn_collection:active p svg path {
+.btn_all .btn-collection:active p svg path {
   fill: var(--yellow);
 }
-.btn_collection:focus {
+.btn_all .btn-collection:focus {
   background: var(--yellow);
   border: 1px solid var(--black);
 }
-.btn_collection:focus p {
+.btn_all .btn-collection:focus p {
   color: var(--black);
 }
-.btn_collection:focus p svg {
+.btn_all .btn-collection:focus p svg {
   transform: rotate(0);
 }
-.btn_collection:focus p svg path {
+.btn_all .btn-collection:focus p svg path {
   fill: var(--black);
 }
+
 .btn_basket button {
   background: var(--black);
   padding: 16px 89px;
@@ -739,8 +807,8 @@ a, button, label {
   position: relative;
   font-family: var(--font-family);
   font-weight: var(--fw-regular);
-  font-size: var(--fs--btn);
-  line-height: var(--lh-16);
+  font-size: var(--fs-little);
+  line-height: var(--lh-checkbox);
   font-feature-settings: "liga" off;
   color: var(--grey);
   cursor: pointer;
@@ -760,7 +828,8 @@ a, button, label {
 }
 .custom-checkbox + label:before {
   content: "";
-  display: inline-block;
+  display: inline-flex;
+  flex-shrink: 0;
   width: 14px;
   height: 14px;
   border: 1px solid var(--grey);
@@ -784,7 +853,7 @@ a, button, label {
   position: absolute;
 }
 
-/** block-btn-input**/
+/** --ls-regular-input**/
 .subscription {
   max-width: 350px;
   width: 100%;
@@ -798,17 +867,17 @@ a, button, label {
 }
 .subscription h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-02);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: var(--white);
   margin-bottom: 13px;
 }
 .subscription p {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs--btn);
-  line-height: var(--lh-12);
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
   color: var(--supportgrey);
   margin-top: 6px;
 }
@@ -829,9 +898,10 @@ a, button, label {
   background: var(--lightblack);
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   display: flex;
   align-items: center;
+  letter-spacing: var(--ls-regular);
   color: var(--white);
   border: 1px solid var(--lightgrey);
   padding: 16px 0 17px 20px;
@@ -839,7 +909,6 @@ a, button, label {
 
 /** header **/
 .header {
-  background: var(--white);
   padding: 15px 0;
   position: relative;
 }
@@ -901,7 +970,7 @@ a, button, label {
 .header__icon_bay span {
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-12);
+  line-height: var(--lh-little);
   color: var(--black);
 }
 .header__block {
@@ -933,9 +1002,9 @@ a, button, label {
   position: relative;
   display: block;
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-08);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-bigem);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -989,31 +1058,31 @@ a, button, label {
   color: var(--yellow);
   font-weight: var(--fw-bold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
 }
 .footer__menu_item a:nth-of-type(3) {
   margin-top: 13px;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   color: var(--white);
 }
 .footer__menu_item span {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   color: var(--white);
   display: block;
 }
 .footer__menu_item h3 {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-title-footer);
-  line-height: var(--lh-22);
-  letter-spacing: var(--ls-02);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: var(--yellow);
   margin-bottom: 10px;
@@ -1025,8 +1094,8 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: #AAA9A9;
 }
@@ -1034,8 +1103,8 @@ a, button, label {
   font-style: normal;
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -1084,8 +1153,8 @@ a, button, label {
 .footer__document a {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
-  letter-spacing: var(--ls-02);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-secondary);
   color: var(--white);
 }
 @media (max-width: 576px) {
@@ -1140,8 +1209,8 @@ a, button, label {
 }
 .card a {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   display: block;
   color: var(--black);
@@ -1150,33 +1219,33 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
-.card__price {
+.card__add-to-cart {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
 }
-.card__price p {
+.card__add-to-cart p {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
-.card__price a {
+.card__add-to-cart a {
   font-weight: var(--fw-bold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-decoration-line: underline;
   color: var(--black);
   display: flex;
   align-items: center;
 }
-.card__price a:after {
+.card__add-to-cart a:after {
   content: "";
   display: block;
   background-image: url("../icons/sale_arrow.svg");
@@ -1220,8 +1289,8 @@ a, button, label {
 }
 .card-small a {
   font-weight: var(--fw-semibold);
-  font-size: var(--fs-card-name);
-  line-height: var(--lh-24);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1229,7 +1298,7 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-primary);
-  line-height: var(--lh-17);
+  line-height: var(--lh-primary);
   text-transform: uppercase;
   color: var(--darkgrey);
 }
@@ -1269,7 +1338,7 @@ a, button, label {
   font-style: normal;
   font-weight: var(--fw-regular);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--white);
 }
@@ -1309,12 +1378,6 @@ a, button, label {
 }
 /** block **/
 /** Главная **/
-.main {
-  max-width: 1440px;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
 .main__burger-menu {
   display: none;
 }
@@ -1350,7 +1413,7 @@ a, button, label {
 .main h2 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-70);
+  line-height: var(--lh-title-secondary);
   text-transform: uppercase;
   color: var(--black);
   white-space: pre-line;
@@ -1377,12 +1440,12 @@ a, button, label {
 }
 .main__collection {
   margin-top: 130px;
-  margin-bottom: 100px;
+  margin-bottom: var(--margin-regular);
 }
 .main__collection h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1409,7 +1472,7 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-big-title);
-  line-height: var(--lh-120);
+  line-height: var(--lh-big);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1417,34 +1480,68 @@ a, button, label {
   font-style: italic;
   font-weight: var(--fw-regular);
   font-size: var(--fs-medium-title);
-  line-height: var(--lh-72);
+  line-height: var(--lh-medium);
   text-transform: uppercase;
   color: var(--black);
 }
 .main__stroky {
   font-weight: var(--fw-regular);
   font-size: var(--fs-title);
-  line-height: var(--lh-96px);
+  line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--white);
   background: var(--black);
   width: 100%;
   height: 111px;
 }
+.main__popular {
+  margin-top: var(--margin-regular);
+  margin-bottom: var(--margin-secondary);
+}
+.main__popular_list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 70px;
+}
+.main__popular h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-title);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.main__popular a {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main__popular a:after {
+  content: "";
+  display: block;
+  background-image: url("../icons/sale_arrow.svg");
+  width: 20px;
+  height: 8px;
+  margin-left: 6px;
+}
 .main__gif {
-  margin-bottom: 100px;
+  margin-bottom: var(--margin-regular);
 }
 .main__gif img {
   max-width: 1439.95px;
   width: 100%;
 }
 .main__runningText {
-  margin-bottom: 100px;
+  margin-bottom: var(--margin-regular);
 }
 .main__runningText h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
-  line-height: var(--lh-70);
+  line-height: var(--lh-title-secondary);
   text-transform: uppercase;
   color: var(--black);
 }
@@ -1452,7 +1549,7 @@ a, button, label {
   display: flex;
   align-items: center;
   gap: 40px;
-  margin-bottom: 80px;
+  margin-bottom: var(--margin-secondary);
 }
 .main__gallery picture img {
   max-width: 250px;
@@ -1671,6 +1768,276 @@ a, button, label {
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
+}
+
+/** Оформления заказа **/
+.order-placing {
+  display: flex;
+  gap: 125px;
+}
+
+.order-inner {
+  width: 100%;
+}
+.order-inner h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-title);
+  text-transform: uppercase;
+  color: var(--black);
+}
+@media (max-width: 992px) {
+  .order-inner h3 {
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+    margin-bottom: 20px;
+  }
+}
+.order-inner label {
+  margin-top: 3px;
+}
+.order-inner__address {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .order-inner__address {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+}
+.order-inner__enter {
+  max-width: 350px;
+  width: 100%;
+}
+.order-inner__enter p {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-medium);
+  text-transform: uppercase;
+  color: var(--black);
+  margin-top: 20px;
+}
+.order-inner__enter p:last-child {
+  margin-top: 6px;
+}
+.order-inner__enter_flex {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .order-inner__price {
+    margin-top: 20px;
+  }
+}
+.order-inner__price p {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-regular);
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .order-inner__price p {
+    margin-top: 6px;
+  }
+}
+.order-inner__price p:nth-of-type(2) {
+  margin-bottom: 44px;
+}
+
+.order-sidebar {
+  max-width: 255px;
+  width: 100%;
+  margin-top: 96px;
+  position: sticky;
+  height: 100%;
+  top: 0;
+  margin-bottom: var(--margin-regular);
+}
+@media (max-width: 992px) {
+  .order-sidebar {
+    display: none;
+  }
+}
+.order-sidebar p {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-sidebar__card {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey);
+}
+.order-sidebar__card img {
+  max-width: 65px;
+  width: 100%;
+}
+.order-sidebar__name {
+  margin-left: 30px;
+}
+.order-sidebar__name h3 {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-checkbox);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.order-sidebar__name p {
+  font-style: italic;
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  text-transform: uppercase;
+  color: var(--darkgrey);
+}
+.order-sidebar__name span {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--black);
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+.order-sidebar__name span a {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
+  text-align: right;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.run-text {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  padding: 18px 0;
+  margin-top: 20px;
+  max-width: 730px;
+  width: 100%;
+}
+.run-text p {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.run-text:nth-of-type(6) {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.order-check {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+  max-width: 730px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .order-check {
+    gap: 10px;
+  }
+  .order-check p {
+    max-width: 110px;
+    width: 100%;
+  }
+}
+.order-check p {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  display: flex;
+  align-items: center;
+  text-align: right;
+  font-feature-settings: "liga" off;
+  color: var(--black);
+}
+.order-check p a {
+  margin-left: 4px;
+  text-decoration: underline;
+  color: var(--black);
+}
+
+.order-inner-total {
+  max-width: 730px;
+  width: 100%;
+  margin-top: 74px;
+  margin-bottom: var(--margin-regular);
+}
+.order-inner-total .btn_all {
+  display: flex;
+  justify-content: end;
+}
+@media (max-width: 768px) {
+  .order-inner-total .btn_all button {
+    padding: 16px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .order-inner-total .btn_all button h3 {
+    display: flex;
+    justify-content: center;
+  }
+}
+.order-inner-total h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
+  letter-spacing: var(--ls-regular);
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+  margin-bottom: 1px;
+  color: var(--black);
+}
+@media (max-width: 768px) {
+  .order-inner-total h3 {
+    line-height: var(--lh-normal);
+    font-size: var(--fs-normal);
+  }
+}
+.order-inner-total p {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-sup-secondary);
+  line-height: var(--lh-sup-secondary);
+  display: flex;
+  align-items: center;
+  letter-spacing: var(--ls-regular);
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+  color: var(--black);
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 /** Карточка товара **/
@@ -2116,32 +2483,35 @@ a, button, label {
   --fw-black: 800;
   /**font-size**/
   --fs-title: 80px;
-  --fs-title-footer: 18px;
+  --fs-secondary: 18px;
   --fs-primary: 14px;
-  --fs--btn:12px;
-  --fs-card-name:20px;
+  --fs-little:12px;
+  --fs-normal:20px;
   --fs-big-title:100px;
   --fs-medium-title:60px;
-  --fs-40:40px;
-  --fs-30:30px;
+  --fs-sup-title:40px;
+  --fs-sup-secondary:16px;
   /**line-height **/
-  --lh-12:12px;
-  --lh-14:14px;
-  --lh-16:16px;
-  --lh-17:17px;
-  --lh-24:24px;
-  --lh-48:48px;
-  --lh-22:22px;
-  --lh-72:72px;
-  --lh-70:70px;
-  --lh-96px:96px;
-  --lh-120:120px;
+  --lh-little:12px;
+  --lh-primary:17px;
+  --lh-title:96px;
+  --lh-big:120px;
+  --lh-secondary:22px;
+  --lh-normal:24px;
+  --lh-medium:72px;
+  --lh-sup-title:48px;
+  --lh-title-secondary:70px;
+  --lh-checkbox:16px;
+  --lh-sup-secondary:19px;
   /**letter-spacing**/
   --ls-regular:0.04em;
-  --ls-01:0.01em;
-  --ls-02:0.02em;
-  --ls-08:0.08em;
-  --ls-06:0.06em;
+  --ls-medium:0.06em;
+  --ls-little:0.01em;
+  --ls-secondary:0.02em;
+  --ls-big:0.08em;
+  /**margin**/
+  --margin-regular: 100px;
+  --margin-secondary: 80px;
 }
 
 /** Цвета **/
