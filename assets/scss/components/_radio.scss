@@ -13,6 +13,10 @@ display: flex;
   font-size: var(--fs-normal);
   line-height: var(--lh-normal);
   text-transform: uppercase;
+  @media (max-width: $sm) {
+    font-size: var(--fs-primary);
+    line-height: var(--lh-primary);
+  }
 }
   &+label:before{
     content: '';

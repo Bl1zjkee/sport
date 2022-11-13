@@ -197,6 +197,9 @@
   position: absolute;
   top:22px;
   right: 58px;
+  @media (max-width: $sm) {
+    right: 44px;
+  }
   &:hover,active{
     svg{
       path{
@@ -211,6 +214,9 @@
   position: absolute;
   top:22px;
   right: 25px;
+  @media (max-width: $sm) {
+    right: 15px;
+  }
   &:hover,active{
     svg{
       path{

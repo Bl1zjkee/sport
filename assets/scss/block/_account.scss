@@ -7,6 +7,10 @@
     line-height: var(--lh-title);
     text-transform: uppercase;
     color: var(--black);
+    @media (max-width: $md) {
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
+    }
   }
 
   &__switch {
@@ -16,12 +20,16 @@
     justify-content: space-between;
     border-bottom: 1px solid var(--black);
     padding-bottom: 5px;
-
+@media (max-width: $lg) {
+  display: none;
+}
   }
 
   &__runText {
     margin-bottom: 41px;
-
+@media (max-width: $lg) {
+  display: none;
+}
     p {
       font-weight: var(--fw-semibold);
       font-size: var(--fs-primary);
@@ -33,7 +41,7 @@
 }
 
 .account-data {
-  display: none;
+display: none;
 
   &.active {
 
@@ -78,6 +86,9 @@
       max-width: 540px;
       width: 100%;
       margin-top: 40px;
+      @media (max-width: $md) {
+        margin-top: 20px;
+      }
 
       p {
         font-weight: var(--fw-regular);
@@ -122,7 +133,9 @@
 .account-social {
   margin-top: 60px;
   margin-bottom: var(--margin-regular);
-
+@media (max-width: $md) {
+  margin-top: 40px;
+}
   h3 {
     font-weight: var(--fw-bold);
     font-size: var(--fs-normal);
@@ -166,8 +179,7 @@
 }
 
 .account-address {
-  display: none;
-
+display: none;
   .input {
     max-width: 540px;
   }
@@ -244,10 +256,19 @@
 .account-history {
   max-width: 1110px;
   width: 100%;
-button{
+  @media (max-width: $sm) {
+    button{
+      width: 100%;
+    }
+
+  }
+
+  button{
   margin-left: auto;
   margin-top: 20px;
-
+    @media (max-width: $md) {
+        width: 100%;
+    }
 }
   .card-secondary {
     max-width: 1067px;
@@ -265,6 +286,10 @@ margin-top: 20px;
   &__list {
     border: 1px solid var(--line);
     padding: 20px 21px;
+    @media (max-width: $lg) {
+      border: none;
+      padding: 0;
+    }
   }
 
   &__item {
@@ -334,5 +359,54 @@ p{
       color: var(--darkgrey);
 
     }
+  }
+}
+
+.account-menu-mobile{
+  display: none;
+  margin-top:20px;
+  background: var(--yellow);
+  @media (max-width: $lg) {
+  display: block;
+  }
+margin-bottom: 10px;
+  &__burger{
+    padding:10px;
+    h3{
+      font-style: italic;
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
+      letter-spacing:var(--ls-medium);
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    display: flex;
+    justify-content: space-between;
+    ul{
+      li{
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-normal);
+        line-height: var(--lh-normal);
+        letter-spacing:var(--ls-medium);
+        text-transform: uppercase;
+        color: var(--black);
+        margin-top: 6px;
+        &:hover{
+          font-style: italic;
+          font-weight: var(--fw-bold);
+        }
+      }
+    }
+  }
+}
+.run-text-account{
+  background: var(--yellow);
+  h3{
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-primary);
+    line-height: var(--lh-primary);
+    text-transform: uppercase;
+    color: var(--black);
   }
 }

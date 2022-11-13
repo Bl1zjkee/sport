@@ -19,6 +19,9 @@
 
     padding: 22px 20px 21px 20px;
     border: 1px dashed #B8B6B6;
+    @media (max-width: $sm) {
+      padding: 22px 15px 21px 11px;
+    }
     &:active {
       border: 1px dashed var(--black);
     }
