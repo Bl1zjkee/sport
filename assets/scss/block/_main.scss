@@ -24,8 +24,8 @@
   }
 &__header-all{
   display: flex;
-  gap: 30px;
-  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
   @media (max-width: $lg) {
     flex-wrap: wrap;
     justify-content: center;
@@ -43,7 +43,6 @@ gap: 0;
 
   &__img {
     z-index: -1;
-
     picture {
       width: 100%;
       img {
@@ -92,6 +91,7 @@ gap: 0;
     align-items: center;
     gap: 30px;
     width: 100%;
+    font-size: 0;
     picture{
       max-width: 350px;
       img{
@@ -210,6 +210,7 @@ gap: 0;
   display: flex;
   gap: 30px;
   margin-top: 30px;
+  position: relative;
 }
   &__item:nth-of-type(1){
     margin-top: 20px;
@@ -252,23 +253,6 @@ max-width: 100%;
       color: var(--black);
     }
 
-    a{
-      font-weight: var(--fw-bold);
-      font-size: var(--fs-normal);
-      line-height: var(--lh-normal);
-      color: var(--black);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:after{
-        content: '';
-        display: block;
-        background-image: url("../icons/sale_arrow.svg");
-        width: 20px;
-        height: 8px;
-        margin-left: 6px;
-      }
-    }
   }
 
   &__gif{
@@ -302,6 +286,10 @@ max-width: 100%;
     }
   }
 }
+
+
+
+
 .popular{
   margin-top: 100px;
   margin-bottom: 80px;
@@ -327,9 +315,9 @@ max-width: 100%;
     }
   }
 
-  a{
+  .popular-arrow{
     font-weight: var(--fw-bold);
-    font-size: var(--fs-card-name);
+    font-size: var(--fs-normal);
     line-height: var(--lh-normal);
     color: var(--black);
     display: flex;
@@ -342,6 +330,11 @@ max-width: 100%;
       width: 20px;
       height: 8px;
       margin-left: 6px;
+    }
+    &_none{
+      @media (max-width: $md) {
+        display: none;
+      }
     }
   }
 }

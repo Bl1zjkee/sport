@@ -5,27 +5,53 @@
   border-top: 1px solid var(--black);
   padding: 22px 0;
 
+@media (max-width: $md) {
+  display: none;
+  h4{
+    display: block;
+  }
+}
   img {
     max-width: 100px;
     width: 100%;
   }
 }
 
+.title-mobile-contact{
+  padding-left: 10px;
+  h4{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+    text-transform: uppercase;
+    color: var(--black);
+    display: none;
+    @media (max-width: $md) {
+      display: block;
+    }
+  }
+}
+
 .contacts {
   padding-top: 33px;
-
   h3 {
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
     line-height: var(--lh-title);
     text-transform: uppercase;
     color: var(--black);
-
   }
-
+.title-h3{
+@media (max-width: $md) {
+  display: none;
+}
+}
   &__data {
     margin-top: 20px;
     margin-bottom: var(--margin-regular);
+    @media (max-width: $md) {
+      margin-top: 0;
+    }
   }
 
   &__phone {
@@ -46,6 +72,12 @@
       letter-spacing: var(--ls-secondary);
       color: var(--black);
       display: block;
+    }
+    @media (max-width: $xl) {
+      padding-left:100px;
+    }
+    @media (max-width: $md) {
+      padding-left:0;
     }
   }
 
@@ -70,11 +102,19 @@
       color: var(--black);
       display: block;
     }
+    @media (max-width: $xl) {
+      padding-left:100px;
+    }
+    @media (max-width: $md) {
+      padding-left:0;
+    }
   }
 
   &__connection {
     margin-top: 40px;
     padding-left: 394px;
+    position: relative;
+    z-index: 3;
     h3 {
       font-style: italic;
       font-weight: var(--fw-bold);
@@ -82,6 +122,12 @@
       line-height: var(--lh-sup-title);
       letter-spacing: var(--ls-secondary);
       color: var(--black);
+    }
+    @media (max-width: $xl) {
+      padding-left:100px;
+    }
+    @media (max-width: $md) {
+      padding-left:0;
     }
   }
 

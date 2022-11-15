@@ -6,5 +6,9 @@ h3{
   line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--black);
+  @media (max-width: $md) {
+    font-size: var(--fs-sup-title);
+    line-height:var(--lh-sup-title);
+  }
 }
 }

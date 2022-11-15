@@ -41,8 +41,6 @@
 }
 
 .account-data {
-display: none;
-
   &.active {
 
   }
@@ -160,11 +158,11 @@ display: none;
 
   &:before {
     content: '';
-    max-width: 249px;
+    max-width: 255px;
     width: 100%;
     border: 3px solid var(--black);
     position: absolute;
-    top: 51px;
+bottom: -5px;
     right: 0;
     display: none;
   }
@@ -179,7 +177,6 @@ display: none;
 }
 
 .account-address {
-display: none;
   .input {
     max-width: 540px;
   }
@@ -274,7 +271,6 @@ display: none;
     max-width: 1067px;
     width: 100%;
 margin-top: 20px;
-
     h3 {
       font-weight: var(--fw-regular);
       font-size: var(--fs-normal);
@@ -295,7 +291,10 @@ margin-top: 20px;
   &__item {
     border-bottom: 1px solid var(--grey);
     padding-bottom: 20px;
-
+@media (max-width: $md) {
+  border: none;
+  padding-bottom: 0;
+}
     p {
       font-weight: var(--fw-regular);
       font-size: var(--fs-primary);

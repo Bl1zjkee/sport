@@ -1,8 +1,11 @@
 .window-size{
   max-width: 900px;
-  width: 1005px;
+  width: 100%;
   background: var(--black);
   padding: 30px 30px 40px 30px;
+  @media (max-width: $md) {
+    padding: 20px 10px 30px 10px;
+  }
   hr{
     width: 100%;
     height: 1px;
@@ -16,7 +19,10 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #DBFF4E;
-
+@media (max-width: $md) {
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+}
   }
   &__inner{
     max-width: 718px;

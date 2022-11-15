@@ -278,6 +278,8 @@
 }
 .close-secondary{
   cursor: pointer;
+  display: flex;
+
   &:hover{
     svg{
       path{
@@ -298,6 +300,8 @@
 
 .close-primary{
   cursor: pointer;
+  width: fit-content;
+  margin-left: auto;
   &:hover{
     svg{
       path{

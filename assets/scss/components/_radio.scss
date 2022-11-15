@@ -41,7 +41,7 @@ background: var(--yellow);
     background: black;
     border-radius: 50%;
     position: absolute;
-    left:4px;
+    left:3px;
   }
   &_order{
     &+label:before{
@@ -57,7 +57,7 @@ background: var(--yellow);
   opacity: 0;
   &+label{
     font-weight: var(--fw-regular);
-    font-size: var(--fs-card-name);
+    font-size: var(--fs-normal);
     line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--grey);
@@ -80,7 +80,7 @@ margin-top: 20px;
   }
   h3{
     font-weight: var(--fw-bold);
-    font-size: var(--fs-card-name);
+    font-size: var(--fs-normal);
     line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--black);
@@ -91,7 +91,7 @@ margin-top: 20px;
     margin-top: 19px;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 205px;
+    max-width: 225px;
     h3{
       margin-right: 40px;
       margin-bottom: 0;

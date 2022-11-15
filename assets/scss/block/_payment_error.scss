@@ -2,6 +2,10 @@
   margin-top: 227px;
   text-align: center;
   padding-bottom: 44px;
+  @media (max-width: $md) {
+    margin-top: 92px;
+    padding-bottom: 241px;
+  }
   h3{
     font-weight: var(--fw-bold);
     font-size: var(--fs-sup-title);

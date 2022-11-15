@@ -10,6 +10,11 @@
 max-width: 1130px;
     width: 100%;
     margin: 0 auto;
+    padding-left: 10px;
+    @media (max-width: $md) {
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
+    }
   }
   .bg-yellow:first-of-type{
     margin-top: 40px;
@@ -31,6 +36,9 @@ max-width: 1130px;
 .delivery-information{
   margin-top: 41px;
   padding-bottom: var(--margin-regular);
+  @media (max-width: $md) {
+    padding-bottom: var(--margin-regular-mobile);
+  }
 
   &__text{
     margin-top: 20px;
@@ -40,6 +48,7 @@ max-width: 1130px;
       line-height:var(--lh-normal);
       letter-spacing: var(--ls-secondary);
       color: var(--black);
+      padding-left: 0;
     }
     p{
       max-width: 920px;
@@ -50,11 +59,16 @@ max-width: 1130px;
       letter-spacing: var(--ls-secondary);
       color: var(--black);
     }
-
+@media (max-width: $md) {
+  margin-top: 10px;
+}
   }
 }
 .delivery-refund{
   padding-bottom: var(--margin-regular);
+  @media (max-width: $md) {
+    padding-bottom: var(--margin-regular-mobile);
+  }
 }
 .bg-yellow{
   margin-top: 60px;
@@ -68,7 +82,16 @@ max-width: 1130px;
     line-height: var(--lh-sup-title);
     text-transform: uppercase;
     color: var(--black);
-
+    padding-left: 0;
+  }
+  @media (max-width: $md) {
+    max-width: 157px;
+padding: 8px 95px 8px 14px;
+    margin-top: 40px;
+    h3{
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
+    }
   }
 }
 .questions-faq{
@@ -87,14 +110,45 @@ margin-top: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      &:after{
-        content: '';
-        background-image: url("../icons/questions-faq_arrow.svg");
-        width: 15px;
-        height: 21px;
-        display: block;
-      }
+      padding-left: 0;
+
   }
+    p{
+      display: none;
+    }
+    &_active{
+      background: var(--black);
+      p{
+        font-weight: var(--fw-bold);
+        font-size:var(--fs-normal);
+        line-height: var(--lh-normal);
+        letter-spacing: var(--ls-secondary);
+        color: var(--white);
+        margin-top: 20px;
+        display: block;
+        max-width: 973px;
+        width: 100%;
+      }
+      p:last-child{
+        font-weight: var(--fw-regular);
+        margin-top:0;
+      }
+      h3{
+        color: var(--yellow);
+        &:after{
+
+        }
+      }
+      svg{
+        transform: rotate(180deg);
+        path{
+          fill: var(--yellow);
+        }
+      }
+    }
+    @media (max-width: $md) {
+    padding: 24px 11px ;
+    }
   }
 
 }
