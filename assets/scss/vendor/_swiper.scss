@@ -6,11 +6,17 @@ gap: 30px;
   width: 100%;
   margin-top: 20px;
   max-width: 350px;
+  &_card{
+    max-width: 445px;
+  }
 }
 
 .swiper-pagination{
   display: none;
   @media (max-width: $md) {
+    display: block;
+  }
+  &_card{
     display: block;
   }
 }
@@ -42,8 +48,8 @@ display: none;
   right: 305px;
   transform: rotate(180deg);
   @media (max-width: $md) {
-    display: none;
-  }
+  display: none;
+}
   &:after{
     display: none;
   }
@@ -55,4 +61,30 @@ display: none;
 }
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 2px;
+}
+
+.swiper-button-prev{
+  &_card{
+    background-image: url(../icons/slider_small_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    height:24px;
+    width: 14px;
+  }
+
+}
+
+.swiper-button-next{
+  &_card{
+    background-image: url(../icons/slider_small_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    height:24px;
+    width: 14px;
+    right:inherit;
+    transform: rotate(180deg);
+  }
+
 }

@@ -107,12 +107,30 @@
 <div class="container">
     <div class="product-card">
         <div class="product-card__gallery">
-            <picture>
-                <img src="assets/image/product_card_one.png" alt="">
-            </picture>
-            <picture>
-                <img src="assets/image/product_card_two.png" alt="">
-            </picture>
+
+            <div class="swiper twoSwiper">
+                <div class="swiper-button-next swiper-button-next_card"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture>
+                            <img src="assets/image/product_card_one.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <img src="assets/image/product_card_two.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
+                            <img src="assets/image/product_card_one.png" alt="">
+                        </picture>
+                    </div>
+                    <div class=" swiper-button-prev  swiper-button-prev_card"></div>
+
+                </div>
+                <div class=" swiper-pagination swiper-pagination_card"></div>
+            </div>
 
         </div>
 
@@ -138,7 +156,7 @@
             <div class="card-title">
                 <h3>Укороченный спортивный топ</h3>
                 <div class="card-title__favorite">
-                <p>IQ editione</p>
+                    <p>IQ editione</p>
                     <div class="favorite">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.7493 2.5C12.2993 2.5 10.9077 3.175 9.99935 4.24167C9.09102 3.175 7.69935 2.5 6.24935 2.5C3.68268 2.5 1.66602 4.51667 1.66602 7.08333C1.66602 10.2333 4.49935 12.8 8.79102 16.7L9.99935 17.7917L11.2077 16.6917C15.4993 12.8 18.3327 10.2333 18.3327 7.08333C18.3327 4.51667 16.316 2.5 13.7493 2.5ZM10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
@@ -159,33 +177,33 @@
             <div class="product-card__color">
                 <p>цвет</p>
 
-               <div class="product-card__color-item">
-                   <input name="radio-color" id="radio-color" type="radio">
-                   <label style="background-color:#BF5858;" for="radio-color"></label>
+                <div class="product-card__color-item">
+                    <input name="radio-color" id="radio-color" type="radio">
+                    <label style="background-color:#BF5858;" for="radio-color"></label>
 
-                   <input name="radio-color" id="radio-color-two" type="radio">
-                   <label style="background-color:#306154;" for="radio-color-two"></label>
+                    <input name="radio-color" id="radio-color-two" type="radio">
+                    <label style="background-color:#306154;" for="radio-color-two"></label>
 
-                   <input name="radio-color" id="radio-color-three" type="radio">
-                   <label style="background-color:#8C9971;" for="radio-color-three"></label>
-               </div>
+                    <input name="radio-color" id="radio-color-three" type="radio">
+                    <label style="background-color:#8C9971;" for="radio-color-three"></label>
+                </div>
             </div>
 
             <div class="size size_product-card">
                 <h3>размеры</h3>
-                <input name="radio-size" id="radio-size-xs" class="radio-size"  type="radio">
+                <input name="radio-size" id="radio-size-xs" class="radio-size" type="radio">
                 <label for="radio-size-xs">xs</label>
 
-                <input name="radio-size" id="radio-size-s" class="radio-size"  type="radio">
+                <input name="radio-size" id="radio-size-s" class="radio-size" type="radio">
                 <label for="radio-size-s">S</label>
 
-                <input  name="radio-size" id="radio-size-m" class="radio-size"  type="radio">
+                <input name="radio-size" id="radio-size-m" class="radio-size" type="radio">
                 <label for="radio-size-m">m</label>
 
-                <input name="radio-size" id="radio-size-l" class="radio-size"  type="radio">
+                <input name="radio-size" id="radio-size-l" class="radio-size" type="radio">
                 <label for="radio-size-l">l</label>
 
-                <input name="radio-size" id="radio-size-xl" class="radio-size"  type="radio">
+                <input name="radio-size" id="radio-size-xl" class="radio-size" type="radio">
                 <label for="radio-size-xl">xl</label>
                 <a href="">смотреть таблицу размеров</a>
             </div>
@@ -212,109 +230,111 @@
         </div>
     </div>
     <div class="product-card-description">
-<h3>Описание товара</h3>
+        <h3>Описание товара</h3>
         <p>Описание товара <br>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies ne </p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+            ultricies ne Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
+            quam felis, ultricies ne </p>
     </div>
 </div>
-    <div class="popular product-card__popular">
-        <div class="container">
-            <h3>
-                С этим товаром заказывают
-            </h3>
-            <div class="popular__list">
-                <div class="card">
-                    <a href="">
-                        <div class="card__img">
-                            <img src="assets/image/card.png" alt="">
-                        </div>
-                    </a>
-                    <a href="">
-                        Моделирующие Шорты
-                    </a>
-                    <span>IQ editione</span>
-                    <div class="card__price">
-                        <p>10 700</p>
-                        <a href="">Купить</a>
+<div class="popular product-card__popular">
+    <div class="container">
+        <h3>
+            С этим товаром заказывают
+        </h3>
+        <div class="popular__list">
+            <div class="card">
+                <a href="">
+                    <div class="card__img">
+                        <img src="assets/image/card.png" alt="">
                     </div>
-                    <div class="new">
-                        <img src="assets/image/new.png" alt="">
-                    </div>
-
-                    <div class="favorite favorite-card">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.7493 2.5C12.2993 2.5 10.9077 3.175 9.99935 4.24167C9.09102 3.175 7.69935 2.5 6.24935 2.5C3.68268 2.5 1.66602 4.51667 1.66602 7.08333C1.66602 10.2333 4.49935 12.8 8.79102 16.7L9.99935 17.7917L11.2077 16.6917C15.4993 12.8 18.3327 10.2333 18.3327 7.08333C18.3327 4.51667 16.316 2.5 13.7493 2.5ZM10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
-                                  fill="black"/>
-                            <path d="M10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
-                                  fill="transparent"/>
-                        </svg>
-                    </div>
+                </a>
+                <a href="">
+                    Моделирующие Шорты
+                </a>
+                <span>IQ editione</span>
+                <div class="card__price">
+                    <p>10 700</p>
+                    <a href="">Купить</a>
+                </div>
+                <div class="new">
+                    <img src="assets/image/new.png" alt="">
                 </div>
 
-
-                <div class="card">
-                    <a href="">
-                        <div class="card__img">
-                            <img src="assets/image/card.png" alt="">
-                        </div>
-                    </a>
-                    <a href="">
-                        Моделирующие Шорты
-                    </a>
-                    <span>IQ editione</span>
-                    <div class="card__price">
-                        <p>10 700</p>
-                        <a href="">Купить</a>
-                    </div>
-                    <div class="new">
-                        <img src="assets/image/new.png" alt="">
-                    </div>
-
-                    <div class="favorite favorite-card">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.7493 2.5C12.2993 2.5 10.9077 3.175 9.99935 4.24167C9.09102 3.175 7.69935 2.5 6.24935 2.5C3.68268 2.5 1.66602 4.51667 1.66602 7.08333C1.66602 10.2333 4.49935 12.8 8.79102 16.7L9.99935 17.7917L11.2077 16.6917C15.4993 12.8 18.3327 10.2333 18.3327 7.08333C18.3327 4.51667 16.316 2.5 13.7493 2.5ZM10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
-                                  fill="black"/>
-                            <path d="M10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
-                                  fill="transparent"/>
-                        </svg>
-                    </div>
-                </div>
-
-
-                <div class="card">
-                    <a href="">
-                        <div class="card__img">
-                            <img src="assets/image/card.png" alt="">
-                        </div>
-                    </a>
-                    <a href="">
-                        Моделирующие Шорты
-                    </a>
-                    <span>IQ editione</span>
-                    <div class="card__price">
-                        <p>10 700</p>
-                        <a href="">Купить</a>
-                    </div>
-                    <div class="new">
-                        <img src="assets/image/new.png" alt="">
-                    </div>
-
-                    <div class="favorite favorite-card">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.7493 2.5C12.2993 2.5 10.9077 3.175 9.99935 4.24167C9.09102 3.175 7.69935 2.5 6.24935 2.5C3.68268 2.5 1.66602 4.51667 1.66602 7.08333C1.66602 10.2333 4.49935 12.8 8.79102 16.7L9.99935 17.7917L11.2077 16.6917C15.4993 12.8 18.3327 10.2333 18.3327 7.08333C18.3327 4.51667 16.316 2.5 13.7493 2.5ZM10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
-                                  fill="black"/>
-                            <path d="M10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
-                                  fill="transparent"/>
-                        </svg>
-                    </div>
+                <div class="favorite favorite-card">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.7493 2.5C12.2993 2.5 10.9077 3.175 9.99935 4.24167C9.09102 3.175 7.69935 2.5 6.24935 2.5C3.68268 2.5 1.66602 4.51667 1.66602 7.08333C1.66602 10.2333 4.49935 12.8 8.79102 16.7L9.99935 17.7917L11.2077 16.6917C15.4993 12.8 18.3327 10.2333 18.3327 7.08333C18.3327 4.51667 16.316 2.5 13.7493 2.5ZM10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
+                              fill="black"/>
+                        <path d="M10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
+                              fill="transparent"/>
+                    </svg>
                 </div>
             </div>
 
+
+            <div class="card">
+                <a href="">
+                    <div class="card__img">
+                        <img src="assets/image/card.png" alt="">
+                    </div>
+                </a>
+                <a href="">
+                    Моделирующие Шорты
+                </a>
+                <span>IQ editione</span>
+                <div class="card__price">
+                    <p>10 700</p>
+                    <a href="">Купить</a>
+                </div>
+                <div class="new">
+                    <img src="assets/image/new.png" alt="">
+                </div>
+
+                <div class="favorite favorite-card">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.7493 2.5C12.2993 2.5 10.9077 3.175 9.99935 4.24167C9.09102 3.175 7.69935 2.5 6.24935 2.5C3.68268 2.5 1.66602 4.51667 1.66602 7.08333C1.66602 10.2333 4.49935 12.8 8.79102 16.7L9.99935 17.7917L11.2077 16.6917C15.4993 12.8 18.3327 10.2333 18.3327 7.08333C18.3327 4.51667 16.316 2.5 13.7493 2.5ZM10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
+                              fill="black"/>
+                        <path d="M10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
+                              fill="transparent"/>
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <a href="">
+                    <div class="card__img">
+                        <img src="assets/image/card.png" alt="">
+                    </div>
+                </a>
+                <a href="">
+                    Моделирующие Шорты
+                </a>
+                <span>IQ editione</span>
+                <div class="card__price">
+                    <p>10 700</p>
+                    <a href="">Купить</a>
+                </div>
+                <div class="new">
+                    <img src="assets/image/new.png" alt="">
+                </div>
+
+                <div class="favorite favorite-card">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.7493 2.5C12.2993 2.5 10.9077 3.175 9.99935 4.24167C9.09102 3.175 7.69935 2.5 6.24935 2.5C3.68268 2.5 1.66602 4.51667 1.66602 7.08333C1.66602 10.2333 4.49935 12.8 8.79102 16.7L9.99935 17.7917L11.2077 16.6917C15.4993 12.8 18.3327 10.2333 18.3327 7.08333C18.3327 4.51667 16.316 2.5 13.7493 2.5ZM10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
+                              fill="black"/>
+                        <path d="M10.0827 15.4583L9.99935 15.5417L9.91601 15.4583C5.94935 11.8667 3.33268 9.49167 3.33268 7.08333C3.33268 5.41667 4.58268 4.16667 6.24935 4.16667C7.53268 4.16667 8.78268 4.99167 9.22435 6.13333H10.7827C11.216 4.99167 12.466 4.16667 13.7493 4.16667C15.416 4.16667 16.666 5.41667 16.666 7.08333C16.666 9.49167 14.0493 11.8667 10.0827 15.4583Z"
+                              fill="transparent"/>
+                    </svg>
+                </div>
+            </div>
         </div>
 
+    </div>
+
 </div>
-
-
 
 
 <footer class="footer">
@@ -420,7 +440,8 @@
                     <input class="subscription__input" type="text">
                     <a href="">
                         <button class="btn subscription__small">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 18L15 12L9 6" stroke="black" stroke-width="2" stroke-linecap="round"
                                       stroke-linejoin="round"/>
                             </svg>
