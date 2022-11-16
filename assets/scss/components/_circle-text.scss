@@ -1,9 +1,15 @@
 .circle-text {
-  font-size: var(--fs-little);
-  line-height: var(--lh-little);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  text-transform: uppercase;
 
-  color: var(--black);
+  .text {
+    position: absolute;
+    left: 0;
+    animation: rounded-text 6s linear infinite forwards;
+  }
 }

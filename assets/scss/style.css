@@ -59,8 +59,9 @@ table {
   box-sizing: border-box;
 }
 
-body, button {
+body {
   font-family: var(--font-family);
+  color: var(--black);
 }
 
 ul {
@@ -68,6 +69,7 @@ ul {
 }
 
 a, button, label {
+  color: inherit;
   cursor: pointer;
   text-decoration: none;
 }
@@ -2138,6 +2140,7 @@ main {
   width: 100%;
 }
 
+/** Текст бегающей строки. */
 .marquee-infinite {
   overflow: hidden;
 }
@@ -2174,6 +2177,22 @@ main {
   animation: marquee-left-to-right 8s linear infinite;
 }
 
+/** Текст бегающего округлого текста. */
+.circle-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle-text .text {
+  position: absolute;
+  left: 0;
+  animation: rounded-text 6s linear infinite forwards;
+}
+
 /** block **/
 /** Главная **/
 .main__burger-menu {
@@ -2202,11 +2221,11 @@ main {
 }
 .main__header-all .marquee-infinite_black {
   transform: rotate(9deg);
-  bottom: -335px;
+  bottom: -300px;
 }
 .main__header-all .marquee-infinite_white {
   transform: rotate(-6deg);
-  bottom: 220px;
+  bottom: 200px;
   z-index: -1;
 }
 .main__header-wrapper {
@@ -2349,12 +2368,16 @@ main {
   text-align: right;
 }
 .main__circle {
+  width: 139px;
+  height: 139px;
   position: absolute;
   bottom: 220px;
 }
-.main__circle img {
-  width: 138px;
-  height: 138px;
+.main__circle-catalog {
+  font-size: var(--fs-sup-secondary);
+  line-height: var(--lh-sup-secondary);
+  letter-spacing: var(--ls-secondary);
+  text-transform: uppercase;
 }
 .main__background {
   --block-width: 380px;
@@ -2362,10 +2385,10 @@ main {
   width: 100%;
   aspect-ratio: 1;
   position: absolute;
-  bottom: -80px;
+  bottom: -100px;
   left: calc(40% - var(--block-width) / 2);
   background: #DBFF4E;
-  filter: blur(50px);
+  filter: blur(100px);
   z-index: -2;
 }
 .main__text-collection h3 {
@@ -2451,7 +2474,23 @@ main {
 }
 .main__jro-animation canvas {
   width: 100%;
+}
+.main__jro-animation #animation-jro-desktop {
   height: 500px;
+}
+@media (max-width: 768px) {
+  .main__jro-animation #animation-jro-desktop {
+    display: none;
+  }
+}
+.main__jro-animation #animation-jro-mobile {
+  display: none;
+  height: 400px;
+}
+@media (max-width: 768px) {
+  .main__jro-animation #animation-jro-mobile {
+    display: block;
+  }
 }
 .main__runningText {
   margin-bottom: var(--margin-regular);
@@ -5318,6 +5357,15 @@ main {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+/** Поворот округлого текста.*/
+@keyframes rounded-text {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /** vendor **/

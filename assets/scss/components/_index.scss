@@ -5,7 +5,6 @@
 /** Input-soc **/
 @import "soc-input";
 
-
 /** promocod **/
 @import "promocod";
 
@@ -45,9 +44,11 @@
 /** Виджет **/
 @import "widget";
 
+/** Текст бегающей строки. */
 @import "walking-string";
 
-
+/** Текст бегающего округлого текста. */
+@import "circle-text";
 
 
 

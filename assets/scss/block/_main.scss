@@ -31,11 +31,11 @@
     .marquee-infinite {
       &_black {
         transform: rotate(9deg);
-        bottom: -335px;
+        bottom: -300px;
       }
       &_white {
         transform: rotate(-6deg);
-        bottom: 220px;
+        bottom: 200px;
         z-index: -1;
       }
     }
@@ -179,12 +179,17 @@
   }
 
   &__circle {
+    width: 139px;
+    height: 139px;
+
     position: absolute;
     bottom: 220px;
 
-    img {
-      width: 138px;
-      height: 138px;
+    &-catalog {
+      font-size: var(--fs-sup-secondary);
+      line-height: var(--lh-sup-secondary);
+      letter-spacing:var(--ls-secondary);
+      text-transform: uppercase;
     }
   }
 
@@ -195,11 +200,11 @@
     width: 100%;
     aspect-ratio: 1;
     position: absolute;
-    bottom: -80px;
+    bottom: -100px;
     left: calc(40% - (var(--block-width)/2));
 
     background: #DBFF4E;
-    filter: blur(50px);
+    filter: blur(100px);
     z-index: -2;
   }
 
@@ -298,7 +303,23 @@
 
     canvas {
       width: 100%;
+    }
+
+    #animation-jro-desktop {
       height: 500px;
+      
+      @media (max-width: $md) {
+        display: none;
+      }
+    }
+
+    #animation-jro-mobile {
+      display: none;
+      height: 400px;
+
+      @media (max-width: $md) {
+        display: block;
+      }
     }
   }
 
