@@ -56,8 +56,20 @@ circleText.forEach(textBlock => {
     }
 });*/
 
+/** Swiper галереи на главной странице. */
+const mainGallerySwiper = new Swiper('.main__gallery .swiper', {
+    slidersPerView: 5,
+    spaceBetween: 40,
+    freeMode: true,
+    autoplay: {
+        delay: 0,
+    },
+    speed: 1000,
+    loop: true,
+});
+
 /** Какой-то Swiper */
-new Swiper('.swiper', {
+new Swiper('.popular__list .swiper', {
     spaceBetween: 30,
     slidersPerView: 3,
     navigation: {
