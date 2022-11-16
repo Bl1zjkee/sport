@@ -1859,7 +1859,9 @@ a, button, label {
   line-height: var(--lh-sup-secondary);
   letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
-  margin-left: 10px;
+}
+.mobile-menu__account a svg {
+  margin-right: 10px;
 }
 .mobile-menu__list {
   border-bottom: 1px solid var(--yellow);
@@ -2197,6 +2199,7 @@ a, button, label {
   display: flex;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
 }
 @media (max-width: 992px) {
   .main__header-all {
@@ -2216,7 +2219,8 @@ a, button, label {
   justify-content: space-between;
 }
 .main__img {
-  z-index: -1;
+  z-index: 0;
+  position: relative;
 }
 .main__img picture {
   width: 100%;
@@ -2348,13 +2352,15 @@ a, button, label {
   height: 138px;
 }
 .main__background {
-  background-image: url("../image/background_header.png");
-  max-width: 380px;
-  width: 100%;
   position: absolute;
   display: block;
-  bottom: 20px;
-  right: 20px;
+  left: 465px;
+  z-index: -1;
+  top: 700px;
+}
+.main__background img {
+  max-width: 380px;
+  width: 100%;
 }
 .main__text-collection h3 {
   font-style: italic;
