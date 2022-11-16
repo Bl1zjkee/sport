@@ -46,7 +46,7 @@
         // задаем параметры
         direction: 'vertical', // вертикальная прокрутка
         slidesPerView: 2, // показывать по 3 превью
-        spaceBetween: 24, // расстояние между слайдами
+        spaceBetween: 0, // расстояние между слайдами
         navigation: { // задаем кнопки навигации
             nextEl: '.slider__next', // кнопка Next
             prevEl: '.slider__prev' // кнопка Prev
@@ -66,7 +66,7 @@
         // задаем параметры
         direction: 'horizontal', // вертикальная прокрутка
         slidesPerView: 1, // показывать по 1 изображению
-        spaceBetween: 32, // расстояние между слайдами
+        spaceBetween: 0, // расстояние между слайдами
         mousewheel: true, // можно прокручивать изображения колёсиком мыши
         navigation: { // задаем кнопки навигации
             nextEl: '.slider__next', // кнопка Next
@@ -78,10 +78,10 @@
         },
         breakpoints: { // условия для разных размеров окна браузера
             0: { // при 0px и выше
-                direction: 'horizontal', // горизонтальная прокрутка
+                direction: 'vertical', // горизонтальная прокрутка
             },
             768: { // при 768px и выше
-                direction: 'horizontal', // вертикальная прокрутка
+                direction: 'vertical', // вертикальная прокрутка
             }
         }
     });
