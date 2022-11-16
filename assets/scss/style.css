@@ -2523,6 +2523,7 @@ main {
   }
 }
 .popular__list {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 30px;
@@ -2541,6 +2542,12 @@ main {
     font-size: var(--fs-sup-title);
     line-height: var(--lh-sup-title);
   }
+}
+.popular .swiper-button-next {
+  right: -80px;
+}
+.popular .swiper-button-prev {
+  left: -80px;
 }
 .popular .popular-arrow {
   font-weight: var(--fw-bold);

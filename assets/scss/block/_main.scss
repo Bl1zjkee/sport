@@ -359,6 +359,7 @@
   }
 
   &__list {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -376,6 +377,14 @@
       font-size: var(--fs-sup-title);
       line-height: var(--lh-sup-title);
     }
+  }
+
+  .swiper-button-next {
+    right: -80px;
+  }
+
+  .swiper-button-prev {
+    left: -80px;
   }
 
   .popular-arrow {
