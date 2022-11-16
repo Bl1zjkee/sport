@@ -1,9 +1,11 @@
-/** Шрифт **/
+/** Шрифт. */
 @import "fonts";
 
-/** Цвета **/
+/** Цвета. */
 @import "color";
 
-/** Адаптив **/
-@import "mixins";
+/** Переменные SCSS. */
+@import "variables";
 
+/** Анимации. */
+@import "animations";

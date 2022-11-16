@@ -1,7 +1,8 @@
-@import "../abstract/mixins";
+@import "../abstract/variables";
 
 .main {
-  &__burger-menu{
+
+  &__burger-menu {
     position: relative;
     z-index: 3;
     display: none;
@@ -9,6 +10,7 @@
       display: block;
     }
   }
+
   &__logo {
     max-width: 65px;
 
@@ -22,50 +24,69 @@
     align-items: center;
     gap: 10px;
   }
-&__header-all{
-  display: flex;
-  max-width: 1440px;
-  margin: 0 auto;
-  position: relative;
-  @media (max-width: $lg) {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 10px;
+
+  &__header-all {
+    position: relative;
+
+    .marquee-infinite {
+      &_black {
+        transform: rotate(9deg);
+        bottom: -335px;
+      }
+      &_white {
+        transform: rotate(-6deg);
+        bottom: 220px;
+        z-index: -1;
+      }
+    }
   }
-  @media (max-width: $md) {
-gap: 0;
+
+  &__header-wrapper {
+    position: relative;
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    @media (max-width: $lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 10px;
+    }
+    @media (max-width: $md) {
+      gap: 0;
+    }
   }
-}
+
   &__header {
     position: relative;
     display: flex;
- justify-content: space-between;
+    justify-content: space-between;
   }
 
   &__img {
-    z-index: 0;
-    position: relative;
+    z-index: -1;
 
     picture {
       width: 100%;
+
       img {
         max-width: 705px;
         width: 100%;
         @media (max-width: $md) {
-            max-width: 210px;
-
+          max-width: 210px;
         }
       }
     }
+
     @media (max-width: $lg) {
       order: 2;
-
-
     }
   }
+
   &__collection {
-    margin-top: 130px;
-    margin-bottom:var(--margin-regular);
+    margin-top: 207px;
+    margin-bottom: var(--margin-regular);
+
     @media (max-width: $lg) {
       margin-bottom: var(--margin-regular-mobile);
     }
@@ -95,19 +116,23 @@ gap: 0;
     gap: 30px;
     width: 100%;
     font-size: 0;
-    picture{
+
+    picture {
       max-width: 350px;
-      img{
+
+      img {
         width: 100%;
       }
     }
-    @media (max-width:$lg ) {
+
+    @media (max-width: $lg) {
       display: none;
     }
-    &_mobile{
+
+    &_mobile {
       display: none;
-      @media (max-width:$lg ) {
-        picture{
+      @media (max-width: $lg) {
+        picture {
 
         }
         display: flex;
@@ -115,26 +140,28 @@ gap: 0;
       }
     }
   }
+
   &__menu {
     width: 100%;
     padding: 21px 0 0 30px;
-    max-width: 541px;
+    max-width: 560px;
     @media (max-width: $md) {
       padding-left: 0;
     }
   }
 
-  h2 {
+  h1 {
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
     line-height: var(--lh-title-secondary);
     text-transform: uppercase;
     color: var(--black);
-    margin: 0 auto;
-    margin-top: 122px;
-@media (max-width: $xl) {
-  margin-top: 50px;
-}
+    margin: 122px auto 0;
+    animation: slide-left 1s linear forwards;
+
+    @media (max-width: $xl) {
+      margin-top: 50px;
+    }
     @media (max-width: $md) {
       font-size: var(--fs-sup-title);
       line-height: var(--lh-sup-title);
@@ -143,24 +170,18 @@ gap: 0;
       margin-top: 8px;
       margin-bottom: -22px;
     }
+
     span {
       display: flex;
-      text-align: end;
-      white-space: pre-line;
-      max-width: 384px;
-      width: 100%;
-
-      @media (max-width: $md) {
-        font-size: var(--fs-sup-title);
-        line-height: var(--lh-sup-title);
-
-      }
+      width: fit-content;
+      text-align: right;
     }
   }
 
   &__circle {
     position: absolute;
-    bottom: 2px;
+    bottom: 220px;
+
     img {
       width: 138px;
       height: 138px;
@@ -168,18 +189,22 @@ gap: 0;
   }
 
   &__background {
+    --block-width: 380px;
+
+    max-width: var(--block-width);
+    width: 100%;
+    aspect-ratio: 1;
     position: absolute;
-    display: block;
-    left: 465px;
-    z-index: -1;
-    top: 700px;
-    img{
-      max-width: 380px;
-      width: 100%;
-    }
+    bottom: -80px;
+    left: calc(40% - (var(--block-width)/2));
+
+    background: #DBFF4E;
+    filter: blur(50px);
+    z-index: -2;
   }
-  &__text-collection{
-    h3{
+
+  &__text-collection {
+    h3 {
       font-style: italic;
       font-weight: var(--fw-regular);
       font-size: var(--fs-big-title);
@@ -187,7 +212,8 @@ gap: 0;
       text-transform: uppercase;
       color: var(--black);
     }
-    span{
+
+    span {
       font-style: italic;
       font-weight: var(--fw-regular);
       font-size: var(--fs-medium-title);
@@ -195,62 +221,65 @@ gap: 0;
       text-transform: uppercase;
       color: var(--black);
     }
+
     @media (max-width: $lg) {
       display: flex;
       justify-content: center;
       align-items: center;
-      h3{
-        font-size:var(--fs-sup-title);
+      h3 {
+        font-size: var(--fs-sup-title);
         line-height: var(--lh-sup-title);
       }
-      span{
+      span {
         margin-left: 20px;
-        font-size:var(--fs-sup-title);
+        font-size: var(--fs-sup-title);
         line-height: var(--lh-sup-title);
       }
     }
   }
 
-&__item{
-  display: flex;
-  gap: 30px;
-  margin-top: 30px;
-  position: relative;
-}
-  &__item:nth-of-type(1){
+  &__item {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    position: relative;
+  }
+
+  &__item:nth-of-type(1) {
     margin-top: 20px;
   }
-  &__title-collection{
+
+  &__title-collection {
     max-width: 350px;
     width: 100%;
     @media (max-width: $lg) {
-max-width: 100%;
+      max-width: 100%;
     }
 
 
   }
-  &__stroky{
+
+  &__running-text {
+    display: flex;
+    align-items: center;
     font-weight: var(--fw-regular);
     font-size: var(--fs-title);
     line-height: var(--lh-title);
-    text-transform: uppercase;
-    color: var(--white);
-    background: var(--black);
-    width: 100%;
     height: 111px;
-
   }
-  
-  &__popular{
-    margin-top:var(--margin-regular);
-    margin-bottom:var(--margin-secondary);
-    &_list{
+
+  &__popular {
+    margin-top: var(--margin-regular);
+    margin-bottom: var(--margin-secondary);
+
+    &_list {
       display: flex;
       align-items: center;
       gap: 30px;
       margin-bottom: 70px;
     }
-    h3{
+
+    h3 {
       font-weight: var(--fw-bold);
       font-size: var(--fs-title);
       line-height: var(--lh-title);
@@ -260,16 +289,23 @@ max-width: 100%;
 
   }
 
-  &__gif{
-    margin-bottom:var(--margin-regular);
-    img{
-      max-width: 1439.95px;
+  &__menu-group {
+    animation: slide-bottom 1s linear forwards;
+  }
+
+  &__jro-animation {
+    margin-bottom: var(--margin-regular);
+
+    canvas {
       width: 100%;
+      height: 500px;
     }
   }
-  &__runningText{
-    margin-bottom:var(--margin-regular);
-    h3{
+
+  &__runningText {
+    margin-bottom: var(--margin-regular);
+
+    h3 {
       font-weight: var(--fw-bold);
       font-size: var(--fs-title);
       line-height: var(--lh-title-secondary);
@@ -278,13 +314,14 @@ max-width: 100%;
     }
   }
 
-  &__gallery{
+  &__gallery {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-bottom:var(--margin-secondary);
-    picture{
-      img{
+    margin-bottom: var(--margin-secondary);
+
+    picture {
+      img {
         max-width: 250px;
         width: 100%;
       }
@@ -293,21 +330,21 @@ max-width: 100%;
 }
 
 
-
-
-.popular{
+.popular {
   margin-top: 100px;
   margin-bottom: 80px;
   @media (max-width: $md) {
     margin-top: var(--margin-regular-mobile);
   }
-  &__list{
+
+  &__list {
     display: flex;
     align-items: center;
     gap: 30px;
     margin-bottom: 70px;
   }
-  h3{
+
+  h3 {
     font-style: normal;
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
@@ -320,7 +357,7 @@ max-width: 100%;
     }
   }
 
-  .popular-arrow{
+  .popular-arrow {
     font-weight: var(--fw-bold);
     font-size: var(--fs-normal);
     line-height: var(--lh-normal);
@@ -328,7 +365,8 @@ max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    &:after{
+
+    &:after {
       content: '';
       display: block;
       background-image: url("../icons/sale_arrow.svg");
@@ -336,7 +374,8 @@ max-width: 100%;
       height: 8px;
       margin-left: 6px;
     }
-    &_none{
+
+    &_none {
       @media (max-width: $md) {
         display: none;
       }

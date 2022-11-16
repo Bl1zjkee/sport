@@ -1,27 +1,29 @@
-
-.swiper-slide{
+.swiper-slide {
   display: flex;
   align-items: center;
-gap: 30px;
+  gap: 30px;
   width: 100%;
   margin-top: 20px;
   max-width: 350px;
-  &_card{
+
+  &_card {
     max-width: 445px;
   }
 }
 
-.swiper-pagination{
+.swiper-pagination {
   display: none;
   @media (max-width: $md) {
     display: block;
   }
-  &_card{
+
+  &_card {
     display: block;
   }
 }
-.swiper-button-prev{
-  background-image: url(../icons/main_arrow_slide.svg);
+
+.swiper-button-prev {
+  background-image: url('../icons/main_arrow_slide.svg');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
@@ -32,12 +34,13 @@ gap: 30px;
   @media (max-width: $md) {
     display: none;
   }
-  &:after{
-display: none;
+
+  &:after {
+    display: none;
   }
 }
 
-.swiper-button-next{
+.swiper-button-next {
   background-image: url(../icons/main_arrow_slide.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -48,42 +51,45 @@ display: none;
   right: 305px;
   transform: rotate(180deg);
   @media (max-width: $md) {
-  display: none;
-}
-  &:after{
+    display: none;
+  }
+
+  &:after {
     display: none;
   }
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
   background: var(--darkgrey);
   width: 6px;
   height: 6px;
 }
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 2px;
 }
 
-.swiper-button-prev{
-  &_card{
+.swiper-button-prev {
+  &_card {
     background-image: url(../icons/slider_small_arrow.svg);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
-    height:24px;
+    height: 24px;
     width: 14px;
   }
 
 }
 
-.swiper-button-next{
-  &_card{
+.swiper-button-next {
+  &_card {
     background-image: url(../icons/slider_small_arrow.svg);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
-    height:24px;
+    height: 24px;
     width: 14px;
-    right:inherit;
+    right: inherit;
     transform: rotate(180deg);
   }
 

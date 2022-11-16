@@ -1,7 +1,8 @@
-@import "../abstract/mixins";
+@import "../abstract/variables";
 
 * {
   box-sizing: border-box;
+  transition: all .2s linear;
 
   &:after, &:before {
     box-sizing: border-box;
@@ -10,6 +11,10 @@
 
 body, button {
   font-family: var(--font-family);
+}
+
+ul {
+  list-style: none;
 }
 
 a, button, label {
@@ -39,4 +44,36 @@ a, button, label {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+}
+
+main {
+  overflow: hidden;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+}
+
+.bolder {
+  font-weight: var(--fw-black);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.white {
+  color: var(--white);
+}
+
+.black {
+  color: var(--black);
+}
+
+.gray {
+  color: var(--grey);
 }

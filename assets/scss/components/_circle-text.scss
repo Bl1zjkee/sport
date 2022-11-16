@@ -1,0 +1,9 @@
+.circle-text {
+  font-size: var(--fs-little);
+  line-height: var(--lh-little);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  color: var(--black);
+}

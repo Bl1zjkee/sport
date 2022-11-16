@@ -1,0 +1,41 @@
+.marquee-infinite {
+  overflow: hidden;
+
+  &_rotated {
+    position: absolute;
+    left: -5vw;
+  }
+
+  &_black {
+    background: var(--black);
+  }
+
+  &_white {
+    background: var(--white);
+    border: 1px solid var(--black);
+
+    .text {
+      color: var(--black) !important;
+    }
+  }
+
+  .text {
+    white-space: nowrap;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-title);
+    line-height: var(--lh-title);
+    text-transform: uppercase;
+    color: var(--white);
+    gap: 12px;
+
+    span {
+      font-weight: var(--fw-black);
+    }
+  }
+}
+
+.marquee-infinite > div {
+  display: flex;
+  gap: 12px;
+  animation: marquee-left-to-right 8s linear infinite;
+}
