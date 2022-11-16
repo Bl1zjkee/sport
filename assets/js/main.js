@@ -58,7 +58,7 @@ circleText.forEach(textBlock => {
 
 /** Swiper галереи на главной странице. */
 const mainGallerySwiper = new Swiper('.main__gallery .swiper', {
-    slidersPerView: 5,
+    slidersPerView: 'auto',
     spaceBetween: 40,
     freeMode: true,
     autoplay: {
