@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/scss/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/scss/style.css">
     <title>Карточка товара</title>
 </head>
@@ -106,41 +107,51 @@
 </div>
 <div class="container">
     <div class="product-card">
-        <div class="product-card__gallery">
+            <section class="slider">
+                <div class="slider__flex">
+                    <div class="slider__col">
 
-            <div class="swiper twoSwiper">
-                <div class="swiper-button-next swiper-button-next_card"></div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <picture>
-                            <img src="assets/image/product_card_one.png" alt="">
-                        </picture>
+                        <div class="slider__prev"></div> <!-- Кнопка для переключения на предыдущий слайд -->
+
+                        <div class="slider__thumbs">
+                            <div class="swiper-container"> <!-- Слайдер с превью -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-slide_card">
+                                        <div class="slider__image"><img src="assets/image/product_card_one.png" alt=""></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slider__image"> <img src="assets/image/product_card_two.png" alt=""></div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="slider__image"><img src="assets/image/product_card_one.png" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider__next"></div> <!-- Кнопка для переключения на следующий слайд -->
+
                     </div>
-                    <div class="swiper-slide">
-                        <picture>
-                            <img src="assets/image/product_card_two.png" alt="">
-                        </picture>
+
+                    <div class="slider__images">
+                        <div class="swiper-container"> <!-- Слайдер с изображениями -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="slider__image"><img src="assets/image/product_card_one.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider__image"> <img src="assets/image/product_card_main.png" alt="">--></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="slider__image"> <img src="assets/image/product_card_main.png" alt="">--></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <picture>
-                            <img src="assets/image/product_card_one.png" alt="">
-                        </picture>
-                    </div>
-                    <div class=" swiper-button-prev  swiper-button-prev_card"></div>
 
                 </div>
-                <div class=" swiper-pagination swiper-pagination_card"></div>
-            </div>
+            </section>
 
-        </div>
-
-        <div class="product-card__img">
-            <h3 class="title-card-mobile">Укороченный спортивный топ</h3>
-            <picture>
-                <img src="assets/image/product_card_main.png" alt="">
-            </picture>
-
-        </div>
         <div class="product-card__name">
             <div class="product-card__back">
                 <a href="">Назад</a>
@@ -518,5 +529,7 @@
         </div>
     </div>
 </footer>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
