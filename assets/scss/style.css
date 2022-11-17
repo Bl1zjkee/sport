@@ -1405,6 +1405,8 @@ main {
 
 /** footer **/
 .footer {
+  position: relative;
+  z-index: 2;
   background: var(--black);
   padding: 40px 0;
 }
@@ -2221,7 +2223,7 @@ main {
   background: var(--black);
 }
 .marquee-infinite_white {
-  background: var(--white);
+  background: transparent;
   border: 1px solid var(--black);
 }
 .marquee-infinite_white .text {
@@ -5322,7 +5324,33 @@ main {
 }
 
 /** 404 **/
+#page-404 {
+  padding-top: 0;
+}
+#page-404 .marquee-infinite_black {
+  top: 0;
+  right: 0;
+  left: -20vw;
+  transform: rotate(-30deg);
+  z-index: 2;
+}
+#page-404 .marquee-infinite_white-one {
+  transform: rotate(45deg);
+  right: 0;
+  left: -90vw;
+}
+#page-404 .marquee-infinite_white-two {
+  transform: rotate(-45deg);
+  left: -20vw;
+}
+@media (min-width: 1600px) {
+  #page-404 .marquee-infinite_white-two {
+    left: -5vw;
+  }
+}
+
 .bg-wrapper {
+  padding-top: 80px;
   background: var(--yellow);
   position: relative;
 }
