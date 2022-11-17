@@ -391,10 +391,10 @@
     }
   }
 
-  &__runningText {
+  &__mixed-text {
     margin-bottom: var(--margin-regular);
 
-    h3 {
+    .mixed-text {
       font-weight: var(--fw-bold);
       font-size: var(--fs-title);
       line-height: var(--lh-title-secondary);

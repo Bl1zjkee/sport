@@ -2790,17 +2790,17 @@ main {
     display: block;
   }
 }
-.main__runningText {
+.main__mixed-text {
   margin-bottom: var(--margin-regular);
 }
-.main__runningText h3 {
+.main__mixed-text .mixed-text {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
   line-height: var(--lh-title-secondary);
   text-transform: uppercase;
   color: var(--black);
 }
-.main__runningText h3 span {
+.main__mixed-text .mixed-text span {
   transition: font-weight 0.1s linear, color 0.3s linear;
 }
 .main__gallery {
