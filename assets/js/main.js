@@ -289,3 +289,28 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
         }
     }
 });
+
+/** Аккордеоны. */
+const accordions = document.querySelectorAll('.accordion');
+
+if (accordions) {
+    document.addEventListener('click', function (e) {
+        e.stopPropagation();
+
+        const header = e.target.closest('.accordion__header');
+
+        if (header){
+
+            if (header.parentElement.classList.contains('questions-faq__item_active')) {
+                header.parentElement.classList.remove('questions-faq__item_active');
+                return;
+            }
+
+            accordions.forEach((accordion => {
+                accordion.classList.remove('questions-faq__item_active');
+            }))
+
+            header.parentElement.classList.add('questions-faq__item_active');
+        }
+    });
+}
