@@ -43,7 +43,8 @@
 .marquee-infinite > div {
   display: flex;
   gap: 12px;
-  animation: marquee-left-to-right 8s linear infinite;
+  will-change: transform;
+  animation: marquee-left-to-right 20s linear infinite;
 }
 
 .marquee-small {
@@ -62,12 +63,13 @@
     white-space: nowrap;
     text-transform: uppercase;
     color: var(--white);
-    animation: marquee-right-to-left 8s linear infinite;
+    will-change: transform;
+    animation: marquee-right-to-left 20s linear infinite;
   }
 
   &_to-right {
     .text {
-      animation: marquee-left-to-right 8s linear infinite;
+      animation: marquee-left-to-right 20s linear infinite;
     }
   }
 }
@@ -90,6 +92,7 @@
     line-height: var(--fs-sup-title);
     white-space: nowrap;
     text-transform: uppercase;
-    animation: marquee-left-to-right 8s linear infinite;
+    will-change: transform;
+    animation: marquee-left-to-right 20s linear infinite;
   }
 }

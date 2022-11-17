@@ -2235,7 +2235,8 @@ main {
 .marquee-infinite > div {
   display: flex;
   gap: 12px;
-  animation: marquee-left-to-right 8s linear infinite;
+  will-change: transform;
+  animation: marquee-left-to-right 20s linear infinite;
 }
 
 .marquee-small {
@@ -2253,10 +2254,11 @@ main {
   white-space: nowrap;
   text-transform: uppercase;
   color: var(--white);
-  animation: marquee-right-to-left 8s linear infinite;
+  will-change: transform;
+  animation: marquee-right-to-left 20s linear infinite;
 }
 .marquee-small_to-right .text {
-  animation: marquee-left-to-right 8s linear infinite;
+  animation: marquee-left-to-right 20s linear infinite;
 }
 
 .marquee-medium {
@@ -2275,7 +2277,8 @@ main {
   line-height: var(--fs-sup-title);
   white-space: nowrap;
   text-transform: uppercase;
-  animation: marquee-left-to-right 8s linear infinite;
+  will-change: transform;
+  animation: marquee-left-to-right 20s linear infinite;
 }
 
 /** Текст бегающего округлого текста. */
@@ -3138,8 +3141,7 @@ main {
   margin-top: 96px;
   position: sticky;
   height: 100%;
-  top: 0;
-  z-index: -1;
+  top: 80px;
   margin-bottom: var(--margin-regular);
 }
 @media (max-width: 992px) {
@@ -3202,10 +3204,9 @@ main {
   font-size: var(--fs-little);
   line-height: var(--lh-little);
   text-align: right;
-  text-decoration-line: underline;
+  text-decoration: underline;
   text-transform: uppercase;
   color: var(--black);
-  text-decoration: underline;
 }
 
 .run-text {
@@ -3215,6 +3216,7 @@ main {
   margin-top: 20px;
   max-width: 730px;
   width: 100%;
+  overflow: hidden;
 }
 .run-text p {
   font-weight: var(--fw-bold);
@@ -3222,6 +3224,9 @@ main {
   line-height: var(--lh-normal);
   text-transform: uppercase;
   color: var(--black);
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee-right-to-left 20s linear infinite;
 }
 
 .run-text:nth-of-type(6) {
@@ -3922,7 +3927,8 @@ main {
   text-transform: uppercase;
   color: var(--black);
   white-space: nowrap;
-  animation: marquee-left-to-right 8s linear infinite;
+  will-change: transform;
+  animation: marquee-left-to-right 20s linear infinite;
 }
 .basket .basket__runText_horizontal {
   width: auto;
@@ -3939,7 +3945,8 @@ main {
   border-bottom: 0;
 }
 .basket .basket__runText_horizontal p {
-  animation: marquee-bottom-to-up 8s linear infinite;
+  will-change: transform;
+  animation: marquee-bottom-to-up 20s linear infinite;
 }
 
 .card-secondary {

@@ -1,29 +1,34 @@
 @import "../abstract/variables";
-.order{
+
+.order {
 }
 
-.order-placing{
+.order-placing {
   display: flex;
-gap: 125px;
+  gap: 125px;
 }
-.order-inner{
+
+.order-inner {
   width: 100%;
-  h3{
+
+  h3 {
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
-    line-height:var(--lh-title);
+    line-height: var(--lh-title);
     text-transform: uppercase;
     color: var(--black);
     @media (max-width: $lg) {
       font-size: var(--fs-sup-title);
-      line-height:var(--lh-sup-title);
+      line-height: var(--lh-sup-title);
       margin-bottom: 20px;
     }
   }
-label{
-  margin-top: 3px;
-}
-  &__address{
+
+  label {
+    margin-top: 3px;
+  }
+
+  &__address {
     display: flex;
     gap: 30px;
     @media (max-width: $md) {
@@ -31,10 +36,12 @@ label{
       gap: 0;
     }
   }
-  &__enter{
+
+  &__enter {
     max-width: 350px;
     width: 100%;
-    p{
+
+    p {
       font-weight: var(--fw-bold);
       font-size: var(--fs-normal);
       line-height: var(--lh-normal);
@@ -42,56 +49,61 @@ label{
       text-transform: uppercase;
       color: var(--black);
       margin-top: 20px;
-      &:last-child{
+
+      &:last-child {
         margin-top: 6px;
       }
     }
-&_flex{
-  display: flex;
-  align-items: center;
-gap: 16px;
-}
+
+    &_flex {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
   }
 
 
-&__price{
-  @media (max-width: $md) {
-    margin-top: 20px;
-  }
-  p{
-    font-weight: var(--fw-regular);
-    font-size: var(--fs-normal);
-    line-height: var(--lh-normal);
-    letter-spacing: var(--ls-regular);
-    text-transform: uppercase;
-    font-feature-settings: 'liga' off;
-    color: var(--black);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
+  &__price {
     @media (max-width: $md) {
-      margin-top: 6px;
+      margin-top: 20px;
     }
-    &:nth-of-type(2){
-      margin-bottom: 44px;
+
+    p {
+      font-weight: var(--fw-regular);
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
+      letter-spacing: var(--ls-regular);
+      text-transform: uppercase;
+      font-feature-settings: 'liga' off;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      @media (max-width: $md) {
+        margin-top: 6px;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 44px;
+      }
     }
   }
 }
-}
-.order-sidebar{
+
+.order-sidebar {
   max-width: 255px;
   width: 100%;
   margin-top: 96px;
   position: sticky;
   height: 100%;
-  top: 0;
-  z-index: -1;
-  margin-bottom:var(--margin-regular);
-@media (max-width: $lg) {
-  display: none;
-}
-  p{
+  top: 80px;
+  margin-bottom: var(--margin-regular);
+  @media (max-width: $lg) {
+    display: none;
+  }
+
+  p {
     font-weight: var(--fw-bold);
     font-size: var(--fs-normal);
     line-height: var(--lh-normal);
@@ -102,28 +114,32 @@ gap: 16px;
     align-items: center;
 
   }
-  &__card{
+
+  &__card {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
     border-top: 1px solid var(--grey);
     border-bottom: 1px solid var(--grey);
-img{
- max-width: 65px;
-  width: 100%;
-}
+
+    img {
+      max-width: 65px;
+      width: 100%;
+    }
   }
 
-  &__name{
+  &__name {
     margin-left: 30px;
-    h3{
+
+    h3 {
       font-weight: var(--fw-regular);
       font-size: var(--fs-normal);
       line-height: var(--lh-checkbox);
       text-transform: uppercase;
       color: var(--black);
     }
-    p{
+
+    p {
       font-style: italic;
       font-weight: var(--fw-regular);
       font-size: var(--fs-primary);
@@ -131,7 +147,8 @@ img{
       text-transform: uppercase;
       color: var(--darkgrey);
     }
-    span{
+
+    span {
       font-weight: var(--fw-bold);
       font-size: var(--fs-normal);
       line-height: var(--lh-normal);
@@ -141,40 +158,47 @@ img{
       align-items: end;
       justify-content: space-between;
       margin-top: 13px;
-      a{
+
+      a {
         font-weight: var(--fw-regular);
         font-size: var(--fs-little);
         line-height: var(--lh-little);
         text-align: right;
-        text-decoration-line: underline;
+        text-decoration: underline;
         text-transform: uppercase;
         color: var(--black);
-        text-decoration: underline;
       }
     }
   }
 }
-.run-text{
+
+.run-text {
   border-top: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
   padding: 18px 0;
   margin-top: 20px;
   max-width: 730px;
   width: 100%;
-  p{
+  overflow: hidden;
+
+  p {
     font-weight: var(--fw-bold);
     font-size: var(--fs-normal);
     line-height: var(--lh-normal);
     text-transform: uppercase;
     color: var(--black);
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee-right-to-left 20s linear infinite;
   }
 }
 
-.run-text:nth-of-type(6){
+.run-text:nth-of-type(6) {
   margin-top: 60px;
   margin-bottom: 20px;
 }
-.order-check{
+
+.order-check {
   display: flex;
   align-items: center;
   margin-top: 10px;
@@ -183,12 +207,13 @@ img{
   width: 100%;
   @media (max-width: $md) {
     gap: 10px;
-    p{
+    p {
       max-width: 110px;
       width: 100%;
     }
   }
-  p{
+
+  p {
     font-weight: var(--fw-regular);
     font-size: var(--fs-primary);
     line-height: var(--lh-primary);
@@ -197,26 +222,31 @@ img{
     text-align: right;
     font-feature-settings: 'liga' off;
     color: var(--black);
-    a{
+
+    a {
       margin-left: 4px;
       text-decoration: underline;
       color: var(--black);
     }
   }
 }
-.order-inner-total{
+
+.order-inner-total {
   max-width: 730px;
   width: 100%;
   margin-top: 74px;
   margin-bottom: var(--margin-regular);
-  .btn_all{
+
+  .btn_all {
     display: flex;
     justify-content: end;
-    button{
-      h3{
+
+    button {
+      h3 {
         display: flex;
         justify-content: center;
       }
+
       @media (max-width: $md) {
         padding: 16px 0;
         width: 100%;
@@ -228,7 +258,8 @@ img{
     }
 
   }
-  h3{
+
+  h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -247,7 +278,8 @@ img{
 
     }
   }
-  p{
+
+  p {
     font-weight: var(--fw-regular);
     font-size: var(--fs-sup-secondary);
     line-height: var(--lh-sup-secondary);
@@ -262,6 +294,6 @@ img{
   }
 }
 
-.sale-text{
+.sale-text {
   margin-top: 20px;
 }

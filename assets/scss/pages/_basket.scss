@@ -211,7 +211,8 @@
       text-transform: uppercase;
       color: var(--black);
       white-space: nowrap;
-      animation: marquee-left-to-right 8s linear infinite;
+      will-change: transform;
+      animation: marquee-left-to-right 20s linear infinite;
     }
 
     &_horizontal {
@@ -229,7 +230,8 @@
       border-bottom: 0;
 
       p {
-        animation: marquee-bottom-to-up 8s linear infinite;
+        will-change: transform;
+        animation: marquee-bottom-to-up 20s linear infinite;
       }
     }
   }
