@@ -4760,7 +4760,6 @@ input[type=number]:focus {
 .about-collection {
   background: var(--yellow);
   padding: 83px 0;
-  overflow: hidden;
   position: relative;
 }
 .about-collection__circle-text {
