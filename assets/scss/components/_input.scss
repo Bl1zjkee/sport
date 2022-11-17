@@ -14,7 +14,7 @@
     font-weight: var(--fw-regular);
   }
 
-  &__item{
+  &__item {
     position: relative;
 
     padding: 22px 20px 21px 20px;
@@ -22,18 +22,20 @@
     @media (max-width: $sm) {
       padding: 22px 15px 21px 11px;
     }
+
     &:active {
       border: 1px dashed var(--black);
     }
+
     &:focus {
       border: 1px dashed var(--black);
     }
 
     max-width: 730px;
     width: 100%;
- @media (max-width: $lg) {
-  max-width: 100%;
- }
+    @media (max-width: $lg) {
+      max-width: 100%;
+    }
 
     input {
       width: 90%;
@@ -43,20 +45,23 @@
         font-weight: var(--fw-regular);
         font-size: var(--fs-primary);
         line-height: var(--lh-primary);
-        letter-spacing: var( --ls-regular);
+        letter-spacing: var(--ls-regular);
         color: var(--placeholder);
       }
+
       &:focus-visible {
         outline: none;
       }
 
 
     }
-    &_small{
+
+    &_small {
       padding: 21px 10px;
     }
   }
-  &_small{
+
+  &_small {
     max-width: 106px;
     width: 100%;
   }

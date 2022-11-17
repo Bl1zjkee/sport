@@ -18,13 +18,23 @@
   }
 }
 
-/** Анимация бегущей строки справа - налево. */
+/** Анимация бегущей строки снизу - вверх. */
 @keyframes marquee-bottom-to-up {
   0% {
     transform: translateY(-40%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+
+/** Анимация бегущей строки сверху - вниз. */
+@keyframes marquee-up-to-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40%);
   }
 }
 

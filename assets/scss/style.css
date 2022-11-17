@@ -129,6 +129,10 @@ main {
   font-style: italic;
 }
 
+.thin {
+  font-weight: var(--fw-overlittle);
+}
+
 .medium {
   font-weight: var(--fw-medium);
 }
@@ -163,6 +167,10 @@ main {
 
 .gray {
   color: var(--grey);
+}
+
+.ok, .warning {
+  display: none;
 }
 
 /** components **/
@@ -2198,6 +2206,7 @@ main {
 /** Текст бегающей строки. */
 .marquee-infinite {
   overflow: hidden;
+  user-select: none;
 }
 .marquee-infinite_rotated {
   position: absolute;
@@ -2219,29 +2228,24 @@ main {
   color: var(--black) !important;
 }
 .marquee-infinite .text {
-  white-space: nowrap;
+  display: flex;
   font-weight: var(--fw-regular);
   font-size: var(--fs-title);
   line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--white);
   gap: 12px;
+  will-change: transform;
+  animation: marquee-left-to-right 20s linear infinite;
+}
+.marquee-infinite .text > * {
+  white-space: nowrap;
 }
 @media (max-width: 768px) {
   .marquee-infinite .text {
     font-size: var(--fs-sup-title);
     line-height: var(--lh-sup-title);
   }
-}
-.marquee-infinite .text span {
-  font-weight: var(--fw-black);
-}
-
-.marquee-infinite > div {
-  display: flex;
-  gap: 12px;
-  will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
 }
 
 .marquee-small {
@@ -2293,9 +2297,19 @@ main {
   will-change: transform;
   animation: marquee-left-to-right 20s linear infinite;
   display: flex;
+  gap: 4px;
 }
 .run-text-animation .text > * {
   white-space: nowrap;
+}
+.run-text-animation_to-left .text {
+  animation: marquee-right-to-left 20s linear infinite;
+}
+.run-text-animation_to-bottom .text {
+  animation: marquee-up-to-bottom 8s linear infinite;
+}
+.run-text-animation_to-up .text {
+  animation: marquee-bottom-to-up 8s linear infinite;
 }
 
 /** Текст бегающего округлого текста. */
@@ -2311,7 +2325,7 @@ main {
 .circle-text .text {
   position: absolute;
   left: 0;
-  animation: rounded-text 6s linear infinite forwards;
+  animation: rounded-text 20s linear infinite forwards;
 }
 
 /** block **/
@@ -4467,6 +4481,19 @@ main {
 }
 
 /** О Компании **/
+#about-page {
+  position: relative;
+}
+#about-page .marquee-infinite_black {
+  transform: rotate(9deg);
+  top: 465px;
+}
+#about-page .marquee-infinite_white {
+  transform: rotate(-6deg);
+  z-index: -1;
+  top: 35px;
+}
+
 .about-main {
   position: relative;
   margin-top: 332px;
@@ -4813,8 +4840,7 @@ main {
 
 .questions {
   position: relative;
-  margin: 0 10px;
-  margin-top: 152px;
+  margin: 152px 10px 0;
 }
 @media (max-width: 768px) {
   .questions {
@@ -4831,8 +4857,9 @@ main {
 .questions__text-left {
   position: absolute;
   left: -16px;
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   transform: rotate(180deg);
+  height: calc(100% - 35px);
 }
 @media (max-width: 768px) {
   .questions__text-left {
@@ -4844,6 +4871,7 @@ main {
   right: -16px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+  height: calc(100% - 35px);
 }
 @media (max-width: 768px) {
   .questions__text-right {
@@ -5594,13 +5622,22 @@ main {
     transform: translateX(-40%);
   }
 }
-/** Анимация бегущей строки справа - налево. */
+/** Анимация бегущей строки снизу - вверх. */
 @keyframes marquee-bottom-to-up {
   0% {
     transform: translateY(-40%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+/** Анимация бегущей строки сверху - вниз. */
+@keyframes marquee-up-to-bottom {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40%);
   }
 }
 /** Всплытие элемента сверху. */

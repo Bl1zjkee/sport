@@ -1,5 +1,6 @@
 .marquee-infinite {
   overflow: hidden;
+  user-select: none;
 
   &_rotated {
     position: absolute;
@@ -23,28 +24,25 @@
   }
 
   .text {
-    white-space: nowrap;
+    display: flex;
     font-weight: var(--fw-regular);
     font-size: var(--fs-title);
     line-height: var(--lh-title);
     text-transform: uppercase;
     color: var(--white);
     gap: 12px;
-@media (max-width: $md) {
-  font-size: var(--fs-sup-title);
-  line-height: var(--lh-sup-title);
-}
-    span {
-      font-weight: var(--fw-black);
+    will-change: transform;
+    animation: marquee-left-to-right 20s linear infinite;
+
+    & > * {
+      white-space: nowrap;
+    }
+
+    @media (max-width: $md) {
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
     }
   }
-}
-
-.marquee-infinite > div {
-  display: flex;
-  gap: 12px;
-  will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
 }
 
 .marquee-small {
@@ -104,9 +102,28 @@
     will-change: transform;
     animation: marquee-left-to-right 20s linear infinite;
     display: flex;
+    gap: 4px;
 
     & > * {
       white-space: nowrap;
+    }
+  }
+
+  &_to-left {
+    .text {
+      animation: marquee-right-to-left 20s linear infinite;
+    }
+  }
+
+  &_to-bottom {
+    .text {
+      animation: marquee-up-to-bottom 8s linear infinite;
+    }
+  }
+
+  &_to-up {
+    .text {
+      animation: marquee-bottom-to-up 8s linear infinite;
     }
   }
 }
