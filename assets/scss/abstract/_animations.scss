@@ -1,7 +1,7 @@
 /** Анимация бегущей строки слева - направо. */
 @keyframes marquee-left-to-right {
   0% {
-    transform: translateX(-40%);
+    transform: translateX(-41%);
   }
   100% {
     transform: translateX(0);
@@ -14,7 +14,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-40%);
+    transform: translateX(-41%);
   }
 }
 

@@ -39,3 +39,45 @@
   gap: 12px;
   animation: marquee-left-to-right 8s linear infinite;
 }
+
+.marquee-small {
+  overflow: hidden;
+
+  &_black {
+    background: var(--black);
+    padding: 2px 0 1px;
+  }
+
+  .text {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-primary);
+    line-height: var(--lh-primary);
+    letter-spacing: var(--ls-little);
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: var(--white);
+    animation: marquee-right-to-left 8s linear infinite;
+  }
+}
+
+.marquee-medium {
+  overflow: hidden;
+
+  &_white {
+    background: var(--white);
+    padding: 8px 0;
+
+    span {
+      color: var(--black);
+    }
+  }
+
+  .text {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-sup-title);
+    line-height: var(--fs-sup-title);
+    white-space: nowrap;
+    text-transform: uppercase;
+    animation: marquee-left-to-right 8s linear infinite;
+  }
+}

@@ -100,7 +100,6 @@ a, button, label {
 }
 
 .wrapper {
-  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 }
@@ -2181,7 +2180,7 @@ main {
 
 .mailing {
   position: fixed;
-  bottom: 1px;
+  bottom: 20px;
   z-index: 4;
 }
 .mailing img {
@@ -2223,6 +2222,43 @@ main {
 .marquee-infinite > div {
   display: flex;
   gap: 12px;
+  animation: marquee-left-to-right 8s linear infinite;
+}
+
+.marquee-small {
+  overflow: hidden;
+}
+.marquee-small_black {
+  background: var(--black);
+  padding: 2px 0 1px;
+}
+.marquee-small .text {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-primary);
+  line-height: var(--lh-primary);
+  letter-spacing: var(--ls-little);
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: var(--white);
+  animation: marquee-right-to-left 8s linear infinite;
+}
+
+.marquee-medium {
+  overflow: hidden;
+}
+.marquee-medium_white {
+  background: var(--white);
+  padding: 8px 0;
+}
+.marquee-medium_white span {
+  color: var(--black);
+}
+.marquee-medium .text {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-sup-title);
+  line-height: var(--fs-sup-title);
+  white-space: nowrap;
+  text-transform: uppercase;
   animation: marquee-left-to-right 8s linear infinite;
 }
 
@@ -2551,21 +2587,10 @@ main {
   color: var(--black);
 }
 .main__mixed-text .mixed-text span {
-  transition: font-weight 0.1s linear, color 0.5s linear;
+  transition: font-weight 0.1s linear, color 0.3s linear;
 }
 .main__gallery {
-  width: 100%;
   margin-bottom: var(--margin-secondary);
-}
-.main__gallery .swiper {
-  width: 100%;
-}
-.main__gallery .swiper-slide {
-  max-width: 250px;
-}
-.main__gallery img {
-  max-width: 250px;
-  width: 100%;
 }
 
 .popular {
@@ -2667,6 +2692,7 @@ main {
   }
 }
 .catalog-menu__block {
+  position: relative;
   display: flex;
   max-width: 940px;
   justify-content: space-between;
@@ -2683,6 +2709,11 @@ main {
     font-size: var(--fs-sup-title);
     line-height: var(--lh-sup-title);
   }
+}
+.catalog-menu__circle-text {
+  position: absolute;
+  left: -130px;
+  bottom: -40px;
 }
 .catalog-menu__list {
   text-align: right;
@@ -5365,7 +5396,7 @@ main {
 /** Анимация бегущей строки слева - направо. */
 @keyframes marquee-left-to-right {
   0% {
-    transform: translateX(-40%);
+    transform: translateX(-41%);
   }
   100% {
     transform: translateX(0);
@@ -5377,7 +5408,7 @@ main {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-40%);
+    transform: translateX(-41%);
   }
 }
 /** Всплытие элемента сверху. */

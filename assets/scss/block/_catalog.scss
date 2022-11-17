@@ -38,8 +38,9 @@ padding:20px 0;
   }
 
   &__block {
+    position: relative;
     display: flex;
-   max-width: 940px;
+    max-width: 940px;
     justify-content: space-between;
 
     h3 {
@@ -53,6 +54,12 @@ padding:20px 0;
         line-height: var(--lh-sup-title);
       }
     }
+  }
+
+  &__circle-text {
+    position: absolute;
+    left: -130px;
+    bottom: -40px;
   }
 
   &__list {

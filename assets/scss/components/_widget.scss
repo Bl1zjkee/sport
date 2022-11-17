@@ -1,26 +1,31 @@
-.widget-block{
+.widget-block {
   position: relative;
   display: flex;
   gap: 30px;
   margin-top: 30px;
-  &__collection-img{
+
+  &__collection-img {
     display: flex;
     align-items: center;
     gap: 30px;
     width: 100%;
-    picture{
+
+    picture {
       max-width: 350px;
-      img{
+
+      img {
         width: 100%;
       }
     }
-    @media (max-width:$lg ) {
+
+    @media (max-width: $lg) {
       display: none;
     }
-    &_mobile{
+
+    &_mobile {
       display: none;
-      @media (max-width:$lg ) {
-        picture{
+      @media (max-width: $lg) {
+        picture {
 
         }
         display: flex;
@@ -29,10 +34,11 @@
     }
   }
 
-  &__item:nth-of-type(1){
+  &__item:nth-of-type(1) {
     margin-top: 20px;
   }
-  &__title-collection{
+
+  &__title-collection {
     max-width: 350px;
     width: 100%;
     @media (max-width: $lg) {
@@ -41,8 +47,9 @@
 
 
   }
-  &__text-collection{
-    h3{
+
+  &__text-collection {
+    h3 {
       font-style: italic;
       font-weight: var(--fw-regular);
       font-size: var(--fs-big-title);
@@ -50,7 +57,8 @@
       text-transform: uppercase;
       color: var(--black);
     }
-    span{
+
+    span {
       font-style: italic;
       font-weight: var(--fw-regular);
       font-size: var(--fs-medium-title);
@@ -58,26 +66,29 @@
       text-transform: uppercase;
       color: var(--black);
     }
+
     @media (max-width: $lg) {
       display: flex;
       justify-content: center;
       align-items: center;
-      h3{
-        font-size:var(--fs-sup-title);
+      h3 {
+        font-size: var(--fs-sup-title);
         line-height: var(--lh-sup-title);
       }
-      span{
+      span {
         margin-left: 20px;
-        font-size:var(--fs-sup-title);
+        font-size: var(--fs-sup-title);
         line-height: var(--lh-sup-title);
       }
     }
   }
 }
-.run-text-widget{
+
+.run-text-widget {
   border: 1px solid var(--black);
   padding: 1px 0;
-  h3{
+
+  h3 {
     font-weight: var(--fw-regular);
     font-size: var(--fs-primary);
     line-height: var(--lh-primary);
@@ -85,47 +96,51 @@
     text-transform: uppercase;
     color: var(--black);
   }
+
   @media (max-width: $md) {
     border-left: none;
     border-right: none;
   }
 }
-.subscription-widget{
+
+.subscription-widget {
   position: fixed;
   bottom: 1px;
   z-index: 4;
   width: 100%;
 
-input{
-  background: var(--yellow);
-  border: none;
-  font-weight: var(--fw-regular);
-  font-size: var(--fs-sup-title);
-  line-height: var(--lh-sup-title);
-  letter-spacing: var(--ls-little);
-  text-transform: uppercase;
-  color: var(--black);
-  width: 100%;
-  text-align: center;
-  @media (max-width: $md) {
-    font-size: var(--fs-normal);
-    line-height: var(--lh-normal);
-  }
-  &:focus-visible{
-    outline: none;
+  input {
+    background: var(--yellow);
+    border: none;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+    letter-spacing: var(--ls-little);
+    text-transform: uppercase;
+    color: var(--black);
+    width: 100%;
+    text-align: center;
+    @media (max-width: $md) {
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
   }
 
-}
-
-  &__inner{
+  &__inner {
     background: var(--yellow);
     width: 100%;
     padding: 26px 0;
-    h3{
+
+    h3 {
       font-style: normal;
       font-weight: var(--fw-bold);
       font-size: var(--fs-sup-title);
-      line-height:var(--lh-sup-title);
+      line-height: var(--lh-sup-title);
       letter-spacing: var(--ls-little);
       text-transform: uppercase;
       color: var(--black);
@@ -140,30 +155,33 @@ input{
   }
 }
 
-.tosend{
+.tosend {
   position: absolute;
   top: 103px;
   right: 0;
   display: none;
-  p{
+
+  p {
     font-weight: var(--fw-regular);
     font-size: var(--fs-primary);
     line-height: var(--lh-primary);
-    letter-spacing:2px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--black);
 
   }
 
 }
-.mailing{
+
+.mailing {
   position: fixed;
-bottom: 1px;
+  bottom: 20px;
   z-index: 4;
-    img{
-      max-width: 40px;
-      width: 100%;
-    }
+
+  img {
+    max-width: 40px;
+    width: 100%;
   }
+}
 
 

@@ -66,11 +66,13 @@ const classesStyleArr = ['normal', 'italic'],
     /** Классы отвечающие за жирность шрифта. */
     classesWeightArr = ['regular', 'medium', 'semi-bold', 'bold', 'bolder'];
 
-window.addEventListener('DOMContentLoaded', function () {
-    mixedTextInit();
+if (mixedText) {
+    window.addEventListener('DOMContentLoaded', function () {
+        mixedTextInit();
 
-    setInterval(mixedTextAnimation, 2000);
-});
+        setInterval(mixedTextAnimation, 1000);
+    });
+}
 
 let newClass = '',
     oldClass = '';
@@ -89,7 +91,7 @@ function mixedTextInit() {
 
         if (words[i].length <= 2) {
             /** Если символ тире, предлог или союз, то его добавляем не преобразовывая. */
-            mixedText.innerHTML += `${words[i]} `
+            mixedText.innerHTML += `${words[i]} `;
         } else {
             /** Генерируем новый класс. */
             newClass = generateMixedClass(classesStyleArr, classesColorArr, classesWeightArr);
@@ -113,10 +115,20 @@ function mixedTextInit() {
 
 /** Функция анимации mixed текста. */
 function mixedTextAnimation() {
+    /** Массив для случайных индексов. */
+    const randomIndexesArr = [];
+
     /** Собираем все span в родителе. */
     const allSpans = mixedText.querySelectorAll('span');
 
-    allSpans.forEach(span => {
+    allSpans.forEach((span, i) => {
+
+        /** Пушим в массив случайный индекс. */
+        randomIndexesArr.push(randomIndex(allSpans));
+
+        /** Если текущего индекса нет в массиве, то выходим с текущей итерации. */
+        if (!randomIndexesArr.find(item => item === i)) return;
+
         /** Генерируем новый класс. */
         newClass = generateMixedClass(classesStyleArr, classesColorArr, classesWeightArr);
 
@@ -130,8 +142,6 @@ function mixedTextAnimation() {
 
         /** Удаляем старые классы. */
         span.classList.remove(...span.classList);
-
-        console.log(newClass);
 
         /** Добавляем новые. */
         span.classList.add(...newClass.split(' '));
@@ -180,22 +190,17 @@ function generateMixedClass(...args) {
     return classString;
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    /** Swiper галереи на главной странице. */
-    const mainGallerySwiper = new Swiper('.main__gallery .swiper', {
-        slidersPerView: 'auto',
-        spaceBetween: 40,
-        loop: true,
-        // loopedSlides: 2,
-        autoplay: {
-            delay: 1,
-            disableOnInteraction: true
-        },
-        // freeMode: true,
-        speed: 5000,
-        // freeModeMomentum: false
-    });
-}, false);
+/** Swiper галереи на главной странице. */
+const mainGallerySwiper = new Swiper('.main__gallery .swiper', {
+    slidersPerView: 3,
+    spaceBetween: 40,
+    loop: true,
+    // loopedSlides: 2,
+    // autoplay: true,
+    freeMode: true,
+    // speed: 5000,
+    // freeModeMomentum: false
+});
 
 /** Swiper популярных товаров на главной. */
 const popularSwiper = new Swiper('.popular__list .swiper', {
@@ -240,47 +245,47 @@ new Swiper('.twoSwiper', {
 
 });
 
-    // Инициализация превью слайдера
-    const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
-        // задаем параметры
-        direction: 'vertical', // вертикальная прокрутка
-        slidesPerView: 2, // показывать по 3 превью
-        spaceBetween: 0, // расстояние между слайдами
-        navigation: { // задаем кнопки навигации
-            nextEl: '.slider__next', // кнопка Next
-            prevEl: '.slider__prev' // кнопка Prev
+// Инициализация превью слайдера
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
+    // задаем параметры
+    direction: 'vertical', // вертикальная прокрутка
+    slidesPerView: 2, // показывать по 3 превью
+    spaceBetween: 0, // расстояние между слайдами
+    navigation: { // задаем кнопки навигации
+        nextEl: '.slider__next', // кнопка Next
+        prevEl: '.slider__prev' // кнопка Prev
+    },
+    freeMode: true, // при перетаскивании превью ведет себя как при скролле
+    breakpoints: { // условия для разных размеров окна браузера
+        0: { // при 0px и выше
+            direction: 'horizontal', // горизонтальная прокрутка
         },
-        freeMode: true, // при перетаскивании превью ведет себя как при скролле
-        breakpoints: { // условия для разных размеров окна браузера
-            0: { // при 0px и выше
-                direction: 'horizontal', // горизонтальная прокрутка
-            },
-            768: { // при 768px и выше
-                direction: 'vertical', // вертикальная прокрутка
-            }
+        768: { // при 768px и выше
+            direction: 'vertical', // вертикальная прокрутка
         }
-    });
-    // Инициализация слайдера изображений
-    const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
-        // задаем параметры
-        direction: 'horizontal', // вертикальная прокрутка
-        slidesPerView: 1, // показывать по 1 изображению
-        spaceBetween: 0, // расстояние между слайдами
-        mousewheel: true, // можно прокручивать изображения колёсиком мыши
-        navigation: { // задаем кнопки навигации
-            nextEl: '.slider__next', // кнопка Next
-            prevEl: '.slider__prev' // кнопка Prev
+    }
+});
+// Инициализация слайдера изображений
+const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
+    // задаем параметры
+    direction: 'horizontal', // вертикальная прокрутка
+    slidesPerView: 1, // показывать по 1 изображению
+    spaceBetween: 0, // расстояние между слайдами
+    mousewheel: true, // можно прокручивать изображения колёсиком мыши
+    navigation: { // задаем кнопки навигации
+        nextEl: '.slider__next', // кнопка Next
+        prevEl: '.slider__prev' // кнопка Prev
+    },
+    grabCursor: true, // менять иконку курсора
+    thumbs: { // указываем на превью слайдер
+        swiper: sliderThumbs // указываем имя превью слайдера
+    },
+    breakpoints: { // условия для разных размеров окна браузера
+        0: { // при 0px и выше
+            direction: 'vertical', // горизонтальная прокрутка
         },
-        grabCursor: true, // менять иконку курсора
-        thumbs: { // указываем на превью слайдер
-            swiper: sliderThumbs // указываем имя превью слайдера
-        },
-        breakpoints: { // условия для разных размеров окна браузера
-            0: { // при 0px и выше
-                direction: 'vertical', // горизонтальная прокрутка
-            },
-            768: { // при 768px и выше
-                direction: 'vertical', // вертикальная прокрутка
-            }
+        768: { // при 768px и выше
+            direction: 'vertical', // вертикальная прокрутка
         }
-    });
+    }
+});

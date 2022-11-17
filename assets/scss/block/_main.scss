@@ -334,18 +334,15 @@
       color: var(--black);
 
       span {
-        transition: font-weight .1s linear, color .5s linear;
+        transition: font-weight .1s linear, color .3s linear;
       }
     }
   }
 
   &__gallery {
-    width: 100%;
     margin-bottom: var(--margin-secondary);
 
-    .swiper {
-      width: 100%;
-    }
+
 
     //.swiper-wrapper {
     //  -webkit-transition-timing-function: linear !important;
@@ -353,17 +350,17 @@
     //  transition-timing-function: linear !important;
     //}
 
-    .swiper-slide {
-      max-width: 250px;
-    }
+    //.swiper-slide {
+    //  max-width: 250px;
+    //  width: auto;
+    //}
 
-    img {
-      max-width: 250px;
-      width: 100%;
-    }
+    //img {
+    //  max-width: 250px;
+    //  width: 100%;
+    //}
   }
 }
-
 
 .popular {
   margin-top: 100px;
