@@ -4942,6 +4942,11 @@ input[type=number]:focus {
   padding-top: 160px;
   padding-bottom: var(--margin-regular);
 }
+@media (max-width: 320px) {
+  .about-questions__text {
+    display: none;
+  }
+}
 .about-questions__text h3 {
   display: flex;
   font-weight: var(--fw-regular);
@@ -4981,11 +4986,15 @@ input[type=number]:focus {
   justify-content: end;
 }
 .about-questions__text_two {
+  display: block;
   margin-top: 20px;
-  display: flex;
-  justify-content: end;
   padding-right: 60px;
   margin-bottom: 162px;
+}
+@media (max-width: 768px) {
+  .about-questions__text_two {
+    padding-right: 0;
+  }
 }
 .about-questions__text_two p {
   font-style: italic;
@@ -4995,6 +5004,30 @@ input[type=number]:focus {
   color: var(--darkgrey);
   max-width: 563px;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .about-questions__text_two p {
+    font-size: var(--fs-primary);
+    line-height: var(--lh-little);
+  }
+}
+.about-questions__text_mobile {
+  display: none;
+}
+@media (max-width: 320px) {
+  .about-questions__text_mobile {
+    display: block;
+  }
+}
+.about-questions__text_mobile h3 {
+  white-space: pre-line;
+  display: block;
+}
+.about-questions__text_mobile h3 p {
+  display: inline-block;
+}
+.about-questions__text_mobile h3 span {
+  display: inline-block;
 }
 
 .questions {
@@ -5152,6 +5185,33 @@ input[type=number]:focus {
   .questions__bg-yellow {
     bottom: 280px;
   }
+}
+
+.left {
+  margin-left: 47px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.effect {
+  margin-left: 32px;
+}
+
+.right {
+  display: block;
+  text-align: end;
+  width: 100%;
 }
 
 /** Оплата и Доставка **/
