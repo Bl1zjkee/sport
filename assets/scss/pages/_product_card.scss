@@ -401,7 +401,43 @@ display: block;
   }
 }
 
-
+.bredcrumbs{
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  @media (max-width: $md) {
+    padding: 8px 0;
+  }
+  ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    li{
+      a{
+        font-weight: var(--fw-regular);
+        font-size: var(--fs-normal);
+        line-height:var(--lh-normal);
+        text-transform: uppercase;
+        color: var(--black);
+        display: flex;
+        align-items: center;
+        &:after{
+          content: '/';
+          margin:0 4px
+        }
+      }
+   span{
+     font-weight: var(--fw-bold);
+     font-size: var(--fs-normal);
+     line-height:var(--lh-normal);
+     text-transform: uppercase;
+     color: var(--black);
+     display: flex;
+     align-items: center;
+   }
+    }
+  }
+}
 
 
 

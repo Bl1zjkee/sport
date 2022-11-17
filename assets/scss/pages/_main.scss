@@ -234,20 +234,9 @@
         margin-left: 4px;
       }
     }
-    &_about-collection{
-      position: absolute;
-      bottom: -51px;
-      left: 308px;
-      @media (max-width: $md) {
-        left: 11px;
-      }
-    }
 
-    &_about-main-block{
-      position: absolute;
-      top: -130px;
-      left: 700px;
-    }
+
+
   }
 
   &__background {

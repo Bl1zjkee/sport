@@ -1,6 +1,6 @@
 @import "../abstract/variables";
-
-.order {
+.order{
+  position: relative;
 }
 
 .order-placing {
@@ -10,8 +10,16 @@
 
 .order-inner {
   width: 100%;
-
-  h3 {
+  &__circle-text{
+    position: absolute;
+    left: 27px;
+    bottom: -8px;
+    z-index: -1;
+    @media (max-width: $md) {
+      left: 0;
+    }
+  }
+  h3{
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
     line-height: var(--lh-title);
@@ -54,12 +62,14 @@
         margin-top: 6px;
       }
     }
-
-    &_flex {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
+&_flex{
+  display: flex;
+  align-items: center;
+gap: 16px;
+  input{
+    padding-left: 10px;
+  }
+}
   }
 
 
@@ -189,11 +199,10 @@
     color: var(--black);
     white-space: nowrap;
   }
-}
-
-.run-text:nth-of-type(6) {
-  margin-top: 60px;
-  margin-bottom: 20px;
+  &:nth-of-type(6){
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
 }
 
 .order-check {
@@ -294,4 +303,8 @@
 
 .sale-text {
   margin-top: 20px;
+}
+
+.radio-btn{
+  margin-top:16px;
 }

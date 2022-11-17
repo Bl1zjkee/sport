@@ -69,8 +69,20 @@
     justify-content: center;
 
     button {
+      background: transparent;
+      border: 1px solid var(--black);
+
+      &:hover {
+        background: var(--black);
+
+        h3 {
+          color: var(--white);
+        }
+      }
+
       h3 {
         font-style: normal;
+        color: var(--black);
       }
     }
   }
