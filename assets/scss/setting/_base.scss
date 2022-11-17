@@ -62,6 +62,10 @@ a, button, label {
 main {
   overflow: hidden;
   padding-top: 80px;
+
+  @media (max-width: $md) {
+    padding-top: 60px;
+  }
 }
 
 .normal {

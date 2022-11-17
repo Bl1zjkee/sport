@@ -115,6 +115,11 @@ main {
   overflow: hidden;
   padding-top: 80px;
 }
+@media (max-width: 768px) {
+  main {
+    padding-top: 60px;
+  }
+}
 
 .normal {
   font-style: normal;
@@ -2279,6 +2284,18 @@ main {
   text-transform: uppercase;
   will-change: transform;
   animation: marquee-left-to-right 20s linear infinite;
+}
+
+.run-text-animation {
+  overflow: hidden;
+}
+.run-text-animation .text {
+  will-change: transform;
+  animation: marquee-left-to-right 20s linear infinite;
+  display: flex;
+}
+.run-text-animation .text > * {
+  white-space: nowrap;
 }
 
 /** Текст бегающего округлого текста. */
