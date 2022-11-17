@@ -2265,6 +2265,9 @@ main {
   color: var(--white);
   animation: marquee-right-to-left 8s linear infinite;
 }
+.marquee-small_to-right .text {
+  animation: marquee-left-to-right 8s linear infinite;
+}
 
 .marquee-medium {
   overflow: hidden;
@@ -3732,6 +3735,9 @@ main {
 }
 
 /** Корзина **/
+.basket {
+  position: relative;
+}
 .basket h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
