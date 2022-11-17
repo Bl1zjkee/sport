@@ -51,6 +51,26 @@
       }
     }
   }
+  &__circle-text{
+    position: absolute;
+    top: -50px;
+    left: 700px;
+    @media (max-width: $lg) {
+      left: 390px;
+    }
+    @media (max-width: $sm) {
+      top: 4px;
+left: inherit;
+      right:100px;
+    }
+    @media (max-width: $esm) {
+      top: 4px;
+      right: 100px;
+      left: inherit;
+    }
+  }
+
+
 
   &__bg {
     img {
@@ -101,7 +121,17 @@
   padding: 83px 0;
   overflow: hidden;
   position: relative;
-
+  &__circle-text{
+    position: absolute;
+    bottom: -50px;
+    left: 27px;
+    width: 139px;
+    height: 139px;
+    @media (max-width: $md) {
+      left: 11px;
+      bottom: -88px;
+    }
+  }
   &__list {
     display: flex;
     justify-content: space-between;
