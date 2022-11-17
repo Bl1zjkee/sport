@@ -20,10 +20,12 @@
     font-size: var(--fs-normal);
     line-height:var(--lh-normal);
     color: var(--black);
+
     a{
       text-decoration-line: underline;
       display: flex;
       align-items: center;
+
       &:after{
         content: '';
         display: block;
@@ -42,7 +44,7 @@
   }
 
   a{
-    font-weight: var(--fw-semibold);
+
     font-size: var(--fs-normal);
     line-height: var(--lh-normal);
     text-transform: uppercase;
@@ -50,7 +52,7 @@
   }
   span{
     font-style: italic;
-    font-weight: var(--fw-semibold);
+    font-weight: var(--fw-little);
     font-size: var(--fs-primary);
     line-height: var(--lh-primary);
     text-transform: uppercase;
@@ -127,7 +129,7 @@ position: relative;
     }
   }
   a{
-    font-weight: var(--fw-semibold);
+
     font-size: var(--fs-normal);
     line-height: var(--lh-normal);
     text-transform: uppercase;
@@ -135,7 +137,7 @@ position: relative;
   }
   span{
     font-style: italic;
-    font-weight: var(--fw-semibold);
+    font-weight: var(--fw-little);
     font-size: var(--fs-primary);
     line-height: var(--lh-primary);
     text-transform: uppercase;

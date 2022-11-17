@@ -3,7 +3,10 @@
   position: sticky;
   z-index: 10;
   top: 0;
-
+  z-index: 5;
+  @media (max-width: $md) {
+    padding: 11px 0;
+  }
   &:before {
     content: '';
     backdrop-filter: blur(6px);
@@ -13,8 +16,11 @@
     display: block;
     width: 100%;
     height: 80px;
-    z-index: 1;
+    z-index:1;
     background: rgba(255, 255, 255, 0.2);
+    @media (max-width: $md) {
+      height: 60px;
+    }
 
   }
 
@@ -43,11 +49,13 @@
   &__logo {
     position: relative;
     z-index: 1;
-
     img {
-
       width: 65px;
       height: 50px;
+      @media (max-width: $md) {
+        width: 50px;
+        height: 38px;
+      }
     }
   }
 
@@ -71,7 +79,7 @@
       }
 
       span {
-        font-weight: var(--fw-semibold);
+        font-weight: var(--fw-regular);
         font-size: var(--fs-primary);
         line-height: var(--lh-little);
         color: var(--black);
@@ -112,7 +120,7 @@
       a {
         position: relative;
         display: block;
-        font-weight: var(--fw-semibold);
+        font-weight: var(--fw-regular);
         font-size: var(--fs-secondary);
         line-height: var(--lh-secondary);
         letter-spacing: var(--ls-bigem);

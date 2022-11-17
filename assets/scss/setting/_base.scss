@@ -22,10 +22,15 @@ ul {
   list-style: none;
 }
 
+h3{
+  font-family: var(--font-family);
+}
+
 a, button, label {
   color: inherit;
   cursor: pointer;
   text-decoration: none;
+  font-family: var(--font-family);
 }
 
 .container {

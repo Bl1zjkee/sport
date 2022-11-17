@@ -16,15 +16,15 @@
     &:hover{
       text-decoration-line: underline;
       color: var(--black);
-      font-weight: var(--fw-semibold);
+      font-weight: var(--fw-regular);
     }
     &:focus{
         color: var(--black);
-        font-weight: var(--fw-semibold);
+        font-weight: var(--fw-regular);
       }
     &:active{
       color: var(--black);
-      font-weight: var(--fw-semibold);
+      font-weight: var(--fw-regular);
     }
   }
 
@@ -42,7 +42,7 @@
 
   &:checked+label{
     color: var(--black);
-    font-weight: var(--fw-semibold);
+    font-weight: var(--fw-regular);
   }
   &:checked+label:before{
     border: 1px solid var(--black);

@@ -158,7 +158,7 @@
     align-items: center;
     justify-content: center;
     span{
-      font-weight: var(--fw-semibold);
+      font-weight: var(--fw-regular);
       font-size: var(--fs-little);
       line-height: var(--lh-little);
       color: var(--black);
@@ -453,130 +453,11 @@
   left: 20px;
   top: 14px;
 }
-//.slider {
-////  padding: 32px;
-////color: var(--black);
-////  font-weight: var(--fw-bold);
-////}
-////.slider .swiper-container {
-////  width: 100%;
-////  height: 100%;
-////}
-////.slider__flex {
-////  display: flex;
-////  align-items: flex-start;
-////}
-////.slider__col {
-////  display: flex;
-////  flex-direction: column;
-////  width: 150px;
-////  margin-right: 32px;
-////}
-////.slider__prev,
-////.slider__next {
-////  cursor: pointer;
-////  text-align: center;
-////  font-size: 14px;
-////  height: 48px;
-////  display: flex;
-////  align-items: center;
-////  justify-content: center;
-////  -webkit-user-select: none;
-////  -moz-user-select: none;
-////  -ms-user-select: none;
-////  user-select: none;
-////}
-////.slider__prev:focus,
-////.slider__next:focus {
-////  outline: none;
-////}
-////.swiper-container {
-////  margin-left: auto;
-////  margin-right: auto;
-////  position: relative;
-////  overflow: hidden;
-////  list-style: none;
-////  padding: 0;
-////  z-index: 1;
-////}
-////.slider__thumbs {
-////  height: calc(400px - 96px);
-////}
-////.slider__thumbs .slider__image {
-////  transition: 0.25s;
-////  max-width: 160px;
-////  width: 100%;
-////}
-////.slider__thumbs .slider__image:hover {
-////  opacity: 1;
-////}
-////.slider__thumbs .swiper-slide-thumb-active .slider__image {
-////  -webkit-filter: grayscale(0%);
-////  filter: grayscale(0%);
-////  opacity: 1;
-////}
-////.slider__images {
-////  height: 400px;
-////}
-////.slider__images .slider__image img {
-////  transition: 3s;
-////}
-////.slider__images .slider__image:hover img {
-////  transform: scale(1.1);
-////}
-////.slider__image {
-////  width: 100%;
-////  height: 100%;
-////  overflow: hidden;
-////}
-////.slider__image img {
-////  display: block;
-////  width: 100%;
-////
-////  height: 100%;
-////  -o-object-fit: cover;
-////  object-fit: cover;
-////}
-////@media (max-width: 767.98px) {
-////  .slider__flex {
-////    flex-direction: column-reverse;
-////  }
-////
-////  .swiper-wrapper {
-////    position: relative;
-////    width: 100%;
-////    height: 100%;
-////    z-index: 1;
-////    display: flex;
-////    transition-property: transform;
-////    box-sizing: content-box;
-////  }
-////  .slider__col {
-////    flex-direction: row;
-////    align-items: center;
-////    margin-right: 0;
-////    margin-top: 24px;
-////    width: 100%;
-////  }
-////  .slider__images {
-////    width: 100%;
-////  }
-////  .slider__thumbs {
-////    height: 100px;
-////    width: calc(100% - 96px);
-////    margin: 0 16px;
-////  }
-////  .slider__prev,
-////  .slider__next {
-////    height: auto;
-////    width: 32px;
-////  }
-////}
 
 
 .slider {
   padding: 32px;
-  color: red;
+  color: #fff;
 }
 .slider .swiper-container {
   width: 100%;
@@ -591,30 +472,13 @@
   flex-direction: column;
   width: 150px;
   margin-right: 32px;
-  align-items: center;
 }
-.slider__prev{
-  transform: rotate(180deg);
-  background-image: url("../icons/slider_small_arrow.svg");
-  cursor: pointer;
-  text-align: center;
-  width: 8px;
-  height: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  margin-bottom: 10px;
-}
+.slider__prev,
 .slider__next {
-  background-image: url("../icons/slider_small_arrow.svg");
   cursor: pointer;
   text-align: center;
-  width: 8px;
-  height: 15px;
+  font-size: 14px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -622,14 +486,13 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin-top: 10px;
 }
 .slider__prev:focus,
 .slider__next:focus {
   outline: none;
 }
 .slider__thumbs {
-  height: 377px;
+  height: calc(400px - 96px);
 }
 .slider__thumbs .slider__image {
   transition: 0.25s;
@@ -657,6 +520,7 @@
 .slider__image {
   width: 100%;
   height: 100%;
+  border-radius: 30px;
   overflow: hidden;
 }
 .slider__image img {
@@ -676,7 +540,6 @@
     margin-right: 0;
     margin-top: 24px;
     width: 100%;
-
   }
   .slider__images {
     width: 100%;

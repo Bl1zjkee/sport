@@ -13,16 +13,15 @@ padding: 15px 0 20px 10px;
     width: 100%;
     border-bottom: 1px solid var(--yellow);
     padding: 20px 0;
-    a{
+    p{
       color: var(--white);
       font-weight: var(--fw-regular);
       font-size: var(--fs-sup-secondary);
       line-height: var(--lh-sup-secondary);
       letter-spacing: var(--ls-secondary);
       text-transform: uppercase;
-  svg{
-    margin-right: 10px;
-  }
+      margin-left: 10px;
+
     }
   }
 
