@@ -31,7 +31,7 @@
     .marquee-infinite {
       &_black {
         transform: rotate(9deg);
-        bottom: -300px;
+        bottom: -225px;
         @media (max-width: $xl) {
           bottom: -415px;
         }
@@ -49,7 +49,8 @@
 
       &_white {
         transform: rotate(-6deg);
-        bottom: 200px;
+        bottom: 105px;
+        background: var(--white);
         z-index: -1;
         @media (max-width: $xl) {
           bottom: 100px;
