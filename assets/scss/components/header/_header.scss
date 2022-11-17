@@ -3,7 +3,8 @@
   position: sticky;
   z-index: 10;
   top: 0;
-  z-index: 5;
+  animation: slide-bottom 1s linear forwards;
+
   @media (max-width: $md) {
     padding: 11px 0;
   }
