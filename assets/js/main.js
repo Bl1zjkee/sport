@@ -20,7 +20,7 @@ function createMainAnimation() {
                 canvas: document.getElementById("animation-jro-desktop"),
                 autoplay: true
             });
-        }else{
+        } else {
             /** Мобильная версия. */
             new rive.Rive({
                 src: "./assets/riv/jro-mobile.riv",
@@ -56,20 +56,149 @@ circleText.forEach(textBlock => {
     }
 });*/
 
-/** Swiper галереи на главной странице. */
-const mainGallerySwiper = new Swiper('.main__gallery .swiper', {
-    slidersPerView: 'auto',
-    spaceBetween: 40,
-    freeMode: true,
-    autoplay: {
-        delay: 0,
-    },
-    speed: 1000,
-    loop: true,
+/** Блок с текстом для анимации изменения визуала слов. */
+const mixedText = document.querySelector('.mixed-text');
+
+/** Классы отвечающие за начертание (style). */
+const classesStyleArr = ['normal', 'italic'],
+    /** Классы отвечающие за цвет. */
+    classesColorArr = ['gray', 'black', 'yellow'],
+    /** Классы отвечающие за жирность шрифта. */
+    classesWeightArr = ['regular', 'medium', 'semi-bold', 'bold', 'bolder'];
+
+window.addEventListener('DOMContentLoaded', function () {
+    mixedTextInit();
+
+    setInterval(mixedTextAnimation, 2000);
 });
 
-/** Какой-то Swiper */
-new Swiper('.popular__list .swiper', {
+let newClass = '',
+    oldClass = '';
+
+let similarClasses;
+
+/** Скрипт изменения слов в тексте при загрузке страницы. */
+function mixedTextInit() {
+    /** Собираем массив из слов и символов. */
+    const words = mixedText.textContent.split(' ');
+
+    /** Очищаем родителя. */
+    mixedText.textContent = '';
+
+    for (let i = 0; i < words.length; i++) {
+
+        if (words[i].length <= 2) {
+            /** Если символ тире, предлог или союз, то его добавляем не преобразовывая. */
+            mixedText.innerHTML += `${words[i]} `
+        } else {
+            /** Генерируем новый класс. */
+            newClass = generateMixedClass(classesStyleArr, classesColorArr, classesWeightArr);
+
+            /** Если есть старый класс, то проверяем новый класс на уникальность. */
+            if (oldClass) similarClasses = differenceBetweenClasses(oldClass, newClass);
+
+            /** Если есть схожие классы, то генерируем уникальный класс. */
+            if (similarClasses) {
+                newClass = uniqueClassGenerator(similarClasses, oldClass, newClass, classesStyleArr, classesColorArr, classesWeightArr);
+            }
+
+            /** Добавляем слово в родителя. */
+            mixedText.innerHTML += `<span class="${newClass}">${words[i]}</span> `;
+
+            /** Перезаписываем переменную. */
+            oldClass = newClass;
+        }
+    }
+}
+
+/** Функция анимации mixed текста. */
+function mixedTextAnimation() {
+    /** Собираем все span в родителе. */
+    const allSpans = mixedText.querySelectorAll('span');
+
+    allSpans.forEach(span => {
+        /** Генерируем новый класс. */
+        newClass = generateMixedClass(classesStyleArr, classesColorArr, classesWeightArr);
+
+        /** Если есть старый класс, то проверяем новый класс на уникальность. */
+        if (oldClass) similarClasses = differenceBetweenClasses(oldClass, newClass);
+
+        /** Если есть схожие классы, то генерируем уникальный класс. */
+        if (similarClasses) {
+            newClass = uniqueClassGenerator(similarClasses, oldClass, newClass, classesStyleArr, classesColorArr, classesWeightArr);
+        }
+
+        /** Удаляем старые классы. */
+        span.classList.remove(...span.classList);
+
+        console.log(newClass);
+
+        /** Добавляем новые. */
+        span.classList.add(...newClass.split(' '));
+
+        /** Перезаписываем переменную. */
+        oldClass = newClass;
+    });
+}
+
+/** Функция, генерации уникального класса (непохожего на предыдущий). */
+function uniqueClassGenerator(similarClasses, oldClass, newClass, ...arr) {
+    while (similarClasses) {
+        newClass = generateMixedClass(...arr);
+        similarClasses = differenceBetweenClasses(oldClass, newClass);
+    }
+
+    return newClass;
+}
+
+/** Функция сравнения нового класса и старого класса. */
+function differenceBetweenClasses(oldClass, newClass) {
+    const common = oldClass.split(' ').filter(x => newClass.split(' ').includes(x));
+
+    return common.length !== 0;
+}
+
+/** Функция выбора рандомного индекса массива. Принимает аргументом массив. */
+function randomIndex(arr) {
+    const randomIndex = Math.random() * arr.length;
+
+    return Math.floor(randomIndex);
+}
+
+/** Функция генерации класса из массивов. */
+function generateMixedClass(...args) {
+    let classString = '';
+
+    for (let i = 0; i < args.length; i++) {
+        if (i === args.length - 1) {
+            classString += `${args[i][randomIndex(args[i])]}`;
+        } else {
+            classString += `${args[i][randomIndex(args[i])]} `;
+        }
+    }
+
+    return classString;
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    /** Swiper галереи на главной странице. */
+    const mainGallerySwiper = new Swiper('.main__gallery .swiper', {
+        slidersPerView: 'auto',
+        spaceBetween: 40,
+        loop: true,
+        // loopedSlides: 2,
+        autoplay: {
+            delay: 1,
+            disableOnInteraction: true
+        },
+        // freeMode: true,
+        speed: 5000,
+        // freeModeMomentum: false
+    });
+}, false);
+
+/** Swiper популярных товаров на главной. */
+const popularSwiper = new Swiper('.popular__list .swiper', {
     spaceBetween: 30,
     slidersPerView: 3,
     navigation: {
@@ -88,7 +217,7 @@ new Swiper('.popular__list .swiper', {
         768: {
             slidesPerView: 2,
         },
-        2000: {
+        2560: {
             slidesPerView: 3,
         },
 

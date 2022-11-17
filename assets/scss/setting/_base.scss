@@ -14,6 +14,10 @@ body {
   color: var(--black);
 }
 
+button {
+  font-family: var(--font-family);
+}
+
 ul {
   list-style: none;
 }
@@ -52,8 +56,24 @@ main {
   overflow: hidden;
 }
 
+.normal {
+  font-style: normal;
+}
+
 .italic {
   font-style: italic;
+}
+
+.medium {
+  font-weight: var(--fw-medium);
+}
+
+.regular {
+  font-weight: var(--fw-regular);
+}
+
+.semi-bold {
+  font-weight: var(--fw-semibold);
 }
 
 .bold {
