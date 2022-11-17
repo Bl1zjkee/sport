@@ -1,6 +1,7 @@
 .header {
   padding: 15px 0;
   position: sticky;
+  z-index: 10;
   top: 0;
 
   &:before {

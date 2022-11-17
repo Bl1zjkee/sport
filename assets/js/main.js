@@ -122,7 +122,7 @@ function mixedTextAnimation() {
     const allSpans = mixedText.querySelectorAll('span');
 
     allSpans.forEach((span, i) => {
-
+        console.log(span, i)
         /** Пушим в массив случайный индекс. */
         randomIndexesArr.push(randomIndex(allSpans));
 
