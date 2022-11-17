@@ -1,14 +1,23 @@
 @import "../abstract/variables";
 
+#basket-page {
+  overflow: hidden;
+}
+
 .basket {
   position: relative;
 
+  .container {
+    position: relative;
+  }
+  
   h3 {
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
     line-height: var(--lh-96px);
     text-transform: uppercase;
     color: var(--black);
+    padding-top: 20px;
   }
 
   &__card {
@@ -189,10 +198,12 @@
 
   .basket__runText {
     background: var(--yellow);
-    border: 1px solid var(--black);
-    padding-top: 2px;
-    padding-bottom: 1px;
+    border-top: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
+    padding: 2px 0 1px;
     position: absolute;
+    left: 0;
+    top: 116px;
     width: 100%;
     z-index: 4;
 
@@ -203,16 +214,29 @@
       letter-spacing: var(--ls-01);
       text-transform: uppercase;
       color: var(--black);
+      white-space: nowrap;
+      animation: marquee-left-to-right 8s linear infinite;
     }
 
-    &_horizont {
-      transform: rotate(270deg);
-      margin-left: 185px;
+    &_horizontal {
+      width: auto;
+      height: calc(100% + 85px + 76px);
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      left: unset;
+      right: 125px;
+      top: -85px;
       z-index: 0;
+      border-left: 1px solid var(--black);
+      border-right: 1px solid var(--black);
+      border-top: 0;
+      border-bottom: 0;
+
+      p {
+        animation: marquee-bottom-to-up 8s linear infinite;
+      }
     }
-
   }
-
 }
 
 .card-secondary {
