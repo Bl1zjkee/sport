@@ -2450,6 +2450,10 @@ input[type=number]:focus {
 
 /** block **/
 /** Главная **/
+#main-page {
+  padding-top: 0;
+}
+
 .main__burger-menu {
   position: relative;
   z-index: 3;
