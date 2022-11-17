@@ -1,12 +1,33 @@
-.payment-error{
+.payment-error {
+  position: relative;
+  min-height: 40vh;
   margin-top: 227px;
   text-align: center;
   padding-bottom: 44px;
+
   @media (max-width: $md) {
     margin-top: 92px;
     padding-bottom: 241px;
   }
-  h3{
+
+  .marquee-infinite {
+    &_black {
+      transform: rotate(9deg);
+      top: 90px;
+
+      .text {
+        color: var(--red);
+      }
+    }
+
+    &_white {
+      transform: rotate(-6deg);
+      z-index: -1;
+      top: -280px;
+    }
+  }
+
+  h3 {
     font-weight: var(--fw-bold);
     font-size: var(--fs-sup-title);
     line-height: var(--lh-sup-title);
@@ -15,11 +36,12 @@
     color: var(--black);
   }
 
-  .btn_all{
+  .btn_all {
     display: flex;
     justify-content: center;
-    button{
-      h3{
+
+    button {
+      h3 {
         font-style: normal;
       }
     }

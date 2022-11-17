@@ -5465,6 +5465,8 @@ main {
 
 /** Ошибка платежа **/
 .payment-error {
+  position: relative;
+  min-height: 40vh;
   margin-top: 227px;
   text-align: center;
   padding-bottom: 44px;
@@ -5474,6 +5476,18 @@ main {
     margin-top: 92px;
     padding-bottom: 241px;
   }
+}
+.payment-error .marquee-infinite_black {
+  transform: rotate(9deg);
+  top: 90px;
+}
+.payment-error .marquee-infinite_black .text {
+  color: var(--red);
+}
+.payment-error .marquee-infinite_white {
+  transform: rotate(-6deg);
+  z-index: -1;
+  top: -280px;
 }
 .payment-error h3 {
   font-weight: var(--fw-bold);
