@@ -384,17 +384,20 @@ margin-bottom: 10px;
     justify-content: space-between;
     ul{
       li{
-        font-weight: var(--fw-regular);
-        font-size: var(--fs-normal);
-        line-height: var(--lh-normal);
-        letter-spacing:var(--ls-medium);
-        text-transform: uppercase;
-        color: var(--black);
-        margin-top: 6px;
-        &:hover{
-          font-style: italic;
-          font-weight: var(--fw-bold);
+        a{
+          font-weight: var(--fw-regular);
+          font-size: var(--fs-normal);
+          line-height: var(--lh-normal);
+          letter-spacing:var(--ls-medium);
+          text-transform: uppercase;
+          color: var(--black);
+          margin-top: 6px;
+          &:hover{
+            font-style: italic;
+            font-weight: var(--fw-bold);
+          }
         }
+
       }
     }
   }

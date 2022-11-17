@@ -5,6 +5,7 @@
   width: 100%;
   margin-bottom: 10px;
   position: relative;
+  z-index: 1;
   @media (max-width: $md) {
     padding: 80px 10px 26px 10px;
   }

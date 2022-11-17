@@ -1,5 +1,6 @@
 @import "../abstract/variables";
 .order{
+  position: relative;
 }
 
 .order-placing{
@@ -8,6 +9,15 @@ gap: 125px;
 }
 .order-inner{
   width: 100%;
+  &__circle-text{
+    position: absolute;
+    left: 27px;
+    bottom: -8px;
+    z-index: -1;
+    @media (max-width: $md) {
+      left: 0;
+    }
+  }
   h3{
     font-weight: var(--fw-bold);
     font-size: var(--fs-title);
@@ -50,6 +60,9 @@ label{
   display: flex;
   align-items: center;
 gap: 16px;
+  input{
+    padding-left: 10px;
+  }
 }
   }
 
@@ -168,12 +181,12 @@ img{
     text-transform: uppercase;
     color: var(--black);
   }
+  &:nth-of-type(6){
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
 }
 
-.run-text:nth-of-type(6){
-  margin-top: 60px;
-  margin-bottom: 20px;
-}
 .order-check{
   display: flex;
   align-items: center;
@@ -264,4 +277,8 @@ img{
 
 .sale-text{
   margin-top: 20px;
+}
+
+.radio-btn{
+  margin-top:16px;
 }

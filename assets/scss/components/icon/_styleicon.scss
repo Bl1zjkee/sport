@@ -210,7 +210,7 @@
 .edit{
   cursor: pointer;
   position: absolute;
-  top:22px;
+  top:18px;
   right: 58px;
   @media (max-width: $sm) {
     right: 44px;
@@ -227,7 +227,7 @@
 .delete{
   cursor: pointer;
   position: absolute;
-  top:22px;
+  top:18px;
   right: 25px;
   @media (max-width: $sm) {
     right: 15px;
