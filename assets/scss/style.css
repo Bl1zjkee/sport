@@ -4648,12 +4648,12 @@ input[type=number]:focus {
 }
 #about-page .marquee-infinite_black {
   transform: rotate(9deg);
-  top: 465px;
+  top: 370px;
 }
 #about-page .marquee-infinite_white {
   transform: rotate(-6deg);
   z-index: -1;
-  top: 35px;
+  top: 130px;
 }
 
 .about-main {

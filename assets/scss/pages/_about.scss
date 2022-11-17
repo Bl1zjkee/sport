@@ -4,13 +4,13 @@
   .marquee-infinite {
     &_black {
       transform: rotate(9deg);
-      top: 465px;
+      top: 370px;
     }
 
     &_white {
       transform: rotate(-6deg);
       z-index: -1;
-      top: 35px;
+      top: 130px;
     }
   }
 }
