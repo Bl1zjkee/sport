@@ -89,6 +89,7 @@ left: inherit;
       }
       span{
         font-weight: var(--fw-bold);
+
       }
       p{
         font-style: italic;
@@ -300,6 +301,9 @@ picture{
   padding-bottom: var(--margin-regular);
 
   &__text {
+    @media (max-width: $esm) {
+      display: none;
+    }
     h3 {
       display: flex;
       font-weight: var(--fw-regular);
@@ -341,11 +345,13 @@ picture{
     }
 
     &_two {
+      display: block;
       margin-top: 20px;
-      display: flex;
-      justify-content: end;
       padding-right: 60px;
       margin-bottom: 162px;
+      @media (max-width: $md){
+        padding-right:0;
+      }
       p {
         font-style: italic;
         font-weight: var(--fw-regular);
@@ -354,8 +360,30 @@ picture{
         color: var(--darkgrey);
         max-width: 563px;
         width: 100%;
+        @media (max-width: $md){
+            font-size: var(--fs-primary);
+            line-height: var(--lh-little);
+        }
       }
     }
+
+    &_mobile{
+      display: none;
+      @media (max-width: $esm) {
+        display: block;
+      }
+      h3{
+        white-space: pre-line;
+        display: block;
+        p{
+          display: inline-block;
+        }
+        span{
+          display: inline-block;
+        }
+      }
+    }
+
   }
 }
 
@@ -515,6 +543,30 @@ margin-top: 10px;
       bottom:280px;
     }
   }
+}
 
+.left{
+  margin-left: 47px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--black);
+}
 
+.bold{
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--black);
+}
+.effect{
+  margin-left: 32px;
+}
+
+.right{
+  display: block;
+  text-align: end;
+  width: 100%;
 }
