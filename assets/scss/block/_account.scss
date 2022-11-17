@@ -14,7 +14,7 @@
   }
 
   &__switch {
-    margin-top: 80px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,7 +31,7 @@
   display: none;
 }
     p {
-      font-weight: var(--fw-semibold);
+      font-weight: var(--fw-regular);
       font-size: var(--fs-primary);
       line-height: var(--lh-primary);
       text-transform: uppercase;
@@ -55,7 +55,7 @@
 
     p {
       font-style: italic;
-      font-weight: var(--fw-semibold);
+      font-weight: var(--fw-regular);
       font-size: var(--fs-primary);
       line-height: var(--lh-primary);
       color: var(--darkgrey);
@@ -123,6 +123,13 @@
           }
         }
       }
+      &:nth-of-type(3){
+        margin-top: 10px;
+      }
+
+      &:nth-of-type(5){
+        margin-top: 10px;
+      }
     }
   }
 }
@@ -144,7 +151,7 @@
 
 .swith {
   font-style: italic;
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-regular);
   font-size: var(--fs-normal);
   line-height: var(--lh-normal);
   letter-spacing: var(--ls-medium);
@@ -169,6 +176,8 @@ bottom: -5px;
 
   &.active {
     background: var(--yellow);
+    color: var(--black);
+    font-weight: var(--fw-bold);
 
     &:before {
       display: block;
@@ -214,7 +223,9 @@ bottom: -5px;
       margin-left: 10px;
     }
   }
-
+.input{
+  max-width: 720px;
+}
   input::placeholder {
     color: #7C7C7C;
   }
@@ -315,25 +326,14 @@ margin-top: 20px;
         color: var(--black);
       }
     }
-
-    P:last-child {
+    p:nth-of-type(2){
       font-weight: var(--fw-bold);
-      font-size: var(--fs-normal);
-      line-height: var(--lh-normal);
-      letter-spacing: var(--ls-medium);
-      color: var(--black);
-
-      span {
+      span{
         font-weight: var(--fw-bold);
-        font-size: var(--fs-normal);
-        line-height: var(--lh-normal);
-        letter-spacing: var(--ls-regular);
-        text-transform: uppercase;
-        font-feature-settings: 'liga' off;
-        color: var(--black);
-
       }
     }
+
+
   }
 
   &__inner{
@@ -351,7 +351,7 @@ p{
     }
     span{
       font-style: italic;
-      font-weight: var(--fw-regular);
+      font-weight: var(--fw-little);
       font-size: var(--fs-little);
       line-height: var(--lh-little);
       font-feature-settings: 'liga' off;

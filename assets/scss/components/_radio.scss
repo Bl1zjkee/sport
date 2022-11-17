@@ -9,7 +9,7 @@ display: flex;
   position: relative;
   cursor: pointer;
  color:  var(--black);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-regular);
   font-size: var(--fs-normal);
   line-height: var(--lh-normal);
   text-transform: uppercase;
@@ -73,13 +73,13 @@ background: var(--yellow);
 }
 
 .size{
-  max-width: 141px;
+  max-width: 143px;
   width: 100%;
   @media (max-width:$md ) {
 margin-top: 20px;
   }
   h3{
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-regular);
     font-size: var(--fs-normal);
     line-height: var(--lh-normal);
     text-transform: uppercase;
@@ -91,7 +91,7 @@ margin-top: 20px;
     margin-top: 19px;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 225px;
+    max-width: 229px;
     h3{
       margin-right: 40px;
       margin-bottom: 0;

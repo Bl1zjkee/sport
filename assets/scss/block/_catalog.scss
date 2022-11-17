@@ -71,7 +71,7 @@ padding:20px 0;
         }
 
         a {
-          font-weight: var(--fw-semibold);
+          font-weight: var(--fw-regular);
           font-size: var(--fs-sup-title);
           line-height: var(--lh-sup-title);
           text-align: right;
@@ -92,6 +92,7 @@ padding:20px 0;
 
           &:hover {
             color: var(--yellow);
+            font-weight: var(--fw-bold);
 
             svg {
               path {
@@ -135,18 +136,22 @@ padding:20px 0;
       color: var(--black);
     }
 
-    span {
+    p {
       font-weight: var(--fw-bold);
       font-size: var(--fs-sup-title);
       line-height: var(--lh-sup-title);
-      text-align: right;
+ margin-left: auto;
       text-transform: uppercase;
       color: var(--black);
       display: flex;
       align-items: center;
+      margin-right: 20px;
 
       svg {
         margin-left: 19px;
+      }
+      span{
+        font-weight: var(--fw-overlittle);
       }
     }
   }
@@ -172,7 +177,7 @@ padding:20px 0;
     align-items: center;
     gap: 10px;
     label{
-      font-weight: var(--fw-semibold);
+      font-weight: var(--fw-regular);
       font-size: var(--fs-normal);
       line-height: var(--lh-normal);
       text-transform: uppercase;
@@ -209,7 +214,7 @@ margin-top: 5px;
   margin-top: 0;
 }
     a{
-      font-weight: var(--fw-semibold);
+      font-weight: var(--fw-regular);
       font-size: var(--fs-normal);
       line-height: var(--lh-normal);
       text-transform: uppercase;
@@ -230,7 +235,6 @@ margin-top: 5px;
 }
 
 .catalog-card{
-  margin-top: 40px;
   margin-bottom: 100px;
   @media (max-width: $md) {
     margin-top: 20px;
@@ -240,12 +244,16 @@ margin-top: 5px;
     align-items: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin-top: 40px;
     @media (max-width: $md) {
       gap: 40px;
       margin-top: 20px;
     }
     @media (max-width: $sm) {
       justify-content: center;
+    }
+    &_favorit{
+      margin-top: 20px;
     }
   }
 }

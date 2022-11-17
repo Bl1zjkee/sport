@@ -8,14 +8,15 @@
     height: 50px;
     max-width: 255px;
     width: 100%;
-    font-weight: var(--fw-bold);
+text-align: center;
+    font-weight: var(--fw-regular);
     font-size: var(--fs-normal);
     line-height: var(--lh-normal);
     &:focus-visible{
       outline: none;
     }
     &::placeholder{
-      font-weight: var(--fw-semibold);
+      font-weight: var(--fw-regular);
       font-size: var(--fs-normal);
       line-height: var(--lh-normal);
       color: var(--black);
@@ -40,7 +41,7 @@
       border-bottom-left-radius: 10px;
       border-top-left-radius: 10px;
       font-family:var(--font-family);
-      font-weight:var(--fw-semibold);
+      font-weight:var(--fw-regular);
       font-size: var(--fs-primary);
       line-height: var(--lh-primary);
       align-items: center;

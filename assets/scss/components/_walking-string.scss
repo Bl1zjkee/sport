@@ -4,6 +4,9 @@
   &_rotated {
     position: absolute;
     left: -5vw;
+    @media (max-width: $md) {
+      left: -27vw;
+    }
   }
 
   &_black {
@@ -27,7 +30,10 @@
     text-transform: uppercase;
     color: var(--white);
     gap: 12px;
-
+@media (max-width: $md) {
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
+}
     span {
       font-weight: var(--fw-black);
     }
