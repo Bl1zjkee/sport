@@ -40,6 +40,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
   }
 
   &__header-all {
@@ -48,7 +49,7 @@
     .marquee-infinite {
       &_black {
         transform: rotate(9deg);
-        bottom: -225px;
+        bottom: -363px;
         @media (max-width: $xl) {
           bottom: -415px;
         }
@@ -56,7 +57,7 @@
         bottom: -545px;
       }
         @media (max-width: $md) {
-          bottom: -263px;
+          bottom: -285px;
         }
         @media (max-width: $sm) {
           transform: rotate(17deg);
@@ -69,17 +70,17 @@
 
       &_white {
         transform: rotate(-6deg);
-        bottom: 105px;
+        bottom: 135px;
         background: var(--white);
         z-index: -1;
         @media (max-width: $xl) {
-          bottom:12px;
+          bottom:107px;
         }
         @media (max-width: $lg) {
           bottom: -16px;
         }
         @media (max-width: $md) {
-          bottom: -112px;
+          bottom: -102px;
         }
         @media (max-width: $sm) {
           bottom: -33px;
