@@ -67,6 +67,7 @@
     color: var(--white);
     will-change: transform;
     animation: marquee-right-to-left 20s linear infinite;
+    display: flex;
   }
 
   &_to-right {

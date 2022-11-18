@@ -59,11 +59,18 @@ table {
   box-sizing: border-box;
 }
 
+html.hidden {
+  overflow: hidden;
+}
+
 body {
   font-family: var(--font-family);
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+body.hidden {
+  overflow: hidden;
 }
 
 button {
@@ -179,6 +186,10 @@ main {
 
 .ok, .warning {
   display: none;
+}
+
+.close-window--js {
+  cursor: pointer;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -779,7 +790,6 @@ input[type=number]:focus {
   .slider__flex {
     flex-direction: column-reverse;
   }
-
   .slider__col {
     flex-direction: row;
     align-items: center;
@@ -787,17 +797,14 @@ input[type=number]:focus {
     margin-top: 24px;
     width: 100%;
   }
-
   .slider__images {
     width: 100%;
   }
-
   .slider__thumbs {
     height: 100px;
     width: calc(100% - 96px);
     margin: 0 16px;
   }
-
   .slider__prev,
 .slider__next {
     height: auto;
@@ -2015,7 +2022,7 @@ input[type=number]:focus {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 11;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(7px);
   align-items: center;
@@ -2023,6 +2030,13 @@ input[type=number]:focus {
 }
 .overlay_opened {
   display: flex;
+}
+.overlay_opened .mobile-menu {
+  animation: slide-right 0.5s ease-in forwards;
+}
+.overlay.mobile-menu-overlay {
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 /** Мобильное меню **/
@@ -2222,6 +2236,12 @@ input[type=number]:focus {
   bottom: 1px;
   z-index: 4;
   width: 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.subscription-widget_opened {
+  transform: translateX(0);
+  opacity: 1;
 }
 .subscription-widget input {
   background: var(--yellow);
@@ -2243,6 +2263,17 @@ input[type=number]:focus {
 }
 .subscription-widget input:focus-visible {
   outline: none;
+}
+.subscription-widget__placeholder {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  font-weight: var(--fw-little);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
+  letter-spacing: var(--ls-little);
+  text-transform: uppercase;
+  pointer-events: none;
 }
 .subscription-widget__inner {
   background: var(--yellow);
@@ -2272,7 +2303,13 @@ input[type=number]:focus {
   position: absolute;
   top: 103px;
   right: 0;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+.tosend_active {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
 }
 .tosend p {
   font-weight: var(--fw-regular);
@@ -2287,6 +2324,11 @@ input[type=number]:focus {
   position: fixed;
   bottom: 20px;
   z-index: 4;
+  cursor: pointer;
+  transform: translateX(0);
+}
+.mailing_hide {
+  transform: translateX(-100%);
 }
 .mailing img {
   max-width: 40px;
@@ -2361,6 +2403,7 @@ input[type=number]:focus {
   color: var(--white);
   will-change: transform;
   animation: marquee-right-to-left 20s linear infinite;
+  display: flex;
 }
 .marquee-small_to-right .text {
   animation: marquee-left-to-right 20s linear infinite;
@@ -2519,7 +2562,7 @@ input[type=number]:focus {
 }
 @media (max-width: 960px) {
   .main__burger-menu {
-    display: block;
+    display: flex;
   }
 }
 .main__logo {
@@ -6348,6 +6391,24 @@ input[type=number]:focus {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+/** Всплытие. */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/** Затухание. */
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /** vendor **/

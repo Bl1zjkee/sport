@@ -108,6 +108,13 @@
   bottom: 1px;
   z-index: 4;
   width: 100%;
+  opacity: 0;
+  transform: translateX(-100%);
+
+  &_opened {
+    transform: translateX(0);
+    opacity: 1;
+  }
 
   input {
     background: var(--yellow);
@@ -120,6 +127,7 @@
     color: var(--black);
     width: 100%;
     text-align: center;
+
     @media (max-width: $md) {
       font-size: var(--fs-normal);
       line-height: var(--lh-normal);
@@ -129,6 +137,20 @@
       outline: none;
     }
 
+  }
+
+  &__placeholder {
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    font-weight: var(--fw-little);
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+    letter-spacing: var(--ls-little);
+    text-transform: uppercase;
+
+    pointer-events: none;
   }
 
   &__inner {
@@ -159,7 +181,14 @@
   position: absolute;
   top: 103px;
   right: 0;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+
+  &_active {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+  }
 
   p {
     font-weight: var(--fw-regular);
@@ -168,15 +197,19 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--black);
-
   }
-
 }
 
 .mailing {
   position: fixed;
   bottom: 20px;
   z-index: 4;
+  cursor: pointer;
+  transform: translateX(0);
+
+  &_hide {
+    transform: translateX(-100%);
+  }
 
   img {
     max-width: 40px;

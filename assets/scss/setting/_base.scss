@@ -9,11 +9,21 @@
   }
 }
 
+html {
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
 body {
   font-family: var(--font-family);
   color: var(--black);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 button {
@@ -124,6 +134,10 @@ main {
 
 .ok, .warning {
   display: none;
+}
+
+.close-window--js {
+  cursor: pointer;
 }
 
 

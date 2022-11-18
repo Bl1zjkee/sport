@@ -122,7 +122,6 @@ function mixedTextAnimation() {
     const allSpans = mixedText.querySelectorAll('span');
 
     allSpans.forEach((span, i) => {
-        console.log(span, i)
         /** Пушим в массив случайный индекс. */
         randomIndexesArr.push(randomIndex(allSpans));
 
@@ -299,7 +298,7 @@ if (accordions) {
 
         const header = e.target.closest('.accordion__header');
 
-        if (header){
+        if (header) {
 
             if (header.parentElement.classList.contains('questions-faq__item_active')) {
                 header.parentElement.classList.remove('questions-faq__item_active');
@@ -313,4 +312,87 @@ if (accordions) {
             header.parentElement.classList.add('questions-faq__item_active');
         }
     });
+}
+
+/** Document overflow: hidden. */
+function documentOverflowHidden() {
+    document.documentElement.classList.add('hidden');
+    document.body.classList.add('hidden');
+}
+
+/** Document overflow: hidden. */
+function documentOverflowNormal() {
+    document.documentElement.classList.remove('hidden');
+    document.body.classList.remove('hidden');
+}
+
+/** Триггер мобильного меню. */
+const burger = document.querySelector('.burger-js'),
+    mobileMenu = document.querySelector('.mobile-menu-overlay');
+
+if (burger) {
+    burger.addEventListener('click', function () {
+        documentOverflowHidden();
+        mobileMenu.classList.add('overlay_opened');
+    });
+}
+
+/** Закрытие модального окна. */
+const closeButton = document.querySelectorAll('.close-window--js');
+
+if (closeButton) {
+    document.addEventListener('click', function (e) {
+        const target = e.target;
+
+        if (target.closest('.close-window--js') || target.classList.contains('close-window--js')) {
+            documentOverflowNormal();
+            target.closest('.overlay').classList.remove('overlay_opened');
+        }
+    });
+}
+
+/** Закрытие модального окна при клике на overlay. */
+const overlay = document.querySelectorAll('.overlay');
+
+if (overlay) {
+    document.addEventListener('click', function (e) {
+        const target = e.target;
+
+        if (target.classList.contains('overlay')) {
+            documentOverflowNormal();
+            target.closest('.overlay').classList.remove('overlay_opened');
+        }
+    });
+}
+
+/** Рассылка. */
+const mailingTrigger = document.querySelector('.mailing');
+const closeWidget = document.querySelector('.close-widget');
+const subscriptionPlaceholder = document.querySelector('.subscription-widget__placeholder');
+const subscriptionInput = document.getElementById('email-subscription');
+const subscriptionWidget = document.querySelector('.subscription-widget');
+const subscriptionSendBtn = subscriptionWidget.querySelector('.tosend');
+
+if (subscriptionInput) {
+    subscriptionInput.addEventListener('focus', function () {
+        subscriptionPlaceholder.style.display = 'none';
+        subscriptionSendBtn.classList.add('tosend_active');
+    });
+
+    subscriptionInput.addEventListener('blur', function () {
+        if (subscriptionInput.value === '') {
+            subscriptionPlaceholder.style.display = 'block';
+            subscriptionSendBtn.classList.remove('tosend_active');
+        }
+    });
+
+    mailingTrigger.addEventListener('click', function () {
+        this.classList.add('mailing_hide');
+        subscriptionWidget.classList.add('subscription-widget_opened');
+    });
+
+    closeWidget.addEventListener('click', function () {
+        mailingTrigger.classList.remove('mailing_hide');
+        subscriptionWidget.classList.remove('subscription-widget_opened');
+    })
 }

@@ -85,7 +85,7 @@ margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 4;
+  z-index: 11;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(7px);
 
@@ -94,5 +94,14 @@ margin: 0 auto;
 
   &_opened {
     display: flex;
+
+    .mobile-menu {
+      animation: slide-right .5s ease-in forwards;
+    }
+  }
+
+  &.mobile-menu-overlay {
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
