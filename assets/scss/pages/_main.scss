@@ -406,9 +406,19 @@
     }
   }
 
+  &__mixed-text-link{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
   &__mixed-text {
     margin-bottom: var(--margin-regular);
 
+    .container {
+      position: relative;
+    }
+    
     h3 {
       font-size: 140px;
       line-height: 70px;
@@ -422,8 +432,6 @@
         margin-bottom: 40px;
       }
     }
-
-
 
     .mixed-text {
       font-weight: var(--fw-bold);

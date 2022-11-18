@@ -2959,8 +2959,16 @@ input[type=number]:focus {
     display: block;
   }
 }
+.main__mixed-text-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 .main__mixed-text {
   margin-bottom: var(--margin-regular);
+}
+.main__mixed-text .container {
+  position: relative;
 }
 .main__mixed-text h3 {
   font-size: 140px;
