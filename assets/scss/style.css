@@ -364,6 +364,7 @@ input[type=number]:focus {
 
 .search {
   cursor: pointer;
+  display: flex;
 }
 .search:hover svg path {
   stroke: black;
@@ -384,6 +385,11 @@ input[type=number]:focus {
   .search_mobile {
     display: none;
   }
+}
+.search_block-search {
+  position: absolute;
+  left: 0;
+  bottom: 6px;
 }
 
 .favorite {
@@ -568,6 +574,11 @@ input[type=number]:focus {
 }
 .close-secondary_white svg path {
   fill: var(--white);
+}
+.close-secondary_search {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
 }
 
 .close-primary {
@@ -1288,6 +1299,10 @@ input[type=number]:focus {
   max-width: 75px;
   width: 100%;
   height: 52px;
+  pointer-events: none;
+}
+.subscription__small:hover {
+  pointer-events: none;
 }
 .subscription__item {
   display: flex;
@@ -1392,8 +1407,12 @@ input[type=number]:focus {
   align-items: center;
   justify-content: space-between;
   gap: 80px;
+  width: 100%;
   position: relative;
   z-index: 1;
+}
+.header__block_open-search {
+  justify-content: center;
 }
 
 @media (max-width: 960px) {
@@ -6068,6 +6087,32 @@ input[type=number]:focus {
   .run-text-nothing {
     margin-top: var(--margin-regular);
   }
+}
+
+.open-search {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  max-width: 730px;
+}
+.open-search input {
+  width: 100%;
+  padding: 4px 0 4px 43px;
+  border: none;
+  border-bottom: 1px solid var(--black);
+  font-weight: var(--fw-little);
+  font-size: var(--fs-secondary);
+  line-height: var(--lh-secondary);
+  color: var(--black);
+  background: transparent;
+}
+.open-search input:focus-visible {
+  outline: none;
+}
+.open-search input::placeholder {
+  color: var(--placeholder);
 }
 
 /** abstract **/

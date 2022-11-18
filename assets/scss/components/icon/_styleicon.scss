@@ -7,6 +7,7 @@
 
 .search{
   cursor: pointer;
+  display: flex;
   &:hover{
     svg{
       path{
@@ -39,6 +40,11 @@
     @media (max-width: $lg) {
       display: none;
     }
+  }
+  &_block-search{
+    position: absolute;
+    left: 0;
+  bottom: 6px;
   }
 }
 
@@ -305,6 +311,12 @@
         fill: var(--white);
       }
     }
+  }
+
+  &_search{
+    position: absolute;
+   bottom: 6px;
+    right: 0;
   }
 }
 

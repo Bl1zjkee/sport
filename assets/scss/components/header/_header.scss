@@ -81,8 +81,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 80px;
+    width: 100%;
     position: relative;
     z-index: 1;
+    &_open-search{
+      justify-content: center;
+    }
   }
 
 

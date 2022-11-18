@@ -30,6 +30,10 @@
      max-width: 75px;
      width: 100%;
     height: 52px;
+    pointer-events: none;
+    &:hover{
+      pointer-events: none;
+    }
    }
   &__item{
     display: flex;
