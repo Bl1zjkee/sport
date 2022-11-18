@@ -3,13 +3,21 @@
   position: relative;
 }
 
-.order-placing {
-  display: flex;
-  gap: 125px;
+.order-flex{
+
+}
+.all{
+display: flex;
 }
 
+.order-placing{
+  display: flex;
+
+  justify-content: space-between;
+}
 .order-inner {
-  width: 100%;
+
+
   &__circle-text{
     position: absolute;
     left: 27px;
@@ -48,7 +56,9 @@
   &__enter {
     max-width: 350px;
     width: 100%;
-
+@media (max-width: $md) {
+  max-width: 100%;
+}
     p {
       font-weight: var(--fw-bold);
       font-size: var(--fs-normal);
@@ -66,6 +76,9 @@
   display: flex;
   align-items: center;
 gap: 16px;
+  @media (max-width: $md) {
+    gap: 6px;
+  }
   input{
     padding-left: 10px;
   }
@@ -104,10 +117,8 @@ gap: 16px;
 .order-sidebar {
   max-width: 255px;
   width: 100%;
-  margin-top: 96px;
   position: sticky;
   height: 100%;
-  top: 80px;
   margin-bottom: var(--margin-regular);
   @media (max-width: $lg) {
     display: none;
@@ -187,9 +198,9 @@ gap: 16px;
   border-bottom: 1px solid var(--black);
   padding: 18px 0;
   margin-top: 20px;
-  max-width: 730px;
   width: 100%;
   overflow: hidden;
+  max-width: 730px;
 
   p {
     font-weight: var(--fw-bold);
@@ -307,4 +318,12 @@ gap: 16px;
 
 .radio-btn{
   margin-top:16px;
+}
+
+.order-payment{
+  width: 100%;
+}
+
+.q{
+  width: 100%;
 }

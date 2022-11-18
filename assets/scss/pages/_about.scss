@@ -4,13 +4,39 @@
   .marquee-infinite {
     &_black {
       transform: rotate(9deg);
-      top: 370px;
+      top: 440px;
+      @media (max-width: $md) {
+        top: 224px;
+      }
+      @media (max-width: $sm) {
+        top: 230px;
+      }
+
+      @media (max-width: $esm) {
+        transform: rotate(7deg);
+        top: 232px;
+
+      }
     }
 
     &_white {
       transform: rotate(-6deg);
       z-index: -1;
-      top: 130px;
+      top: 67px;
+      @media (max-width: $lg) {
+        top: -43px;
+      }
+      @media (max-width: $md) {
+        top: 45px;
+      }
+      @media (max-width: $sm) {
+  top: 6px;
+      }
+
+      @media (max-width: $esm) {
+        transform: rotate(-20deg);
+        top: -272px;
+      }
     }
   }
 }
@@ -334,7 +360,6 @@ left: inherit;
       color: var(--black);
       letter-spacing: var(--ls-secondary);
       text-transform: uppercase;
-      white-space: break-spaces;
       flex-wrap: wrap;
       @media (max-width: $xl) {
         font-size: var(--fs-normal);
@@ -588,7 +613,7 @@ left: inherit;
   color: var(--black);
 }
 
-.bold{
+.bold2{
   font-weight: var(--fw-bold);
   font-size: var(--fs-normal);
   line-height: var(--lh-normal);

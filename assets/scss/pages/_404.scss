@@ -8,6 +8,14 @@
       left: -20vw;
       transform: rotate(-30deg);
       z-index: 2;
+      @media (max-width: $md) {
+        transform: rotate(349deg);
+        top: 94px;
+      }
+@media (max-width: $esm) {
+  transform: rotate(335deg);
+  top: 109px;
+}
     }
 
     &_white {
@@ -15,6 +23,20 @@
         transform: rotate(45deg);
         right: 0;
         left: -90vw;
+        @media (max-width: $xl) {
+         right: 323px;
+        }
+        @media (max-width: $md) {
+          transform: rotate(13deg);
+          top: 84px;
+          right: inherit;
+        }
+        @media (max-width: $sm) {
+          top: 150px;
+        }
+        @media (max-width: $esm) {
+          top: 193px;
+        }
       }
 
       &-two {
@@ -23,6 +45,22 @@
 
         @media (min-width: 1600px) {
           left: -5vw;
+        }
+        @media (max-width: $xl) {
+          top: -211px;
+        }
+        @media (max-width: $lg) {
+          top: -396px;
+        }
+        @media (max-width: $md) {
+          transform: rotate(357deg);
+          top: 461px;
+          left: -122px;
+        }
+        @media (max-width: $esm) {
+          transform: rotate(353deg);
+          top: 421px;
+          left: -159px;
         }
       }
     }

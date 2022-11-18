@@ -12,9 +12,17 @@
 
   .marquee-infinite {
     &_black {
-      transform: rotate(9deg);
-      top: 90px;
-
+      transform: rotate(5deg);
+      top: -18px;
+@media (max-width: $md) {
+  transform: rotate(5deg);
+  top: inherit;
+  bottom: 28px;
+}
+      @media (max-width: $esm) {
+        transform: rotate(9deg);
+        bottom: -30px;
+      }
       .text {
         color: var(--red);
       }
@@ -24,6 +32,23 @@
       transform: rotate(-6deg);
       z-index: -1;
       top: -280px;
+      @media (max-width: $xl) {
+        top: -325px;
+      }
+
+      @media (max-width: $md) {
+        top: inherit;
+        bottom: 191px;
+        transform: rotate(-11deg);
+      }
+
+      @media (max-width: $sm) {
+       bottom: 243px;
+      }
+      @media (max-width: $esm) {
+        bottom: 219px;
+        transform: rotate(-12deg);
+      }
     }
   }
 

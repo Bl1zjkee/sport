@@ -105,6 +105,11 @@ a, button, label {
     max-width: 1130px;
   }
 }
+.container_order {
+  max-width: 1104px;
+  margin: 0;
+  padding: 0;
+}
 
 .wrapper {
   width: 100%;
@@ -202,11 +207,6 @@ input[type=number]:focus {
 .input__item {
   position: relative;
 }
-@media (max-width: 576px) {
-  .input__item {
-    padding: 0 13px;
-  }
-}
 @media (max-width: 992px) {
   .input__item {
     max-width: 100%;
@@ -241,6 +241,11 @@ input[type=number]:focus {
 .input_small {
   max-width: 106px;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .input_small {
+    max-width: 100%;
+  }
 }
 
 /** Input-soc **/
@@ -760,6 +765,7 @@ input[type=number]:focus {
   .slider__flex {
     flex-direction: column-reverse;
   }
+
   .slider__col {
     flex-direction: row;
     align-items: center;
@@ -767,14 +773,17 @@ input[type=number]:focus {
     margin-top: 24px;
     width: 100%;
   }
+
   .slider__images {
     width: 100%;
   }
+
   .slider__thumbs {
     height: 100px;
     width: calc(100% - 96px);
     margin: 0 16px;
   }
+
   .slider__prev,
 .slider__next {
     height: auto;
@@ -915,6 +924,9 @@ input[type=number]:focus {
   cursor: pointer;
   height: 50px;
 }
+.btn_none {
+  pointer-events: none;
+}
 .btn_basket {
   width: 100%;
 }
@@ -927,7 +939,6 @@ input[type=number]:focus {
   align-items: center;
   width: 100%;
   height: 60px;
-  padding: 16px 0;
 }
 .btn_basket button h3 {
   font-weight: var(--fw-bold);
@@ -936,6 +947,7 @@ input[type=number]:focus {
   letter-spacing: var(--ls-big);
   text-transform: uppercase;
   color: var(--white);
+  margin-top: 0;
 }
 .btn_basket button:hover {
   border: 1px solid var(--yellow);
@@ -2266,6 +2278,11 @@ input[type=number]:focus {
     left: -27vw;
   }
 }
+@media (max-width: 320px) {
+  .marquee-infinite_rotated {
+    left: -86vw;
+  }
+}
 .marquee-infinite_black {
   background: var(--black);
 }
@@ -2321,6 +2338,7 @@ input[type=number]:focus {
 
 .marquee-medium {
   overflow: hidden;
+  padding: 9px 0;
 }
 .marquee-medium_white {
   background: var(--white);
@@ -2459,6 +2477,15 @@ input[type=number]:focus {
   z-index: 3;
   display: none;
 }
+.main__burger-menu:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+}
 @media (max-width: 960px) {
   .main__burger-menu {
     display: block;
@@ -2469,6 +2496,12 @@ input[type=number]:focus {
 }
 .main__logo img {
   width: 100%;
+}
+@media (max-width: 768px) {
+  .main__logo img {
+    width: 50px;
+    height: 38px;
+  }
 }
 .main__icon {
   display: flex;
@@ -2489,18 +2522,23 @@ input[type=number]:focus {
 }
 @media (max-width: 992px) {
   .main__header-all .marquee-infinite_black {
-    bottom: -575px;
+    bottom: -481px;
   }
 }
 @media (max-width: 768px) {
   .main__header-all .marquee-infinite_black {
-    bottom: -300px;
+    bottom: -263px;
   }
 }
 @media (max-width: 576px) {
   .main__header-all .marquee-infinite_black {
     transform: rotate(17deg);
-    bottom: -488px;
+    bottom: -411px;
+  }
+}
+@media (max-width: 320px) {
+  .main__header-all .marquee-infinite_black {
+    bottom: -421px;
   }
 }
 .main__header-all .marquee-infinite_white {
@@ -2511,12 +2549,12 @@ input[type=number]:focus {
 }
 @media (max-width: 1200px) {
   .main__header-all .marquee-infinite_white {
-    bottom: 100px;
+    bottom: 12px;
   }
 }
 @media (max-width: 992px) {
   .main__header-all .marquee-infinite_white {
-    bottom: -15px;
+    bottom: -63px;
   }
 }
 @media (max-width: 768px) {
@@ -2526,8 +2564,13 @@ input[type=number]:focus {
 }
 @media (max-width: 576px) {
   .main__header-all .marquee-infinite_white {
-    bottom: -15px;
+    bottom: -64px;
     transform: rotate(-8deg);
+  }
+}
+@media (max-width: 320px) {
+  .main__header-all .marquee-infinite_white {
+    bottom: -25px;
   }
 }
 .main__header-wrapper {
@@ -2552,6 +2595,7 @@ input[type=number]:focus {
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .main__img {
   z-index: -1;
@@ -2635,7 +2679,7 @@ input[type=number]:focus {
 }
 @media (max-width: 768px) {
   .main__menu {
-    padding-left: 0;
+    padding: 11px 0 0 0;
   }
 }
 .main h1 {
@@ -2782,7 +2826,6 @@ input[type=number]:focus {
   font-weight: var(--fw-regular);
   font-size: var(--fs-title);
   line-height: var(--lh-title);
-  height: 111px;
 }
 .main__popular {
   margin-top: var(--margin-regular);
@@ -2836,6 +2879,12 @@ input[type=number]:focus {
   line-height: var(--lh-title-secondary);
   text-transform: uppercase;
   color: var(--black);
+}
+@media (max-width: 768px) {
+  .main__mixed-text .mixed-text {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 .main__mixed-text .mixed-text span {
   transition: font-weight 0.1s linear, color 0.3s linear;
@@ -3197,14 +3246,15 @@ input[type=number]:focus {
   position: relative;
 }
 
-.order-placing {
+.all {
   display: flex;
-  gap: 125px;
 }
 
-.order-inner {
-  width: 100%;
+.order-placing {
+  display: flex;
+  justify-content: space-between;
 }
+
 .order-inner__circle-text {
   position: absolute;
   left: 27px;
@@ -3247,6 +3297,11 @@ input[type=number]:focus {
   max-width: 350px;
   width: 100%;
 }
+@media (max-width: 768px) {
+  .order-inner__enter {
+    max-width: 100%;
+  }
+}
 .order-inner__enter p {
   font-weight: var(--fw-bold);
   font-size: var(--fs-normal);
@@ -3263,6 +3318,11 @@ input[type=number]:focus {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+@media (max-width: 768px) {
+  .order-inner__enter_flex {
+    gap: 6px;
+  }
 }
 .order-inner__enter_flex input {
   padding-left: 10px;
@@ -3297,10 +3357,8 @@ input[type=number]:focus {
 .order-sidebar {
   max-width: 255px;
   width: 100%;
-  margin-top: 96px;
   position: sticky;
   height: 100%;
-  top: 80px;
   margin-bottom: var(--margin-regular);
 }
 @media (max-width: 992px) {
@@ -3373,9 +3431,9 @@ input[type=number]:focus {
   border-bottom: 1px solid var(--black);
   padding: 18px 0;
   margin-top: 20px;
-  max-width: 730px;
   width: 100%;
   overflow: hidden;
+  max-width: 730px;
 }
 .run-text p {
   font-weight: var(--fw-bold);
@@ -3486,6 +3544,14 @@ input[type=number]:focus {
 
 .radio-btn {
   margin-top: 16px;
+}
+
+.order-payment {
+  width: 100%;
+}
+
+.q {
+  width: 100%;
 }
 
 /** Карточка товара **/
@@ -3934,13 +4000,32 @@ input[type=number]:focus {
 .basket .container {
   position: relative;
 }
-.basket h3 {
+.basket h2 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
   line-height: var(--lh-96px);
   text-transform: uppercase;
   color: var(--black);
   padding-top: 20px;
+}
+@media (max-width: 768px) {
+  .basket h2 {
+    display: none;
+  }
+}
+.basket h4 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sup-title);
+  line-height: var(--lh-sup-title);
+  text-transform: uppercase;
+  color: var(--black);
+  display: none;
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .basket h4 {
+    display: block;
+  }
 }
 .basket__card {
   max-width: 730px;
@@ -4117,6 +4202,11 @@ input[type=number]:focus {
   width: 100%;
   z-index: 4;
 }
+@media (max-width: 768px) {
+  .basket .basket__runText {
+    top: -36px;
+  }
+}
 .basket .basket__runText p {
   font-weight: var(--fw-regular);
   font-size: var(--fs-primary);
@@ -4142,6 +4232,16 @@ input[type=number]:focus {
   border-top: 0;
   border-bottom: 0;
 }
+@media (max-width: 992px) {
+  .basket .basket__runText_horizontal {
+    right: 3px;
+  }
+}
+@media (max-width: 768px) {
+  .basket .basket__runText_horizontal {
+    display: none;
+  }
+}
 .basket .basket__runText_horizontal p {
   will-change: transform;
   animation: marquee-bottom-to-up 20s linear infinite;
@@ -4150,10 +4250,15 @@ input[type=number]:focus {
 .card-secondary {
   max-width: 730px;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 60px;
   display: flex;
   border-bottom: 1px solid var(--grey);
   padding-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .card-secondary {
+    margin-top: 20px;
+  }
 }
 .card-secondary picture {
   font-size: 0;
@@ -4653,12 +4758,49 @@ input[type=number]:focus {
 }
 #about-page .marquee-infinite_black {
   transform: rotate(9deg);
-  top: 370px;
+  top: 440px;
+}
+@media (max-width: 768px) {
+  #about-page .marquee-infinite_black {
+    top: 224px;
+  }
+}
+@media (max-width: 576px) {
+  #about-page .marquee-infinite_black {
+    top: 230px;
+  }
+}
+@media (max-width: 320px) {
+  #about-page .marquee-infinite_black {
+    transform: rotate(7deg);
+    top: 232px;
+  }
 }
 #about-page .marquee-infinite_white {
   transform: rotate(-6deg);
   z-index: -1;
-  top: 130px;
+  top: 67px;
+}
+@media (max-width: 992px) {
+  #about-page .marquee-infinite_white {
+    top: -43px;
+  }
+}
+@media (max-width: 768px) {
+  #about-page .marquee-infinite_white {
+    top: 45px;
+  }
+}
+@media (max-width: 576px) {
+  #about-page .marquee-infinite_white {
+    top: 6px;
+  }
+}
+@media (max-width: 320px) {
+  #about-page .marquee-infinite_white {
+    transform: rotate(-20deg);
+    top: -272px;
+  }
 }
 
 .about-main {
@@ -4999,7 +5141,6 @@ input[type=number]:focus {
   color: var(--black);
   letter-spacing: var(--ls-secondary);
   text-transform: uppercase;
-  white-space: break-spaces;
   flex-wrap: wrap;
 }
 @media (max-width: 1200px) {
@@ -5240,7 +5381,7 @@ input[type=number]:focus {
   color: var(--black);
 }
 
-.bold {
+.bold2 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-normal);
   line-height: var(--lh-normal);
@@ -5410,6 +5551,11 @@ input[type=number]:focus {
 .contacts {
   padding-top: 33px;
 }
+@media (max-width: 768px) {
+  .contacts .questions {
+    margin-top: 100px;
+  }
+}
 .contacts h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-title);
@@ -5526,10 +5672,44 @@ input[type=number]:focus {
   transform: rotate(-30deg);
   z-index: 2;
 }
+@media (max-width: 768px) {
+  #page-404 .marquee-infinite_black {
+    transform: rotate(349deg);
+    top: 94px;
+  }
+}
+@media (max-width: 320px) {
+  #page-404 .marquee-infinite_black {
+    transform: rotate(335deg);
+    top: 109px;
+  }
+}
 #page-404 .marquee-infinite_white-one {
   transform: rotate(45deg);
   right: 0;
   left: -90vw;
+}
+@media (max-width: 1200px) {
+  #page-404 .marquee-infinite_white-one {
+    right: 323px;
+  }
+}
+@media (max-width: 768px) {
+  #page-404 .marquee-infinite_white-one {
+    transform: rotate(13deg);
+    top: 84px;
+    right: inherit;
+  }
+}
+@media (max-width: 576px) {
+  #page-404 .marquee-infinite_white-one {
+    top: 150px;
+  }
+}
+@media (max-width: 320px) {
+  #page-404 .marquee-infinite_white-one {
+    top: 193px;
+  }
 }
 #page-404 .marquee-infinite_white-two {
   transform: rotate(-45deg);
@@ -5538,6 +5718,30 @@ input[type=number]:focus {
 @media (min-width: 1600px) {
   #page-404 .marquee-infinite_white-two {
     left: -5vw;
+  }
+}
+@media (max-width: 1200px) {
+  #page-404 .marquee-infinite_white-two {
+    top: -211px;
+  }
+}
+@media (max-width: 992px) {
+  #page-404 .marquee-infinite_white-two {
+    top: -396px;
+  }
+}
+@media (max-width: 768px) {
+  #page-404 .marquee-infinite_white-two {
+    transform: rotate(357deg);
+    top: 461px;
+    left: -122px;
+  }
+}
+@media (max-width: 320px) {
+  #page-404 .marquee-infinite_white-two {
+    transform: rotate(353deg);
+    top: 421px;
+    left: -159px;
   }
 }
 
@@ -5603,6 +5807,7 @@ input[type=number]:focus {
   line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--black);
+  margin-top: 100px;
 }
 @media (max-width: 768px) {
   .favourites h3 {
@@ -5657,6 +5862,11 @@ input[type=number]:focus {
   border-top: 1px solid var(--black);
   padding: 8px 0;
 }
+@media (max-width: 768px) {
+  .run-text-payment {
+    padding: 6px 0;
+  }
+}
 .run-text-payment h3 {
   font-style: italic;
   font-weight: var(--fw-bold);
@@ -5664,6 +5874,12 @@ input[type=number]:focus {
   line-height: var(--lh-title);
   text-transform: uppercase;
   color: var(--black);
+}
+@media (max-width: 768px) {
+  .run-text-payment h3 {
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+  }
 }
 
 /** Ошибка платежа **/
@@ -5681,8 +5897,21 @@ input[type=number]:focus {
   }
 }
 .payment-error .marquee-infinite_black {
-  transform: rotate(9deg);
-  top: 90px;
+  transform: rotate(5deg);
+  top: -18px;
+}
+@media (max-width: 768px) {
+  .payment-error .marquee-infinite_black {
+    transform: rotate(5deg);
+    top: inherit;
+    bottom: 28px;
+  }
+}
+@media (max-width: 320px) {
+  .payment-error .marquee-infinite_black {
+    transform: rotate(9deg);
+    bottom: -30px;
+  }
 }
 .payment-error .marquee-infinite_black .text {
   color: var(--red);
@@ -5691,6 +5920,29 @@ input[type=number]:focus {
   transform: rotate(-6deg);
   z-index: -1;
   top: -280px;
+}
+@media (max-width: 1200px) {
+  .payment-error .marquee-infinite_white {
+    top: -325px;
+  }
+}
+@media (max-width: 768px) {
+  .payment-error .marquee-infinite_white {
+    top: inherit;
+    bottom: 191px;
+    transform: rotate(-11deg);
+  }
+}
+@media (max-width: 576px) {
+  .payment-error .marquee-infinite_white {
+    bottom: 243px;
+  }
+}
+@media (max-width: 320px) {
+  .payment-error .marquee-infinite_white {
+    bottom: 219px;
+    transform: rotate(-12deg);
+  }
 }
 .payment-error h3 {
   font-weight: var(--fw-bold);
@@ -5733,16 +5985,44 @@ input[type=number]:focus {
   transform: rotate(9deg);
   top: 420px;
 }
+@media (max-width: 768px) {
+  .page-search-beginning .marquee-infinite_black {
+    top: 253px;
+  }
+}
+@media (max-width: 320px) {
+  .page-search-beginning .marquee-infinite_black {
+    top: 474px;
+    transform: rotate(22deg);
+  }
+}
 .page-search-beginning .marquee-infinite_white {
   transform: rotate(-6deg);
   z-index: -1;
   top: -10px;
 }
+@media (max-width: 768px) {
+  .page-search-beginning .marquee-infinite_white {
+    top: 78px;
+    transform: rotate(-10deg);
+  }
+}
+@media (max-width: 576px) {
+  .page-search-beginning .marquee-infinite_white {
+    top: -38px;
+    transform: rotate(-12deg);
+  }
+}
+@media (max-width: 320px) {
+  .page-search-beginning .marquee-infinite_white {
+    top: -376px;
+    transform: rotate(-34deg);
+  }
+}
 
 .page-search-nothing {
   margin-top: 40px;
   text-align: center;
-  display: none;
 }
 .page-search-nothing h3 {
   font-weight: var(--fw-bold);
@@ -5766,12 +6046,23 @@ input[type=number]:focus {
   border-top: 1px solid var(--black);
   padding: 20px 0;
 }
+@media (max-width: 768px) {
+  .run-text-nothing {
+    padding: 6px 0;
+  }
+}
 .run-text-nothing h3 {
   font-weight: var(--fw-regular);
   font-size: var(--fs-medium-title);
   line-height: var(--lh-medium);
   text-transform: uppercase;
   color: var(--run-nothing);
+}
+@media (max-width: 768px) {
+  .run-text-nothing h3 {
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+  }
 }
 @media (max-width: 768px) {
   .run-text-nothing {

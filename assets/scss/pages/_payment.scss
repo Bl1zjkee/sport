@@ -43,6 +43,9 @@
   background: var(--yellow);
   border-top: 1px solid var(--black);
   padding: 8px 0;
+  @media (max-width: $md) {
+    padding:6px 0;
+  }
   h3{
     font-style: italic;
     font-weight: var(--fw-bold);
@@ -50,5 +53,9 @@
     line-height: var(--lh-title);
     text-transform: uppercase;
     color: var(--black);
+    @media (max-width: $md) {
+      font-size: var(--fs-sup-title);
+      line-height: var(--lh-sup-title);
+    }
   }
 }

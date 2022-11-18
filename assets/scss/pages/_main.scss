@@ -10,6 +10,15 @@
     position: relative;
     z-index: 3;
     display: none;
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+    }
     @media (max-width: 960px) {
       display: block;
     }
@@ -20,6 +29,10 @@
 
     img {
       width: 100%;
+      @media (max-width: $md) {
+        width: 50px;
+        height: 38px;
+      }
     }
   }
 
@@ -40,14 +53,17 @@
           bottom: -415px;
         }
         @media (max-width: $lg) {
-        bottom: -575px;
+        bottom: -481px;
       }
         @media (max-width: $md) {
-          bottom: -300px;
+          bottom: -263px;
         }
         @media (max-width: $sm) {
           transform: rotate(17deg);
-          bottom: -488px;
+          bottom: -411px;
+        }
+        @media (max-width: $esm) {
+          bottom: -421px;
         }
       }
 
@@ -57,17 +73,20 @@
         background: var(--white);
         z-index: -1;
         @media (max-width: $xl) {
-          bottom: 100px;
+          bottom:12px;
         }
         @media (max-width: $lg) {
-          bottom: -15px;
+          bottom: -63px;
         }
         @media (max-width: $md) {
           bottom: -112px;
         }
         @media (max-width: $sm) {
-          bottom: -15px;
+          bottom: -64px;
           transform: rotate(-8deg);
+        }
+        @media (max-width: $esm) {
+          bottom: -25px;
         }
       }
     }
@@ -93,6 +112,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__img {
@@ -178,7 +198,7 @@
     padding: 21px 0 0 30px;
     max-width: 560px;
     @media (max-width: $md) {
-      padding-left: 0;
+      padding: 11px 0 0 0;
     }
   }
 
@@ -332,7 +352,6 @@
     font-weight: var(--fw-regular);
     font-size: var(--fs-title);
     line-height: var(--lh-title);
-    height: 111px;
   }
 
   &__popular {
@@ -394,6 +413,10 @@
       line-height: var(--lh-title-secondary);
       text-transform: uppercase;
       color: var(--black);
+      @media (max-width: $md) {
+        font-size: 36px;
+        line-height: 36px;
+      }
 
       span {
         transition: font-weight .1s linear, color .3s linear;
