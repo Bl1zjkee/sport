@@ -328,8 +328,9 @@ h4{
     text-transform: uppercase;
     color: var(--black);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    max-width: 85px;
+    justify-content: space-between;
     @media (max-width: $md) {
       margin-top: 10px;
     }

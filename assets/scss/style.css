@@ -938,9 +938,6 @@ input[type=number]:focus {
   cursor: pointer;
   height: 50px;
 }
-.btn_none {
-  pointer-events: none;
-}
 .btn_basket {
   width: 100%;
 }
@@ -2538,13 +2535,14 @@ input[type=number]:focus {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 .main__header-all {
   position: relative;
 }
 .main__header-all .marquee-infinite_black {
   transform: rotate(9deg);
-  bottom: -225px;
+  bottom: -363px;
 }
 @media (max-width: 1200px) {
   .main__header-all .marquee-infinite_black {
@@ -2558,7 +2556,7 @@ input[type=number]:focus {
 }
 @media (max-width: 768px) {
   .main__header-all .marquee-infinite_black {
-    bottom: -263px;
+    bottom: -285px;
   }
 }
 @media (max-width: 576px) {
@@ -2574,13 +2572,13 @@ input[type=number]:focus {
 }
 .main__header-all .marquee-infinite_white {
   transform: rotate(-6deg);
-  bottom: 105px;
+  bottom: 135px;
   background: var(--white);
   z-index: -1;
 }
 @media (max-width: 1200px) {
   .main__header-all .marquee-infinite_white {
-    bottom: 12px;
+    bottom: 107px;
   }
 }
 @media (max-width: 992px) {
@@ -2590,7 +2588,7 @@ input[type=number]:focus {
 }
 @media (max-width: 768px) {
   .main__header-all .marquee-infinite_white {
-    bottom: -112px;
+    bottom: -102px;
   }
 }
 @media (max-width: 576px) {
@@ -4401,8 +4399,9 @@ input[type=number]:focus {
   text-transform: uppercase;
   color: var(--black);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  max-width: 85px;
+  justify-content: space-between;
 }
 @media (max-width: 768px) {
   .card-secondary__color {
