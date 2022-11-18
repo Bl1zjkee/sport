@@ -70,7 +70,7 @@ if (mixedText) {
     window.addEventListener('DOMContentLoaded', function () {
         mixedTextInit();
 
-        setInterval(mixedTextAnimation, 1000);
+        setInterval(mixedTextAnimation, 2000);
     });
 }
 
@@ -395,4 +395,24 @@ if (subscriptionInput) {
         mailingTrigger.classList.remove('mailing_hide');
         subscriptionWidget.classList.remove('subscription-widget_opened');
     })
+}
+
+/** Функция получения координаты скролла от верха страницы. */
+function getBodyScrollTop() {
+    return self.pageYOffset || (document.documentElement && document.documentElement.scrollTop) || (document.body && document.body.scrollTop);
+}
+
+/** Появление меню при скролле на главной. */
+const mainMenu = document.querySelector('.header_main');
+
+if (mainMenu) {
+    window.addEventListener('scroll', function () {
+        const mainMenuHeight = mainMenu.clientHeight;
+
+        if (getBodyScrollTop() > mainMenuHeight) {
+            mainMenu.classList.add('showed-js');
+        } else {
+            mainMenu.classList.remove('showed-js');
+        }
+    });
 }

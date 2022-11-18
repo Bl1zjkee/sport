@@ -1356,6 +1356,15 @@ input[type=number]:focus {
   background: rgba(255, 255, 255, 0.2);
   animation: slide-bottom 1s linear forwards;
 }
+.header_main {
+  animation: none;
+  opacity: 0;
+  pointer-events: none;
+}
+.header_main.showed-js {
+  opacity: 1;
+  pointer-events: auto;
+}
 @media (max-width: 768px) {
   .header {
     padding: 11px 0;
