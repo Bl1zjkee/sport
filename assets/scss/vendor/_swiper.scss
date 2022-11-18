@@ -11,17 +11,6 @@
   }
 }
 
-.swiper-pagination {
-  display: none;
-  @media (max-width: $md) {
-    display: block;
-  }
-
-  &_card {
-    display: block;
-  }
-}
-
 .swiper-button-prev {
   background-image: url('../icons/main_arrow_slide.svg');
   background-repeat: no-repeat;
@@ -41,7 +30,7 @@
 }
 
 .swiper-button-next {
-  background-image: url(../icons/main_arrow_slide.svg);
+  background-image: url('../icons/main_arrow_slide.svg');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
@@ -71,7 +60,7 @@
 
 .swiper-button-prev {
   &_card {
-    background-image: url(../icons/slider_small_arrow.svg);
+    background-image: url('../icons/slider_small_arrow.svg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
@@ -83,7 +72,7 @@
 
 .swiper-button-next {
   &_card {
-    background-image: url(../icons/slider_small_arrow.svg);
+    background-image: url('../icons/slider_small_arrow.svg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
