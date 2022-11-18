@@ -226,12 +226,16 @@ input[type=number]:focus {
     max-width: 100%;
   }
 }
+.input__item_radio {
+  border: 1px dashed var(--grey);
+  padding: 22px 0 22px 10px;
+}
 .input__item input {
   max-width: 730px;
   width: 100%;
   height: 60px;
-  border: 1px dashed #B8B6B6;
-  padding-left: 20px;
+  border: 1px dashed var(--grey);
+  padding: 22px 0 22px 21px;
 }
 .input__item input::placeholder {
   font-weight: var(--fw-regular);
@@ -251,6 +255,7 @@ input[type=number]:focus {
 }
 .input__item_small {
   padding: 21px 10px;
+  border: 1px dashed var(--grey);
 }
 .input_small {
   max-width: 106px;
@@ -613,7 +618,6 @@ input[type=number]:focus {
 .vk:hover svg path {
   fill: var(--black);
   stroke: var(--yellow);
-  stroke-width: 0.2;
 }
 .vk:active svg path, .vk_active svg path {
   stroke: var(--white);
@@ -627,7 +631,6 @@ input[type=number]:focus {
 .telegram:hover svg path {
   fill: var(--black);
   stroke: var(--yellow);
-  stroke-width: 0.2;
 }
 .telegram:active svg path, .telegram_active svg path {
   stroke: var(--white);
@@ -641,7 +644,6 @@ input[type=number]:focus {
 .whatsup:hover svg path {
   fill: var(--black);
   stroke: var(--yellow);
-  stroke-width: 0.2;
 }
 .whatsup:active svg path, .whatsup_active svg path {
   stroke: var(--white);
@@ -654,7 +656,6 @@ input[type=number]:focus {
 .yt:hover svg path {
   fill: var(--black);
   stroke: var(--yellow);
-  stroke-width: 0.2;
 }
 .yt:active svg path, .yt_active svg path {
   stroke: var(--white);
@@ -790,6 +791,7 @@ input[type=number]:focus {
   .slider__flex {
     flex-direction: column-reverse;
   }
+
   .slider__col {
     flex-direction: row;
     align-items: center;
@@ -797,14 +799,17 @@ input[type=number]:focus {
     margin-top: 24px;
     width: 100%;
   }
+
   .slider__images {
     width: 100%;
   }
+
   .slider__thumbs {
     height: 100px;
     width: calc(100% - 96px);
     margin: 0 16px;
   }
+
   .slider__prev,
 .slider__next {
     height: auto;
@@ -1284,7 +1289,7 @@ input[type=number]:focus {
   background: var(--bg-black);
   padding: 24px 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .subscription {
     margin: 0 auto;
   }
@@ -2286,6 +2291,11 @@ input[type=number]:focus {
   width: 100%;
   padding: 26px 0;
 }
+@media (max-width: 768px) {
+  .subscription-widget__inner {
+    padding: 38px 0;
+  }
+}
 .subscription-widget__inner h3 {
   font-style: normal;
   font-weight: var(--fw-bold);
@@ -2296,6 +2306,7 @@ input[type=number]:focus {
   color: var(--black);
   justify-content: center;
   width: 100%;
+  display: flex;
   display: none;
 }
 @media (max-width: 768px) {
@@ -5928,6 +5939,18 @@ input[type=number]:focus {
 }
 .error .btn_all button h3 {
   font-style: normal;
+  color: var(--black);
+}
+.error .btn_all:last-child button {
+  background: var(--black);
+}
+.error .btn_all:last-child button h3 {
+  color: var(--white);
+}
+.error .btn_all:last-child button:hover {
+  background: var(--yellow);
+}
+.error .btn_all:last-child button:hover h3 {
   color: var(--black);
 }
 

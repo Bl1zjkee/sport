@@ -157,6 +157,9 @@
     background: var(--yellow);
     width: 100%;
     padding: 26px 0;
+    @media (max-width: $md) {
+      padding: 38px 0;
+    }
 
     h3 {
       font-style: normal;
@@ -168,6 +171,7 @@
       color: var(--black);
       justify-content: center;
       width: 100%;
+      display: flex;
       display: none;
       @media (max-width: $md) {
         font-size: var(--fs-normal);

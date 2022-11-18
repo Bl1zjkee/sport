@@ -123,5 +123,19 @@
         color: var(--black);
       }
     }
+    &:last-child{
+     button{
+       background: var(--black);
+       h3{
+         color: var(--white);
+       }
+       &:hover{
+         background: var(--yellow);
+         h3{
+           color: var(--black);
+         }
+       }
+     }
+    }
   }
 }
