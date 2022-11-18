@@ -59,11 +59,11 @@
 
     &_bay {
       position: absolute;
-      top: 19px;
-      right: -13px;
+      top: 20px;
+      right: -7px;
       @media (max-width: $lg) {
         width: 60px;
-        top: 2px;
+        top: 3px;
         right: 14px;
       }
 
@@ -81,11 +81,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 80px;
-    width: 100%;
     position: relative;
     z-index: 1;
     &_open-search{
       justify-content: center;
+      width: 100%;
     }
   }
 

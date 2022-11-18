@@ -52,9 +52,10 @@ a, button, label {
     max-width: 1130px;
   }
   &_order{
-    max-width: 1104px;
-    margin: 0;
-    padding: 0;
+ padding: 0 10px;
+    @media (max-width: $xl) {
+      padding: 0;
+    }
   }
 }
 

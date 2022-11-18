@@ -65,18 +65,36 @@
     display: flex;
     justify-content: center;
     button{
-      background: transparent;
+      background: var(--black);
       border: 1px solid var(--black);
       &:hover{
-        background: var(--black);
+        background: var(--white);
         h3{
-          color: var(--white);
+          color: var(--black);
         }
       }
       h3{
         font-style: normal;
-        color: var(--black);
+        color: var(--white);
+      }
+
+    }
+
+  }
+
+.btn_all:last-child{
+  button{
+    background: var(--white);
+    h3{
+      color: var(--black);
+    }
+    &:hover{
+      background: var(--black);
+      h3{
+        color: var(--white);
       }
     }
   }
 }
+}
+

@@ -106,9 +106,12 @@ a, button, label {
   }
 }
 .container_order {
-  max-width: 1104px;
-  margin: 0;
-  padding: 0;
+  padding: 0 10px;
+}
+@media (max-width: 1200px) {
+  .container_order {
+    padding: 0;
+  }
 }
 
 .wrapper {
@@ -194,7 +197,7 @@ input[type=number]:focus {
 /** Input **/
 .input {
   margin-top: 20px;
-  max-width: 720px;
+  max-width: 730px;
   width: 100%;
 }
 .input label {
@@ -951,6 +954,11 @@ input[type=number]:focus {
   width: 100%;
   height: 60px;
 }
+@media (max-width: 768px) {
+  .btn_basket button {
+    max-width: 100%;
+  }
+}
 .btn_basket button h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-normal);
@@ -1071,6 +1079,13 @@ input[type=number]:focus {
 }
 .btn_all_white:hover {
   background: var(--white);
+}
+.btn .btn-black button {
+  background: var(--black);
+}
+.btn .btn-black button:hover {
+  background: var(--white);
+  border: 1px solid var(--black);
 }
 
 .btn-collection {
@@ -1197,11 +1212,6 @@ input[type=number]:focus {
 }
 .btn-social button:active {
   background: var(--yellow);
-  border: 1px solid var(--black);
-}
-
-.btn-white button:hover {
-  background: var(--white);
   border: 1px solid var(--black);
 }
 
@@ -1386,13 +1396,13 @@ input[type=number]:focus {
 }
 .header__icon_bay {
   position: absolute;
-  top: 19px;
-  right: -13px;
+  top: 20px;
+  right: -7px;
 }
 @media (max-width: 992px) {
   .header__icon_bay {
     width: 60px;
-    top: 2px;
+    top: 3px;
     right: 14px;
   }
 }
@@ -1407,12 +1417,12 @@ input[type=number]:focus {
   align-items: center;
   justify-content: space-between;
   gap: 80px;
-  width: 100%;
   position: relative;
   z-index: 1;
 }
 .header__block_open-search {
   justify-content: center;
+  width: 100%;
 }
 
 @media (max-width: 960px) {
@@ -2347,6 +2357,7 @@ input[type=number]:focus {
   letter-spacing: var(--ls-little);
   white-space: nowrap;
   text-transform: uppercase;
+  display: flex;
   color: var(--white);
   will-change: transform;
   animation: marquee-right-to-left 20s linear infinite;
@@ -2407,6 +2418,7 @@ input[type=number]:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 22px;
 }
 .circle-text .text {
   position: absolute;
@@ -2541,7 +2553,7 @@ input[type=number]:focus {
 }
 @media (max-width: 992px) {
   .main__header-all .marquee-infinite_black {
-    bottom: -481px;
+    bottom: -545px;
   }
 }
 @media (max-width: 768px) {
@@ -2552,7 +2564,7 @@ input[type=number]:focus {
 @media (max-width: 576px) {
   .main__header-all .marquee-infinite_black {
     transform: rotate(17deg);
-    bottom: -411px;
+    bottom: -454px;
   }
 }
 @media (max-width: 320px) {
@@ -2573,7 +2585,7 @@ input[type=number]:focus {
 }
 @media (max-width: 992px) {
   .main__header-all .marquee-infinite_white {
-    bottom: -63px;
+    bottom: -16px;
   }
 }
 @media (max-width: 768px) {
@@ -2583,13 +2595,13 @@ input[type=number]:focus {
 }
 @media (max-width: 576px) {
   .main__header-all .marquee-infinite_white {
-    bottom: -64px;
-    transform: rotate(-8deg);
+    bottom: -33px;
+    transform: rotate(-11deg);
   }
 }
 @media (max-width: 320px) {
   .main__header-all .marquee-infinite_white {
-    bottom: -25px;
+    bottom: 11px;
   }
 }
 .main__header-wrapper {
@@ -2693,12 +2705,13 @@ input[type=number]:focus {
 }
 .main__menu {
   width: 100%;
-  padding: 21px 0 0 30px;
+  padding: 21px 10px 0 30px;
   max-width: 560px;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .main__menu {
     padding: 11px 0 0 0;
+    max-width: 100%;
   }
 }
 .main h1 {
@@ -3264,6 +3277,25 @@ input[type=number]:focus {
 .order {
   position: relative;
 }
+.order h3 {
+  font-style: normal;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-title);
+  line-height: var(--lh-title);
+  text-transform: uppercase;
+  color: var(--black);
+}
+@media (max-width: 1200px) {
+  .order h3 {
+    padding-left: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .order h3 {
+    font-size: var(--fs-sup-title);
+    line-height: var(--lh-sup-title);
+  }
+}
 
 .all {
   display: flex;
@@ -3274,6 +3306,9 @@ input[type=number]:focus {
   justify-content: space-between;
 }
 
+.order-inner {
+  width: 100%;
+}
 .order-inner__circle-text {
   position: absolute;
   left: 27px;
@@ -3305,6 +3340,11 @@ input[type=number]:focus {
 .order-inner__address {
   display: flex;
   gap: 30px;
+}
+@media (max-width: 1200px) {
+  .order-inner__address {
+    padding: 0 10px;
+  }
 }
 @media (max-width: 768px) {
   .order-inner__address {
@@ -3346,6 +3386,11 @@ input[type=number]:focus {
 .order-inner__enter_flex input {
   padding-left: 10px;
 }
+@media (max-width: 1200px) {
+  .order-inner__price {
+    padding: 0 10px;
+  }
+}
 @media (max-width: 768px) {
   .order-inner__price {
     margin-top: 20px;
@@ -3378,9 +3423,10 @@ input[type=number]:focus {
   width: 100%;
   position: sticky;
   height: 100%;
+  top: 0;
   margin-bottom: var(--margin-regular);
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .order-sidebar {
     display: none;
   }
@@ -3453,6 +3499,11 @@ input[type=number]:focus {
   width: 100%;
   overflow: hidden;
   max-width: 730px;
+}
+@media (max-width: 1200px) {
+  .run-text {
+    max-width: 100%;
+  }
 }
 .run-text p {
   font-weight: var(--fw-bold);
@@ -3556,6 +3607,11 @@ input[type=number]:focus {
   justify-content: space-between;
   margin-top: 10px;
 }
+@media (max-width: 1200px) {
+  .order-inner-total {
+    padding: 0 10px;
+  }
+}
 
 .sale-text {
   margin-top: 20px;
@@ -3564,13 +3620,20 @@ input[type=number]:focus {
 .radio-btn {
   margin-top: 16px;
 }
+@media (max-width: 1200px) {
+  .radio-btn {
+    padding: 0 10px;
+  }
+}
 
 .order-payment {
   width: 100%;
 }
 
-.q {
-  width: 100%;
+@media (max-width: 1200px) {
+  .order-personal {
+    padding: 0 10px;
+  }
 }
 
 /** Карточка товара **/
@@ -4411,7 +4474,7 @@ input[type=number]:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--grey);
   padding-bottom: 5px;
 }
 @media (max-width: 992px) {
@@ -4547,9 +4610,10 @@ input[type=number]:focus {
   content: "";
   max-width: 255px;
   width: 100%;
-  border: 3px solid var(--black);
+  background: var(--black);
+  height: 6px;
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   right: 0;
   display: none;
 }
@@ -5976,18 +6040,30 @@ input[type=number]:focus {
   justify-content: center;
 }
 .payment-error .btn_all button {
-  background: transparent;
+  background: var(--black);
   border: 1px solid var(--black);
 }
 .payment-error .btn_all button:hover {
-  background: var(--black);
+  background: var(--white);
 }
 .payment-error .btn_all button:hover h3 {
-  color: var(--white);
+  color: var(--black);
 }
 .payment-error .btn_all button h3 {
   font-style: normal;
+  color: var(--white);
+}
+.payment-error .btn_all:last-child button {
+  background: var(--white);
+}
+.payment-error .btn_all:last-child button h3 {
   color: var(--black);
+}
+.payment-error .btn_all:last-child button:hover {
+  background: var(--black);
+}
+.payment-error .btn_all:last-child button:hover h3 {
+  color: var(--white);
 }
 
 /** Поиск **/

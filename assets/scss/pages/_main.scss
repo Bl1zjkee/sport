@@ -53,14 +53,14 @@
           bottom: -415px;
         }
         @media (max-width: $lg) {
-        bottom: -481px;
+        bottom: -545px;
       }
         @media (max-width: $md) {
           bottom: -263px;
         }
         @media (max-width: $sm) {
           transform: rotate(17deg);
-          bottom: -411px;
+          bottom: -454px;
         }
         @media (max-width: $esm) {
           bottom: -421px;
@@ -76,17 +76,17 @@
           bottom:12px;
         }
         @media (max-width: $lg) {
-          bottom: -63px;
+          bottom: -16px;
         }
         @media (max-width: $md) {
           bottom: -112px;
         }
         @media (max-width: $sm) {
-          bottom: -64px;
-          transform: rotate(-8deg);
+          bottom: -33px;
+          transform: rotate(-11deg);
         }
         @media (max-width: $esm) {
-          bottom: -25px;
+          bottom: 11px;
         }
       }
     }
@@ -195,10 +195,11 @@
 
   &__menu {
     width: 100%;
-    padding: 21px 0 0 30px;
+    padding: 21px 10px 0 30px;
     max-width: 560px;
-    @media (max-width: $md) {
+    @media (max-width: $lg) {
       padding: 11px 0 0 0;
+      max-width: 100%;
     }
   }
 

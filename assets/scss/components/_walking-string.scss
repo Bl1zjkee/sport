@@ -63,6 +63,7 @@
     letter-spacing: var(--ls-little);
     white-space: nowrap;
     text-transform: uppercase;
+    display: flex;
     color: var(--white);
     will-change: transform;
     animation: marquee-right-to-left 20s linear infinite;
