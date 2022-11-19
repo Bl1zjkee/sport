@@ -189,60 +189,53 @@ function generateMixedClass(...args) {
     return classString;
 }
 
-/** Swiper галереи на главной странице. */
-const mainGallerySwiper = new Swiper('.main__gallery .swiper', {
-    slidersPerView: 3,
-    spaceBetween: 40,
-    loop: true,
-    // loopedSlides: 2,
-    // autoplay: true,
-    freeMode: true,
-    // speed: 5000,
-    // freeModeMomentum: false
-});
-
 /** Swiper популярных товаров на главной. */
 const popularSwiper = new Swiper('.popular__list .swiper', {
     spaceBetween: 30,
-    slidersPerView: 3,
+    // loop: true,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.popular__list .swiper-button-next',
+        prevEl: '.popular__list .swiper-button-prev',
     },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.popular__list .swiper-pagination',
         clickable: true,
     },
     breakpoints: {
         320: {
             slidesPerView: 1,
         },
-        // when window width is <= 320px
         768: {
             slidesPerView: 2,
         },
-        2560: {
+        1024: {
             slidesPerView: 3,
         },
-
     },
 });
 
-
-new Swiper('.twoSwiper', {
-    slidersPerView: 2,
-    direction: 'vertical',
+/** Swiper галереи на главной странице. */
+const mainGallerySwiper = new Swiper('.main__gallery .swiper-gallery', {
+    slidesPerView: 'auto',
+    loop: true,
     freeMode: true,
-    navigation: {
-        nextEl: '.s-button-next',
-        prevEl: '.swiper-button-prev_card',
+    simulateTouch: false,
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: true,
     },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+    freeModeMomentum: false,
+    speed: 5000,
+    breakpoints: {
+        320: {
+            spaceBetween: 6,
+        },
+        768: {
+            spaceBetween: 40,
+        },
     },
-
 });
+
 
 // Инициализация превью слайдера
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору

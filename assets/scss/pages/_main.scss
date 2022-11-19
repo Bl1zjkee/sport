@@ -406,9 +406,33 @@
     }
   }
 
+  &__mixed-text-link{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
   &__mixed-text {
     margin-bottom: var(--margin-regular);
     position: relative;
+
+    .container {
+      position: relative;
+    }
+    
+    h3 {
+      font-size: 140px;
+      line-height: 70px;
+      margin-bottom: 80px;
+      font-weight: var(--fw-bold);
+      text-transform: uppercase;
+
+      @media (max-width: $md) {
+        font-size: 60px;
+        line-height: 36px;
+        margin-bottom: 40px;
+      }
+    }
 
     .mixed-text {
       font-weight: var(--fw-bold);
@@ -416,7 +440,10 @@
       line-height: var(--lh-title-secondary);
       text-transform: uppercase;
       color: var(--black);
+      padding-left: 80px;
+
       @media (max-width: $md) {
+        padding-left: 0;
         font-size: 36px;
         line-height: 36px;
       }
@@ -430,23 +457,24 @@
   &__gallery {
     margin-bottom: var(--margin-secondary);
 
+    .swiper-slide {
+      width: auto;
 
+      img {
+        max-width: 250px;
+        width: 100%;
+        
+        @media (max-width: $md) {
+          max-width: 137px;
+        }
+      }
+    }
 
-    //.swiper-wrapper {
-    //  -webkit-transition-timing-function: linear !important;
-    //  -o-transition-timing-function: linear !important;
-    //  transition-timing-function: linear !important;
-    //}
-
-    //.swiper-slide {
-    //  max-width: 250px;
-    //  width: auto;
-    //}
-
-    //img {
-    //  max-width: 250px;
-    //  width: 100%;
-    //}
+    .swiper-wrapper {
+      -webkit-transition-timing-function: linear !important;
+      -o-transition-timing-function: linear !important;
+      transition-timing-function: linear !important;
+    }
   }
 }
 
@@ -461,11 +489,23 @@
     position: relative;
     display: flex;
     align-items: center;
-    gap: 30px;
     margin-bottom: 70px;
 
-    .swiper-slide {
+    /*.swiper-slide {
       max-width: 350px;
+    }*/
+
+    .swiper {
+      padding-top: 20px;
+    }
+
+    .swiper-pagination {
+      display: none;
+      bottom: -30px;
+
+      @media (max-width: $xl) {
+        display: block;
+      }
     }
   }
 
