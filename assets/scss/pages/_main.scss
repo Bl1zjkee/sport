@@ -408,6 +408,7 @@
 
   &__mixed-text {
     margin-bottom: var(--margin-regular);
+    position: relative;
 
     .mixed-text {
       font-weight: var(--fw-bold);
