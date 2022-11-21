@@ -2,7 +2,7 @@
   display: flex;
   margin-top: 60px;
   @media (max-width: $xl) {
-    max-width: 300px;
+
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
@@ -10,6 +10,9 @@
   }
   @media (max-width: $md) {
 margin-top: 40px;
+  }
+  @media (max-width: $sm) {
+    max-width: 300px;
   }
   h4{
     font-weight: var(--fw-bold);
@@ -71,6 +74,9 @@ margin-top: 40px;
   }
 
   &__back {
+    @media (max-width: $xl) {
+      margin-top: 40px;
+    }
     width: 100%;
     display: flex;
     align-items: center;
@@ -324,6 +330,9 @@ margin-top: 40px;
 }
 
 .card-title {
+  @media (max-width: $md) {
+    margin-top: 40px;
+  }
   h3 {
     font-weight: var(--fw-bold);
     font-size: var(--fs-sup-title);
@@ -466,16 +475,16 @@ margin-top: 40px;
   display: flex;
   align-items: flex-start;
 
-  @media (max-width: $xl) {
+  @media (max-width: $sm) {
     max-height: 400px;
-    margin-bottom: 40px;
+
   }
 
   picture {
     display: block;
     width: 100%;
     height: 100%;
-    @media (max-width: $xl) {
+    @media (max-width: $sm) {
       max-width: 300px;
     }
   }
@@ -483,7 +492,7 @@ margin-top: 40px;
   img {
     width: 100%;
     height: 100%;
-    @media (max-width: $xl) {
+    @media (max-width: $sm) {
       max-width: 300px;
     }
   }
@@ -493,10 +502,16 @@ margin-top: 40px;
 
     @media (max-width: $xl) {
       display: block;
-bottom: 250px;
+bottom: 60px;
     }
     @media (max-width: $md) {
-      bottom: 225px;
+      bottom: 70px;
+    }
+    @media (max-width: $sm) {
+      bottom: 138px;
+    }
+    @media (max-width: $esm) {
+      bottom: 111px;
     }
   }
 
