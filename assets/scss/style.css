@@ -13,7 +13,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -791,6 +791,7 @@ input[type=number]:focus {
   .slider__flex {
     flex-direction: column-reverse;
   }
+
   .slider__col {
     flex-direction: row;
     align-items: center;
@@ -798,14 +799,17 @@ input[type=number]:focus {
     margin-top: 24px;
     width: 100%;
   }
+
   .slider__images {
     width: 100%;
   }
+
   .slider__thumbs {
     height: 100px;
     width: calc(100% - 96px);
     margin: 0 16px;
   }
+
   .slider__prev,
 .slider__next {
     height: auto;
@@ -939,12 +943,34 @@ input[type=number]:focus {
 
 /** btn**/
 .btn {
-  padding: 13px 45px;
   background: var(--yellow);
   border: 1px solid var(--black);
   border-left: none;
   cursor: pointer;
   height: 50px;
+  width: 96px;
+}
+.btn:hover {
+  background: var(--black);
+}
+.btn:hover svg path {
+  stroke: var(--yellow);
+  fill: transparent;
+}
+.btn:active {
+  border: 1px solid var(--yellow);
+  background: var(--black);
+}
+.btn:active svg path {
+  stroke: var(--yellow);
+  fill: transparent;
+}
+.btn:focus {
+  border: 3px solid var(--black);
+}
+.btn:focus svg path {
+  stroke: var(--black);
+  fill: transparent;
 }
 .btn_basket {
   width: 100%;
@@ -989,26 +1015,6 @@ input[type=number]:focus {
 }
 .btn_basket button:focus h3 {
   color: var(--white);
-}
-.btn:hover {
-  background: var(--black);
-}
-.btn:hover svg path {
-  fill: var(--yellow);
-}
-.btn:active {
-  background: var(--black);
-  border: 1px solid var(--yellow);
-}
-.btn:active svg path {
-  fill: var(--yellow);
-}
-.btn:focus {
-  background: var(--yellow);
-  border: 3px solid var(--black);
-}
-.btn:focus svg path {
-  fill: var(--black);
 }
 .btn_window-enter {
   margin-top: 20px;
@@ -1319,6 +1325,17 @@ input[type=number]:focus {
   stroke: var(--yellow);
   fill: transparent;
 }
+.subscription__small:active {
+  border: 1px solid var(--yellow);
+}
+.subscription__small:active svg path {
+  stroke: var(--yellow);
+  fill: transparent;
+}
+.subscription__small:focus svg path {
+  stroke: var(--black);
+  fill: transparent;
+}
 .subscription__item {
   display: flex;
 }
@@ -1439,7 +1456,7 @@ input[type=number]:focus {
   width: 100%;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 992px) {
   .nav {
     display: none;
   }
@@ -2581,7 +2598,7 @@ input[type=number]:focus {
   right: -10px;
   bottom: -10px;
 }
-@media (max-width: 960px) {
+@media (max-width: 992px) {
   .main__burger-menu {
     display: flex;
   }
@@ -2971,6 +2988,35 @@ input[type=number]:focus {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+@media (max-width: 1200px) {
+  .main__mixed-text-link {
+    right: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .main__mixed-text-link {
+    position: sticky;
+    margin-top: 10px;
+  }
+}
+.main__mixed-text-link a {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-normal);
+  line-height: var(--lh-normal);
+  text-transform: uppercase;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+}
+.main__mixed-text-link a:after {
+  content: "";
+  display: block;
+  background-image: url("../icons/sale_arrow.svg");
+  width: 20px;
+  height: 8px;
+  margin-left: 6px;
 }
 .main__mixed-text {
   margin-bottom: var(--margin-regular);
@@ -4520,7 +4566,7 @@ input[type=number]:focus {
   color: var(--black);
   display: flex;
   align-items: center;
-  max-width: 85px;
+  max-width: 118px;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
@@ -6388,6 +6434,8 @@ input[type=number]:focus {
   --line: #EAEAEA;
   --run-nothing: #6A6A6A;
   --window-size-line: #323232;
+  --pagination-standart:#C8C8C8;
+  --pagination-active:#606060;
 }
 
 /** Переменные SCSS. */
@@ -6543,14 +6591,31 @@ input[type=number]:focus {
   display: none;
 }
 
-.swiper-pagination-bullet {
-  background: var(--darkgrey);
+.swiper-pagination-bullet-active {
+  background: var(--pagination-standart);
   width: 6px;
   height: 6px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet {
+  background: var(--pagination-active);
+  width: 6px;
+  height: 6px;
+  position: relative;
+}
+.swiper-pagination-bullet:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 2px;
+  margin: 7px;
 }
 
 .swiper-button-prev_card {

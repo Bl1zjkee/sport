@@ -43,6 +43,24 @@
         }
       }
     }
+    &:active{
+      border: 1px solid var(--yellow);
+      svg {
+        path {
+          stroke: var(--yellow);
+          fill: transparent;
+        }
+      }
+    }
+    &:focus{
+      svg {
+        path {
+          stroke: var(--black);
+          fill: transparent;
+        }
+      }
+
+    }
   }
 
   &__item {
