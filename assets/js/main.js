@@ -258,7 +258,7 @@ const sliderThumbs = new Swiper('.slider__thumbs', { // ищем слайдер 
     // задаем параметры
     direction: 'vertical', // вертикальная прокрутка
     slidesPerView: 2, // показывать по 3 превью
-    spaceBetween:20, // расстояние между слайдами
+    spaceBetween: 20, // расстояние между слайдами
     navigation: { // задаем кнопки навигации
         nextEl: '.slider__next', // кнопка Next
         prevEl: '.slider__prev' // кнопка Prev
@@ -374,9 +374,9 @@ const closeWidget = document.querySelector('.close-widget');
 const subscriptionPlaceholder = document.querySelector('.subscription-widget__placeholder');
 const subscriptionInput = document.getElementById('email-subscription');
 const subscriptionWidget = document.querySelector('.subscription-widget');
-
+let subscriptionSendBtn;
 if (subscriptionWidget) {
-    const subscriptionSendBtn = subscriptionWidget.querySelector('.tosend');
+    subscriptionSendBtn = subscriptionWidget.querySelector('.tosend');
 }
 
 if (subscriptionInput) {
@@ -430,5 +430,17 @@ if (tableSizeTrigger) {
     tableSizeTrigger.addEventListener('click', function () {
         documentOverflowHidden();
         document.querySelector('.overlay-sizes').classList.add('overlay_opened');
+    });
+}
+
+/** Появление окна входа в аккаунт. */
+const loginWindow = document.querySelector('.overlay-login');
+
+if (loginWindow) {
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('.cabinet-trigger')) {
+            documentOverflowHidden();
+            loginWindow.classList.add('overlay_opened');
+        }
     });
 }
