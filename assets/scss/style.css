@@ -53,7 +53,6 @@ table {
 
 * {
   box-sizing: border-box;
-  transition: all 0.2s linear;
 }
 *:after, *:before {
   box-sizing: border-box;
@@ -75,6 +74,7 @@ body.hidden {
 
 button {
   font-family: var(--font-family);
+  transition: all 0.2s linear;
 }
 
 ul {
@@ -697,33 +697,6 @@ input[type=number]:focus {
   top: 14px;
 }
 
-.slider {
-  color: #fff;
-}
-
-.slider .swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.slider__flex {
-  display: flex;
-  align-items: flex-start;
-}
-
-.slider__col {
-  display: flex;
-  flex-direction: column;
-  width: 160px;
-  margin-right: 32px;
-  align-items: center;
-}
-@media (max-width: 1200px) {
-  .slider__col {
-    display: none;
-  }
-}
-
 .slider__prev {
   cursor: pointer;
   text-align: center;
@@ -739,7 +712,7 @@ input[type=number]:focus {
   user-select: none;
   background-image: url("../icons/arrow_slider_product-card.svg");
   background-repeat: no-repeat;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
 
 .slider__next {
@@ -758,46 +731,12 @@ input[type=number]:focus {
   -ms-user-select: none;
   user-select: none;
   transform: rotate(180deg);
-  margin-top: 10px;
+  margin: 10px auto 0;
 }
 
 .slider__prev:focus,
 .slider__next:focus {
   outline: none;
-}
-
-.slider__thumbs {
-  height: 304px;
-}
-
-.slider__thumbs .slider__image {
-  transition: 0.25s;
-}
-
-.slider__images {
-  height: 400px;
-}
-
-.slider__images .slider__image img {
-  transition: 3s;
-}
-
-.slider__images .slider__image:hover img {
-  transform: scale(1.1);
-}
-
-.slider__image {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.slider__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 @media (max-width: 767.98px) {
@@ -1788,8 +1727,6 @@ input[type=number]:focus {
   align-items: center;
   justify-content: center;
   padding: 18px 16px 18px 17px;
-}
-.new p {
   font-weight: var(--fw-bold);
   font-size: var(--fs-normal);
   line-height: var(--lh-normal);
@@ -2058,30 +1995,6 @@ input[type=number]:focus {
 .window-size__number:last-child {
   border: none;
   padding-bottom: 0;
-}
-
-.overlay {
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 11;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(7px);
-  align-items: center;
-  justify-content: center;
-}
-.overlay_opened {
-  display: flex;
-}
-.overlay_opened .mobile-menu {
-  animation: slide-right 0.5s ease-in forwards;
-}
-.overlay.mobile-menu-overlay {
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 /** Мобильное меню **/
@@ -2424,7 +2337,7 @@ input[type=number]:focus {
   color: var(--white);
   gap: 12px;
   will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
 }
 .marquee-infinite .text > * {
   white-space: nowrap;
@@ -2453,11 +2366,10 @@ input[type=number]:focus {
   display: flex;
   color: var(--white);
   will-change: transform;
-  animation: marquee-right-to-left 20s linear infinite;
-  display: flex;
+  animation: marquee-right-to-left 40s linear infinite;
 }
 .marquee-small_to-right .text {
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
 }
 
 .marquee-medium {
@@ -2478,7 +2390,7 @@ input[type=number]:focus {
   white-space: nowrap;
   text-transform: uppercase;
   will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
 }
 
 .run-text-animation {
@@ -2486,7 +2398,7 @@ input[type=number]:focus {
 }
 .run-text-animation .text {
   will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
   display: flex;
   gap: 4px;
 }
@@ -2494,7 +2406,7 @@ input[type=number]:focus {
   white-space: nowrap;
 }
 .run-text-animation_to-left .text {
-  animation: marquee-right-to-left 20s linear infinite;
+  animation: marquee-right-to-left 40s linear infinite;
 }
 .run-text-animation_to-bottom .text {
   animation: marquee-up-to-bottom 8s linear infinite;
@@ -2517,7 +2429,7 @@ input[type=number]:focus {
 .circle-text .text {
   position: absolute;
   left: 0;
-  animation: rounded-text 20s linear infinite forwards;
+  animation: rounded-text 40s linear infinite forwards;
 }
 
 /** Аккордеон. */
@@ -2591,6 +2503,31 @@ input[type=number]:focus {
   fill: var(--yellow);
 }
 
+/** Overlay. */
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(7px);
+  align-items: center;
+  justify-content: center;
+}
+.overlay > div {
+  animation: slide-right 0.5s ease-in forwards;
+}
+.overlay_opened {
+  display: flex;
+}
+.overlay.mobile-menu-overlay {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 /** block **/
 /** Главная **/
 #main-page {
@@ -2636,6 +2573,9 @@ input[type=number]:focus {
 }
 .main__header-all {
   position: relative;
+}
+.main__header-all .marquee-infinite .text {
+  animation: marquee-left-to-right 60s linear infinite;
 }
 .main__header-all .marquee-infinite_black {
   transform: rotate(9deg);
@@ -2816,7 +2756,6 @@ input[type=number]:focus {
   text-transform: uppercase;
   color: var(--black);
   margin: 122px auto 0;
-  animation: slide-left 1s linear forwards;
 }
 @media (max-width: 1200px) {
   .main h1 {
@@ -3818,16 +3757,30 @@ input[type=number]:focus {
 }
 @media (max-width: 1200px) {
   .product-card {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media (max-width: 1200px) {
-  .product-card {
     max-width: 300px;
     width: 100%;
-    margin: 0 auto;
-    margin-top: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 60px auto 0;
+  }
+}
+@media (max-width: 768px) {
+  .product-card {
+    margin-top: 40px;
+  }
+}
+.product-card h4 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sup-title);
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--black);
+  display: none;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .product-card h4 {
+    display: block;
   }
 }
 .product-card__gallery {
@@ -3958,6 +3911,8 @@ input[type=number]:focus {
     display: flex;
     justify-content: end;
     flex-wrap: wrap;
+    max-width: 292px;
+    width: 100%;
   }
 }
 .product-card__color {
@@ -4120,9 +4075,6 @@ input[type=number]:focus {
 .product-card__popular {
   margin-bottom: 100px;
 }
-.card-title {
-  margin-top: 20px;
-}
 .card-title h3 {
   font-weight: var(--fw-bold);
   font-size: var(--fs-sup-title);
@@ -4251,6 +4203,81 @@ input[type=number]:focus {
   color: var(--black);
   display: flex;
   align-items: center;
+}
+
+.product-slider {
+  max-width: 635px;
+  width: 100%;
+  max-height: 500px;
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 1200px) {
+  .product-slider {
+    max-height: 400px;
+    margin-bottom: 40px;
+  }
+}
+.product-slider picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .product-slider picture {
+    max-width: 300px;
+  }
+}
+.product-slider img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1200px) {
+  .product-slider img {
+    max-width: 300px;
+  }
+}
+.product-slider .swiper-pagination {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .product-slider .swiper-pagination {
+    display: block;
+    bottom: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .product-slider .swiper-pagination {
+    bottom: 225px;
+  }
+}
+.product-slider .swiper-button-disabled {
+  opacity: 0.6;
+}
+.product-slider .slider__col {
+  margin-right: 30px;
+}
+@media (max-width: 1200px) {
+  .product-slider .slider__col {
+    display: none;
+  }
+}
+.product-slider .slider__thumbs {
+  max-height: 500px;
+  width: 160px;
+}
+.product-slider .slider__thumbs .swiper-slide {
+  max-height: 228px;
+}
+.product-slider .slider__thumbs .swiper-slide:last-of-type {
+  margin-bottom: 10px !important;
+}
+.product-slider .slider__images {
+  height: 100%;
+}
+.product-slider .slider__images .swiper-slide {
+  max-height: 500px;
+  position: relative;
 }
 
 /** Корзина **/
@@ -4476,7 +4503,7 @@ input[type=number]:focus {
   color: var(--black);
   white-space: nowrap;
   will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
 }
 .basket .basket__runText_horizontal {
   width: auto;
@@ -4504,7 +4531,7 @@ input[type=number]:focus {
 }
 .basket .basket__runText_horizontal p {
   will-change: transform;
-  animation: marquee-bottom-to-up 20s linear infinite;
+  animation: marquee-bottom-to-up 40s linear infinite;
 }
 
 .card-secondary {
