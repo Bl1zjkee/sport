@@ -5,10 +5,11 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  @media (max-width: $md) {
+  @media (max-width: $xl) {
     max-width: 300px;
     width: 100%;
     margin: 0 auto;
+    margin-top: 60px;
   }
 
   &__gallery {
@@ -197,13 +198,13 @@ display: flex;
   &__basket {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+  gap: 30px;
     margin-top: 110px;
     @media (max-width: $xl) {
       margin-top: 30px;
+      gap: 6px;
     }
     @media (max-width: $md) {
-      gap: 6px;
       margin-top: 20px;
     }
   }
@@ -214,9 +215,10 @@ display: flex;
     width: 100%;
     display: flex;
     align-items: center;
-    @media (max-width: $md) {
+    height: 60px;
+    @media (max-width:$xl) {
       max-width: 96px;
-
+      height: 55px;
     }
 
     input {
@@ -253,7 +255,7 @@ display: flex;
       letter-spacing: var(--ls-little);
       text-transform: uppercase;
       color: var(--black);
-      @media (max-width: $md) {
+      @media (max-width: $xl) {
         font-size: var(--fs-normal);
         padding-left: 13px;
       }

@@ -1,13 +1,49 @@
 @import "../abstract/variables";
+
 .btn {
-  padding: 13px 45px;
   background: var(--yellow);
   border: 1px solid var(--black);
   border-left: none;
   cursor: pointer;
   height: 50px;
+  width: 96px;
+  &:hover {
+    background: var(--black);
+    svg {
+      path {
+        stroke: var(--yellow);
+        fill: transparent;
+      }
+    }
+  }
+
+  &:active {
+    border: 1px solid var(--yellow);
+    background: var(--black);
+    svg {
+      path {
+        stroke: var(--yellow);
+        fill: transparent;
+      }
+    }
+  }
+
+  &:focus {
+    border: 3px solid var(--black);
+    svg {
+      path {
+        stroke: var(--black);
+        fill: transparent;
+      }
+    }
+
+  }
+
+
   &_basket {
+    max-width: 255px;
     width: 100%;
+
     button {
       background: var(--black);
       border: none;
@@ -17,10 +53,14 @@
       align-items: center;
       width: 100%;
       height: 60px;
+      @media (max-width:$xl ) {
+        height: 55px;
+      }
       @media (max-width: $md) {
         max-width: 100%;
       }
-      h3{
+
+      h3 {
         font-weight: var(--fw-bold);
         font-size: var(--fs-normal);
         line-height: var(--lh-normal);
@@ -29,6 +69,7 @@
         color: var(--white);
         margin-top: 0;
       }
+
       &:hover {
         border: 1px solid var(--yellow);
         background: var(--yellow);
@@ -38,9 +79,11 @@
           color: var(--black);
         }
       }
-&:active{
-  border: 1px solid var(--black);
-}
+
+      &:active {
+        border: 1px solid var(--black);
+      }
+
       &:focus {
         border: 1px solid var(--yellow);
         background: var(--black);
@@ -51,62 +94,36 @@
       }
     }
   }
-  &:hover {
-    background: var(--black);
 
-    svg {
-      path {
-        fill: var(--yellow);
-      }
-    }
-  }
 
-  &:active {
-    background: var(--black);
-    border: 1px solid var(--yellow);
-
-    svg {
-      path {
-        fill: var(--yellow);
-      }
-    }
-  }
-
-  &:focus {
-    background: var(--yellow);
-    border: 3px solid var(--black);
-
-    svg {
-      path {
-        fill: var(--black);
-      }
-    }
-  }
-&_window-enter{
-  margin-top: 20px;
-  max-width: 460px;
-  width: 100%;
-  @media (max-width: $md){
-    max-width: 100%;
-  }
-  button {
-background: var(--yellow);
-    padding: 18px 0;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-normal);
-    line-height: var(--lh-normal);
-    letter-spacing:var(--ls-medium);
-    text-transform: uppercase;
-    color: var(--black);
-    border: 1px solid var(--black);
+  &_window-enter {
+    margin-top: 20px;
+    max-width: 460px;
     width: 100%;
-    &:hover{
-      background: var(--black);
-      color: var(--yellow);
-      border: 1px solid var(--yellow);
+    @media (max-width: $md) {
+      max-width: 100%;
     }
-}
-}
+
+    button {
+      background: var(--yellow);
+      padding: 18px 0;
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
+      letter-spacing: var(--ls-medium);
+      text-transform: uppercase;
+      color: var(--black);
+      border: 1px solid var(--black);
+      width: 100%;
+
+      &:hover {
+        background: var(--black);
+        color: var(--yellow);
+        border: 1px solid var(--yellow);
+      }
+    }
+  }
+
   &_all {
     button {
       background: var(--black);
@@ -115,13 +132,14 @@ background: var(--yellow);
       align-items: center;
       justify-content: center;
       border: none;
-max-width: 255px;
+      max-width: 255px;
       width: 100%;
       height: 60px;
       margin-top: 10px;
       @media (max-width: $md) {
         max-width: 100%;
       }
+
       h3 {
         font-weight: var(--fw-bold);
         font-size: var(--fs-normal);
@@ -144,39 +162,44 @@ max-width: 255px;
         background: var(--yellow);
         border: 1px solid var(--black);
 
-  }
+      }
 
-}
-    &_repeat{
-      &:hover{
-        svg{
-          path{
+    }
+
+    &_repeat {
+      &:hover {
+        svg {
+          path {
             fill: var(--black);
           }
         }
       }
-      h3{
+
+      h3 {
         display: flex;
-        align-items:center;
-        svg{
+        align-items: center;
+
+        svg {
           margin-left: 10px;
         }
 
       }
 
     }
-    &_white{
-      &:hover{
+
+    &_white {
+      &:hover {
         background: var(--white);
       }
     }
   }
 
-  .btn-black{
+  .btn-black {
 
-    button{
+    button {
       background: var(--black);
-      &:hover{
+
+      &:hover {
         background: var(--white);
         border: 1px solid var(--black);
       }
@@ -185,7 +208,7 @@ max-width: 255px;
 
 }
 
-.btn-collection{
+.btn-collection {
   background: var(--yellow);
   padding: 24px 0 24px 0;
   display: flex;
@@ -198,6 +221,7 @@ max-width: 255px;
   @media (max-width: $lg) {
     margin: 0 auto;
   }
+
   p {
     font-weight: var(--fw-bold);
     font-size: var(--fs-secondary);
@@ -208,9 +232,10 @@ max-width: 255px;
     display: flex;
     align-items: center;
 
-    svg{
+    svg {
       margin-left: 10px;
-      path{
+
+      path {
 
       }
     }
@@ -218,31 +243,32 @@ max-width: 255px;
 
   &:hover {
     background: var(--black);
+
     p {
       color: var(--yellow);
 
-      svg{
+      svg {
         transform: rotate(45deg);
         transition: 1s;
-        path{
-          fill:var(--yellow);
+
+        path {
+          fill: var(--yellow);
         }
       }
     }
   }
 
-    &_decoration{
-      button{
-        max-width: 255px;
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-        @media (max-width: $sm) {
-       max-width: 100% ;
-        }
+  &_decoration {
+    button {
+      max-width: 255px;
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      @media (max-width: $sm) {
+        max-width: 100%;
       }
     }
-
+  }
 
 
   &:active {
@@ -252,29 +278,32 @@ max-width: 255px;
     p {
       color: var(--yellow);
 
-      svg{
+      svg {
         transform: rotate(45deg);
-        path{
-          fill:var(--yellow);
+
+        path {
+          fill: var(--yellow);
         }
       }
     }
 
 
-  &:focus {
-    background: var(--yellow);
-    border: 1px solid var(--black);
+    &:focus {
+      background: var(--yellow);
+      border: 1px solid var(--black);
 
-    p {
-      color: var(--black);
-      svg{
-        transform: rotate(0);
-        path{
-          fill:var(--black);
+      p {
+        color: var(--black);
+
+        svg {
+          transform: rotate(0);
+
+          path {
+            fill: var(--black);
+          }
         }
       }
-      }
-      }
+    }
   }
 }
 
@@ -285,10 +314,11 @@ max-width: 255px;
   align-items: center;
   gap: 30px;
   margin-top: 10px;
-@media (max-width: $md) {
-  max-width:100%;
-  gap: 6px;
-}
+  @media (max-width: $md) {
+    max-width: 100%;
+    gap: 6px;
+  }
+
   button {
     color: var(--yellow);
     padding: 19px 0;
