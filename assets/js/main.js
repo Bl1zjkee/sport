@@ -59,13 +59,24 @@ circleText.forEach(textBlock => {
 /** Блок с текстом для анимации изменения визуала слов. */
 const mixedText = document.querySelector('.mixed-text');
 
-/** Классы отвечающие за начертание (style). */
-const classesStyleArr = ['normal', 'italic'],
+/** Классы со свойствами для анимаций. */
+const ANIMATION_OPTIONS = {
+    /** Классы отвечающие за начертание. */
+    classesStyleArr: ['normal', 'italic'],
     /** Классы отвечающие за цвет. */
-    classesColorArr = ['gray', 'black', 'yellow'],
+    classesColorArr: ['gray', 'black', 'yellow'],
     /** Классы отвечающие за жирность шрифта. */
-    classesWeightArr = ['regular', 'medium', 'semi-bold', 'bold', 'bolder'];
+    classesWeightArr: ['regular', 'medium', 'semi-bold', 'bold', 'bolder']
+}
 
+/** Переменные для хранения классов. */
+const CLASS_VARIABLES = {
+    newClass: '',
+    oldClass: '',
+    similarClasses: ''
+}
+
+/** Загрузка скрипта. */
 if (mixedText) {
     window.addEventListener('DOMContentLoaded', function () {
         mixedTextInit();
@@ -74,13 +85,13 @@ if (mixedText) {
     });
 }
 
-let newClass = '',
-    oldClass = '';
-
-let similarClasses;
-
 /** Скрипт изменения слов в тексте при загрузке страницы. */
 function mixedTextInit() {
+    /** Классы стилей. */
+    const {classesStyleArr, classesColorArr, classesWeightArr} = ANIMATION_OPTIONS;
+    /** Переменные для хранения классов. */
+    let {newClass, oldClass, similarClasses} = CLASS_VARIABLES;
+
     /** Собираем массив из слов и символов. */
     const words = mixedText.textContent.split(' ');
 
@@ -115,6 +126,11 @@ function mixedTextInit() {
 
 /** Функция анимации mixed текста. */
 function mixedTextAnimation() {
+    /** Классы стилей. */
+    const {classesStyleArr, classesColorArr, classesWeightArr} = ANIMATION_OPTIONS;
+    /** Переменные для хранения классов. */
+    let {newClass, oldClass, similarClasses} = CLASS_VARIABLES;
+
     /** Массив для случайных индексов. */
     const randomIndexesArr = [];
 
