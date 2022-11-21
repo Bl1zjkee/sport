@@ -92,12 +92,16 @@ margin: 0 auto;
   align-items: center;
   justify-content: center;
 
+  & > div {
+    animation: slide-right .5s ease-in forwards;
+  }
+
   &_opened {
     display: flex;
 
-    .mobile-menu {
-      animation: slide-right .5s ease-in forwards;
-    }
+    //.mobile-menu {
+    //  animation: slide-right .5s ease-in forwards;
+    //}
   }
 
   &.mobile-menu-overlay {

@@ -6,10 +6,8 @@
     justify-content: center;
   }
   @media (max-width: $xl) {
-    max-width: 300px;
     width: 100%;
-    margin: 0 auto;
-    margin-top: 60px;
+    margin: 60px auto 0;
   }
 
   &__gallery {
@@ -146,8 +144,7 @@
   &__color {
     display: flex;
     align-items: center;
-    gap: 10px
-  ;
+    gap: 10px;
     margin-top: 40px;
     @media (max-width: $md) {
       margin-top: 20px;
@@ -163,8 +160,9 @@
     }
 
     &-item {
-display: flex;
+      display: flex;
       align-items: center;
+
       input {
         position: absolute;
         opacity: 0;
@@ -198,7 +196,7 @@ display: flex;
   &__basket {
     display: flex;
     align-items: center;
-  gap: 30px;
+    gap: 30px;
     margin-top: 110px;
     @media (max-width: $xl) {
       margin-top: 30px;
@@ -216,7 +214,7 @@ display: flex;
     display: flex;
     align-items: center;
     height: 60px;
-    @media (max-width:$xl) {
+    @media (max-width: $xl) {
       max-width: 96px;
       height: 55px;
     }
@@ -341,11 +339,12 @@ display: flex;
 
   &_basket {
     margin-top: 0;
-@media (max-width: $md) {
-h3{
-display: block;
-}
-}
+    @media (max-width: $md) {
+      h3 {
+        display: block;
+      }
+    }
+
     h3 {
       font-weight: var(--fw-regular);
       font-size: var(--fs-normal);
@@ -364,13 +363,14 @@ display: block;
       color: var(--darkgrey);
       display: flex;
       align-items: center;
-     span{
-       margin-left: 3px;
-       font-weight: var(--fw-little);
-       @media (max-width: $md) {
-         display: block;
-       }
-     }
+
+      span {
+        margin-left: 3px;
+        font-weight: var(--fw-little);
+        @media (max-width: $md) {
+          display: block;
+        }
+      }
     }
   }
 
@@ -403,43 +403,112 @@ display: block;
   }
 }
 
-.bredcrumbs{
+.bredcrumbs {
   display: flex;
   align-items: center;
   padding: 20px 0;
   @media (max-width: $md) {
     padding: 8px 0;
   }
-  ul{
+
+  ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    li{
-      a{
+
+    li {
+      a {
         font-weight: var(--fw-regular);
         font-size: var(--fs-normal);
-        line-height:var(--lh-normal);
+        line-height: var(--lh-normal);
         text-transform: uppercase;
         color: var(--black);
         display: flex;
         align-items: center;
-        &:after{
+
+        &:after {
           content: '/';
-          margin:0 4px
+          margin: 0 4px
         }
       }
-   span{
-     font-weight: var(--fw-bold);
-     font-size: var(--fs-normal);
-     line-height:var(--lh-normal);
-     text-transform: uppercase;
-     color: var(--black);
-     display: flex;
-     align-items: center;
-   }
+
+      span {
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-normal);
+        line-height: var(--lh-normal);
+        text-transform: uppercase;
+        color: var(--black);
+        display: flex;
+        align-items: center;
+      }
     }
   }
 }
 
+.product-slider {
+  max-width: 160px+30px+445px;
+  width: 100%;
+  max-height: 500px;
+  display: flex;
+  align-items: flex-start;
 
+  @media (max-width: $xl) {
+    max-height: 400px;
+    margin-bottom: 40px;
+  }
 
+  picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-pagination {
+    display: none;
+
+    @media (max-width: $xl) {
+      display: block;
+    }
+  }
+
+  .swiper-button-disabled {
+    opacity: .6;
+  }
+
+  .slider {
+
+    &__col {
+      margin-right: 30px;
+
+      @media (max-width: $xl) {
+        display: none;
+      }
+    }
+
+    &__thumbs {
+      max-height: 500px;
+      width: 160px;
+
+      .swiper-slide {
+        max-height: 228px;
+
+        &:last-of-type {
+          margin-bottom: 10px!important;
+        }
+      }
+    }
+
+    &__images {
+      height: 100%;
+
+      .swiper-slide {
+        max-height: 500px;
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@
     position: relative;
     z-index: 3;
     display: none;
+
     &:before {
       content: '';
       position: absolute;
@@ -19,6 +20,7 @@
       right: -10px;
       bottom: -10px;
     }
+
     @media (max-width:$lg) {
       display: flex;
     }
@@ -47,6 +49,10 @@
     position: relative;
 
     .marquee-infinite {
+      .text {
+        animation: marquee-left-to-right 60s linear infinite;
+      }
+
       &_black {
         transform: rotate(9deg);
         bottom: -363px;
@@ -211,7 +217,6 @@
     text-transform: uppercase;
     color: var(--black);
     margin: 122px auto 0;
-    animation: slide-left 1s linear forwards;
 
     @media (max-width: $xl) {
       margin-top: 50px;

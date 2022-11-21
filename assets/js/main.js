@@ -81,7 +81,7 @@ if (mixedText) {
     window.addEventListener('DOMContentLoaded', function () {
         mixedTextInit();
 
-        setInterval(mixedTextAnimation, 2000);
+        // setInterval(mixedTextAnimation, 2000);
     });
 }
 
@@ -241,7 +241,7 @@ const mainGallerySwiper = new Swiper('.main__gallery .swiper-gallery', {
         disableOnInteraction: true,
     },
     freeModeMomentum: false,
-    speed: 5000,
+    speed: 10000,
     breakpoints: {
         320: {
             spaceBetween: 6,
@@ -254,7 +254,7 @@ const mainGallerySwiper = new Swiper('.main__gallery .swiper-gallery', {
 
 
 // Инициализация превью слайдера
-const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
+const sliderThumbs = new Swiper('.slider__thumbs', { // ищем слайдер превью по селектору
     // задаем параметры
     direction: 'vertical', // вертикальная прокрутка
     slidesPerView: 2, // показывать по 3 превью
@@ -263,7 +263,6 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ище
         nextEl: '.slider__next', // кнопка Next
         prevEl: '.slider__prev' // кнопка Prev
     },
-    freeMode: true, // при перетаскивании превью ведет себя как при скролле
     breakpoints: { // условия для разных размеров окна браузера
         0: { // при 0px и выше
             direction: 'horizontal', // горизонтальная прокрутка
@@ -273,20 +272,18 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ище
         }
     }
 });
-// Инициализация слайдера изображений
-const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
-    // задаем параметры
-    direction: 'horizontal', // вертикальная прокрутка
 
-    spaceBetween: 0, // расстояние между слайдами
-    mousewheel: true, // можно прокручивать изображения колёсиком мыши
-    slidesPerView: 'auto',
+// Инициализация слайдера изображений
+const sliderImages = new Swiper('.slider__images', { // ищем слайдер превью по селектору
+    direction: 'horizontal',
+    spaceBetween: 30, // расстояние между слайдами
+    slidesPerView: 1,
     navigation: { // задаем кнопки навигации
         nextEl: '.slider__next', // кнопка Next
         prevEl: '.slider__prev' // кнопка Prev
     },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.product-slider .swiper-pagination',
         clickable: true,
     },
     grabCursor: true, // менять иконку курсора
@@ -377,7 +374,10 @@ const closeWidget = document.querySelector('.close-widget');
 const subscriptionPlaceholder = document.querySelector('.subscription-widget__placeholder');
 const subscriptionInput = document.getElementById('email-subscription');
 const subscriptionWidget = document.querySelector('.subscription-widget');
-const subscriptionSendBtn = subscriptionWidget.querySelector('.tosend');
+
+if (subscriptionWidget) {
+    const subscriptionSendBtn = subscriptionWidget.querySelector('.tosend');
+}
 
 if (subscriptionInput) {
     subscriptionInput.addEventListener('focus', function () {
@@ -420,5 +420,15 @@ if (mainMenu) {
         } else {
             mainMenu.classList.remove('showed-js');
         }
+    });
+}
+
+/** Появление таблицы размера на странице. */
+const tableSizeTrigger = document.getElementById('table-sizes');
+
+if (tableSizeTrigger) {
+    tableSizeTrigger.addEventListener('click', function () {
+        documentOverflowHidden();
+        document.querySelector('.overlay-sizes').classList.add('overlay_opened');
     });
 }

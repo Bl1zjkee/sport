@@ -1,158 +1,175 @@
-.allicons{
+.allicons {
   display: flex;
   align-items: center;
 }
 
 
-
-.search{
+.search {
   cursor: pointer;
   display: flex;
-  &:hover{
-    svg{
-      path{
-        stroke:black;
+
+  &:hover {
+    svg {
+      path {
+        stroke: black;
         stroke-width: 0.2px;
         border: 0.2px solid var(--black);
-        fill:var(--yellow);
+        fill: var(--yellow);
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path{
-        stroke:black;
+
+  &:active, &_active {
+    svg {
+      path {
+        stroke: black;
         stroke-width: 1.3px;
       }
     }
   }
-  &__white{
+
+  &__white {
     @media (max-width: 960px) {
-      svg{
-        path{
+      svg {
+        path {
           fill: (var(--white));
         }
       }
     }
 
   }
-  &_mobile{
+
+  &_mobile {
     @media (max-width: $lg) {
       display: none;
     }
   }
-  &_block-search{
+
+  &_block-search {
     position: absolute;
     left: 0;
-  bottom: 6px;
+    bottom: 6px;
   }
 }
 
-.favorite{
+.favorite {
   cursor: pointer;
   display: flex;
   align-items: center;
-  &:hover{
-    svg{
-      path:nth-of-type(1){
-        fill:var(--yellow);
+
+  &:hover {
+    svg {
+      path:nth-of-type(1) {
+        fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
 
-  &:active, &_active{
-    svg{
-      path:nth-of-type(1){
+  &:active, &_active {
+    svg {
+      path:nth-of-type(1) {
         fill: var(--black);
       }
 
-      path:nth-of-type(2){
+      path:nth-of-type(2) {
         fill: var(--yellow);
       }
     }
   }
-  &__white{
+
+  &__white {
     @media (max-width: 960px) {
-      svg{
-        path{
+      svg {
+        path {
           fill: (var(--white));
         }
       }
     }
 
   }
-  &_mobile{
+
+  &_mobile {
     @media (max-width: $lg) {
       display: none;
     }
   }
 }
 
-.user{
+.user {
   cursor: pointer;
-  &:hover{
-    svg{
-      path:nth-of-type(1){
+
+  &:hover {
+    svg {
+      path:nth-of-type(1) {
         fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path:nth-of-type(1){
+
+  &:active, &_active {
+    svg {
+      path:nth-of-type(1) {
         fill: var(--black);
       }
-      path:nth-of-type(2){
+
+      path:nth-of-type(2) {
         fill: var(--yellow);
       }
-      path:nth-of-type(3){
+
+      path:nth-of-type(3) {
         fill: var(--yellow);
       }
     }
   }
-  &__white{
+
+  &__white {
     @media (max-width: 960px) {
-      svg{
-        path{
+      svg {
+        path {
           fill: (var(--white));
         }
       }
     }
   }
-  &_mobile{
+
+  &_mobile {
     @media (max-width: $lg) {
       display: none;
     }
   }
 }
 
-.cart{
+.cart {
   cursor: pointer;
   position: relative;
-  &:hover{
-    svg{
-      path:nth-of-type(1){
+
+  &:hover {
+    svg {
+      path:nth-of-type(1) {
         fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path:nth-of-type(1){
+
+  &:active, &_active {
+    svg {
+      path:nth-of-type(1) {
         fill: var(--black);
       }
-      path:nth-of-type(2){
+
+      path:nth-of-type(2) {
         fill: var(--yellow);
       }
     }
   }
-  &__quantity{
+
+  &__quantity {
     position: absolute;
     background: var(--yellow);
     border-radius: 50%;
@@ -163,7 +180,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    span{
+
+    span {
       font-weight: var(--fw-regular);
       font-size: var(--fs-little);
       line-height: var(--lh-little);
@@ -171,20 +189,23 @@
     }
   }
 }
-.filter{
+
+.filter {
   cursor: pointer;
-  &:hover{
-    svg{
-      path{
+
+  &:hover {
+    svg {
+      path {
         fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path{
+
+  &:active, &_active {
+    svg {
+      path {
         fill: var(--black);
 
       }
@@ -192,20 +213,22 @@
   }
 }
 
-.filter_active{
+.filter_active {
   cursor: pointer;
-  &:hover{
-    svg{
-      path{
+
+  &:hover {
+    svg {
+      path {
         fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2px;
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path{
+
+  &:active, &_active {
+    svg {
+      path {
         fill: var(--black);
 
       }
@@ -213,167 +236,161 @@
   }
 }
 
-.edit{
+.edit {
   cursor: pointer;
   position: absolute;
-  top:18px;
+  top: 18px;
   right: 58px;
   @media (max-width: $sm) {
     right: 44px;
   }
-  &:hover,active{
-    svg{
-      path{
+
+  &:hover, active {
+    svg {
+      path {
         fill: black;
       }
     }
   }
 }
 
-.delete{
+.delete {
   cursor: pointer;
   position: absolute;
-  top:18px;
+  top: 18px;
   right: 25px;
   @media (max-width: $sm) {
     right: 15px;
   }
-  &:hover,active{
-    svg{
-      path{
+
+  &:hover, active {
+    svg {
+      path {
         fill: black;
       }
     }
   }
 }
 
-.group-big{
+.group-big {
   cursor: pointer;
-  &:hover{
-    svg{
-      circle{
+
+  &:hover {
+    svg {
+      circle {
         fill: var(--yellow);
       }
     }
   }
-  &:active, &_active{
-    svg{
-      circle{
+
+  &:active, &_active {
+    svg {
+      circle {
         fill: var(--black);
       }
     }
   }
 }
 
-.group-small{
+.group-small {
   cursor: pointer;
-  &:hover{
-    svg{
-      circle{
+
+  &:hover {
+    svg {
+      circle {
         fill: var(--yellow);
       }
     }
   }
-  &:active, &_active{
-    svg{
-      circle{
+
+  &:active, &_active {
+    svg {
+      circle {
         fill: var(--black);
       }
     }
   }
 }
-.close-secondary{
+
+.close-secondary {
   cursor: pointer;
   display: flex;
 
-  &:hover{
-    svg{
-      path{
+  &:hover {
+    svg {
+      path {
         fill: var(--yellow);
         stroke: black;
         stroke-width: 0.2;
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path{
+
+  &:active, &_active {
+    svg {
+      path {
         fill: var(--black);
       }
     }
   }
-  &_white{
+
+  &_white {
     position: absolute;
     right: 10px;
     top: 10px;
-    svg{
-      path{
+
+    svg {
+      path {
         fill: var(--white);
       }
     }
   }
 
-  &_search{
+  &_search {
     position: absolute;
-   bottom: 6px;
+    bottom: 6px;
     right: 0;
   }
 }
 
-.close-primary{
+.close-primary {
   cursor: pointer;
   width: fit-content;
   margin-left: auto;
-  &:hover{
-    svg{
-      path{
+
+  &:hover {
+    svg {
+      path {
         fill: var(--yellow);
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path{
+
+  &:active, &_active {
+    svg {
+      path {
         fill: var(--black);
       }
     }
   }
 }
 
-.vk{
+.vk {
   cursor: pointer;
-  &:hover{
-    svg{
-      path{
+
+  &:hover {
+    svg {
+      path {
         fill: var(--black);
         stroke: var(--yellow);
 
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path{
-        stroke: var(--white);
-        fill: var(--white);
-      }
-    }
-  }
-}
-.telegram{
-  cursor: pointer;
-  display: flex;
-  &:hover{
-    svg{
-      path{
-        fill: var(--black);
-        stroke: var(--yellow);
-      }
-    }
-  }
-  &:active, &_active{
-    svg{
-      path{
+
+  &:active, &_active {
+    svg {
+      path {
         stroke: var(--white);
         fill: var(--white);
       }
@@ -381,20 +398,22 @@
   }
 }
 
-.whatsup{
+.telegram {
   cursor: pointer;
   display: flex;
-  &:hover{
-    svg{
-      path{
+
+  &:hover {
+    svg {
+      path {
         fill: var(--black);
         stroke: var(--yellow);
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path{
+
+  &:active, &_active {
+    svg {
+      path {
         stroke: var(--white);
         fill: var(--white);
       }
@@ -402,19 +421,44 @@
   }
 }
 
-.yt{
+.whatsup {
   cursor: pointer;
-  &:hover{
-    svg{
-      path{
+  display: flex;
+
+  &:hover {
+    svg {
+      path {
         fill: var(--black);
         stroke: var(--yellow);
       }
     }
   }
-  &:active, &_active{
-    svg{
-      path{
+
+  &:active, &_active {
+    svg {
+      path {
+        stroke: var(--white);
+        fill: var(--white);
+      }
+    }
+  }
+}
+
+.yt {
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      path {
+        fill: var(--black);
+        stroke: var(--yellow);
+      }
+    }
+  }
+
+  &:active, &_active {
+    svg {
+      path {
         stroke: var(--white);
         fill: var(--white);
       }
@@ -423,72 +467,79 @@
 }
 
 
-.ok{
+.ok {
   position: absolute;
   top: 22px;
-  right:20px;
-  img{
+  right: 20px;
+
+  img {
     width: 16px;
     height: 16px;
   }
-  &__active{
+
+  &__active {
     display: block;
   }
-  &_item{
+
+  &_item {
     top: 17px;
     right: 21px;
   }
 }
 
-.warning{
+.warning {
   position: absolute;
   top: 22px;
-  right:20px;
+  right: 20px;
 
-  img{
+  img {
     width: 16px;
     height: 16px;
   }
-  &__input{
+
+  &__input {
     border: 1px dashed var(--red);
   }
-  &__active{
+
+  &__active {
 
   }
 }
 
-.input-vk{
+.input-vk {
   position: absolute;
   left: 20px;
   top: 14px;
 }
 
 
-.slider {
-  color: #fff;
-}
-.slider .swiper-container {
-  width: 100%;
-  height: 100%;
-}
-.slider__flex {
-  display: flex;
-  align-items: flex-start;
+//.slider {
+//  color: #fff;
+//}
+//
+//.slider .swiper-container {
+//  width: 100%;
+//  height: 100%;
+//}
+//
+//.slider__flex {
+//  display: flex;
+//  align-items: flex-start;
+//
+//}
+//
+//.slider__col {
+//  display: flex;
+//  flex-direction: column;
+//  width: 160px;
+//  margin-right: 32px;
+//  align-items: center;
+//  @media (max-width: $xl) {
+//    display: none;
+//  }
+//}
 
-}
-.slider__col {
-  display: flex;
-  flex-direction: column;
-  width: 160px;
-  margin-right: 32px;
-  align-items: center;
-@media (max-width: $xl) {
-  display: none;
-}
-
-
-}
-.slider__prev{
+.slider__prev {
   cursor: pointer;
   text-align: center;
   font-size: 14px;
@@ -502,9 +553,10 @@
   -ms-user-select: none;
   user-select: none;
   background-image: url("../icons/arrow_slider_product-card.svg");
-background-repeat: no-repeat;
-  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  margin: 0 auto 10px;
 }
+
 .slider__next {
   cursor: pointer;
   background-image: url("../icons/arrow_slider_product-card.svg");
@@ -521,42 +573,49 @@ background-repeat: no-repeat;
   -ms-user-select: none;
   user-select: none;
   transform: rotate(180deg);
-  margin-top:10px;
+  margin: 10px auto 0;
 }
+
 .slider__prev:focus,
 .slider__next:focus {
   outline: none;
 }
-.slider__thumbs {
-  height: calc(400px - 96px);
-}
-.slider__thumbs .slider__image {
-  transition: 0.25s;
-}
 
+//.slider__thumbs {
+//  height: calc(400px - 96px);
+//}
+//
+//.slider__thumbs .slider__image {
+//  transition: 0.25s;
+//}
+//
+//
+//.slider__images {
+//  height: 400px;
+//}
+//
+//.slider__images .slider__image img {
+//  transition: 3s;
+//}
+//
+//.slider__images .slider__image:hover img {
+//  transform: scale(1.1);
+//}
+//
+//.slider__image {
+//  width: 100%;
+//  height: 100%;
+//  overflow: hidden;
+//}
+//
+//.slider__image img {
+//  display: block;
+//  width: 100%;
+//  height: 100%;
+//  -o-object-fit: cover;
+//  object-fit: cover;
+//}
 
-.slider__images {
-  height: 400px;
-
-}
-.slider__images .slider__image img {
-  transition: 3s;
-}
-.slider__images .slider__image:hover img {
-  transform: scale(1.1);
-}
-.slider__image {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.slider__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
 @media (max-width: 767.98px) {
   .slider__flex {
     flex-direction: column-reverse;

@@ -227,7 +227,7 @@ h4{
       color: var(--black);
       white-space: nowrap;
       will-change: transform;
-      animation: marquee-left-to-right 20s linear infinite;
+      animation: marquee-left-to-right 40s linear infinite;
     }
 
     &_horizontal {
@@ -252,7 +252,7 @@ h4{
 
       p {
         will-change: transform;
-        animation: marquee-bottom-to-up 20s linear infinite;
+        animation: marquee-bottom-to-up 40s linear infinite;
       }
     }
   }

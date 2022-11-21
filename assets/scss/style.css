@@ -53,7 +53,6 @@ table {
 
 * {
   box-sizing: border-box;
-  transition: all 0.2s linear;
 }
 *:after, *:before {
   box-sizing: border-box;
@@ -75,6 +74,7 @@ body.hidden {
 
 button {
   font-family: var(--font-family);
+  transition: all 0.2s linear;
 }
 
 ul {
@@ -697,33 +697,6 @@ input[type=number]:focus {
   top: 14px;
 }
 
-.slider {
-  color: #fff;
-}
-
-.slider .swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.slider__flex {
-  display: flex;
-  align-items: flex-start;
-}
-
-.slider__col {
-  display: flex;
-  flex-direction: column;
-  width: 160px;
-  margin-right: 32px;
-  align-items: center;
-}
-@media (max-width: 1200px) {
-  .slider__col {
-    display: none;
-  }
-}
-
 .slider__prev {
   cursor: pointer;
   text-align: center;
@@ -739,7 +712,7 @@ input[type=number]:focus {
   user-select: none;
   background-image: url("../icons/arrow_slider_product-card.svg");
   background-repeat: no-repeat;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
 
 .slider__next {
@@ -758,7 +731,7 @@ input[type=number]:focus {
   -ms-user-select: none;
   user-select: none;
   transform: rotate(180deg);
-  margin-top: 10px;
+  margin: 10px auto 0;
 }
 
 .slider__prev:focus,
@@ -766,45 +739,10 @@ input[type=number]:focus {
   outline: none;
 }
 
-.slider__thumbs {
-  height: 304px;
-}
-
-.slider__thumbs .slider__image {
-  transition: 0.25s;
-}
-
-.slider__images {
-  height: 400px;
-}
-
-.slider__images .slider__image img {
-  transition: 3s;
-}
-
-.slider__images .slider__image:hover img {
-  transform: scale(1.1);
-}
-
-.slider__image {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.slider__image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
 @media (max-width: 767.98px) {
   .slider__flex {
     flex-direction: column-reverse;
   }
-
   .slider__col {
     flex-direction: row;
     align-items: center;
@@ -812,17 +750,14 @@ input[type=number]:focus {
     margin-top: 24px;
     width: 100%;
   }
-
   .slider__images {
     width: 100%;
   }
-
   .slider__thumbs {
     height: 100px;
     width: calc(100% - 96px);
     margin: 0 16px;
   }
-
   .slider__prev,
 .slider__next {
     height: auto;
@@ -1794,8 +1729,6 @@ input[type=number]:focus {
   align-items: center;
   justify-content: center;
   padding: 18px 16px 18px 17px;
-}
-.new p {
   font-weight: var(--fw-bold);
   font-size: var(--fs-normal);
   line-height: var(--lh-normal);
@@ -2079,11 +2012,11 @@ input[type=number]:focus {
   align-items: center;
   justify-content: center;
 }
+.overlay > div {
+  animation: slide-right 0.5s ease-in forwards;
+}
 .overlay_opened {
   display: flex;
-}
-.overlay_opened .mobile-menu {
-  animation: slide-right 0.5s ease-in forwards;
 }
 .overlay.mobile-menu-overlay {
   justify-content: flex-start;
@@ -2430,7 +2363,7 @@ input[type=number]:focus {
   color: var(--white);
   gap: 12px;
   will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
 }
 .marquee-infinite .text > * {
   white-space: nowrap;
@@ -2459,11 +2392,10 @@ input[type=number]:focus {
   display: flex;
   color: var(--white);
   will-change: transform;
-  animation: marquee-right-to-left 20s linear infinite;
-  display: flex;
+  animation: marquee-right-to-left 40s linear infinite;
 }
 .marquee-small_to-right .text {
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
 }
 
 .marquee-medium {
@@ -2484,7 +2416,7 @@ input[type=number]:focus {
   white-space: nowrap;
   text-transform: uppercase;
   will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
 }
 
 .run-text-animation {
@@ -2492,7 +2424,7 @@ input[type=number]:focus {
 }
 .run-text-animation .text {
   will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
   display: flex;
   gap: 4px;
 }
@@ -2500,7 +2432,7 @@ input[type=number]:focus {
   white-space: nowrap;
 }
 .run-text-animation_to-left .text {
-  animation: marquee-right-to-left 20s linear infinite;
+  animation: marquee-right-to-left 40s linear infinite;
 }
 .run-text-animation_to-bottom .text {
   animation: marquee-up-to-bottom 8s linear infinite;
@@ -2523,7 +2455,7 @@ input[type=number]:focus {
 .circle-text .text {
   position: absolute;
   left: 0;
-  animation: rounded-text 20s linear infinite forwards;
+  animation: rounded-text 40s linear infinite forwards;
 }
 
 /** Аккордеон. */
@@ -2642,6 +2574,9 @@ input[type=number]:focus {
 }
 .main__header-all {
   position: relative;
+}
+.main__header-all .marquee-infinite .text {
+  animation: marquee-left-to-right 60s linear infinite;
 }
 .main__header-all .marquee-infinite_black {
   transform: rotate(9deg);
@@ -2822,7 +2757,6 @@ input[type=number]:focus {
   text-transform: uppercase;
   color: var(--black);
   margin: 122px auto 0;
-  animation: slide-left 1s linear forwards;
 }
 @media (max-width: 1200px) {
   .main h1 {
@@ -3830,10 +3764,8 @@ input[type=number]:focus {
 }
 @media (max-width: 1200px) {
   .product-card {
-    max-width: 300px;
     width: 100%;
-    margin: 0 auto;
-    margin-top: 60px;
+    margin: 60px auto 0;
   }
 }
 .product-card__gallery {
@@ -4259,6 +4191,64 @@ input[type=number]:focus {
   align-items: center;
 }
 
+.product-slider {
+  max-width: 635px;
+  width: 100%;
+  max-height: 500px;
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 1200px) {
+  .product-slider {
+    max-height: 400px;
+    margin-bottom: 40px;
+  }
+}
+.product-slider picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.product-slider img {
+  width: 100%;
+  height: 100%;
+}
+.product-slider .swiper-pagination {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .product-slider .swiper-pagination {
+    display: block;
+  }
+}
+.product-slider .swiper-button-disabled {
+  opacity: 0.6;
+}
+.product-slider .slider__col {
+  margin-right: 30px;
+}
+@media (max-width: 1200px) {
+  .product-slider .slider__col {
+    display: none;
+  }
+}
+.product-slider .slider__thumbs {
+  max-height: 500px;
+  width: 160px;
+}
+.product-slider .slider__thumbs .swiper-slide {
+  max-height: 228px;
+}
+.product-slider .slider__thumbs .swiper-slide:last-of-type {
+  margin-bottom: 10px !important;
+}
+.product-slider .slider__images {
+  height: 100%;
+}
+.product-slider .slider__images .swiper-slide {
+  max-height: 500px;
+}
+
 /** Корзина **/
 .basket {
   position: relative;
@@ -4482,7 +4472,7 @@ input[type=number]:focus {
   color: var(--black);
   white-space: nowrap;
   will-change: transform;
-  animation: marquee-left-to-right 20s linear infinite;
+  animation: marquee-left-to-right 40s linear infinite;
 }
 .basket .basket__runText_horizontal {
   width: auto;
@@ -4510,7 +4500,7 @@ input[type=number]:focus {
 }
 .basket .basket__runText_horizontal p {
   will-change: transform;
-  animation: marquee-bottom-to-up 20s linear infinite;
+  animation: marquee-bottom-to-up 40s linear infinite;
 }
 
 .card-secondary {
