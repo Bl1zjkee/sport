@@ -1,4 +1,10 @@
 .accordion {
+  transition: height .3s ease-in;
+
+  svg {
+    transition: all .3s ease-in;
+  }
+
   &__header {
     cursor: pointer;
     padding: 24px 40px 24px 42px;
@@ -12,9 +18,27 @@
     margin-top: -4px;
     height: 0;
     overflow: hidden;
+    transition: all .3s ease-in;
 
-  & > div {
-      padding: 0 95px 26px 42px;
+    p {
+      font-weight: var(--fw-bold);
+      font-size: var(--fs-normal);
+      line-height: var(--lh-normal);
+      letter-spacing: var(--ls-secondary);
+      color: var(--white);
+      display: block;
+      max-width: 973px;
+      width: 100%;
+
+      &:not(:first-of-type) {
+        font-weight: var(--fw-regular);
+      }
+    }
+
+    & > div {
+      transition: all .3s ease-in;
+      padding: 20px 95px 26px 42px;
+      opacity: 0;
     }
   }
 }
@@ -43,39 +67,13 @@
       background: var(--black);
 
       .accordion__body {
-        height: auto;
-
-        & > div {
-
-        }
-      }
-
-      p {
-        font-weight: var(--fw-bold);
-        font-size: var(--fs-normal);
-        line-height: var(--lh-normal);
-        letter-spacing: var(--ls-secondary);
-        color: var(--white);
-        margin-top: 20px;
-        display: block;
-        max-width: 973px;
-        width: 100%;
-
-        &:not(:first-of-type) {
-          font-weight: var(--fw-regular);
-        }
-
-        &:last-of-type {
-          margin-top: 0;
+        > div {
+          opacity: 1;
         }
       }
 
       h4 {
         color: var(--yellow);
-
-        &:after {
-
-        }
       }
 
       svg {

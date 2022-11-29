@@ -302,17 +302,22 @@ if (accordions) {
         const header = e.target.closest('.accordion__header');
 
         if (header) {
+            const bodyElem = header.nextElementSibling;
+            let bodyHeight = bodyElem.querySelector('div').clientHeight;
 
             if (header.parentElement.classList.contains('questions-faq__item_active')) {
                 header.parentElement.classList.remove('questions-faq__item_active');
+                bodyElem.style.height = '0';
                 return;
             }
 
             accordions.forEach((accordion => {
                 accordion.classList.remove('questions-faq__item_active');
+                accordion.querySelector('.accordion__body').style.height = '0';
             }))
 
             header.parentElement.classList.add('questions-faq__item_active');
+            bodyElem.style.height = `${bodyHeight}px`;
         }
     });
 }
